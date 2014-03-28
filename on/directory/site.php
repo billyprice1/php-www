@@ -21,29 +21,27 @@ $content .= "
 		<div id=\"directorycontainer\">
 			<div class=\"directory\">
 				<div class=\"container\">
-					<div class=\"left\">
-						<div class=\"logo\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['url']}\" />
+					<div class=\"logo\">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['url']}\" />
+					</div>
+					<div style=\"float: left; width: 600px;\">
+						<h1 class=\"dark\">{$site['title']}</h1>
+						<span class=\"category\">".$lang['CAT_' . $site['category']]."</span>
+						<div class=\"clear\"></div>
+						<br />
+						<a class=\"callout\" href=\"http://{$site['url']}\">{$lang['visit']}</a>
+						<br /><br /><br />
+						<div class=\"seperator-mini\" style=\"width: 620px;\"></div>
+						<div class=\"star\" data-score=\"{$rating['rating_value']}\" data-id=\"{$site['id']}\"></div>
+						<span class=\"label\">{$lang['edited']} {$site['user']}</span>
+						<div class=\"social\">
+							<div class=\"fb-like\" data-href=\"https://www.olympe.in/directory/site?id={$site['id']}\" data-width=\"\" data-height=\"\" data-colorscheme=\"light\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-send=\"false\"></div>
 						</div>
-						<div style=\"float: left; width: 400px;\">
-							<h1 class=\"dark\">{$site['title']}</h1>
-							<span class=\"category\">".$lang['CAT_' . $site['category']]."</span>
-							<div class=\"clear\"></div>
-							<br />
-							<a class=\"callout\" href=\"http://{$site['url']}\">{$lang['visit']}</a>
-							<br /><br /><br />
-							<div class=\"seperator-mini\"></div>
-							<div class=\"star\" data-score=\"{$rating['rating_value']}\" data-id=\"{$site['id']}\"></div>
-							<span class=\"label\">{$lang['edited']} {$site['user']}</span>
-							<div class=\"social\">
-								<div class=\"fb-like\" data-href=\"https://www.olympe.in/directory/site?id={$site['id']}\" data-width=\"\" data-height=\"\" data-colorscheme=\"light\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-send=\"false\"></div>
-							</div>
-							<div class=\"social\">
-								<div class=\"g-plusone\" data-size=\"medium\"></div>
-							</div>
+						<div class=\"social\">
+							<div class=\"g-plusone\" data-size=\"medium\"></div>
 						</div>
 					</div>
-					<div class=\"right\">
+					<div style=\"float: right; width: 100px;\">
 						<a class=\"action report\" href=\"#\" onclick=\"$('#report').dialog('open'); $('input[name=site]').val('{$site['id']}'); return false;\">
 							{$lang['report']}
 						</a>	
