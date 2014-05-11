@@ -9,7 +9,6 @@ $menu = array(
 	array('text'=>"menu_offer", 'link'=>"/service/offer"),
 	array('text'=>"menu_infrastructure", 'link'=>"/service/infrastructure"),
 	array('text'=>"menu_tos", 'link'=>"/on/documents/Olympe-CGS-FR.pdf"),
-	array('text'=>"menu_report", 'link'=>"/about/contact?report"),
 );
 
 return $menu;

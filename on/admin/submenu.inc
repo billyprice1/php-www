@@ -11,7 +11,6 @@ $menu = array(
 	array('text'=>"menu_grants", 'icon'=>"iKey", 'link'=>"/admin/grants"),
 	array('text'=>"menu_quotas", 'icon'=>"iChart8", 'link'=>"/admin/quotas"),
 	array('text'=>"menu_stats", 'icon'=>"iChart8", 'link'=>"/admin/stats"),
-	array('text'=>"menu_overquota", 'icon'=>"iChart8", 'link'=>"/admin/overquota"),
 	array('text'=>"menu_blog", 'icon'=>"iChart8", 'link'=>"/admin/blog"),
 	array('text'=>"menu_logs", 'icon'=>"iChart8", 'link'=>"/admin/logs")
 );
