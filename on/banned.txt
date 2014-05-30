@@ -172,3 +172,15 @@ gustr.com
 jourrapide.com
 rhyta.com
 superrito.com
+kurzepost.de
+objectmail.com
+proxymail.eu
+rcpt.at
+trash-mail.at
+trashmail.at
+trashmail.com
+trashmail.me
+trashmail.net
+wegwerfmail.de
+wegwerfmail.net
+wegwerfmail.org
