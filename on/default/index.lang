@@ -31,6 +31,7 @@ logged = "Login as"
 conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
 hosted = "Want to know our references ?"
 directory = "Search our index"
+remember = "Remember me"
 
 [ES]
 title = "Solidaridad y Innovación"
@@ -64,6 +65,7 @@ logged = "Conectado como"
 conditions = "He leído y acepto las <a href='/on/documents/Olympe-CGS-FR.pdf'>Condiciones Generales de Utilización</a>."
 hosted = "¿Quiénes son las personas y las organizaciones alojados en Olympe?"
 directory = "Ver el directorio"
+remember = "Mantenerme conectado"
 
 [FR]
 title = "Solidarité et innovation"
@@ -101,3 +103,4 @@ logged = "Identifié en tant que"
 conditions = "J'ai lu et j'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions Générales d'Utilisation</a>."
 hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
 directory = "Consultez notre annuaire"
+remember = "Se souvenir de moi"
