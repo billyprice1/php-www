@@ -47,7 +47,7 @@ $content .= "
 							".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['register']}</span>")."
 						</fieldset>
 						<fieldset>
-							<input type=\"checkbox\" name=\"remember\" value=\"remember" />
+							<input type=\"checkbox\" name=\"remember\" value=\"remember\" />
 							<label for=\"remember\" style=\"display: inline-block; padding-left: 10px;\">{$lang['remember']}</label>
 						</fieldset>
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\"  value=\"{$lang['login']}\" />											
