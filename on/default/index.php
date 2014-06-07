@@ -46,10 +46,6 @@ $content .= "
 							<input class=\"auto\" type=\"password\" value=\"{$lang['password']}\" name=\"password\" onfocus=\"this.value = this.value=='{$lang['password']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['password']}' : this.value; this.value=='{$lang['password']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\"/>
 							".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['register']}</span>")."
 						</fieldset>
-						<fieldset>
-							<input type=\"checkbox\" name=\"remember\" value=\"remember\" />
-							<label for=\"remember\" style=\"display: inline-block; padding-left: 10px;\">{$lang['remember']}</label>
-						</fieldset>
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\"  value=\"{$lang['login']}\" />											
 					</form>
 				</div>
