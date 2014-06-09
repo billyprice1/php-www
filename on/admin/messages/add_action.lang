@@ -28,3 +28,19 @@ subject = "Olympe - Une réponse vous attend"
 content = "<p style='margin: 20px 0'>Un administrateur a répondu à votre demande sur la plateforme d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Prenez-en connaissance, une réponse est peut-être attendue de votre part.</p>
 <p style='margin: 20px 0'>Vous pouvez y accéder en cliquant sur le lien suivant :<br /><a style='color: #de5711;' href='https://www.olympe.in/panel/messages/detail?id={ID}'>https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>
 <p style='margin: 20px 0'>Bonne continuation sur Olympe !</p>"
+
+[DE]
+error = "Eines der Felder ist nicht korrekt!"
+type = "Anfrage :"
+quota = "Quote erhöhen"
+select = "Quotentyp :"
+disk = "Speicherplatz"
+sites = "Anzahl der Webseiten"
+dbs = "Datenbanken"
+domains = "Anzahl der Domänen"
+request = "Quote gefordert :"
+
+subject = "Olympe - eine Antwort wartet auf dich "
+content = "<p style='margin: 20px 0'>Einen Administrator hat auf Ihre Anfrage auf der <a style='color: #de5711;' href='https://www.olympe.in'>Olympus-hosting-Plattform</a>beantwortet. 
+Lesen Sie bitte weiter, eine Antwort ist vielleicht von Ihnen erwartet.<p style='margin: 20px 0'>Sie können darauf zugreifen, indem Sie auf den folgenden Link klicken: <br/><a style='color: #de5711;' href='https://www.olympe.in/panel/messages/detail?id={ID}'>
+https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>

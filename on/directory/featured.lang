@@ -1,5 +1,11 @@
 [EN]
+featured = "Main selection"
+top = "Team selection"
 
 [FR]
 featured = "A la une"
 top = "Sélection de l'équipe"
+
+[DE]
+featured = "Main selection"
+top = "Team-Auswahl"

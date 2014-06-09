@@ -21,3 +21,11 @@ content = "<p style='margin: 20px 0'>Vous avez effectué une demande de récupé
 	<p style='margin: 20px 0'>Changement de mot de passe : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
 
 success = "Votre demande a bien été prise en compte, un email contenant un lien de récupération a bien été envoyé."
+
+[DE]
+subject = "Olympe - Kontowiederherstellung"
+content = "<p style='margin: 20px 0'>Sie haben Sie über die <a style='color: #de5711;' href='https://www.olympe.in'>Olympe Plattform</a> zum Zurücksetzen Ihres Kennworts zurücksetzen lassen.</p>
+	<p style='margin: 20px 0'>Um eine neues Passwort zu wählen , bitte klicken Sie auf den folgenden Link. Dieser Link wird für <strong>6 Stunden </strong>gültig sein !</p>
+	<p style='margin: 20px 0'>Kennwort Ändererung: <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
+
+success = "Ihre Anfrage ist berücksichtigt worden, eine E-Mail für Ihre Kontowiederherstellung ist Ihnen gesendet worden ."

@@ -15,3 +15,9 @@ users = "utilisateurs"
 databases = "bases de données et"
 sites = "sites Internet"
 domains = "noms de domaine."
+
+[DE]
+users = "Users"
+databases = "Datenbanken und"
+sites = "Webseiten"
+domains = "Domain-Namen."

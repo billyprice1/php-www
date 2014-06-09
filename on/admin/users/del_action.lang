@@ -9,3 +9,9 @@ subject = "Olympe - Votre compte a été supprimé"
 content = "<p style='margin: 20px 0'>Un administrateur vient de supprimer votre compte <i>{USER}</i> du service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> suite à une demande ou un abus de votre part.</p>
 <p style='margin: 20px 0'>Si vous pensez que cette action est injustifiée, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>
 <p style='margin: 20px 0'>Nous espérons vous revoir très rapidement sur notre plateforme !</p>"
+
+[DE]
+subject = "Olympe - Ihr Konto wurde gelöscht"
+content = "<p style='margin: 20px 0'>Ihr Konto: <i>{USER}</i> wurde von unserem hosting Service <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> gelöscht, nach eine Anforderung oder Missbrauch von Ihrer Webseite</p>
+<p style='margin: 20px 0'>Wenn Sie denken, dass diese Aktion unbegründet ist, bitte setzen Sie Sie <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>in Verbindung mit uns</a>.</p>
+<p style='margin: 20px 0'>Mit freundlichen Grüßen</p>"

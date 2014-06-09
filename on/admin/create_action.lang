@@ -15,3 +15,12 @@ mail_add = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt !
 <p style='margin: 20px 0'>Utilisateur : <strong>{USER}</strong><br />
 Mot de passe : <strong>{PASS}</strong></p>
 <p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>"
+
+[DE]
+success = "Dieses Konto wurde erfolgreich erstellt"
+
+subject = "Willkommen auf der Olympe-Plattform"
+mail_add = "<p style='margin: 20px 0'>Ihr Olympe-Account ist nun fertig! " Hier sind die Parameter der Kennzeichnung, die Sie ausgewählt haben: </p>
+<p style='margin: 20px 0'>Benutzer : <strong>{USER}</strong><br />
+Kennwort : <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Genießen Sie Ihr kostenloses hosting-Raum, und wenn Sie spezielle Wünsche haben, zögern Sie nicht Ihnen mit uns <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>in Verbindung zu setzen</a>.</p>"

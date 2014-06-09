@@ -27,3 +27,13 @@ content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vou
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
 error_api = "Le format de votre adresse email est incorrect ou cette adresse est déjà utilisée."
+
+[DE]
+subject = "Olympe Konto Bestätigung"
+content = "<p style='margin: 20px 0'>Vielen Dank für Ihre Registrierung auf unserer Plattform ! Um Ihr Konto zu aktivieren, bitte klicken Sie auf den folgenden Link :</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Zögern Sie nicht uns zu kontaktieren um uns Ihre Meinung mitzuteilen.</p>"
+
+success = "Ihre Anfrage ist angenommen worden.<br/>Sie  werden eine E-Mail mit dem Bestätigungslink erhalten<br/>"
+error_mail = "Ein Fehler ist aufgetreten worden und der E-Mail wurde nicht gesendet.<br />Bitte versuchen Sie es später nochmal ."
+error_api = "Der Format Ihre E-Mail-Adresse ist falsch, oder diese Adresse wird bereits verwendet."

@@ -14,11 +14,11 @@ try
 }
 catch( Exception $e )
 {
-	template::redirect('/panel/messages');
+	template::redirect('/admin/messages');
 }
 
 if( !$message['id'] || !$_GET['id'] )
-	template::redirect('/panel/messages');
+	template::redirect('/admin/messages');
 
 	
 if($message['status']==3) $replyButton = "

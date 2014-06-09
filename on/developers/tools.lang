@@ -1,5 +1,24 @@
 [EN]
+title = "Panel and developed tools"
+panel = "Panel and the API"
+panel_text = "So that everyone can contribute and improve the panel according to his needs, we opened its source code modification. 
+This allows both to check the robustness of procedures and the safety devices in place, but also to allow all users to develop new features. 
+This is HTML/PHP pages (Javascript) that query <a href='https://api.olympe.in'>the API</a> which code is also open if additional functions are required.."
+modules = "PHP Module"
+modules_text = "For the purposes of Olympe, particularly in terms of security, we have need to develop two new extensions PHP 
+(suPHP and Override). The first allows chowner process PHP on the fly (whether in CGI or Fast-CGI) with the UID of the owner of the 
+script. The second gives an opportunity to crush any built-in PHP function with a custom function 
+(quota on <i>mail()</i>, checks on <i>shell_exec()</i>...)."
+phpkiller = "PHP Killer"
+phpkiller_text = "PHP Killer is a JAVA program to monitor the behaviour of the PHP CGI process and thus ensure a steady 
+flow of the platform. It includes a clock monitoring execution time, memory and the CPU used by the process. 
+In case of anomaly, a white/grey/black list system allows you to adjust the reliability of scripts and thus preventing errors or abuse."
+ftpfilter = "FTP Filter"
+ftpfilter_text = "Recently enhanced to support SFTP, FTP logs filter is a JAVA program that analyzes real-time uploads logs on 
+the platform and will then scan the files with a number of rules of actions defined in the configuration. It serves including 
+to eliminate viruses and phishing prevalent, to issue alerts in the event of abnormal behavior.."
 
+access = "Access codes"
 
 [FR]
 title = "Panel et outils développés"
@@ -22,3 +41,30 @@ ftpfilter_text = "Récemment amélioré pour supporter les logs SFTP, FTP filter
 et d'actions définies dans la configuration. Il sert notamment à éliminer les virus et phishing les plus répandus, à émettre des alertes en cas de comportement anormal..."
 
 access = "Accéder aux codes"
+
+[DE]
+title = "Panel und entwickelten Tools"
+panel = "Panel und die API"
+panel_text = "So dass jeder einen Beitrag leisten und verbessern die Leiste nach seinen Bedürfnissen kann, 
+öffneten wir den Source-Code-Änderung. Dies ermöglicht sowohl die Robustheit der Verfahren und die Sicherheitseinrichtungen 
+im Ort zu überprüfen, sondern auch alle Benutzer neue Features entwickeln zu können. Es ist HTML/PHP-Seiten (Javascript), 
+die <a href='https://api.olympe.in'>die API</a> abfragen, welcher Code geöffnet ist, wenn zusätzliche Funktionen erforderlich wäre."
+modules = "PHP-Module"
+modules_text = "Im Sinne von Olympe, insbesondere im Hinblick auf Sicherheit, haben wir zwei neue Erweiterungen PHP 
+(SuPHP und Override) entwickelt. Die erste ermöglicht Chowner Prozess PHP dynamisch (ob in CGI oder Fast-CGI) mit der UID des Besitzers 
+des Skripts. Die zweite gibt die Möglichkeit, jede integrierte PHP-Funktion mit einer benutzerdefinierten Funktion zu zerquetschen 
+(Quote auf <i>mail()</i>, prüft auf <i>shell_exec()</i> identisch usw....). "
+
+phpkiller = "PHP Killer"
+phpkiller_text = "PHP-Killer ist ein JAVA-Programm, das Verhalten von PHP-CGI-Prozess überwacht und somit einen stetigen 
+Strom von der Plattform gewährleistet.Es enthält eine Uhr, die Überwachung der Ausführungszeit, Speicher und CPU, 
+die vom Prozess verwendet wird. Im Falle einer Anomalie kann weiß/grau/schwarz-Listen Sie die Zuverlässigkeit der Skripts warnen 
+und damit Verhinderung von Störungen oder Missbrauch anpassen."
+
+ftpfilter = "FTP Filter"
+ftpfilter_text = "Vor kurzem Zeit erweitert für SFTP-Unterstützung, ist FTP-Protokolle-Filter ein JAVA-Programm, 
+das in Echtzeit Protokolle hochladen auf der Plattform analysiert und die Dateien mit einer Reihe von Aktionen, 
+die in der Konfiguration definierten Regeln sind, scannt. Es dient auch zur Beseitigung der Viren und Phishing Verbreitung, um Benachrichtigungen 
+bei Verhaltensauffälligkeiten Ausstellungen...""
+
+access = "Zugangsdaten"

@@ -51,3 +51,21 @@ le développement web ou les interactions communautaires, vous pouvez nous <a hr
 <br /><br />En tant que membre de l'équipe, vous devenez pleinement adhérent à l'association Olympe et de ce fait vous avez la possibilité d'aller représenter l'association lors de salons ou de conférences."
 contact = "Contactez-nous"
 help = "Rejoignez notre équipe"
+
+[DE]
+title = "Unser Team"
+yann = "Engineer <br />Co-Gründer"
+sam = "Engineer <br />Co-Gründer"
+simon = "Engineer <br />Co-Gründer"
+bruno = "Engineer <br />Administrator"
+gaetan = "Engineer <br />Administrator"
+thomas = "Student <br />Administrator / Entwickler"
+herve = "Student <br />Administrator / Support"
+gael = "Engineer<br />Administrator / Entwickler"
+
+hiring = "Wir sind recruiting!"
+hiring_text = "Olympus sucht derzeit neue Mitglieder in die Entwicklungsteam. Es ist für Freiwilligenarbeit, aber wenn Sie IT-Infrastruktur, Web-Entwicklung oder Community-Interaktion interessiert sind, 
+können Sie Ihnen mit uns <a href='/about/contact'> in Verbindung setzen </a>"
+<br/><br/>
+contact = "Kontakt"
+help = "Verstärken Sie unser Team"

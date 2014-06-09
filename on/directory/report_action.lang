@@ -1,10 +1,23 @@
 [EN]
+subject = "Olympe - New abuse report"
+content = "<p style='margin: 20px 0;'>A new abuse report has been posted on the site  <span style='font-weight: bold;'><a href='http://{SITE}'>http://{SITE}</a></span>.</p>
+<p style='margin: 20px 0;'>Summary : {DESCRIPTION}</p>
+<p style='margin: 20px 0;'>Content : {CONTENT}</p>
+"
 success = "Your message has been successfully sent. Thanks for your bug report!"
 
 [FR]
-subject = "[Olympe Nouveau rapport d'abus"
+subject = "Olympe - Nouveau rapport d'abus"
 content = "<p style='margin: 20px 0;'>Un nouveau rapport d'abus a été posté concernant le site <span style='font-weight: bold;'><a href='http://{SITE}'>http://{SITE}</a></span>.</p>
 <p style='margin: 20px 0;'>Résumé : {DESCRIPTION}</p>
 <p style='margin: 20px 0;'>Contenu : {CONTENT}</p>
 "
 success = "Votre message a bien été envoyé. Merci pour votre rapport !"
+
+[DE]
+subject = "Olympe - Neue Beschwerde"
+content = "<p style='margin: 20px 0;'>Eine neue Beschwerde auf der Website <span style='font-weight: bold;'><a href='http://{SITE}'>http://{SITE}</a></span>ist bekanntgegeben worden.</p>
+<p style='margin: 20px 0;'>Zusammenfassung : {DESCRIPTION}</p>
+<p style='margin: 20px 0;'>Inhalt : {CONTENT}</p>
+"
+success = "Ihre Nachricht wurde erfolgreich versendet. Vielen Dank !"

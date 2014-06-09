@@ -76,3 +76,48 @@ status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Fe
 new_info_title = "Informations préalables"
 new_info_contain = "<u>Si votre demande <b> ne concerne pas</b> une augmentation de quota</u> : cette interface ne doit être utilisée <b>que</b> pour solliciter une augmentation de <a href='/panel/quotas'>vos quotas</a>. Aucune assistance ne sera fournie via cette interface : merci de poster votre question sur <a href='https://community.olympe.in'>le support</a>, le cas échéant.<br /><br /><u>Si votre demande concerne une augmentation de quota</u> : conformément aux <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions générales d'utilisation</a>, il est nécessaire de présenter votre projet pour <b>toute augmentation de quota</b> (site, domaine, espace disque...). Pour cela, il vous faut indiquer les informations qui peuvent nous permettre d'<b>apprécier de l'opportunité de votre demande</b> (<i>exemple : l'intérêt de votre site, le sujet qu'il traite, le public auquel il se destine, etc.</i>) Si vous sollicitez une augmentation du nombre de site, pensez également à présenter le(s) site(s) que vous avez déjà réalisé."
 continue = "Poursuivre"
+
+[DE]
+title = "Anwendungen (Quote)"
+add = "Neue Anfrage"
+search = "Suchen"
+nomessage = "Keine Anwendung anzuzeigen."
+support = "Technischer Support"
+delete = "Löschen"
+delete_text = "Sind Sie sicher, dass Sie diese Nachricht löschen möchten ?"
+delete_now = "Bestätigen"
+new = "Neue Anfrage"
+new_text = "Bitte geben Sie Ihre Anfrage."
+type_help = "Art der Anwendung"
+quota = "Quote erhöhen"
+quota_select = "Typ der Quote"
+type_1 = "Quote erhöhen"
+disk = "Speicherplatz"
+sites = "Anzahl der Webseiten"
+number = "Eine Zahl"
+number_help = "Quote gewünscht"
+dbs = "Datenbanken"
+domains = "Anzahl der Domänen"
+subject = "Betreff"
+title_help = "Betreff Ihrer Anfrage"
+content_help = "Danke voll rechtfertigen Ihre Anfrage !"
+create = "Erstellen"
+type = "Art der Anwendung"
+date = "Datum"
+user = "User"
+dateformat = "d/m/Y"
+subject = "Betreff der Anwendung"
+status = "Status"
+actions = "Aktionen"
+status_1 = "<span style='color: #d44343; font-weight: bold; font-size: 17px;'>Ausstehende</span>"
+status_2 = "<span style='color: #298b22; font-weight: bold; font-size: 17px;'>Geantwortet </span>"
+status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Geschlossen </span>"
+new_info_title = "Information"
+new_info_contain = <u>Wenn Ihre Anwendung <b>nicht auf einen Anstieg der Quote bezieht</b>: diese Schnittstelle muss verwendet werden, 
+um eine Erhöhung des Quotes zu beantragen. Keine Unterstützung werden Sie über diese Schnittstelle erhalten: Bitte wenden Sie Ihnen
+an <a href='https://community.olympe.in'>das Forum</a> gegebenenfalls.<br/><br/><u> Wenn Ihre Anfrage eine Zunahme der Quote betrifft</u>: 
+gemäß den <a href='/on/documents/Olympe-CGS-FR.pdf'>allgemeinen Bedingungen der Nutzung</a>, ist es notwendig, Ihr Projekt auf <b>Erhöhungen des Quotes</b> 
+(Website, Domain, Speicherplatz...) zu präsentieren. Hierzu müssen Sie Informationen, die uns ermöglicht, <b> die Zweckmäßigkeit Ihrer Anfrage zu schätzen</b> 
+(<i>Beispiel: das Interesse von Ihrer Seite, zum Thema, die er behandelt, das Publikum, für die es bestimmt ist, usw..</i>), angeben. 
+Wenn Sie eine Zunahme der Zahl der Website anfordern, sollten Sie auch vorhanden Website Sie bereits erreicht haben präsentieren."
+continue = "Weiter"
