@@ -65,6 +65,6 @@ ftpfilter = "FTP Filter"
 ftpfilter_text = "Vor kurzem Zeit erweitert für SFTP-Unterstützung, ist FTP-Protokolle-Filter ein JAVA-Programm, 
 das in Echtzeit Protokolle hochladen auf der Plattform analysiert und die Dateien mit einer Reihe von Aktionen, 
 die in der Konfiguration definierten Regeln sind, scannt. Es dient auch zur Beseitigung der Viren und Phishing Verbreitung, um Benachrichtigungen 
-bei Verhaltensauffälligkeiten Ausstellungen...""
+bei Verhaltensauffälligkeiten Ausstellungen..."
 
 access = "Zugangsdaten"
