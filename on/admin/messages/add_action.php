@@ -48,6 +48,9 @@ catch( Exception $e )
 	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
 }
 
+if(isset($_POST['close']) && ($_POST['close']==1)) 
+	api::send('message/update', array('id'=>$_POST['parent'], 'status'=>3));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
