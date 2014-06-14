@@ -113,7 +113,7 @@ status_1 = "<span style='color: #d44343; font-weight: bold; font-size: 17px;'>Au
 status_2 = "<span style='color: #298b22; font-weight: bold; font-size: 17px;'>Geantwortet </span>"
 status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Geschlossen </span>"
 new_info_title = "Information"
-new_info_contain = <u>Wenn Ihre Anwendung <b>nicht auf einen Anstieg der Quote bezieht</b>: diese Schnittstelle muss verwendet werden, 
+new_info_contain = "<u>Wenn Ihre Anwendung <b>nicht auf einen Anstieg der Quote bezieht</b>: diese Schnittstelle muss verwendet werden, 
 um eine Erhöhung des Quotes zu beantragen. Keine Unterstützung werden Sie über diese Schnittstelle erhalten: Bitte wenden Sie Ihnen
 an <a href='https://community.olympe.in'>das Forum</a> gegebenenfalls.<br/><br/><u> Wenn Ihre Anfrage eine Zunahme der Quote betrifft</u>: 
 gemäß den <a href='/on/documents/Olympe-CGS-FR.pdf'>allgemeinen Bedingungen der Nutzung</a>, ist es notwendig, Ihr Projekt auf <b>Erhöhungen des Quotes</b> 
