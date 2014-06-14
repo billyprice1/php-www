@@ -103,3 +103,38 @@ alors qu'elle sait cette information inexacte, <strong>est puni</strong> d'une p
 <li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>la copie de la correspondance adressée à l'auteur ou à l'éditeur des activités litigieuses demandant leur interruption, leur retrait 
 ou leur modification, ou la justification de ce que l'auteur ou l'éditeur n'a pu être contacté.</li>
 </ul>"
+
+[DE]
+title = "Kontakt"
+send = "Schreiben Sie uns"
+send_text = "Haben Sie ein Problem mit der Nutzung der Plattform ?  Finden Sie keine Antwort auf Ihre Frage in unserer <a href='https://www.olympe.in/doc'>Dokumentation</a> ?
+<br /> Sollten Sie Fragen haben, können Sie <a href='https://community.olympe.in'>das Forum</a> verwenden. Technischen Fragen werden nicht beantworten werden.
+<br /><br /> Wenn Sie mehr Informationen über unserer Leistungen oder wenn Sie Ihnen einfach mit uns in Verbindung setzen möchten, bitte fühlen Sie das Kontaktformular aus."
+infos = "Informationen"
+meet = "Treffen Sie uns"
+meet_text = "Olympe ist eine Non-Profit-Vereinigung, deren Betriebssitz in Paris, Frankreich steht."
+name = "Name"
+email = "E-Mail-Adresse"
+subject = "Anliegen"
+message = "Nachricht "
+send_now = "Senden"
+follow = "Follow us"
+news = "Nachrichten"
+account = "Olympe Account(wenn vorhanden)"
+email_wrong = "Das Format der e-Mail-Adresse ist falsch"
+
+report = "Illegale Inhalte melden"
+report_text = "Gemäß Gesetz Nr. 2004-575 der 21. Juni 2004 über das Vertrauen in die digitale Wirtschaft, haben Sie die Möglichkeit uns von Olympus, gehosteten Inhalte <strong> zu informieren<strong>"
+voraussichtlich eine strafbare Handlung charakterisieren </strong>, einschließlich Straftaten der Entschuldigung der Verbrechen gegen die Menschlichkeit, Anstiftung zum Rassenhass und Kinderpornographie.
+<br /><br/>
+Wir erinnern Sie daran, dass Artikel 4 des Gesetzes bereitstellt, das Scheitern <em> einreichen 'Inhalte oder Aktivitäten als illegaler sucht die Rücknahme oder die Sendung zu stoppen' während sie diese ungenaue Informationen kennt, 
+ist <strong> bestraft </strong> eine Strafe von einem Jahr in Haft und Geldstrafe von 15.000 Euro </em>.
+<br/><br/>
+<strong>Illegale Inhalte melden, senden Sie bitte eine e-Mail an folgende Adresse: </strong ><a href = 'mailto:abuse@olympe.in'> abuse@olympe.in </a>, einschließlich: 
+<ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
+<li style='padding-left: 10px; padding-bottom: 10px;'>Ihre vollständige Identität,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>die Adresse der Seite betrifft/den Seiten betroffen </li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>der Grund für Ihre Anfrage,</li>
+<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>die Kopie der Korrespondenz an den Autor oder an die Redaktion der umstrittenen Aktivitäten Fragen ihre Unterbrechung, ihren Rückzug 
+Ihre Änderung oder Begründung für was der Autor oder Herausgeber konnte kontaktiert werden.</li>
+</ul>"

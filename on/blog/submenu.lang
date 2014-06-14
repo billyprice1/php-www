@@ -15,3 +15,9 @@ menu_actions = "Actions et projets"
 menu_last = "Actualités"
 menu_press = "Presse"
 menu_help = "Aide et financement"
+
+[DE]
+menu_actions = "Aktionen und Projekte"
+menu_last = "Nachrichten"
+menu_press = "Medien"
+menu_help = "Hilfe und Finanzierung"

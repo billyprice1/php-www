@@ -2,3 +2,6 @@
 
 [FR]
 success = "Votre base de données a bien été migrée."
+
+[DE]
+success = "Ihre Datenbank ist erfolgreich umgestellt worden"

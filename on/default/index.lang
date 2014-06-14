@@ -31,7 +31,6 @@ logged = "Login as"
 conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
 hosted = "Want to know our references ?"
 directory = "Search our index"
-remember = "Remember me"
 
 [ES]
 title = "Solidaridad y Innovación"
@@ -65,7 +64,6 @@ logged = "Conectado como"
 conditions = "He leído y acepto las <a href='/on/documents/Olympe-CGS-FR.pdf'>Condiciones Generales de Utilización</a>."
 hosted = "¿Quiénes son las personas y las organizaciones alojados en Olympe?"
 directory = "Ver el directorio"
-remember = "Mantenerme conectado"
 
 [FR]
 title = "Solidarité et innovation"
@@ -103,4 +101,34 @@ logged = "Identifié en tant que"
 conditions = "J'ai lu et j'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions Générales d'Utilisation</a>."
 hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
 directory = "Consultez notre annuaire"
-remember = "Se souvenir de moi"
+
+[DE]
+title = "Solidarität und Innovation"
+subtitle = "Free hosting ohne Werbung und verwandte Dienstleistungen."
+signup = "Registrieren"
+login_now = "oder sich anmelden"
+username = "Benutzername"
+password = "Passwort"
+login = "Login"
+email = "E-Mail"
+free = "Frei"
+free_text = "Wir sind ein non-Profit-Verein, wir <a href='/org'>arbeiten</a> für eine bessere Zugänglichkeit zu Technologie."
+open = "Open"
+open_text = "Wir veröffentlichen unsere <a href='https://github.com/OlympeNetwork'>Source-Code</a> und unserer Arbeit. Tools und eine API für <a href='/developers'>Entwickler</a> verfügbar."
+innovation = "Innovative"
+innovation_text = "Wir verwenden die neuesten <a href='/service/infrastructure'>Technologien</a> und konzentrieren uns hauptsächlich auf die <a href='/status'>Service-Verfügbarkeit.</a>"
+app = "PHP-Anwendungen und Dienste"
+app_text = "Seit mehr als 6 Jahren, bietet Olympe eine <a href='/service/hosting'>kostenloses Hosting</a> ohne Werbung. Von eine einfache PHP/MySQL Anbieten, ist die Plattformnach nach und nach entwickelt worden, und bietet heute <a href='/service/offer'>andere Technologien</a>(PostgreSQL, MongoDB...).<br/><br/>Neben der hosting-Raum bieten wir <a href='/service/offer'>vollständige Verwaltung</a> von Domain-Namen (Sub-Domains, DNS-Records), die POP/IMAP (Weiterleitungen, Aliase...)-Mail-Konten, Kalender und geteilten Agenden."
+manage = "Erweiterte Funktionen"
+manage_text = "Wir fördern eine <a href='/doc/cloud'>Cloud Anwendung</a>, die Synchronisation, Speicherung und gemeinsame Nutzung von Dateien erlaubt. 
+Diese Lösung enthält eine Schnittstelle für die Visualisierung von Dateien (Download, Edition, Galerien...), sowie die Wiederherstellung von gelöschten Dateien.
+<br /><br />
+Unsere Plattform ist vollständig selbst finanziert und ist von <a href='/about/team'>einem Team von Freiwilligen</a> gepflegt. Sie können uns <a href='/org/help'>helfen</a>, die Kosten im Zusammenhang mit dem Dienst. 
+Wenn Sie Fragen haben oder wenn Sie an dem Projekt teilnehmen möchten, bitte <a href='/about/contact'>setzen Sie Sie in Verbindung mit uns</a>."
+signup_now = "Jetzt registrieren"
+help = "Eine Frage ? Zögern Sie nicht uns <a href='/about/contact'>zu kontaktieren</a>."
+panel = "Panel"
+logged = "Gekennzeichnet als"
+conditions = "Ich habe <a href='/on/documents/Olympe-CGS-FR.pdf'>die allgemeinen Nutzungsbedingungen</a> gelesen und akzeptiere die."
+hosted = "Möchten Sie unsere Referenzen erfahren?"
+directory = "Sehen Sie unser Verzeichnis"

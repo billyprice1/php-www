@@ -21,3 +21,11 @@ menu_team = "Equipe"
 menu_partners = "Partenaires"
 menu_legal = "Conditions"
 menu_reference = "Références"
+
+[DE]
+menu_overview = "Vorschau"
+menu_contact = "Kontakt"
+menu_team = "Team"
+menu_partners = "Partner"
+menu_legal = "Bedingungen"
+menu_reference = "Referenzen"

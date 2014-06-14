@@ -27,7 +27,7 @@ foreach( $response['monitors']['monitor'] as $m )
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
-$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
+$issues = $client->api('issue')->all(array('project_id' => 'infrastructure'));
 $issues = $issues['issues'];
 
 $content = "

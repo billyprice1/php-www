@@ -25,3 +25,17 @@ date = "Date"
 ip = "Adresse IP"
 actions = "Actions"
 dateformat = "d/m/Y H:i:s"
+
+[DE]
+title = "Protokolle der Plattform"
+search = "Suchen"
+delete = "Löschen"
+delete_text = "Sie können keine Protokolle löschen"
+
+user = "User"
+method = "Methode"
+params = "Einstellungen"
+date = "Datum"
+ip = "IP Address"
+actions = "Aktionen"
+dateformat = "d/m/Y H:i:s"

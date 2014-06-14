@@ -9,3 +9,7 @@ description = "Los diez últimos mensajes del blog de ​​la asociación Olymp
 [FR]
 channel = "Actualités du réseau Olympe" 
 description = "Les dix derniers billets du blog de l'association Olympe, hébergeur gratuit et sans publicité."
+
+[DE]
+channel = "Olympe Network News" 
+description = "Letzte zehn Blog-posts von Olympe, freie und kostenlose Werbung Hoster."

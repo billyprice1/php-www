@@ -144,10 +144,6 @@ $content .= "
 					<span class=\"help-block\">{$lang['content_help']}</span>
 				</fieldset>
 				<fieldset>
-					{$lang['close']} : 
-					<input type=\"checkbox\" name=\"close\" value=\"1\" />
-				</fieldset>
-				<fieldset>
 					<input autofocus type=\"submit\" value=\"{$lang['send']}\" />
 				</fieldset>
 			</form>

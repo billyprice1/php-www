@@ -5,3 +5,8 @@ error = "Domain name format or folder format is wrong, or your <a href='/panel/q
 [FR]
 folder = "dossier de destination"
 error = "Le format du nom de domaine ou de dossier est incorrect ou votre <a href='/panel/quotas'>quota</a> est atteint."
+
+[DE]
+folder = "Zielordner"
+error = "Das Format der Domäne/Ordner-Name ist falsch oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+

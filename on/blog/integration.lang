@@ -7,7 +7,7 @@ read = "Read more"
 by = "by"
 DATEFORMAT = "M d, Y"
 
-[FR]
+[ES]
 title = "Blog del equipo"
 
 rss = "Suscribir"
@@ -23,4 +23,13 @@ rss = "S'abonner"
 follow = "Suivre"
 read = "Lire la suite"
 by = "par"
+DATEFORMAT = "d M, Y"
+
+[DE]
+title = "Team Blog"
+
+rss = "Abonnieren"
+follow = "Folgen"
+read = "Weiterlesen"
+by = "von"
 DATEFORMAT = "d M, Y"

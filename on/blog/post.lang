@@ -75,3 +75,29 @@ react = "Réagir à cet article"
 
 olympe = "Olympe - "
 comments = "Commentaires"
+
+[DE]
+by = "von"
+DATEFORMAT = "d F Y"
+January = "Januar"
+February = "Februar"
+March = "März"
+April = "April"
+May = "Mai"
+June = "Juni"
+July = "Juli"
+August = "August"
+September = "September"
+October = "Oktober"
+November = "November"
+December = "Dezember"
+
+author_1 = "Yann Autissier"
+author_2 = "Bruno Million"
+author_3 = "Samuel Hassine"
+author_4 = "Simon Uyttendaele"
+
+react = "Auf diesen Artikel reagieren"
+
+olympe = "Olympe - "
+comments = "Kommentare"

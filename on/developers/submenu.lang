@@ -1,7 +1,17 @@
 [EN]
+menu_home = "Developers"
+menu_api = "Management API"
+menu_tools = "Developed tools"
+menu_sources = "Source code"
 
 [FR]
 menu_home = "Développeurs"
 menu_api = "API de gestion"
 menu_tools = "Outils développés"
 menu_sources = "Codes sources"
+
+[DE]
+menu_home = "Entwickler"
+menu_api = "Management API"
+menu_tools = "Entwickelte Tools"
+menu_sources = "Quellcode"
