@@ -46,7 +46,7 @@ description_help = "Beschreibung dieser Datenbank"
 type_help = "Datenbank-Typ"
 
 delete = "Datenbank löschen"
-delete_text = "Sind Sie sicher, dass Sie diese Datenbank löschen möchten ?""
+delete_text = "Sind Sie sicher, dass Sie diese Datenbank löschen möchten ?"
 delete_now = "Löschen"
 connection = "Login-Informationen"
 
