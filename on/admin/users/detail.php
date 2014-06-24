@@ -192,6 +192,7 @@ $content .= "
 					<table>
 						<tr>
 							<th>{$lang['type']}</th>
+							<th>{$lang['server']}</th>
 							<th>{$lang['database']}</th>
 							<th>{$lang['size']}</th>
 							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
@@ -207,6 +208,7 @@ if( security::hasGrant('DATABASE_SELECT') )
 		$content .= "
 						<tr>
 							<td>{$d['type']}</td>
+							<td>{$d['server']}</td>
 							<td>{$d['name']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">

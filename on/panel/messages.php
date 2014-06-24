@@ -103,15 +103,15 @@ $content .= "
 							<span class=\"help-block\">{$lang['quota_select']}</span>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" type=\"text\" style=\"width: 400px;\" value=\"{$lang['number']}\" name=\"max\" onfocus=\"this.value = this.value=='{$lang['number']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['number']}' : this.value; this.value=='{$lang['number']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto req\" type=\"text\" style=\"width: 400px;\" name=\"max\" placeholder=\"{$lang['number']}\" />
 							<span class=\"help-block\">{$lang['number_help']}</span>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" type=\"text\" style=\"width: 400px;\" maxlenght=\"150\" value=\"{$lang['subject']}\" name=\"title\" onfocus=\"this.value = this.value=='{$lang['subject']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['subject']}' : this.value; this.value=='{$lang['subject']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto req\" type=\"text\" style=\"width: 400px;\" maxlenght=\"150\" name=\"title\" placeholder=\"{$lang['subject']}\" />
 							<span class=\"help-block\">{$lang['title_help']}</span>
 						</fieldset>
 						<fieldset>
-							<textarea class=\"auto\" style=\"width: 400px; height: 100px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
+							<textarea class=\"auto req\" style=\"width: 400px; height: 100px;\" name=\"content\" placeholder=\"{$lang['content']}\"></textarea>
 							<span class=\"help-block\">{$lang['content_help']}</span>
 						</fieldset>
 						<fieldset autofocus>
