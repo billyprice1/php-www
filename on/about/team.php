@@ -20,6 +20,12 @@ $content = "
 				<span style=\"color: #a8a8a8; font-size: 12px;\">yann.autissier@olympe.in</span><br />
 			</div>
 			<div style=\"float: left; text-align: center; width: 275px;\">
+				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/9.png\" /></a><br />
+				<span style=\"color: #de5711; font-size: 20px;\" id=\"Tristan Le Chanony\">Tristan Le Chanony</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['tristan']}</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">tristan.lechanony@olympe.in</span><br />
+			</div>
+			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/6.png\" /></a><br />
 				<span style=\"color: #de5711; font-size: 20px;\" id=\"Herv&eacute; Cognet\">Herv&eacute; Cognet</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['herve']}</span><br />
@@ -31,13 +37,13 @@ $content = "
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['gael']}</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">gael.frouin@olympe.in</span><br />
 			</div>
+			<div class=\"clear\"></div><br />
 			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"https://twitter.com/SamuelHassine\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/3.png\" /></a><br />
 				<span style=\"color: #de5711; font-size: 20px;\" id=\"Samuel Hassine\">Samuel Hassine</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['sam']}</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">samuel.hassine@olympe.in</span><br />
 			</div>
-			<div class=\"clear\"></div><br />
 			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"https://twitter.com/BrunoMillion\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/2.png\" /></a><br />
 				<span style=\"color: #de5711; font-size: 20px;\" id=\"Bruno Million\">Bruno Million</span><br />
@@ -55,7 +61,20 @@ $content = "
 				<span style=\"color: #de5711; font-size: 20px;\" id=\"Ga&euml;tan Parisse\">Ga&euml;tan Parisse</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['gaetan']}</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">gaetan.parisse@olympe.in</span><br />
-			</div>			
+			</div>
+			<div class=\"clear\"></div><br />
+			<div style=\"float: left; text-align: center; width: 275px;\">
+				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/11.png\" /></a><br />
+				<span style=\"color: #de5711; font-size: 20px;\" id=\"Romain Perronne\">Romain Perronne</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['romain']}</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">romain.perronne@olympe.in</span><br />
+			</div>
+			<div style=\"float: left; text-align: center; width: 275px;\">
+				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/10.png\" /></a><br />
+				<span style=\"color: #de5711; font-size: 20px;\" id=\"Remi Rondia\">R&eacute;mi Rondia</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['remi']}</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">remi.rondia@olympe.in</span><br />
+			</div>
 			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"https://twitter.com/suytt\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/4.png\" /></a><br />
 				<span style=\"color: #de5711; font-size: 20px;\" id=\"Simon Uyttendaele\">Simon Uyttendaele</span><br />
