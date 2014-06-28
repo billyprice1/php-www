@@ -65,9 +65,9 @@ $content = "
 			<div class=\"clear\"></div><br />
 			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/11.png\" /></a><br />
-				<span style=\"color: #de5711; font-size: 20px;\" id=\"Romain Perronne\">Romain Perronne</span><br />
+				<span style=\"color: #de5711; font-size: 20px;\" id=\"Romain Perrone\">Romain Perrone</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['romain']}</span><br />
-				<span style=\"color: #a8a8a8; font-size: 12px;\">romain.perronne@olympe.in</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">romain.perrone@olympe.in</span><br />
 			</div>
 			<div style=\"float: left; text-align: center; width: 275px;\">
 				<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/10.png\" /></a><br />
