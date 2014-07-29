@@ -86,6 +86,7 @@ uggsrock.com
 vidchart.com
 yopmail.com
 yopmail.fr
+yopmail.org
 ypmail.webarnak.fr.eu.org
 cashette.com
 cashette.fr
@@ -183,3 +184,4 @@ easy-trash-mail.com
 easytrashmail.com
 email-jetable.biz.st
 bitmessage.ch
+mailHazard.com
