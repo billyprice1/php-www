@@ -11,9 +11,9 @@ $params = array('site'=>$_POST['id']);
 if( $_POST['pass'] && $_POST['confirm'] == $_POST['pass'] )
 	$params['pass'] = $_POST['pass'];
 if( $_POST['title'] )
-	$params['title'] = $_POST['title'];
+	$params['title'] = str_replace("'", "&#39;", htmlspecialchars($_POST['title']));
 if( $_POST['description'] )
-	$params['description'] = $_POST['description'];
+	$params['description'] = str_replace("'", "&#39;", htmlspecialchars($_POST['description']));
 if( $_POST['category'] )
 	$params['category'] = $_POST['category'];
 if( $_POST['directory'] == 1 )

@@ -137,6 +137,7 @@ $content .= "
 				newFlexibleDialog('delete', 550);
 				newFlexibleDialog('preinfo', 700);
 			</script>
+			<script type=\"text/javascript\" src=\"/{$GLOBALS['CONFIG']['SITE']}/js/checkForm.js\"></script>
 ";
 
 /* ========================== OUTPUT PAGE ========================== */
