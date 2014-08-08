@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 channel = "News of the Olympe platform" 
 description = "The last ten blog posts of the Olympe association, free hosting without ads."
 
@@ -13,3 +13,7 @@ description = "Les dix derniers billets du blog de l'association Olympe, héberg
 [DE]
 channel = "Olympe Network News" 
 description = "Letzte zehn Blog-posts von Olympe, freie und kostenlose Werbung Hoster."
+
+[IT]
+channel = "Annunci & Aggiornamenti sulla piattaforma Olympe" 
+description = "Gli ultimi dieci post del blog dell'associazione Olympe, servizio gratuito senza pubblicità."

@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Our team"
 yann = "Engineer<br />Co-founder"
 sam = "Engineer<br />Co-founder"
@@ -8,9 +8,9 @@ gaetan = "Engineer<br />Administrator"
 thomas = "Student<br />Administrator / Developer"
 herve = "Student<br />Administrator / Support"
 gael = "Engineer<br />Administrator / Developer"
-tristan = "Student<br />Administrator / Developer"
 romain = "Student<br />Administrator"
 remi = "Education Officer<br />Administrator / Support"
+tristan = "Student<br />Administrator / Developer"
 
 hiring = "We're hiring !"
 hiring_text = "Olympe is currently searching for new staff members. Of course, this is a volunteer and remote work, but if you are interested in infrastructure technologies,
@@ -29,9 +29,9 @@ gaetan = "Ingeniero<br />Administrador"
 thomas = "Estudiante<br />Administrador / Developer"
 herve = "Estudiante<br />Administrador / Soporte"
 gael = "Ingeniero<br />Administrador / Developer"
-tristan = "Estudiante<br />Administrador / Developer"
 romain = "Estudiante<br />Administrador"
 remi = "Educador<br />Administrador / Soporte"
+tristan = "Estudiante<br />Administrador / Developer"
 
 hiring = "¡Estamos reclutando!"
 hiring_text = "Olympe está buscando nuevos miembros en el staff. Por supuesto, es un trabajo voluntario y a distancia, pero si estás interesado en las tecnologías de infraestructura,
@@ -50,9 +50,9 @@ gaetan = "Ingénieur<br />Administrateur"
 thomas = "Étudiant<br />Administrateur / Développeur"
 herve = "Étudiant<br />Administrateur / Support"
 gael = "Ingénieur<br />Administrateur / Développeur"
-tristan = "Étudiant<br />Administrateur / Développeur"
-romain = "Étudiant<br />Administrateur"
+romain = "Etudiant<br />Administrateur"
 remi = "Agent d'éducation<br />Administrateur / Support"
+tristan = "Étudiant<br />Administrateur / Développeur"
 
 hiring = "Nous recrutons !"
 hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
@@ -71,9 +71,9 @@ gaetan = "Engineer <br />Administrator"
 thomas = "Student <br />Administrator / Entwickler"
 herve = "Student <br />Administrator / Support"
 gael = "Engineer<br />Administrator / Entwickler"
-tristan = "Student <br />Administrator / Entwickler"
-romain = "Student <br />Administrator"
+romain = "Student<br />Administrator"
 remi = "Education Officer<br />Administrator / Support"
+tristan = "Student <br />Administrator / Entwickler"
 
 hiring = "Wir sind recruiting!"
 hiring_text = "Olympus sucht derzeit neue Mitglieder in die Entwicklungsteam. Es ist für Freiwilligenarbeit, aber wenn Sie IT-Infrastruktur, Web-Entwicklung oder Community-Interaktion interessiert sind, 
@@ -81,3 +81,24 @@ können Sie Ihnen mit uns <a href='/about/contact'> in Verbindung setzen </a>"
 <br/><br/>
 contact = "Kontakt"
 help = "Verstärken Sie unser Team"
+
+[IT]
+title = "La squadra Olympe"
+yann = "Tecnico<br />Co-fondatore"
+sam = "Tecnico<br />Co-fondatore"
+simon = "Tecnico<br />Co-fondatore"
+bruno = "Tecnico<br />Amministratore"
+gaetan = "Tecnico<br />Amministratore"
+thomas = "Studente<br />Amministratore / Sviluppatore"
+herve = "Studente<br />Amministratore / Supporto"
+gael = "Tecnico<br />Amministratore / Sviluppatore"
+romain = "Studente<br />Amministratore"
+remi = "Education Officer<br />Amministratore / Supporto"
+tristan = "Studente <br />Amministratore / Sviluppatore"
+
+hiring = "Stiamo reclutando!"
+hiring_text = "Olympe stà attualmente cercando per nuovi membri del personale. Certamente, questo è un lavoro volontario e da casa, ma se sei interessato nelle tecnologie delle infrastrutture,
+nello sviluppo, o nella gestione della community, puoi <a href='/about/contact'>contattarci</a> e spiegarci la tua richiesta. 
+<br /><br />Come membro del personale, aderisci in tutto e per tutto all'organizzazione Olympe, e in questo senso potresti dover rappresentare l'associazione durante incontri o conferenze"
+contact = "Contattaci"
+help = "Entra a far parte del personale"

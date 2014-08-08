@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 error = "A field isn't well filled"
 type = "Request"
 quota = "Quota increase"
@@ -41,3 +41,14 @@ sites = "Webseiten Anzahl"
 dbs = "Datenbanken"
 domains = "Domänen Anzahl"
 request = "Geforderte Quote :"
+
+[IT]
+error = "Un campo non è stato compilato correttamente"
+type = "Richiesta"
+quota = "Aumento di spazio"
+select = "Tipo di spazio :"
+disk = "Spazio su disco"
+sites = "Numero di siti"
+dbs = "Numero di database"
+domains = "Numero di nomi di dominio"
+request = "Spazio desiderato :"

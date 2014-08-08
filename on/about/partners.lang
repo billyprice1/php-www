@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Partners"
 
 interxion = "With more than 34 datacenters in 11 countries, Interxion is a leading provider of cloud- and carrier-neutral colocation data centre services, neutral over european Cloud and Telecom operators.
@@ -12,3 +12,27 @@ title = "Partenaires"
 interxion = "Avec plus de 34 datacenters dans 11 pays, Interxion est l'un des principaux fournisseurs de colocations neutres vis-à-vis des acteurs du cloud et des opérateurs Télécom en Europe.
 Interxion fournit à Olympe plusieurs emplacements dans ses datacenters parisiens et l'une de ses fibres noires."
 as = "Another Service est un fournisseur de solutions d'hébergement PaaS/IaaS, spécialisé dans les applications critiques et les infrastructures très haute disponibilité. Another Service opère le réseau et finance les serveurs physiques d'Olympe."
+
+[ES]
+title = "Partners"
+
+interxion = "With more than 34 datacenters in 11 countries, Interxion is a leading provider of cloud- and carrier-neutral colocation data centre services, neutral over european Cloud and Telecom operators.
+Interxion provides Olympe several locations in its parisian datacenters and one of its dark fibre."
+as = "Another Service is a PaaS/Iaas host solutions, specialised in critical applications and high availability infrastructure. Another
+Service operates Olympe's network and funds up its physical servers."
+
+[DE]
+title = "Partners"
+
+interxion = "With more than 34 datacenters in 11 countries, Interxion is a leading provider of cloud- and carrier-neutral colocation data centre services, neutral over european Cloud and Telecom operators.
+Interxion provides Olympe several locations in its parisian datacenters and one of its dark fibre."
+as = "Another Service is a PaaS/Iaas host solutions, specialised in critical applications and high availability infrastructure. Another
+Service operates Olympe's network and funds up its physical servers."
+
+[IT]
+title = "Partners"
+
+interxion = "Con più di 34 datacenters in 11 nazioni, Interxion è il maggior fornitore di servizi cloud e di servizi di database, con operatori Cloud e Telecom.
+Interxion fornisce a Olympe molte collocazioni fin dai suoi datacenter parigini"
+as = "Un altro servizio è una soluzione PaaS/Iaas per l'hoting, specializzato in applicazioni e infrastrutture ad alta disponibilità. Un altro
+servizio nella rete Olympe che gestisce i suoi database."

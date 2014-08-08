@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 users = "users"
 databases = "databases and"
 sites = "websites"
@@ -21,3 +21,9 @@ users = "Users"
 databases = "Datenbanken und"
 sites = "Webseiten"
 domains = "Domain-Namen."
+
+[IT]
+users = "utenti"
+databases = "databases e"
+sites = "siti web"
+domains = "domini."

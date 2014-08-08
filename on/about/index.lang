@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "About Olympe"
 
 intro = "Who are we?"
@@ -125,3 +125,34 @@ Ihre Sprache, und einige nützliche spezifische Parameter für die Nutzung der D
 Ihre Spracheinstellungen und Analisierung Besuche auf unseren Seiten "
 
 cookie_no = "Cookies nicht verwenden"
+
+[IT]
+title = "Su Olympe"
+
+intro = "Chi siamo?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> è un'organizzazione non a scopo di lucro il cui obbiettivo principale è quello di migliorare <span style='font-weight: bold;'>l'accessibilitò alle tecnologie di informazione e comunicazione</span>. 
+Olympe favorisce i contenuti dei vostri siti fornendo un <a href='/service/hosting'>servizio gratuito di hosting</a>.
+<br /><br />
+Provvediamo a tutto (servizi, piattaforme, sviluppo e innovazione,...) e alle operazioni (insegnamento, sviluppo, aiuto...). Abbiamo il desiderio di sviluppare i campi delle nostre attività e
+siamo sempre attenti ad ascoltare i bisogni individuali e collettivi. Non esitate a <a href='/about/contact'>contattarci</a> se pensate che possiamo esservi utili in ambito
+giuridico o se avete sugerimenti per la piattaforma"
+
+data = "Politica sulla Privacy"
+data_text = "Le informazioni che vengono fornite su questa piattaforma, come i vostri dati personali, ecc attraverso la registrazione, le email, i forum o utilizzando il form di contatto sono gestite automaticamente dal sistema. Non saranno utilizzate a fini commerciali o trasferite a terzi.
+Per questo, la piattaforma Olympe fornisce le dichiarazioni ai numeri CNIL <span style='font-weight:bold;'>1215047</span> e <span style='font-weight:bold;'>1237057</span>"
+
+follow = "Seguici"
+news = "News"
+behind = "La storia di Olympe"
+behind_text = "L'organizzazione Olympe è stata fondata nel 2007. I servizi sono sviluppati e mantenuti da una <a href='/about/team'>squadra</a> di volontari"
+legal = "Informazioni legali"
+legal_text = "<i>Numero organizzazione (sede in Francia)</i>: 20070028<br />
+<i>Presidente</i>: Samuel Hassine<br />
+<i>Segretario</i>: Thomas Brugmans<br />
+<i>Tesoriere</i>: Yann Autissier"
+
+cookie = "Uso dei cookies"
+cookie_explain = "Un cokie è una piccola parte di testo inviata al tuo browser da un sito che visiti, in cui sono registrate delle informazioni riguardanti la tua visita: 
+la tua lingua, e altri parametri utili all'uso del servizio. I cookies giocano un ruolo importane nella navigazione. Olympe li usa, per esempio, per ricordare 
+la tua lingua e per analizzare le visite alle nostre pagina"
+cookie_no = "Non usare i cookies"

@@ -1,4 +1,11 @@
-[EN]
+﻿[EN]
+success = "Your site has been updated."
+
+[ES]
+success = "Tu sitio ha sido actualizado."
 
 [FR]
 success = "Votre site a bien été mis à jour."
+
+[IT]
+success = "Il tuo sito è stato aggiornato."

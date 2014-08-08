@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Contact us"
 send = "Send us a message"
 send_text = "You have a problem with the usage of our services ? You can not find the answer in the <a href='https://www.olympe.in/doc'>documentation</a> ?
@@ -138,3 +138,38 @@ ist <strong> bestraft </strong> eine Strafe von einem Jahr in Haft und Geldstraf
 <li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>die Kopie der Korrespondenz an den Autor oder an die Redaktion der umstrittenen Aktivitäten Fragen ihre Unterbrechung, ihren Rückzug 
 Ihre Änderung oder Begründung für was der Autor oder Herausgeber konnte kontaktiert werden.</li>
 </ul>"
+
+[IT]
+title = "Contattaci"
+send = "Mandaci un messaggio"
+send_text = "Hai problemi con l'utilizzare i nostri servizi ? Non sei riuscito a trovare la soluzione nella <a href='https://www.olympe.in/doc'>documentazione</a> ?
+<br />Perfavore, utilizza la <a href='https://community.olympe.in'>community</a> per rispondere alla tua domanda, non rispondiamo a domande di natura tecnica per email.
+<br /><br /> Se ti servono più informazioni sui nostri servizi o semplicemente vuoi entrare in contatta con noi, puoi completare il seguente form."
+infos = "Informazioni"
+meet = "Incontraci"
+meet_text = "Olympe è un'organizzazione non a scopo di lucro, il suo ufficio centrale ha sede a Parigi, Francia."
+name = "Nome"
+email = "Email"
+subject = "Soggetto"
+message = "Messaggio"
+send_now = "Invia"
+follow = "Seguici"
+news = "News"
+account = "Account Olympe (se disponibile)"
+
+report = "Riporta contenuti inappropriati"
+report_text = "In accordo con la lagge francese sull'economia digitale no. 2004-575 del 21 Giugno 2004, <strong>puoi informarci di qualsiasi contenuto, ospitato su Olympe, che potrebbe recare un'offesa</strong>, 
+incluse offese contro l'umanità, incitamento al razzsmo o a pornografia minorile. 
+<br /><br />
+Ti ricordiamo che, secondo questa legge, il fatto di riportare un contenuto come illegale è al fine di ritirare o fermare questi contenuti, per quanto queste informazioni devono essere accurate per poter essere utilizzate
+<strong>in un'azione legale</strong>.
+<br /><br />
+<strong>Per riportare un qualsiasi contenuto, per favore invia una email al seguente indirizzo: <a href='mailto:abuse@olympe.in'>abuse@olympe.in</a> fornendo: 
+<ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
+<li style='padding-left: 10px; padding-bottom: 10px;'>il tuo nome e tutti i dettagli per contattarti,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>l'indirizzo delle pagine in questione,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>la motivazione della segnalazione,</li>
+<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>la copia di una comunicazione (precedentemente inviata) all'autore o al pubblicatore, in cui si richiede l'eliminazione, l'interruzione o la modifica dei contenuti, 
+o una prova che non è stato possibile contattarlo.</li>
+</ul>"
+email_wrong = "Il formato della tua email non è corretto"

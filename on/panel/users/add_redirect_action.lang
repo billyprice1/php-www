@@ -1,4 +1,11 @@
-[EN]
+﻿[EN]
+error = "The email address is not well formatted."
+
+[ES]
+error = "El correo electrónico no tiene el formato correcto."
 
 [FR]
 error = "L'adresse email n'est pas correctement formatée."
+
+[IT]
+error = "L'email non è stat configurata correttamente."

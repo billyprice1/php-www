@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 phome = "Sites"
 pdomains = "Domains"
 pdatabases = "Databases"
@@ -7,6 +7,17 @@ pservices = "Services"
 pquotas = "Quotas"
 pmessages = "Requests"
 psettings = "Settings"
+pbackups = "Backups"
+
+[ES]
+phome = "Sitios"
+pdomains = "Dominios"
+pdatabases = "Bases de datos"
+pmails = "Cuentas de correo"
+pservices = "Servicios"
+pquotas = "Cuotas"
+pmessages = "Solicitud"
+psettings = "Configuración"
 pbackups = "Backups"
 
 [FR]
@@ -20,4 +31,13 @@ pmessages = "Demandes"
 psettings = "Paramètres"
 pbackups = "Sauvegardes"
 
-
+[IT]
+phome = "Siti"
+pdomains = "Domini"
+pdatabases = "Database"
+pmails = "Account email"
+pservices = "Servizi"
+pquotas = "Quote"
+pmessages = "Richieste"
+psettings = "Impostazioni"
+pbackups = "Backup"
