@@ -6,6 +6,14 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if($_POST['name'] == 'Olympe') {
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+	
+	template::redirect('/panel/settings/tokens');
+	exit;
+}
+
 switch( $_POST['type'] )
 {
 	case 'admin':

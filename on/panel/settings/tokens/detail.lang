@@ -10,6 +10,7 @@ update = "Update"
 tokentoken = "Token login"
 back = "Back to the access"
 dateformat = "Y-m-d"
+maintoken_text = "This is your main connection token, you can not modify it."
 
 [ES]
 title = "Detalles del token"
@@ -23,6 +24,7 @@ update = "Modificar"
 tokentoken = "Token login"
 back = "Volver a los accesos"
 dateformat = "Y-m-d"
+maintoken_text = "Esta es tu principal token de conexión, no puedes modificarlo."
 
 [FR]
 title = "Détails du token"
@@ -36,6 +38,7 @@ update = "Modifier"
 tokentoken = "Identifiant du token"
 back = "Retour aux accès"
 dateformat = "Y-m-d"
+maintoken_text = "Il s'agit de votre token de connexion principal, vous ne pouvez donc pas le modifier."
 
 [IT]
 title = "Dettagli Token"
@@ -49,3 +52,4 @@ update = "Aggiorna"
 tokentoken = "Connessione token"
 back = "Torna all'accesso"
 dateformat = "Y-m-d"
+maintoken_text = "This is your main connection token, you can not modify it."

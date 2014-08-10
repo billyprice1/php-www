@@ -42,7 +42,21 @@ foreach( $tokens as $t )
 							<td>".($t['lease']==0?"{$lang['never']}":date($lang['dateformat'], $t['lease']))."</td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"/panel/settings/tokens/detail?token={$t['token']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+		";
+	
+	if($t['name'] != 'Olympe')
+		$content .= "
+								
 								<a href=\"#\" onclick=\"$('#token').val('{$t['token']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
+			";
+			
+	else
+		$content .= "
+								
+								<a href=\"#\" onclick=\"$('#nodelete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
+			";
+			
+	$content .= "
 							</td>
 						</tr>
 		";
@@ -62,7 +76,7 @@ $content .= "
 				<div class=\"form-small\">		
 					<form action=\"/panel/settings/tokens/add_action\" method=\"post\" class=\"center\">
 						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto req\" type=\"text\" placeholder=\"{$lang['name']}\" name=\"name\" />
 							<span class=\"help-block\">{$lang['tipname']}</span>
 						</fieldset>
 						<fieldset>
@@ -93,10 +107,23 @@ $content .= "
 					</form>
 				</div>
 			</div>
+			<div id=\"nodelete\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['delete']}</h3>
+				<p style=\"text-align: center;\">{$lang['no_delete_text']}</p>
+				<div class=\"form-small\">		
+					<fieldset autofocus>
+						<a href=\"/doc/tokens\">
+							<input type=\"button\" value=\"{$lang['why']}\" style=\"margin: auto;\" />
+						</a>
+					</fieldset>
+				</div>
+			</div>
 			<script>
 				newFlexibleDialog('new', 550);
 				newFlexibleDialog('delete', 550);
+				newFlexibleDialog('nodelete', 550);
 			</script>
+			<script type=\"text/javascript\" src=\"/{$GLOBALS['CONFIG']['SITE']}/js/checkForm.js\"></script>
 ";
 
 /* ========================== OUTPUT PAGE ========================== */

@@ -11,6 +11,14 @@ if( count($token) == 0 )
 	template::redirect('/panel/tokens');
 $token = $token[0];
 
+if($token['name'] == 'Olympe') {
+	$main_token = true;
+	$disabled = 'disabled="disabled"';
+} else {
+	$main_token = false;
+	$disabled = '';
+}
+
 $content = "
 		<div class=\"panel\">
 			<div class=\"top\">
@@ -57,7 +65,7 @@ foreach( $grants as $g )
 						<tr>
 							<td>{$g['name']}</td>
 							<td style=\"text-align: center;\">
-								<input style=\"margin: 0 auto;\" type=\"checkbox\" name=\"grant[]\" value=\"{$g['id']}\" {$checked} />
+								<input {$disabled} style=\"margin: 0 auto;\" type=\"checkbox\" name=\"grant[]\" value=\"{$g['id']}\" {$checked} />
 							</td>
 						</tr>";
 }
@@ -66,12 +74,20 @@ $content .= "
 					</table>
 					<input type=\"hidden\" name=\"token\" value=\"".security::encode($_GET['token'])."\" />
 					<br />
-					<input type=\"submit\" value=\"{$lang['update']}\" />
+					<input {$disabled} type=\"submit\" value=\"{$lang['update']}\" />
 				</form>
 			</div>
 			<div style=\"width: 600px; float: right;\">
 				<h2 class=\"dark\">{$lang['tokeninfo']}</h2>
 ";
+
+if($main_token == 1)
+	$content .= "
+					<div style=\"margin-bottom: 20px; padding: 10px 10px 10px 45px; background: url('/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/denied.png') no-repeat scroll 10px 8px rgb(238, 238, 238);\">
+					 {$lang['maintoken_text']}
+					</div>
+";
+
 
 $tokendate = '';
 if( $token['lease'] > 0 )
@@ -81,19 +97,19 @@ $content .= "
 				<form action=\"/panel/settings/tokens/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"token\" value=\"".security::encode($_GET['token'])."\" />
 					<fieldset>
-						<input type=\"text\" name=\"value\" value=\"{$token['token']}\" style=\"width: 400px;\" disabled />
+						<input {$disabled} type=\"text\" name=\"value\" value=\"{$token['token']}\" style=\"width: 400px;\" disabled />
 						<span class=\"help-block\">{$lang['tokentoken']}</span>
 					</fieldset>	
 					<fieldset>
-						<input type=\"text\" name=\"name\" value=\"{$token['name']}\" style=\"width: 400px;\" />
+						<input {$disabled} type=\"text\" name=\"name\" value=\"{$token['name']}\" style=\"width: 400px;\" />
 						<span class=\"help-block\">{$lang['tokenname']}</span>
 					</fieldset>					
 					<fieldset>
-						<input type=\"text\" name=\"lease\" id=\"lease\" value=\"{$tokendate}\" style=\"width: 400px;\"/>
+						<input {$disabled} type=\"text\" name=\"lease\" id=\"lease\" value=\"{$tokendate}\" style=\"width: 400px;\"/>
 						<span class=\"help-block\">{$lang['tokenlease']}</span>
 					</fieldset>
 					<fieldset>
-						<input type=\"submit\" value=\"{$lang['update']}\" />
+						<input {$disabled} type=\"submit\" value=\"{$lang['update']}\" />
 					</fieldset>
 				</form>
 			</div>
