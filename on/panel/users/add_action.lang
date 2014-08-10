@@ -1,4 +1,11 @@
 [EN]
+error = "The format of the account name is incorrect (only lowercase letters and numbers)."
+
+[ES]
+error = "El formato del nombre de la cuenta es incorrecta (sólo letras minúsculas y números)."
 
 [FR]
 error = "Le format du nom du compte est incorrect (seulement minuscules et chiffres)."
+
+[IT]
+error = "Il formato dell'account email non è corretto: sono ammessi solo numeri e lettere minuscole."

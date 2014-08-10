@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 subject = "Olympe account recovery"
 content = "<p style='margin: 20px 0'>You have requested the recovery of your account on the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe platform</a>.</p>
 	<p style='margin: 20px 0'>In order to choose a new password, you have to click on the following link. Be careful, this link is only valid during <strong>6 hours</strong>!</p>
@@ -29,3 +29,11 @@ content = "<p style='margin: 20px 0'>Sie haben Sie über die <a style='color: #d
 	<p style='margin: 20px 0'>Kennwort Ändererung: <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
 
 success = "Ihre Anfrage ist berücksichtigt worden, eine E-Mail für Ihre Kontowiederherstellung ist Ihnen gesendet worden ."
+
+[IT]
+subject = "Recupera il tuo account Olympe"
+content = "<p style='margin: 20px 0'>Hai richiesto il recupero del tuo account sulla <a style='color: #de5711;' href='https://www.olympe.in'>piattaforma Olympe</a>.</p>
+	<p style='margin: 20px 0'>Per scegliere una nuova password, devi cliccare sul seguente link. Fai attenzione, questo link è valido solo per <strong>6 ore</strong>!</p>
+	<p style='margin: 20px 0'>Aggiorna la tua password : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
+
+success = "La tua richiesta è stata completata con successo. Una email con il link di recupero è stata mandata al tuo indirizzo email."

@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 by = "by"
 DATEFORMAT = "d F Y"
 January = "January"
@@ -101,3 +101,29 @@ react = "Auf diesen Artikel reagieren"
 
 olympe = "Olympe - "
 comments = "Kommentare"
+
+[IT]
+by = "da"
+DATEFORMAT = "d M, Y"
+January = "Gennaio"
+February = "Febbraio"
+March = "Marzo"
+April = "Aprile"
+May = "Maggio"
+June = "Giugno"
+July = "Luglio"
+August = "Agosto"
+September = "Settembre"
+October = "Ottobre"
+November = "Novembre"
+December = "Dicembre"
+
+author_1 = "Yann Autissier"
+author_2 = "Bruno Million"
+author_3 = "Samuel Hassine"
+author_4 = "Simon Uyttendaele"
+
+react = "Reagisci a questo post"
+
+olympe = "Olympe - "
+comments = "Commenti"

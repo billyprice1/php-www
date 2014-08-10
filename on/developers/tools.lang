@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Panel and developed tools"
 panel = "Panel and the API"
 panel_text = "So that everyone can contribute and improve the panel according to his needs, we opened its source code modification. 
@@ -8,7 +8,7 @@ modules = "PHP Module"
 modules_text = "For the purposes of Olympe, particularly in terms of security, we have need to develop two new extensions PHP 
 (suPHP and Override). The first allows chowner process PHP on the fly (whether in CGI or Fast-CGI) with the UID of the owner of the 
 script. The second gives an opportunity to crush any built-in PHP function with a custom function 
-(quota on <i>mail()</i>, checks on <i>shell_exec()</i>...)."
+(quota on <em>mail()</em>, checks on <em>shell_exec()</em>...)."
 phpkiller = "PHP Killer"
 phpkiller_text = "PHP Killer is a JAVA program to monitor the behaviour of the PHP CGI process and thus ensure a steady 
 flow of the platform. It includes a clock monitoring execution time, memory and the CPU used by the process. 
@@ -29,8 +29,8 @@ l'<a href='https://api.olympe.in'>API</a> dont le code est également ouvert si 
 
 modules = "Modules PHP"
 modules_text = "Pour les besoins d'Olympe, notamment en terme de sécurité, nous avons eu besoin de développer deux nouvelles extensions PHP (suPHP et Override). Le premier permet de chowner le processus
-PHP à la volée (que ce soit en CGI ou en Fast-CGI) avec l'UID du propriétaire du script. Le second donne la possibilité d'écraser n'importe quelle fonction built-in de PHP avec une fonction personnalisée (quota sur <i>mail()</i>, 
-vérifications sur <i>shell_exec()</i> etc...)."
+PHP à la volée (que ce soit en CGI ou en Fast-CGI) avec l'UID du propriétaire du script. Le second donne la possibilité d'écraser n'importe quelle fonction built-in de PHP avec une fonction personnalisée (quota sur <em>mail()</em>, 
+vérifications sur <em>shell_exec()</em> etc...)."
 
 phpkiller = "PHP Killer"
 phpkiller_text = "PHP Killer est un programme en JAVA permettant de surveiller le comportement des processus PHP CGI et ainsi d'assurer la fluidité de la plateforme. Il intègre notamment une horloge surveillant le temps
@@ -53,7 +53,7 @@ modules = "PHP-Module"
 modules_text = "Im Sinne von Olympe, insbesondere im Hinblick auf Sicherheit, haben wir zwei neue Erweiterungen PHP 
 (SuPHP und Override) entwickelt. Die erste ermöglicht Chowner Prozess PHP dynamisch (ob in CGI oder Fast-CGI) mit der UID des Besitzers 
 des Skripts. Die zweite gibt die Möglichkeit, jede integrierte PHP-Funktion mit einer benutzerdefinierten Funktion zu zerquetschen 
-(Quote auf <i>mail()</i>, prüft auf <i>shell_exec()</i> identisch usw....). "
+(Quote auf <em>mail()</em>, prüft auf <em>shell_exec()</em> identisch usw....). "
 
 phpkiller = "PHP Killer"
 phpkiller_text = "PHP-Killer ist ein JAVA-Programm, das Verhalten von PHP-CGI-Prozess überwacht und somit einen stetigen 
@@ -68,3 +68,25 @@ die in der Konfiguration definierten Regeln sind, scannt. Es dient auch zur Bese
 bei Verhaltensauffälligkeiten Ausstellungen..."
 
 access = "Zugangsdaten"
+
+[IT]
+title = "Pannello e strumenti di sviluppo"
+panel = "Il pannello e il codice API"
+panel_text = "In modo da poter permettere a chiunque di migliorare il proprio pannello, abbiamo reso disponibili le modifiche al codice. 
+Questo permette sia di controllare la validità delle procedure e la sicurezza, ma anche di far sviluppare a tutti gli utenti nuove funzioni.
+Queste pagine sono sviluppate con PHP/Html (Javascript) che richiama <a href='https://api.olympe.in'>il codice API</a> che è nuovamente disponibile se fosse necessaria qualche modifica..."
+modules = "Il modulo PHP"
+modules_text = "Per gli scopi di Olympe, in particolare in termini di sicurezza, abbiamo bisogno di sviluppare due funzioni API 
+(suPHP e Override). La prima permette i comandi PHP (sia in CGI che in Fast-CGI) con l'UID del possessore del 
+codice script. Il secondo da l'opportunità di sostituire ogni funzione presente con una personalizzata
+(quote per <em>mail()</em>, controlli per <em>shell_exec()</em>...)."
+phpkiller = "PHP Killer"
+phpkiller_text = "PHP Killer è un programma JAVA utile per monitorare il compartamente del processo CGI del PHP e per mantenere un funzionamento
+ottimale della piattaforma. Include un orologio per monitorare i tempi di esecuzione, della memoria e della CPU utilizzata per il processo.
+In caso di anomalie, un sistema a lista bianco/grigio/nero ti permette di correggere i problemi e prevenire futuri errori o abusi."
+ftpfilter = "Filtro FTP"
+ftpfilter_text = "Recentemente migliorato per il supporto SFTP, il filtro log FTP, applicaziione JAVA, permette di analizzare in tempo reale i log dei caricamenti sulla 
+piattaforma e di scansionare i file con un numero di regole e istruzioni definite nella configurazione. Serve per includere
+un sistema per eliminare e prevenire virus e phishing, e per segnalare problemi e anomalie."
+
+access = "Codici di accesso"

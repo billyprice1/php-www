@@ -1,0 +1,11 @@
+[EN]
+error = "You can not create a new token named \"Olympe\"."
+
+[ES]
+error = "No puedes crear un nuevo token \"Olympe\"."
+
+[FR]
+error = "Vous ne pouvez pas créer un nouveau token nommé \"Olympe\"."
+
+[IT]
+error = "You can not create a new token named \"Olympe\"."

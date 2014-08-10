@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 success = "Congratulations! Your subscription is now complete.<br />You can enter to your <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">control panel</a>."
 
 subject = "Welcome to the Olympe platform"
@@ -33,3 +33,12 @@ content = "<p style='margin: 20px 0'>Ihre Olympe Account ist nun bereit ! Hier f
 <p style='margin: 20px 0'>Benutzer : <strong>{USER}</strong><br />
 Passwort : <strong>{PASS}</strong></p>
 <p style='margin: 20px 0;'>Genießen Sie Ihrem kostenloses Hosting-Bereich und wenn Sie Nachfragen haben, zögern Sie nicht uns <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>zu kontaktieren</a>.</p>"
+
+[IT]
+success = "Congratulazioni! La tua iscrizione è completata.<br />Puoi ora accedere al <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">pannello di controllo</a>."
+
+subject = "Welcome to the Olympe platform"
+content = "<p style='margin: 20px 0'>Your Olympe account is now ready! Here are the authentification parameters you entered:</p>
+<p style='margin: 20px 0'>Username: <strong>{USER}</strong><br />
+Password: <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Goditi il tuo spazio di hosting gratuito, e se hai dei bisogni particolari, non esitare a <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contattarci</a>.</p>"

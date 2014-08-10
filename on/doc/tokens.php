@@ -32,6 +32,9 @@ $content = "
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/24.png\" alt=\"24\" />
 				<p>{$lang['create_text2']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/25.png\" alt=\"25\" />
+				<br />
+				<h3>{$lang['main_token']}</h3>
+				<p>{$lang['main_token_text']}</p>
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

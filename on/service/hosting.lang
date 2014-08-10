@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Web hosting platform"
 free = "Free and open-source"
 free_text = "We run our platform with the  <a href='/service/infrastructure'>latest technologies</a>. A great <a href='/about/team'>volunteer team</a> insures the maintenance and 
@@ -10,6 +10,19 @@ offer_text = "Everyday we work on developping our <a href='/service/offer'>offer
 The offer includes database, domain names and email accounts management. Each account has also a <a href='/doc/cloud'>Cloud interface</a> for sharing files, calendars, contacts, etc."
 
 offers = "Discover our offer"
+
+[ES]
+title = "Plataforma de alojamiento Web"
+free = "Gratuito y de código abierto"
+free_text = "We run our platform with the  <a href='/service/infrastructure'>latest technologies</a>. A great <a href='/about/team'>volunteer team</a> insures the maintenance and 
+is enriched by a <a href='https://community.olympe.in'>community</a> of webmasters.<br /><br />
+The hosting services are free of charge for you, always ad-free, and available online 7 days a week. We have developed a strong <a href='/about/partners'>partnership</a> to provide us up-to-date equipment and powerful applications."
+
+offer = "Servicio"
+offer_text = "Everyday we work on developping our <a href='/service/offer'>offer</a> with the most common and reliable technologies. We always keep the system update, so that all Olympe users benefit from our latest features. <br /><br />
+The offer includes database, domain names and email accounts management. Each account has also a <a href='/doc/cloud'>Cloud interface</a> for sharing files, calendars, contacts, etc."
+
+offers = "Ver detalles"
 
 [FR]
 title = "Plateforme d'hébergement"
@@ -25,3 +38,29 @@ la présence des dernières fonctionnalités pour l'ensemble des utilisateurs.<b
 dispose également d'un espace d'<a href='/doc/cloud'>applications cloud</a> lui permettant de gérer un espace de stockage, des agendas et contacts partagés etc..."
 
 offers = "Voir l'offre"
+
+[DE]
+title = "Web hosting platform"
+free = "Free and open-source"
+free_text = "We run our platform with the  <a href='/service/infrastructure'>latest technologies</a>. A great <a href='/about/team'>volunteer team</a> insures the maintenance and 
+is enriched by a <a href='https://community.olympe.in'>community</a> of webmasters.<br /><br />
+The hosting services are free of charge for you, always ad-free, and available online 7 days a week. We have developed a strong <a href='/about/partners'>partnership</a> to provide us up-to-date equipment and powerful applications."
+
+offer = "Service"
+offer_text = "Everyday we work on developping our <a href='/service/offer'>offer</a> with the most common and reliable technologies. We always keep the system update, so that all Olympe users benefit from our latest features. <br /><br />
+The offer includes database, domain names and email accounts management. Each account has also a <a href='/doc/cloud'>Cloud interface</a> for sharing files, calendars, contacts, etc."
+
+offers = "Discover our offer"
+
+[IT]
+title = "Piattaforma di hosting web"
+free = "Gratuito open-source"
+free_text = "La nostra piattaforma funzione con le più <a href='/service/infrastructure'>recenti tecnologie</a>. Un grandissimo <a href='/about/team'>team di volontari</a> provvede alle manutenzioni 
+ed è arricchito da una <a href='https://community.olympe.in'>community</a> di webmasters.<br /><br />
+Il servizio di hosting è gratuito al 100%, sempre libero da pubblicità e disponibile 7 giorni a settimana. Abbiamo sviluppato una solida <a href='/about/partners'>partnership</a> per fornire sempre strumentazioni aggiornate e funzionali."
+
+offer = "Servizio"
+offer_text = "Ogni giorno lavoriamo per sviluppare la nostra <a href='/service/offer'>offerta</a> che le più recenti e innovative risorse. Manteniamo sempre il sistema aggiornato, cosi che tutti gli utenti di Olympe possano beneficiare delle ultime tecnologies. <br /><br />
+L'offerta di olympe include databse, nomi di dominio e gestione degli account email. Ogni account possiede inoltre un <a href='/doc/cloud'>interfaccia cloud</a> per la condivisione di files, calendari, contatti, etc.."
+
+offers = "Scopri la nostra offerta"

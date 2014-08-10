@@ -1,7 +1,15 @@
-[EN]
+﻿[EN]
 success = "Domain name settings have been successfully updated."
 error = "One of the fields is not well filled."
+
+[ES]
+success = "La configuración del dominio ha sido modificada correctamente."
+error = "Uno de los campos no está correctamente llenado."
 
 [FR]
 success = "Les paramètres du nom de domaine ont bien été mis à jour."
 error = "L'un des champs n'est pas correctement formaté."
+
+[IT]
+success = "Le impostazoni del nome di dominio sono state correttamente modificate."
+error = "Uno o più campi non sono stati compilati correttamente."

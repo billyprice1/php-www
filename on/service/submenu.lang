@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 menu_overview = "Overview"
 menu_hosting = "Hosting"
 menu_offer = "Offer"
@@ -19,3 +19,17 @@ menu_offer = "Offre"
 menu_infrastructure = "Infrastructure"
 menu_tos = "Conditions générales"
 menu_report = "Signaler un abus"
+
+[DE]
+menu_overview = "Overview"
+menu_hosting = "Hosting"
+menu_offer = "Offer"
+menu_infrastructure = "Infrastructure"
+menu_tos = "Terms of Use"
+
+[IT]
+menu_overview = "Panoramica"
+menu_hosting = "Hosting"
+menu_offer = "Offerte"
+menu_infrastructure = "Infrastrutture"
+menu_tos = "Condizioni di utilizzo"

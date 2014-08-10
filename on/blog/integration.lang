@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Team blog"
 
 rss = "Subscribe"
@@ -32,4 +32,13 @@ rss = "Abonnieren"
 follow = "Folgen"
 read = "Weiterlesen"
 by = "von"
+DATEFORMAT = "d M, Y"
+
+[IT]
+title = "Team blog"
+
+rss = "Sottoscrivi"
+follow = "Segui"
+read = "Continua a leggere"
+by = "da"
 DATEFORMAT = "d M, Y"

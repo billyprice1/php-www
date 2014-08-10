@@ -1,4 +1,11 @@
-[EN]
+﻿[EN]
+error = "The site name is not formatted correctly (only lowercase letters and numbers) or your <a href='/panel/quotas'>quota</a> is reached."
+
+[ES]
+error = "El nombre del sitio no tiene el formato correcto (sólo letras minúsculas y números) o se alcance tu <a href='/panel/quotas'>cuota</a>."
 
 [FR]
 error = "Le nom du site n'est pas correctement formaté (uniquement minuscules et chiffres) ou votre <a href='/panel/quotas'>quota</a> est atteint."
+
+[IT]
+error = "Il nome del sito non è configurato correttamente (sono consentiti solo numeri e lettere minuscole) oppure hai esaurito il tuo <a href='/panel/quotas'>spazio disponibile</a>."

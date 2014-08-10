@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Request"
 reply = "Reply"
 dateformat = "d/m/Y H:i:s"
@@ -39,3 +39,17 @@ send = "Envoyer"
 update = "Modifier"
 noreply = "Cette demande a été fermée, vous ne pouvez donc plus y répondre. Merci d'ouvrir une nouvelle demande en cas de nécessité."
 closed = "Demande fermée"
+
+[IT]
+title = "Richiesta"
+reply = "Rispondi"
+dateformat = "d/m/Y H:i:s"
+delete = "Rimuovi"
+delete_text = "Sei sicuro di voler rimuovere questo messaggio ?"
+delete_now = "Conferma"
+reply = "Rispondi"
+content_help = "Il tuo messaggio"
+send = "Pubblica"
+update = "Modifica"
+noreply = "Questa richiesta è archiviata, non puoi più rispondere. Per favore, apri una nuova richiesta se necessario."
+closed = "Richiesta Archiviata"

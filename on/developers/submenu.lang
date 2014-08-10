@@ -1,8 +1,14 @@
-[EN]
+﻿[EN]
 menu_home = "Developers"
 menu_api = "Management API"
 menu_tools = "Developed tools"
 menu_sources = "Source code"
+
+[ES]
+menu_home = "Desarrolladores"
+menu_api = "API"
+menu_tools = "Herramientas desarrolladas"
+menu_sources = "Código fuente"
 
 [FR]
 menu_home = "Développeurs"
@@ -15,3 +21,9 @@ menu_home = "Entwickler"
 menu_api = "Management API"
 menu_tools = "Entwickelte Tools"
 menu_sources = "Quellcode"
+
+[IT]
+menu_home = "Sviluppatori"
+menu_api = "Gestione API"
+menu_tools = "Strumenti sviluppati"
+menu_sources = "Codice sorgente"

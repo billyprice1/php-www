@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 title = "Backups"
 type = "Backup type"
 name = "Name"
@@ -13,6 +13,22 @@ delete_now = "Confirm"
 type_database = "Databases"
 type_site = "Web site"
 nobackup = "You have no backup."
+
+[ES]
+title = "Backups"
+type = "Type del backup"
+name = "Nombre"
+date = "Fecha"
+actions = "Acciones"
+
+dateformat = "d/m/Y H:i:s"
+doc = "Documentación"
+delete = "Eliminar"
+delete_text = "¿Estás seguro de que deseas eliminar esta copia de seguridad?"
+delete_now = "Confirmar"
+type_database = "Bases de datos"
+type_site = "Sitio"
+nobackup = "No tienes backups."
 
 [FR]
 title = "Sauvegardes"
@@ -29,3 +45,19 @@ delete_now = "Confirmer"
 type_database = "Base de données"
 type_site = "Site Internet"
 nobackup = "Vous n'avez aucune sauvegarde."
+
+[IT]
+title = "Backup"
+type = "Tipo di Backup"
+name = "Nome"
+date = "Data"
+actions = "Azioni"
+
+dateformat = "d/m/Y H:i:s"
+doc = "Documentazione"
+delete = "Rimuovi"
+delete_text = "Sei sicuro di voler rimuovere questo backup?"
+delete_now = "Conferma"
+type_database = "Database"
+type_site = "Siti web"
+nobackup = "Non sono presenti backup."

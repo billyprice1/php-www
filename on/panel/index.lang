@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 new = "New space"
 welcome = "Welcome on Olympe !"
 welcome_text = "Create your first website here.<br />
@@ -25,6 +25,34 @@ help = "Olympe is an independent non-profit association and self-financing. Feel
 help_text = "help us"
 thanks = "Follow us on"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> and <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+
+[ES]
+new = "Nuevo espacio"
+welcome = "Bienvenido/a en Olympe !"
+welcome_text = "Crea tu primero sitio aquí.<br />
+Después, se mostrará aquí."
+of = "de"
+tipsite = "Disponible a la dirección <i>nombre</i>.olympe.in."
+newsite = "Crear un nuevo sitio"
+newsite_text = "Un sitio es un espacio de alojamiento para tu aplicación."
+created = "creado el"
+nolastname = "No informaciones."
+disk_intro = "Utiliza"
+request = "Solicitar más"
+DATEFORMAT = "M d, Y"
+create = "Crear"
+name = "nombre"
+size = "Tamaño :"
+mb = "MB"
+password = "Contraseña"
+tippassword = "Contraseña del acceso SFTP para este sitio."
+gb = "GB"
+disk = "Espacio en disco :"
+disk2 = "Espacio en disco"
+help = "Olympe es una organización sin fines de lucro independiente y autofinanciada. Siéntate libre para"
+help_text = "ayudarnos"
+thanks = "Siguenos en"
+thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> y <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
 
 [FR]
 new = "Nouvel espace"
@@ -53,3 +81,31 @@ help = "Olympe est une association à but non lucratif indépendante et autofina
 help_text = "nous aider"
 thanks = "Suivez-nous sur"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> et <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+
+[IT]
+new = "Nuovo spazio"
+welcome = "Benvenuti su Olympe !"
+welcome_text = "Crea il tuo primo sito internet qui.<br />
+Dopo la creazione, sarà visualizzato qui"
+of = "di"
+tipsite = "Sarà disponibile su <i>nome_scelto</i>.olympe.in."
+newsite = "Crea il tuo sito!"
+newsite_text = "Un sito web è uno spazio dedicato alla tua applicazione"
+created = "creato il"
+nolastname = "Non disponibile"
+disk_intro = "Hai usato"
+request = "Hai bisogni di più spazio?"
+DATEFORMAT = "M d, Y"
+create = "Crea"
+name = "nome"
+size = "Dimensione :"
+mb = "MB"
+password = "Password"
+tippassword = "La tua password SFTP per questo sito"
+gb = "GB"
+disk = "Spazio disco :"
+disk2 = "Spazio disco"
+help = "Olympe è un'organizzazione indipendente no-profit e autofinanziata. Sentiti libero di"
+help_text = "aiutarci"
+thanks = "Seguici su"
+thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> e <a href='https://www.facebook.com/olympe.org'>Facebook</a>"

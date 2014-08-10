@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 menu_actions = "Actions and projects"
 menu_last = "News"
 menu_press = "Press"
@@ -21,3 +21,9 @@ menu_actions = "Aktionen und Projekte"
 menu_last = "Nachrichten"
 menu_press = "Medien"
 menu_help = "Hilfe und Finanzierung"
+
+[IT]
+menu_actions = "Operazioni e progetti"
+menu_last = "News"
+menu_press = "Premi"
+menu_help = "Supporto e finanze"

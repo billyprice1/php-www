@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 mhosting = "Hosting"
 mcommunity = "Community"
 mblog = "Blog"
@@ -44,4 +44,16 @@ msignup = "Registrieren"
 mpanel = "Panel"
 mlogout = "Abmelden"
 mactions = "Aktionen"
+madmin = "Admin"
+
+[IT]
+mhosting = "Hosting"
+mcommunity = "Community"
+mblog = "Blog"
+mdoc = "Documentazione"
+mlogin = "Login"
+msignup = "Registrati"
+mpanel = "Pannello"
+mlogout = "Logout"
+mactions = "Operazioni"
 madmin = "Admin"
