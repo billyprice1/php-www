@@ -1,12 +1,12 @@
 [EN]
-title = "Sites Internet"
+title = "Website"
 intro = "Introduction"
-intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Par défaut, vous ne pouvez créer qu'un seul site sur votre compte, mais en cas de nécessité, vous pouvez solliciter une augmentation de <a href='/doc/quotas'>votre quota</a>,
-afin de pouvoir créer plusieurs sites Internet. Les sites se distinguent par une adresse de la forme <i>nom_du_site.olympe.in</i>."
-create = "Créer un site"
-create_text = "Pour créer un site, il suffit de vous rendre sur l'<a href='/panel'>accueil</a> votre panel."
-create_text2 = "Puis de remplir le formulaire :"
-create_text3 = "Une fois le site créé, vous pouvez modifier ses paramètres, notamment sa description et sa catégorie pour l'<a href='/directory'>annuaire</a> des sites hébergés."
+intro_text = "These are the hosting space. By default, you can create one website with your account, but if you need more, you can ask an increase of <a href='/doc/quotas'>your quotas</a>,
+in order to create two, three or more websites. The sites are characterized by an address of the form <i>website_name.olympe.in</i>."
+create = "Create a website"
+create_text = "To create a website, you just have to be on your <a href='/panel'>home panel</a>."
+create_text2 = "Then, just fill the form :"
+create_text3 = "Once your site is made, you can update its settings, its category and description in the <a href='/directory'>directory</a>."
 
 [FR]
 title = "Sites Internet"

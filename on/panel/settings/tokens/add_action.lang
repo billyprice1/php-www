@@ -8,4 +8,4 @@ error = "No puedes crear un nuevo token \"Olympe\"."
 error = "Vous ne pouvez pas créer un nouveau token nommé \"Olympe\"."
 
 [IT]
-error = "You can not create a new token named \"Olympe\"."
+error = "Non puoi creare un altro token chiamato \"Olympe\"."
