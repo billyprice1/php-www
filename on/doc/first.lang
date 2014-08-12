@@ -1,5 +1,18 @@
 [EN]
-
+title = "First steps"
+start = "Where to start ?"
+intro = "You just completed your registration on Olympe? Let us guide you !<br /><br />
+As a reminder, your Olympe account allow you to publish your website, and your documents on the Cloud (more about the <a href='/doc/quotas'>quotas and limits</a>).
+This small guide aims to give you all the essential information for a good start."
+panel = "Your panel"
+panel_text = "You are now logged in on your <a href='/panel'>management panel</a>, whose home looks like the screenshot below."
+site = "First website creation"
+site_text = "To create your site, you have to be on the home of your panel, and click on the <strong>" + "</strong> to the left."
+site_text2 = "Once the site is created, you can go to the thumbnail to get the access details for updates."
+publish = "Publishing Data"
+publish_text = "To login the platform and upload your data, you have plenty possibilities. We explain here how to do so with the WinSCP software."
+publish_text2 = "The list of folders appears, you can upload your files."
+end = "You can access your pages!"
 
 [FR]
 title = "Premiers pas"

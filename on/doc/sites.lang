@@ -1,10 +1,18 @@
 [EN]
-
+title = "Sites Internet"
+intro = "Introduction"
+intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Par défaut, vous ne pouvez créer qu'un seul site sur votre compte, mais en cas de nécessité, vous pouvez solliciter une augmentation de <a href='/doc/quotas'>votre quota</a>,
+afin de pouvoir créer plusieurs sites Internet. Les sites se distinguent par une adresse de la forme <i>nom_du_site.olympe.in</i>."
+create = "Créer un site"
+create_text = "Pour créer un site, il suffit de vous rendre sur l'<a href='/panel'>accueil</a> votre panel."
+create_text2 = "Puis de remplir le formulaire :"
+create_text3 = "Une fois le site créé, vous pouvez modifier ses paramètres, notamment sa description et sa catégorie pour l'<a href='/directory'>annuaire</a> des sites hébergés."
 
 [FR]
 title = "Sites Internet"
 intro = "Introduction"
-intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Vous pouvez créer plusieurs sites Internet à partir du même compte utilisateur. Les sites se distinguent par une adresse de la forme <i>nom_du_site.olympe.in</i>."
+intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Par défaut, vous ne pouvez créer qu'un seul site sur votre compte, mais en cas de nécessité, vous pouvez solliciter une augmentation de <a href='/doc/quotas'>votre quota</a>,
+afin de pouvoir créer plusieurs sites Internet. Les sites se distinguent par une adresse de la forme <i>nom_du_site.olympe.in</i>."
 create = "Créer un site"
 create_text = "Pour créer un site, il suffit de vous rendre sur l'<a href='/panel'>accueil</a> votre panel."
 create_text2 = "Puis de remplir le formulaire :"
