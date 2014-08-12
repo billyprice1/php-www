@@ -8,8 +8,16 @@ if( !defined('PROPER_START') )
 
 if(isset($_POST['action']) && $_POST['action']=='search') {
 	$user = security::encode($_POST['user']);
-	$logs = api::send('log/list', array('user'=>$user));
-	$messages = api::send('message/list', array('topic'=>1, 'user'=>$user));
+	
+	if($_POST['user'] != '' && $_POST['statusmode']!= 0)
+		$messages = api::send('message/list', array('topic'=>1, 'user'=>$user, 'status'=>$_POST['statusmode']));
+	
+	elseif($_POST['user'] != '' && $_POST['statusmode']== 0)
+		$messages = api::send('message/list', array('topic'=>1, 'user'=>$user));
+		
+	elseif($_POST['user'] == '' && $_POST['statusmode']!= 0)
+		$messages = api::send('message/list', array('topic'=>1, 'status'=>$_POST['statusmode']));
+		
 } else {
 	$display = 'display:none';
 	$messages = api::send('message/list', array('topic'=>1));
@@ -37,6 +45,12 @@ $content = "
 					<form action=\"\" method=\"post\">
 						<fieldset>
 							<input type=\"text\" name=\"user\" placeholder=\"{$lang['user']}\" value=\"{$user}\" style=\"width: 300px; display: inline-block;\" />
+							<select name=\"statusmode\" style=\"display: inline-block;\">
+								<option value=\"0\">{$lang['all_status']}</option>
+								<option value=\"1\">{$lang['status_1']}</option>
+								<option value=\"2\">{$lang['status_2']}</option>
+								<option value=\"3\">{$lang['status_3']}</option>
+							</select>
 							<input type=\"hidden\" name=\"action\" value=\"search\" />
 							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />
 						</fieldset>
