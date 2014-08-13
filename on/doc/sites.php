@@ -32,7 +32,7 @@ $content = "
 				<p>{$lang['create_text2']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/2.png\" alt=\"2\" />
 				<p>{$lang['create_text3']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/15.png\" alt=\"15\" />
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/3.png\" alt=\"3\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

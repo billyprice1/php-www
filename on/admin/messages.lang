@@ -36,6 +36,7 @@ status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Cl
 new_info_title = "Prior informations"
 new_info_contain = "<u>If your request <b>is not about</b> a quota increase</u>: this interface should <b>only</b> be used to request an increase of <a href='/panel/quotas'>your quotas</a>. No support will be provided by this way : please post on <a href='https://community.olympe.in'>the forums</a>.<br /><br /><u>If your request is about a quota increase</u>: according to our <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions of use</a>, you have to point out the reasons that can allow us to understand the motivation of your request (<i>eg : the aim of your site, the intended audience, the interest of your request, etc.</i>). If you want to increase your websites number, also consider presenting the site(s) you've already done."
 continue = "Continue"
+all_status = "All statuses"
 
 
 [FR]
@@ -76,6 +77,7 @@ status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Fe
 new_info_title = "Informations préalables"
 new_info_contain = "<u>Si votre demande <b> ne concerne pas</b> une augmentation de quota</u> : cette interface ne doit être utilisée <b>que</b> pour solliciter une augmentation de <a href='/panel/quotas'>vos quotas</a>. Aucune assistance ne sera fournie via cette interface : merci de poster votre question sur <a href='https://community.olympe.in'>le support</a>, le cas échéant.<br /><br /><u>Si votre demande concerne une augmentation de quota</u> : conformément aux <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions générales d'utilisation</a>, il est nécessaire de présenter votre projet pour <b>toute augmentation de quota</b> (site, domaine, espace disque...). Pour cela, il vous faut indiquer les informations qui peuvent nous permettre d'<b>apprécier de l'opportunité de votre demande</b> (<i>exemple : l'intérêt de votre site, le sujet qu'il traite, le public auquel il se destine, etc.</i>) Si vous sollicitez une augmentation du nombre de site, pensez également à présenter le(s) site(s) que vous avez déjà réalisé."
 continue = "Poursuivre"
+all_status = "Tous les status"
 
 [DE]
 title = "Anwendungen (Quote)"
@@ -121,3 +123,4 @@ gemäß den <a href='/on/documents/Olympe-CGS-FR.pdf'>allgemeinen Bedingungen de
 (<i>Beispiel: das Interesse von Ihrer Seite, zum Thema, die er behandelt, das Publikum, für die es bestimmt ist, usw..</i>), angeben. 
 Wenn Sie eine Zunahme der Zahl der Website anfordern, sollten Sie auch vorhanden Website Sie bereits erreicht haben präsentieren."
 continue = "Weiter"
+all_status = "All statuses"

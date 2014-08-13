@@ -1,5 +1,14 @@
 [EN]
+title = "What is Olympe?"
+intro = "Free web hosting"
+intro_text = "Olympe is a <a href='https://www.olympe.in'>free web hosting</a> platform. You can register and enjoy a <a href='/service/hosting'>free space</a> to publish your website, your blog, and your web apps.
+We provide <a href='/service/offer'>extensive services</a> all around databases, domain names and development  tools."
+intro_text2 = "Olympe also offers its users a <a href='/doc/services'>Cloud app</a>
+including files synchronizing, calendars and contacts, todo list ..."
 
+who = "Who is Olympe ?"
+who_text = "Olympe is a non-profit organization under French law. It is funded by the <a href='https://www.sys.as'>SYS</a> compagny, created to make the association independant and to ensure it continues."
+who_text2 = "The association head office is located in Paris, France. Feel free to <a href='/about/contact'>contact us</a> if you have any question."
 
 [FR]
 title = "Qu'est-ce que Olympe ?"

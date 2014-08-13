@@ -150,7 +150,7 @@ innovation = "Innovativo"
 innovation_text = "Forniamo le più recenti <a href='/service/infrastructure'>tecnologie</a>, concentrandoci sulla <a href='/status'>disponibilità</a> dei servizi."
 app = "Applicazioni PHP e servizi"
 app_text = "Per più di sei anni ormai, l'organizzazione Olympe fornisce un <a href='/service/hosting'>servizio di hosting gratuito</a> e libero da pubblicità. Agli inizi, il nostro piano offriva solamente PHP/MySQL. In seguito, la nostra squadra ha migliorato la capacità della piattaforma e ora proponiamo molte
-altre <a href='/service/offer'>tecnologie/a> (PostgreSQL, MongoDB...).<br />
+altre <a href='/service/offer'>tecnologie</a> (PostgreSQL, MongoDB...).<br />
 <br />Più di un semplice spazio di stoccaggio (memoria), vi forniamo inoltre un <a href='/service/offer'>servizio completo di gestione dei domi di dominio</a> (sottodomini, DNS records...), account email POP/IMAP (redirect, aliases...), calendari condivisi e molto altro ancora."
 
 manage = "Funzioni aggiuntive"
