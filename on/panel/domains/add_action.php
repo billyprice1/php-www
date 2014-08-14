@@ -16,7 +16,7 @@ try
 catch( Exception $e )
 {
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+	$_SESSION['MESSAGE']['TEXT'] = $lang['error'];	
 }
 
 if( isset($_GET['redirect']) )
