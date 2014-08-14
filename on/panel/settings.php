@@ -8,6 +8,15 @@ if( !defined('PROPER_START') )
 
 $userinfo = api::send('self/user/list');
 $userinfo = $userinfo[0];
+
+$limit_date = $userinfo['date'] + 1209600;
+
+if($limit_date > time()) {
+	$disabled = ' disabled="disabled" ';
+	$limit_date_month = date('F', $limit_date);
+	$limit_date_month_translate = $lang[$limit_date_month];
+	$email_info = $lang['no_email_change'] . '<strong>' . str_replace($limit_date_month, $limit_date_month_translate, date($lang['DATEFORMAT'], $limit_date)) . '</strong>.';
+}
 		
 $month = date('F', $userinfo['date']);
 $month_translate = $lang[$month];
@@ -17,7 +26,7 @@ $content = "
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 500px;\">
 				<h1 class=\"dark\" style=\"padding-top: 7px;\">{$lang['settings']}</h1>
-				<blockquote style=\"width: 100%;\"><p>{$lang['registered']} <span style=\"font-weight: bold;\">".str_replace($month, $month_translate, date($lang['DATEFORMAT'], $userinfo['date']))."</span>.</p></blockquote>
+				<blockquote style=\"width: 100%;\"><p>{$lang['registered']} <span style=\"font-weight: bold;\">".str_replace($month, $month_translate, date($lang['DATEFORMAT'], $userinfo['date']))."</span>. {$email_info}</p></blockquote>
 			</div>
 			<div class=\"right\" style=\"width: 550px; float: right; text-align: right;\">
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepass').dialog('open'); return false;\">
@@ -42,7 +51,7 @@ $content = "
 							<span class=\"help-block\">{$lang['firstname_help']}</span>
 						</fieldset>
 						<fieldset>
-							<input type=\"text\" name=\"email\" value=\"{$userinfo['email']}\" style=\"width: 250px;\" />
+							<input {$disabled} type=\"text\" name=\"email\" value=\"{$userinfo['email']}\" style=\"width: 250px;\" />
 							<span class=\"help-block\">{$lang['mail_help']}</span>
 						</fieldset>
 					</div>
