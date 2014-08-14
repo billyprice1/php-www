@@ -1,4 +1,10 @@
 [EN]
+menu_intro = "Home"
+menu_first = "First step"
+menu_infos = "Useful Information"
+menu_faq = "Frequently Asked Questions"
+
+ndoc = "Documentation"
 
 [FR]
 menu_intro = "Accueil"
