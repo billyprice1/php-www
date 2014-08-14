@@ -65,6 +65,8 @@ $content = "
 								<option ".($userinfo['language']=='EN'?"selected":"")." value=\"EN\">English</option>
 								<option ".($userinfo['language']=='FR'?"selected":"")." value=\"FR\">Fran&ccedil;ais</option>
 								<option ".($userinfo['language']=='ES'?"selected":"")." value=\"ES\">Espa&ntilde;ol</option>
+								<option ".($userinfo['language']=='DE'?"selected":"")." value=\"DE\">Deutsch</option>
+								<option ".($userinfo['language']=='IT'?"selected":"")." value=\"IT\">Italiano</option>
 							</select>
 							<span class=\"help-block\">{$lang['lang_help']}</span>
 						</fieldset>							
