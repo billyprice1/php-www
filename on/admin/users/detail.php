@@ -252,6 +252,10 @@ if( security::hasGrant('TOKEN_SELECT') )
 						<td style=\"width: 100px; text-align: center;\">
 		";
 		
+		if( $t['name'] == "Olympe" ) 
+			$content .= "
+							<a href=\"/admin/tokens/send_action?user={$_GET['id']}&token={$t['token']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/mail.png\" alt=\"\" /></a>";
+		
 		if( security::hasGrant('TOKEN_UPDATE') )
 		{
 			$content .= "
