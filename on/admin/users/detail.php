@@ -70,14 +70,16 @@ if( security::hasGrant('SITE_SELECT') )
 	$sites = api::send('site/list', array('user'=>$_GET['id']));
 	
 	foreach( $sites as $s )
-	{		
+	{
 		$content .= "
 						<tr>
 							<td style=\"width: 60px; text-align: center;\">{$s['id']}</td>
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
-							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<td style=\"width: 100px; text-align: center;\">
+								<a href=\"#\" onclick=\"$('#site_overview_link').attr('href', '/admin/sites/overview_action?user={$user['id']}&site={$s['hostname']}'); $('#site_overview').attr('src','/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}'); $('#site_overview_name').text('{$s['hostname']}'); $('#overview').dialog('open'); return false;\" title=\"{$lang['overview']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/view.png\" alt=\"\" /></a>
+								
+								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"{$lang['delete_site']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -251,6 +253,10 @@ if( security::hasGrant('TOKEN_SELECT') )
 						<td>{$t['token']}</td>
 						<td style=\"width: 100px; text-align: center;\">
 		";
+		
+		if( $t['name'] == "Olympe" ) 
+			$content .= "
+							<a href=\"/admin/tokens/send_action?user={$_GET['id']}&token={$t['token']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/mail.png\" alt=\"\" /></a>";
 		
 		if( security::hasGrant('TOKEN_UPDATE') )
 		{
@@ -676,6 +682,15 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"overview\" class=\"floatingdialog delete-link\">
+			<br />
+			<h3 class=\"center\">{$lang['overview']} (<span id=\"site_overview_name\"></span>)</h3>
+			<img src=\"\" id=\"site_overview\" alt=\"\" style=\"margin:auto; border: 1px solid #DDD; display: block;\" />
+			<a id=\"site_overview_link\" style=\"height: 22px; width: 130px; margin: 20px auto;\" href=\"\" class=\"button classic\">
+				<img src=\"/on/images/refresh-white.png\" style=\"float: left; height: 98%;\">
+				<span style=\"display: block; padding-top: 3px;\">Actualiser</span>
+			</a>
+		</div>
 		<script>
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('deletebackup', 550);
@@ -686,6 +701,7 @@ $content .= "
 			newFlexibleDialog('quotachange', 550);
 			newFlexibleDialog('newtoken', 550);
 			newFlexibleDialog('email', 700);
+			newFlexibleDialog('overview', 700);
 			$(function() {
 				$('#admincomment').focus(function() {
 						var currentVal = $(this).val(),

@@ -1,0 +1,17 @@
+[EN]
+subject = "Olympe - Reminder of your login"
+content = "<p style='margin: 20px 0'>Following your request, we remind you your login to the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> hosting platform.</p>
+<p style='margin: 20px 0'><strong>Username</strong> : {USERNAME} <br />
+<strong>Main token</strong> : {TOKEN} </p>
+<p style='margin: 20px 0'>If you have not asked for a reminder, you can just ignore it. Hope to see you again very soon on our platform!</p>"
+
+success = "The reminder of the login has been sent."
+
+[FR]
+subject = "Olympe - Rappel de vos identifiants"
+content = "<p style='margin: 20px 0'>Suite à votre demande, nous vous rappelons vos identifiants de connexion au service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'><strong>Nom d'utilisateur</strong> : {USERNAME} <br />
+<strong>Token principal</strong> : {TOKEN} </p>
+<p style='margin: 20px 0'>Si vous n'avez pas sollicité ce rappel, vous pouvez simplement l'ignorer. En espérant vous revoir très rapidement sur notre plateforme !</p>"
+
+success = "Le rappel des identifiants de connexion a bien été envoyé."
