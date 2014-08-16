@@ -4,7 +4,7 @@ content = "<p style='margin: 20px 0'>You have requested the recovery of your acc
 	<p style='margin: 20px 0'>In order to choose a new password, you have to click on the following link. Be careful, this link is only valid during <strong>6 hours</strong>!</p>
 	<p style='margin: 20px 0'>Update your password : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
 
-success = "You request is a success. An email with a a recovery link has been sent to your address."
+success = "You request is a success. An email with a recovery link has been sent to your address."
 
 [ES]
 subject = "Recuperación de cuenta"
