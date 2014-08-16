@@ -18,8 +18,10 @@ if( count($user) == 0 )
 
 $user = $user[0];
 
-$email = str_replace(array('{USER}'), array($user['name']), $lang['content']);
-$email = str_replace('{TOKEN}', $token, $lang['content']);
+$email = $lang['content'];
+$email = str_replace('{USERNAME}', $user['name'], $email);
+$email = str_replace('{TOKEN}', $token, $email);
+
 mail($user['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
