@@ -6,7 +6,12 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$fh = fopen("http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1", 'r');
+$fh = "http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1";
+
+if ( @fopen($fh, 'r')) {
+
+$fh = fopen($fh, 'r');
+
 $response = stream_get_contents($fh);
 fclose($fh);
 $response = json_decode(str_replace(array('jsonUptimeRobotApi(', ')'), array('', ''), $response), true);
@@ -22,6 +27,13 @@ foreach( $response['monitors']['monitor'] as $m )
 		$status = $m['status'];
 		$logs = $m['log'];
 	}
+}
+
+}
+else {
+	$status = "2";
+	$up30 = "Indisponible "; 
+	$up365 = "Indisponible "; 
 }
 
 require_once 'on/status/vendor/autoload.php';
@@ -87,6 +99,17 @@ if( count($issues) > 0 )
 				</tr>
 		";
 	}
+}
+else
+{
+	$content .= "
+				<tr>
+					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
+					".$lang['intervention'].".
+					</td>
+				</tr>
+	";
+
 }
 
 
