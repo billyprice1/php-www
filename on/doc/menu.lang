@@ -1,52 +1,59 @@
 [EN]
 index = "Index"
-started = "How to start ?"
-what = "What is Olympe ?"
-techno = "Used technologies"
-infos = "Useful information"
-first = "Your first website"
+
+started = "First website"
+first = "Create a new website"
+publish = "Publish the website online"
+infos = "Useful informations"
+php = "Display PHP errors"
 
 features = "Features"
 sites = "Website"
 domains = "Domain names"
 databases = "Databases"
 mails = "Email accounts"
-
-services = "Services"
-cloud = "Cloud application"
-stats = "Statistics"
-quota = "Quota and limits"
-tokens = "Tokens"
-
-various = "Other"
-faq = "Frequently asked questions"
 directory = "Directory"
 backups = "Backups"
-php = "PHP errors"
+
+services = "Services"
+stats = "Statistics"
+quota = "Quota and limits"
+tokens = "Access Rights (tokens)"
+cloud = "Cloud application"
+
+faq = "Frequently asked questions"
+
+about = "About us"
+what = "What is Olympe ?"
+techno = "Used technologies"
+contact = "Contact us"
 
 [FR]
 index = "Accueil de l'aide"
-started = "Débuter"
-what = "Qu'est-ce qu'Olympe ?"
-techno = "Technologies utilisées"
+
+started = "Premier site"
+first = "Créer un nouveau site"
+publish = "Publier le site en ligne"
 infos = "Informations utiles"
-first = "Votre premier site"
+php = "Afficher les erreurs PHP"
 
 features = "Fonctionnalités"
 sites = "Sites Internet"
 domains = "Noms de domaine"
 databases = "Bases de données"
 mails = "Comptes mails"
-
-services = "Services"
-cloud = "Application cloud"
-stats = "Statistiques"
-quota = "Quotas et limites"
-tokens = "Droits d'accès"
-tokens = "Tokens"
-
-various = "Divers"
-faq = "Questions fréquentes"
 directory = "Annuaire des sites"
 backups = "Sauvegardes"
-php = "Erreurs PHP"
+
+services = "Services liés"
+stats = "Statistiques"
+quota = "Quotas et limites"
+tokens = "Droits d'accès (tokens)"
+cloud = "Application cloud"
+
+faq = "Questions fréquentes"
+
+about = "A propos"
+what = "Qu'est-ce qu'Olympe ?"
+techno = "Technologies utilisées"
+contact = "Nous contacter"
