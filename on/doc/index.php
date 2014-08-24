@@ -159,7 +159,7 @@ $content = "
 									<tr>
 										<td>PHPPgAdmin</td>
 										<td>{$lang['pgsql']}</td>
-										<td><a href=\"https://pma.olympe.in\">https://ppa.olympe.in</a></td>
+										<td><a href=\"https://ppa.olympe.in\">https://ppa.olympe.in</a></td>
 									</tr>
 								</table>
 								<div style=\"float:right; margin-top: 20px;\">
