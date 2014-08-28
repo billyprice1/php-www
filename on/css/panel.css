@@ -535,8 +535,13 @@ div.panel div.database span.name {
 }
 
 div.panel div.database span.subname {
-	font-size: 15px;
-	color: #929292;
+    color: #929292;
+    display: inline-block;
+    font-size: 15px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 div.panel div.database span.disk {
