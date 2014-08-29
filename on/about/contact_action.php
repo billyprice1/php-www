@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
 else {
-	$user = utf8_decode($_POST['account']);
+	$user = utf8_decode(htmlspecialchars($_POST['account']));
 }
 
 if($_POST['email']=='' || $_POST['subject']=='' || $_POST['message']=='') {
@@ -25,16 +25,16 @@ if(! filter_var(security::encode($_POST['email']), FILTER_VALIDATE_EMAIL)) {
 }
 
 $ip = $_SERVER['HTTP_X_REAL_IP'];
-$subject = utf8_decode($_POST['subject']);
+$subject = utf8_decode(htmlspecialchars($_POST['subject']));
 
 $message = "
-Nom : ".utf8_decode($_POST['name'])."
-Email : ".utf8_decode($_POST['email'])."
+Nom : ".utf8_decode(htmlspecialchars($_POST['name']))."
+Email : ".utf8_decode(htmlspecialchars($_POST['email']))."
 Sujet : {$subject}
 Compte : {$user}
 IP : {$ip}
 
-Message : ".utf8_decode($_POST['message'])."
+Message : ".utf8_decode(htmlspecialchars($_POST['message']))."
 ";
 
 mail("contact@olympe.in", "[Olympe] [Contact] {$subject}", $message, "From: ".security::encode($_POST['email']));
