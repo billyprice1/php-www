@@ -43,6 +43,19 @@ $content = "
 				</blockquote>
 				<p>{$lang['create_text4']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/10.png\" alt=\"10\" />
+				
+				<br /><hr /><br />
+				<div>
+					<div style=\"width: 300px; float: right;\">
+						<a class=\"button classic\" style=\"width: 220px; height: 22px; float: right;\" href=\"/doc/mails\">
+							<img src=\"/on/images/arrow-right.png\" style=\"float: left;\">
+							<span style=\"display: block; padding-top: 3px;\">{$lang['next_button']}</span>
+						</a>
+					</div>
+					<div style=\"margin-right: 300px;\">
+						{$lang['next_text']}
+					</div>
+				</div>
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

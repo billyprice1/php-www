@@ -685,7 +685,7 @@ $content .= "
 		<div id=\"overview\" class=\"floatingdialog delete-link\">
 			<br />
 			<h3 class=\"center\">{$lang['overview']} (<span id=\"site_overview_name\"></span>)</h3>
-			<img src=\"\" id=\"site_overview\" alt=\"\" style=\"margin:auto; border: 1px solid #DDD; display: block;\" />
+			<img src=\"\" id=\"site_overview\" alt=\"\" style=\"margin: auto; border: 1px solid rgb(221, 221, 221); display: block; width: 512px; height: 384px; background: url('/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_75x75.gif') no-repeat scroll center center transparent;\" />
 			<a id=\"site_overview_link\" style=\"height: 22px; width: 130px; margin: 20px auto;\" href=\"\" class=\"button classic\">
 				<img src=\"/on/images/refresh-white.png\" style=\"float: left; height: 98%;\">
 				<span style=\"display: block; padding-top: 3px;\">Actualiser</span>

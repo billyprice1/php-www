@@ -1,0 +1,52 @@
+[EN]
+title = "First steps"
+publish = "Publish your website online"
+
+publish_text = "To login our platform and upload your pages, you have to use an FTP (<em>File Transfer Protocol</em>) client. The FTP client is a software that easily carries out the uploads between your computer and the server.
+There are many FTP clients, the explanations here will be for both of them: <br />"
+publish_client1 = "WinSCP"
+publish_client2 = "FileZilla"
+
+login = "Login informations"
+login_text = "Whether you use one of the two FTP clients mentioned above, or another one, in all cases you will need the following informations to login the FTP server. Keep it in mind, we use it very soon."
+service = "Service"
+hostname = "Hostname"
+port = "Port"
+
+winscp = "Using WinSCP"
+winscp_text = "If you have not already done so, you have to <a href=\"http://winscp.net/eng/docs/installation\">download and install WinSCP</a>. When it is done, the client will require a connection (<em>see image</em>). You have 
+to fill the hostname (<em>ftp.olympe.in</em>) and the port number (<em>22</em>, preferably). WARNING : here, the user name is your <strong>website name</strong>, not your own username. If you made the following website : 
+<em>test</em>.olympe.in, you should write <em>test</em> as user name. The password is the one chosen when you made the website. You can change it clicking the website thumbnail on your home panel."
+winscp_text2 = "If everything is set correctly, the list of folders and files appears. You can upload your files."
+
+filezilla = "Using FileZilla"
+filezilla_text = "If you have not already done so, you have to <a href=\"https://filezilla-project.org/download.php?type=client\">download and install FileZilla</a>. When it is done, the client will require a connection (<em>see image</em>). 
+You have to fill the hostname (<em>ftp.olympe.in</em>) and the port number (<em>22</em>, preferably). WARNING : here, the user name is your <strong>website name</strong>, not your own username. If you made the following website : 
+<em>test</em>.olympe.in, you should write <em>test</em> as user name. The password is the one chosen when you made the website. You can change it clicking the website thumbnail on your home panel."
+filezilla_text2 = "If everything is set correctly, a message confirms the login and the list of folders and files appears. The left frame shows the files on your computer, and the right frame those on your site. Just move from one frame to 
+another to put them online"
+
+[FR]
+title = "Premiers pas"
+publish = "Publier le site en ligne"
+
+publish_text = "Pour vous connecter à notre plateforme et y transférer vos pages, vous devez utiliser un client FTP (ce qui signifie <em>File Transfer Protocol</em>, soit en français, Protocole de Transfert de Fichiers).
+Le client FTP est un logiciel qui, d'une manière simplifiée, effectue les opérations de transfert entre votre ordinateur et le serveur. Il existe de nombreux clients FTP, les explications fournies ici le seront pour deux d'entre eux : <br />"
+publish_client1 = "WinSCP"
+publish_client2 = "FileZilla"
+
+login = "Informations de connexion"
+login_text = "Que vous utilisiez l'un des deux clients cités précédemment, ou un autre, vous aurez besoin dans tous les cas des informations suivantes, qui vous seront nécessaires pour vous connecter au serveur FTP. Gardez-les en tête, 
+nous y revenons très bientôt."
+service = "Service"
+hostname = "Nom d'hôte"
+port = "Port"
+
+winscp = "Utilisation de WinSCP"
+winscp_text = "Tout d'abord, si ce n'est pas encore fait, vous devez <a href=\"http://winscp.net/eng/docs/lang:fr#telechargement_et_installation_de_winscp\">télécharger et installer WinSCP</a>. Une fois chose faite, le logiciel requerra une connexion (<em>cf. image</em>). C'est là que les informations de connexion interviennent : vous devez indiquer le nom d'hôte (<em>ftp.olympe.in</em>) et le port (<em>22</em>, de préférence). Concernant le nom d'utilisateur, il s'agit là <strong>du nom de votre site</strong>, et non du nom de votre compte. Si vous avez crée le site <em>test</em>.olympe.in, vous devez indiquer <em>test</em>. Le mot de passe est celui choisi lors de la création du site. Vous pouvez le modifier en cliquant sur l'aperçu du site correspondant, sur l'accueil de votre panel."
+winscp_text2 = "Si vous avez correctement configuré ces informations, la liste des dossiers apparaît, vous pouvez uploader vos fichiers."
+
+filezilla = "Utilisation de FileZilla"
+filezilla_text = "Tout d'abord, si ce n'est pas encore fait, vous devez <a href=\"https://filezilla-project.org/download.php?type=client\">télécharger et installer FileZilla</a>. Une fois chose faite, le logiciel requerra une connexion (<em>cf. image</em>). C'est là que les informations de connexion interviennent : vous devez indiquer l'hôte (<em>ftp.olympe.in</em>) et le port (<em>22</em>, de préférence). Concernant l'identifiant, il s'agit là <strong>du nom de votre site</strong>, et non du nom de votre compte. Si vous avez crée le site <em>test</em>.olympe.in, vous devez indiquer <em>test</em>. Le mot de passe est celui choisi lors de la création du site. Vous pouvez le modifier en cliquant sur l'aperçu du site correspondant, sur l'accueil de votre panel."
+filezilla_text2 = "Si vous avez correctement configuré ces informations, un message vous confirme l'affichage du contenu du dossier et la liste des dossiers apparaît. Dans le cadre de gauche apparaissent les fichiers présents sur votre ordinateur, et dans
+le cadre de droite ceux présent sur votre site. Il vous suffit de passer d'un cadre à l'autre pour les mettre en ligne"

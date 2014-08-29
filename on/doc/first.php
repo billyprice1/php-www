@@ -35,13 +35,19 @@ $content = "
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/2.png\" alt=\"2\" />
 				<p>{$lang['site_text2']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/3.png\" alt=\"3\" />
-				<br />
-				<h3>{$lang['publish']}</h3>
-				<p class=\"large\">{$lang['publish_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/4.png\" alt=\"4\" />
-				<p class=\"large\">{$lang['publish_text2']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/5.png\" alt=\"5\" />
-				<p>{$lang['end']}</p>
+				
+				<br /><hr /><br />
+				<div>
+					<div style=\"width: 300px; float: right;\">
+						<a class=\"button classic\" style=\"width: 220px; height: 22px; float: right;\" href=\"/doc/publish\">
+							<img src=\"/on/images/arrow-right.png\" style=\"float: left;\">
+							<span style=\"display: block; padding-top: 3px;\">{$lang['next_button']}</span>
+						</a>
+					</div>
+					<div style=\"margin-right: 300px;\">
+						{$lang['next_text']}
+					</div>
+				</div>
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>
