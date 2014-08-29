@@ -11,6 +11,7 @@ gael = "Engineer<br />Administrator / Developer"
 romain = "Student<br />Administrator"
 remi = "Education Officer<br />Administrator / Support"
 tristan = "Student<br />Administrator / Developer"
+you = "You?<br />Join"
 
 hiring = "We're hiring !"
 hiring_text = "Olympe is currently searching for new staff members. Of course, this is a volunteer and remote work, but if you are interested in infrastructure technologies,
@@ -53,6 +54,8 @@ gael = "Ingénieur<br />Administrateur / Développeur"
 romain = "Etudiant<br />Administrateur"
 remi = "Agent d'éducation<br />Administrateur / Support"
 tristan = "Étudiant<br />Administrateur / Développeur"
+you = "Vous?"
+join = "Rejoindre"
 
 hiring = "Nous recrutons !"
 hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
