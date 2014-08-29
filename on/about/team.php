@@ -81,6 +81,12 @@ $content = "
 				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['simon']}</span><br />
 				<span style=\"color: #a8a8a8; font-size: 12px;\">simon.uyttendaele@olympe.in</span><br />
 			</div>
+			<div style=\"float: left; text-align: center; width: 275px;\">
+				<a href=\"/about/contact\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/you.png\" /></a><br />
+				<span style=\"color: #de5711; font-size: 20px;\" id=\"You\">{$lang['you']}</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">{$lang['join']}</span><br />
+				<span style=\"color: #a8a8a8; font-size: 12px;\">contact@olympe.in</span><br />
+			</div>			
 			<div class=\"clear\"></div>
 			<br />
 			<div class=\"separator\"></div>
