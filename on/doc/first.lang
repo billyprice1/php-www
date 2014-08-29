@@ -1,6 +1,6 @@
 [EN]
 title = "First steps"
-start = "Where to start ?"
+start = "Create a new website"
 intro = "You just completed your registration on Olympe? Let us guide you !<br /><br />
 As a reminder, your Olympe account allow you to publish your website, and your documents on the Cloud (more about the <a href='/doc/quotas'>quotas and limits</a>).
 This small guide aims to give you all the essential information for a good start."
@@ -8,15 +8,13 @@ panel = "Your panel"
 panel_text = "You are now logged in on your <a href='/panel'>management panel</a>, whose home looks like the screenshot below."
 site = "First website creation"
 site_text = "To create your site, you have to be on the home of your panel, and click on the <strong>" + "</strong> to the left."
-site_text2 = "Once the site is created, you can go to the thumbnail to get the access details for updates."
-publish = "Publishing Data"
-publish_text = "To login the platform and upload your data, you have plenty possibilities. We explain here how to do so with the WinSCP software."
-publish_text2 = "The list of folders appears, you can upload your files."
-end = "You can access your pages!"
+site_text2 = "Now, you can click the thumbnail to get the access details, and configure few informations about your website."
+next_text = "Once the site is created, you can access its root via the chosen address (<em>name</em>.olympe.in). The next step is to publish your pages to finally create your website."
+next_button = "Publish the website online"
 
 [FR]
 title = "Premiers pas"
-start = "Débuter sur Olympe"
+start = "Créer un nouveau site"
 intro = "Vous venez de terminer votre inscription sur Olympe ? Suivez le guide...<br /><br />
 Pour rappel, votre compte Olympe vous permet d'accéder à un service proposant d'héberger, de base, un site internet et des documents dans le cloud (en savoir plus sur les <a href='/doc/quotas'>quotas et 
 limitations</a>). Ce petit guide à pour but de vous donner toutes les informations essentielles pour bien commencer."
@@ -24,8 +22,6 @@ panel = "Votre panel de gestion"
 panel_text = "Vous êtes maintenant connecté sur votre <a href='/panel'>panel de gestion</a> dont l'accueil ressemble à la capture ci-dessous."
 site = "Création du premier site"
 site_text = "Pour créer votre site, vous devez vous trouver sur l'accueil de votre panel, et cliquer sur le <i>plus</i> à gauche."
-site_text2 = "Une fois le site créé, vous pouvez vous rendre sur l'aperçu afin d'obtenir les détails des accès pour les mises à jour."
-publish = "Publication des données"
-publish_text = "Pour vous connecter à notre plateforme et transférer vos données, vous avez de nombreuses possibilités à votre disposition. Nous verrons ici la méthode classique (SFTP), avec le logiciel WinSCP."
-publish_text2 = "La liste des dossiers apparaît, vous pouvez uploader vos fichiers."
-end = "Vous pouvez accéder à vos pages !"
+site_text2 = "Désormais, vous pouvez vous rendre sur l'aperçu afin d'obtenir les détails des accès, et de configurer quelques informations relatives à votre site."
+next_text = "Une fois le site crée, vous pouvez accéder à sa racine via l'adresse choisie (<em>nom</em>.olympe.in). L'étape suivante consiste à y publier vos pages, pour enfin créer votre site Internet."
+next_button = "Publier le site en ligne"

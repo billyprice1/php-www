@@ -6,7 +6,12 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$fh = fopen("http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1", 'r');
+$fh = "http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1";
+
+if ( @fopen($fh, 'r')) {
+
+$fh = fopen($fh, 'r');
+
 $response = stream_get_contents($fh);
 fclose($fh);
 $response = json_decode(str_replace(array('jsonUptimeRobotApi(', ')'), array('', ''), $response), true);
@@ -22,6 +27,13 @@ foreach( $response['monitors']['monitor'] as $m )
 		$status = $m['status'];
 		$logs = $m['log'];
 	}
+}
+
+}
+else {
+	$status = "2";
+	$up30 = "";
+	$up365 = "";
 }
 
 require_once 'on/status/vendor/autoload.php';
@@ -43,15 +55,15 @@ $content = "
 			<div style=\"margin: 0 auto; width: 1100px;\">
 				<div style=\"float: left;\">
 					<div class=\"filluptimeout\">
-						<div class=\"filluptime\" style=\"width: {$up30}%;\"></div>
+						<div class=\"filluptime\" style=\"width: ".($up30==""?"{$lang['up30ind']}":"{$up30}")."%;\"></div>
 					</div>
-					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['30days']} <span style=\"font-weight: bold;\">{$up30}%</span></span>
+					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['30days']} <span style=\"font-weight: bold;\">".($up30==""?"{$lang['up30ind']}":"{$up30}")."%</span></span>
 				</div>
 				<div style=\"float: right;\">
 					<div class=\"filluptimeout\">
-						<div class=\"filluptime\" style=\"width: {$up365}%;\"></div>
+						<div class=\"filluptime\" style=\"width: ".($up365==""?"{$lang['up365ind']}":"{$up365}")."%;\"></div>
 					</div>
-					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['365days']} <span style=\"font-weight: bold;\">{$up365}%</span></span>
+					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['365days']} <span style=\"font-weight: bold;\">".($up365==""?"{$lang['up365ind']}":"{$up365}")."%</span></span>
 				</div>
 				<div class=\"clear\"></div>
 			</div>
@@ -87,6 +99,17 @@ if( count($issues) > 0 )
 				</tr>
 		";
 	}
+}
+else
+{
+	$content .= "
+				<tr>
+					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
+					".$lang['intervention'].".
+					</td>
+				</tr>
+	";
+
 }
 
 

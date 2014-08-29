@@ -1,11 +1,19 @@
 [EN]
-
+title = "Email accounts"
+intro = "Prerequisite"
+intro_text = "To create mail accounts, aliases and redirections on Olympe, you must have registered at least <a href='/doc/domains'>one domain name</a> for your website."
+create = "Create an email account"
+create_text = "In order to create an email account, go to the <a href='/panel/users'>\"Email accounts\"</a> menu of your panel. Choose the domain name for which you want a new email account, and click on "<em>Add an account</em>" :"
+create_text2 = "Then, fill the form"
+create_text3 = "Once the account is created, you can access it on the <a href='https://webmail.olympe.in'>webmail</a> or with your favorite mailer (<a href='/doc/infos'>POP/IMAP</a>). Moreover, you can easily create redirections and aliases."
 
 [FR]
 title = "Comptes mails"
-intro = "Introduction"
-intro_text = "Pour créer des comptes mails, redirections et alias sur Olympe, vous devez posséder au moins un <a href='/doc/domains'>nom de domaine</a>."
+intro = "Prérequis"
+intro_text = "Pour créer des comptes mails, redirections et alias sur Olympe, vous devez avoir enregistré et lié à votre site au moins un <a href='/doc/domains'>nom de domaine</a>."
 create = "Créer un compte mail"
-create_text = "Pour créer un compte mail, rendez-vous dans la <a href='/panel/users'>rubrique correspondante</a> de votre panel, puis cliquez sur le nom de domaine que vous voulez administrer :"
-create_text2 = "Puis remplir le formulaire :"
-create_text3 = "Une fois le compte mail créé, vous pouvez y accéder par le <a href='https://webmail.olympe.in'>webmail</a> ou en POP/IMAP. Mais vous pouvez également ajouter des redirections et des alias."
+create_text = "Pour créer un compte mail, rendez-vous dans la <a href='/panel/users'>rubrique correspondante</a> de votre panel, puis cliquez sur le nom de domaine pour lequel vous souhaitez créer un compte mail, et 
+cliquez sur <em>Ajouter un compte mail</em> :"
+create_text2 = "Puis remplissez le formulaire :"
+create_text3 = "Une fois le compte mail créé, vous pouvez y accéder par le <a href='https://webmail.olympe.in'>webmail</a> ou via votre logiciel de messagerie préféré (<a href='/doc/infos'>accès POP/IMAP</a>). Mais vous pouvez
+également ajouter des redirections et des alias."

@@ -31,6 +31,9 @@ $content = "
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/11.png\" alt=\"11\" />
 				<p>{$lang['stats_text2']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/12.png\" alt=\"12\" />
+				<br />
+				<h3>{$lang['access']}</h3>
+				<p>{$lang['access_text']}</p>
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>
