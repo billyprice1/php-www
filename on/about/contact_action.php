@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
 else {
-	$user = security::encode($_POST['account']);
+	$user = htmlspecialchars($_POST['account']);
 }
 
 if($_POST['email']=='' || $_POST['subject']=='' || $_POST['message']=='') {
@@ -25,12 +25,12 @@ if(! filter_var(security::encode($_POST['email']), FILTER_VALIDATE_EMAIL)) {
 }
 
 $message = "
-Name: ".security::encode($_POST['name'])."
-Email: ".security::encode($_POST['email'])."
-Subject: ".security::encode($_POST['subject'])."
+Name: ".htmlspecialchars($_POST['name'])."
+Email: ".htmlspecialchars($_POST['email'])."
+Subject: ".htmlspecialchars($_POST['subject'])."
 Compte: {$user}
 
-Message: ".security::encode($_POST['message'])."
+Message: ".htmlspecialchars($_POST['message'])."
 ";
 
 mail("contact@olympe.in", "[Olympe] {$_POST['subject']}", $message, "From: ".security::encode($_POST['email']));
