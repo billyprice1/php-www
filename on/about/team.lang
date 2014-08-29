@@ -11,6 +11,8 @@ gael = "Engineer<br />Administrator / Developer"
 romain = "Student<br />Administrator"
 remi = "Education Officer<br />Administrator / Support"
 tristan = "Student<br />Administrator / Developer"
+you = "You?"
+join = "Join"
 
 hiring = "We're hiring !"
 hiring_text = "Olympe is currently searching for new staff members. Of course, this is a volunteer and remote work, but if you are interested in infrastructure technologies,
@@ -32,6 +34,8 @@ gael = "Ingeniero<br />Administrador / Developer"
 romain = "Estudiante<br />Administrador"
 remi = "Educador<br />Administrador / Soporte"
 tristan = "Estudiante<br />Administrador / Developer"
+you = "Usted?"
+join = "Únete"
 
 hiring = "¡Estamos reclutando!"
 hiring_text = "Olympe está buscando nuevos miembros en el staff. Por supuesto, es un trabajo voluntario y a distancia, pero si estás interesado en las tecnologías de infraestructura,
@@ -53,6 +57,8 @@ gael = "Ingénieur<br />Administrateur / Développeur"
 romain = "Etudiant<br />Administrateur"
 remi = "Agent d'éducation<br />Administrateur / Support"
 tristan = "Étudiant<br />Administrateur / Développeur"
+you = "Vous?"
+join = "Rejoindre"
 
 hiring = "Nous recrutons !"
 hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
@@ -74,6 +80,8 @@ gael = "Engineer<br />Administrator / Entwickler"
 romain = "Student<br />Administrator"
 remi = "Education Officer<br />Administrator / Support"
 tristan = "Student <br />Administrator / Entwickler"
+you = "Sie?"
+join = "Beitreten"
 
 hiring = "Wir sind recruiting!"
 hiring_text = "Olympus sucht derzeit neue Mitglieder in die Entwicklungsteam. Es ist für Freiwilligenarbeit, aber wenn Sie IT-Infrastruktur, Web-Entwicklung oder Community-Interaktion interessiert sind, 
@@ -95,6 +103,8 @@ gael = "Tecnico<br />Amministratore / Sviluppatore"
 romain = "Studente<br />Amministratore"
 remi = "Education Officer<br />Amministratore / Supporto"
 tristan = "Studente <br />Amministratore / Sviluppatore"
+you = "Te?"
+join = "Aderire"
 
 hiring = "Stiamo reclutando!"
 hiring_text = "Olympe stà attualmente cercando per nuovi membri del personale. Certamente, questo è un lavoro volontario e da casa, ma se sei interessato nelle tecnologie delle infrastrutture,
