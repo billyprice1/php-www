@@ -23,7 +23,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'update_user_infos') {
 	
 } elseif(isset($_POST['action']) && $_POST['action'] == 'update_user_comment') {
 	$params = array('user'=>$_POST['id']);
-	if( isset($_POST['user_comment']) && strlen($_POST['user_comment']) > 0 )
+	if( isset($_POST['user_comment']) )
 		$params['comment'] = htmlspecialchars($_POST['user_comment']);
 }
 

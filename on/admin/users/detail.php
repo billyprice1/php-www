@@ -48,7 +48,7 @@ $content = "
 							
 							<input type=\"hidden\" name=\"action\" value=\"update_user_comment\" />
 							<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-							<textarea style=\"width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px;\" name=\"user_comment\" id=\"admincomment\" placeholder=\"Aucun commentaire\">{$user['comment']}</textarea>
+							<textarea style=\"width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px;\" name=\"user_comment\" id=\"admincomment\" placeholder=\"{$lang['no_comment']}\">{$user['comment']}</textarea>
 							
 							<br />
 						</form>
