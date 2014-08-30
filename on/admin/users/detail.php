@@ -15,6 +15,11 @@ if( count($user) == 0 )
 	template::redirect('/admin');
 $user = $user[0];
 
+if($user['comment'] == "0" || $user['comment'] == '')
+	$user_comment = "";
+else 
+	$user_comment = $user['comment'];
+
 $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
@@ -48,7 +53,7 @@ $content = "
 							
 							<input type=\"hidden\" name=\"action\" value=\"update_user_comment\" />
 							<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-							<textarea style=\"width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px;\" name=\"user_comment\" id=\"admincomment\" placeholder=\"{$lang['no_comment']}\">{$user['comment']}</textarea>
+							<textarea style=\"width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px;\" name=\"user_comment\" id=\"admincomment\" placeholder=\"{$lang['no_comment']}\">{$user_comment}</textarea>
 							
 							<br />
 						</form>
