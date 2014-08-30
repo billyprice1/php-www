@@ -46,9 +46,9 @@ $content = "
 							</div>
 							<div class=\"clear\"></div>
 							
-							<input type=\"hidden\" name=\"action\" value=\"comment\" />
+							<input type=\"hidden\" name=\"action\" value=\"update_user_comment\" />
 							<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-							<textarea style=\"width:98%;\" id=\"admincomment\">A venir...</textarea>
+							<textarea style=\"width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px;\" name=\"user_comment\" id=\"admincomment\" placeholder=\"Aucun commentaire\">{$user['comment']}</textarea>
 							
 							<br />
 						</form>
@@ -418,6 +418,7 @@ if( security::hasGrant('USER_SELECT') )
 						<span class=\"help-block\">{$lang['language_help']}</span>
 					</fieldset>
 					<fieldset>
+						<input type=\"hidden\" name=\"action\" value=\"update_user_infos\" />
 						<input type=\"submit\" value=\"{$lang['update']}\" />
 					</fieldset>
 				</form>";
@@ -704,6 +705,7 @@ $content .= "
 			newFlexibleDialog('overview', 700);
 			$(function() {
 				$('#admincomment').focus(function() {
+ 
 						var currentVal = $(this).val(),
 							adminName = '". security::get('USER') ."',
 							today = new Date(),
@@ -717,13 +719,20 @@ $content .= "
 						
 						if(! $(this).hasClass('editing')) {
 							if(currentVal != '') {
-								$(this).val(currentVal + '\\n' + adminName +' ('+today+') -');
+								$(this).val(currentVal + '\\n' + adminName +' ('+today+') - ');
 							} else {
-								$(this).val(adminName +' ('+today+') -');
+								$(this).val(adminName +' ('+today+') - ');
 							}
 						}
 						$(this).addClass('editing');
 				});
+				
+				var comment_lht = parseInt($('textarea#admincomment').css('lineHeight'),10);
+				var comment_lines = Math.round(($('textarea#admincomment').prop('scrollHeight') / comment_lht) - 1); 
+				var comment_height = (comment_lines * 20);
+				
+				$('#admincomment').css('min-height', comment_height +'px');
+				
 			});
 			
 		</script>	
