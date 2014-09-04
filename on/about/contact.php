@@ -57,8 +57,16 @@ $content .= "
 	}
 }
 		
+if( count($issues) > 0 )
+	{
+		$content .= "<div class=\"head-light\" style=\"padding: 10px 0 0 0;\">";
+	}
+	else
+	{ 
+		$content .= "<div class=\"head-light\">";
+	}
+	
 $content .= "
-			<div class=\"head-light\" style=\"padding: 10px 0 0 0;\">
 				<div class=\"container\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
 				</div>
