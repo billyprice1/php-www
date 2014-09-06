@@ -6,11 +6,67 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+require_once 'on/status/vendor/autoload.php';
+
+$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
+$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
+$issues = $issues['issues'];
+
+
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
 
-$content = "
-			<div class=\"head-light\">
+$content = "";
+
+if( count($issues) > 0 )
+{	
+$content .= "
+			<div class=\"head-light\" style=\"border-bottom: 0px;\">
+				<div class=\"container\">
+				<h3 style=\"color: #a4a4a4;\">
+				
+				<h3 style=\"color: #a4a4a4;\">{$lang['issues']}</h3>
+			<table>
+				<tr>
+					<th style=\"color: #a4a4a4; text-align: center; width: 40px;\">#</th>
+					<th style=\"color: #a4a4a4;\">{$lang['type']}</th>
+					<th style=\"color: #a4a4a4;\">{$lang['title']}</th>
+					<th style=\"color: #a4a4a4;\">{$lang['priority']}</th>
+					<th style=\"color: #a4a4a4;\">{$lang['date']}</th>
+					<th style=\"color: #a4a4a4;\">{$lang['status']}</th>
+					<th style=\"color: #a4a4a4;\">{$lang['updated']}</th>
+				</tr>";
+				
+
+	foreach( $issues as $i )
+	{
+		$content .= "
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><a href=\"https://projets.olympe.in/issues/{$i['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/issue.png\" /></a></td>
+					<td>".$lang['tracker_' . $i['tracker']['id']]."</td>
+					<td><a href=\"https://projets.olympe.in/issues/{$i['id']}\">{$i['subject']}</a></td>
+					<td>".$lang['priority_' . $i['priority']['id']]."</td>
+					<td>".date($lang['dateformatsimple'], strtotime($i['start_date']))."</td>
+					<td>".$lang['status2_' . $i['status']['id']]."</td>
+					<td>".date($lang['dateformat'], strtotime($i['updated_on']))."</td>
+				</tr>
+				</table>
+				</h3>
+			</div></div>			
+		";
+	}
+}
+		
+if( count($issues) > 0 )
+	{
+		$content .= "<div class=\"head-light\" style=\"padding: 10px 0 0 0;\">";
+	}
+	else
+	{ 
+		$content .= "<div class=\"head-light\">";
+	}
+	
+$content .= "
 				<div class=\"container\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
 				</div>

@@ -95,7 +95,7 @@ $content .= "
 if( count($sites) > 0 )
 {
 	$content .= "
-				<p style=\"text-align: center;\">{$lang['new_text']}</p>
+				<p style=\"text-align: justify;\">{$lang['new_text']}</p><hr /><br />
 				<div class=\"form-small\">		
 					<form action=\"/panel/domains/add_action\" method=\"post\" class=\"center\">
 						<fieldset>

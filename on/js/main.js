@@ -60,7 +60,7 @@ $(function()
 	);
 	
 	// FIXED STORE MENU //
-	var num = 140;
+	var num = 120;
 	$(window).bind('scroll', function ()
 	{
 		if( $(window).scrollTop() > num )
