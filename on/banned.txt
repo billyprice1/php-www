@@ -1,4 +1,5 @@
 0clickemail.com
+0-mail.com
 10minutemail.com
 10minutemail.de
 123-m.com
@@ -48,6 +49,7 @@ bobmail.info
 bofthew.com
 bookee.com
 boxformail.in
+brefmail.com
 brefmail.com
 brennendesreich.de
 broadbandninja.com
@@ -135,11 +137,13 @@ emailjetable.eu
 email-jetable.fr
 emaillime.com
 emailmiser.com
+emailsensei.com
 emailtemporar.ro
 emailtemporario.com.br
 emailthe.net
 emailtmp.com
 emailwarden.com
+ephemail.com
 example.com
 explodemail.com
 eyepaste.com
@@ -153,6 +157,7 @@ fatflap.com
 faza.ru
 fdfdsfds.com
 fightallspam.com
+filzmail.com
 filzmail.com
 find-love.info
 fizmail.com
@@ -224,6 +229,7 @@ jetable.com
 jetable.fr.nf
 jetable.net
 jetable.org
+jetable.org
 jnxjn.com
 jourrapide.com
 jsrsolutions.com
@@ -239,6 +245,7 @@ lavabit.com
 letthemeatspam.com
 lhsdv.com
 lifebyfood.com
+link2mail.com
 list.ru
 litedrop.com
 lookugly.com
@@ -258,6 +265,7 @@ maileater.com
 mailexpire.com
 mail-filter.com
 mailguard.me
+mail-gratuit.com
 mailhazard.com
 mailin8r.com
 mailinator.com
@@ -378,6 +386,7 @@ shit.trillianpro.com
 shitmail.me
 shitmail.org
 shitware.nl
+shortmail.net
 sibmail.com
 sinnlos-mail.de
 siteposter.net
@@ -397,6 +406,7 @@ spam.su
 spam4.me
 spamarrest.com
 spamavert.com
+spambob.com
 spambob.net
 spambob.org
 spambog.com
@@ -415,6 +425,7 @@ spamfree24.info
 spamfree24.net
 spamfree24.org
 spamgourmet.com
+spamh0le.com
 spamherelots.com
 spamhereplease.com
 spamhole.com
@@ -459,6 +470,7 @@ tempinbox.co.uk
 tempinbox.com
 tempmail.it
 tempmaildemo.com
+tempomail.com
 tempomail.fr
 temporaryemail.net
 temporaryemail.us
@@ -519,6 +531,7 @@ weibo.10086.cn
 wh4f.org
 whatiaas.com
 whyspam.me
+willhackforfood.biz
 willselfdestruct.com
 winemaven.info
 wuzupmail.net
