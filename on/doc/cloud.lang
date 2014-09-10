@@ -10,4 +10,4 @@ cloud_text = "Olympe propulse la version 7 d'OwnCloud, une suite complète compr
 les carnets d'adresse etc..."
 cloud_text2 = "Pour accéder à <a href='https://cloud.olympe.in'>OwnCloud</a>, vous devez vous connecter avec vos identifiants Olympe."
 client = "Installation du client"
-client_text = "Afin de synchroniser automatiquement les fichiers de vos pérophériques avec notre plateforme, vous devez <a href='http://owncloud.org/sync-clients'>télécharger</a> le client OwnCloud."
+client_text = "Afin de synchroniser automatiquement les fichiers de vos périphériques avec notre plateforme, vous devez <a href='http://owncloud.org/sync-clients'>télécharger</a> le client OwnCloud."
