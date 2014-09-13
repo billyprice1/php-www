@@ -122,6 +122,7 @@ $content .= "
 				<h2 class=\"dark\">{$lang['directory']}</h2>
 				<form action=\"/panel/sites/config_action\" method=\"post\">	
 					<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+					<input type=\"hidden\" name=\"action\" value=\"changedirectory\" />
 					<fieldset>
 						<input type=\"text\" name=\"title\" value=\"{$site['title']}\" style=\"width: 300px;\" />
 						<span class=\"help-block\">{$lang['title_help']}</span>
@@ -132,6 +133,7 @@ $content .= "
 					</fieldset>
 					<fieldset>
 						<select name=\"category\" style=\"width: 320px;\">
+							<option value=\"-1\">{$lang['choose_cat']}</option>
 							<option ".($site['category']==1?"selected":"")." value=\"1\">{$lang['CAT_1']}</option>
 							<option ".($site['category']==2?"selected":"")." value=\"2\">{$lang['CAT_2']}</option>
 							<option ".($site['category']==3?"selected":"")." value=\"3\">{$lang['CAT_3']}</option>
@@ -197,6 +199,7 @@ $content .= "
 		<div class=\"form-small\">		
 			<form action=\"/panel/sites/config_action\" method=\"post\" class=\"center\">
 				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<input type=\"hidden\" name=\"action\" value=\"changepass\" />
 				<fieldset>
 					<input type=\"password\" name=\"pass\" />
 					<span class=\"help-block\">{$lang['pass_help']}</span>
