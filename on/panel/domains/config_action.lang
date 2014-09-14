@@ -10,6 +10,10 @@ error = "Uno de los campos no está correctamente llenado."
 success = "Les paramètres du nom de domaine ont bien été mis à jour."
 error = "L'un des champs n'est pas correctement formaté."
 
+[DE]
+success = "DNS-Einstellungen sind geändert worden."
+error = "Das Format einen Feld ist falsch"
+
 [IT]
 success = "Le impostazoni del nome di dominio sono state correttamente modificate."
 error = "Uno o più campi non sono stati compilati correttamente."

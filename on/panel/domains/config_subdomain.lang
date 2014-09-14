@@ -16,6 +16,12 @@ subtitle = "Formulaire de configuration"
 record = "Enregistrement DNS"
 update = "Mettre à jour"
 
+[DE]
+title = "Subdomain einstellen"
+subtitle = "Einstellung Formular"
+record = "DNS record"
+update = "Update"
+
 [IT]
 title = "Configura un sottodominio"
 subtitle = "Form per la configurazione"

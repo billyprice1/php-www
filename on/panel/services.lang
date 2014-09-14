@@ -32,7 +32,7 @@ vous devez tout de même insérer le code fourni par Piwik sur vos pages."
 stats_text2 = "Vous pouvez vous connecter à l'interface Piwik avec les mêmes identifiants que le panel et ainsi découvrir toutes les fonctionnalités 
 offertes par notre outil de statistiques."
 cloud = "Application clouds"
-cloud_text = "Olympe propulse une plateforme de type <i>OwnCloud</i> avec de <a href='/doc/cloud'>nombreuses fonctionnalités</a> : stockage de fichiers, calendendriers et contacts partagés, galeries photos, lecteurs de musique..."
+cloud_text = "Olympe propulse une plateforme de type <i>OwnCloud</i> avec de <a href='/doc/cloud'>nombreuses fonctionnalités</a> : stockage de fichiers, calendriers et contacts partagés, galeries photos, lecteurs de musique..."
 cloud_text2 = "Afin d'utiliser le service, vous devez vous connecter au moins une fois à l'interface avec les identifiants de votre compte Olympe."
 
 piwik = "Accéder à Piwik"
