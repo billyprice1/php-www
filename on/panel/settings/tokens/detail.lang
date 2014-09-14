@@ -52,7 +52,7 @@ update = "Ändern"
 tokentoken = "Benutzeridentifizierung des tokens"
 back = "Back to the access"
 dateformat = "Y-m-d"
-maintoken_text = "Es handelt sich um ihre Haupttoken, Sie dürfen folglich nicht ihm bearbeiten. "
+maintoken_text = "Es handelt sich um ihre Haupttoken, Sie dürfen ihm folglich nicht bearbeiten. "
 
 [IT]
 title = "Dettagli Token"
