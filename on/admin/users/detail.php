@@ -411,6 +411,10 @@ if( security::hasGrant('USER_SELECT') )
 						<span class=\"help-block\">{$lang['email_help']}</span>
 					</fieldset>
 					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"ip\" value=\"{$user['ip']}\" disabled />
+						<span class=\"help-block\">{$lang['ip_help']}</span>
+					</fieldset>
+					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"firstname\" value=\"{$user['firstname']}\" />
 						<span class=\"help-block\">{$lang['firstname_help']}</span>
 					</fieldset>

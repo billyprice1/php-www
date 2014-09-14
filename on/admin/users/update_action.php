@@ -27,7 +27,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'update_user_infos') {
 		if( $_POST['user_comment'] == "")
 			$user_comment = "0";
 		else 
-			$user_comment = htmlspecialchars($_POST['user_comment']);
+			$user_comment = str_replace("'", "&#39;", htmlspecialchars($_POST['user_comment']));
 			
 		$params['comment'] = $user_comment;
 		

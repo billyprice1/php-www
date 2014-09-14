@@ -51,6 +51,7 @@ $content .= "
 						<option ".($news['language']=='FR'?"selected":"")." value=\"FR\">Fran&ccedil;ais</option>
 						<option ".($news['language']=='EN'?"selected":"")." value=\"EN\">English</option>
 						<option ".($news['language']=='ES'?"selected":"")." value=\"ES\">Espagnol</option>
+						<option ".($news['language']=='DE'?"selected":"")." value=\"DE\">Allemand</option>
 					</select>
 					<span class=\"help-block\">{$lang['lang_help']}</span>
 				</fieldset>	
