@@ -7,6 +7,7 @@ menu_quotas = "Quotas"
 menu_stats = "Statistics"
 menu_overquota = "Overquota"
 menu_blog = "Blog"
+menu_directory = "Directory"
 menu_logs = "Logs"
 
 [FR]
@@ -18,6 +19,7 @@ menu_quotas = "Quotas"
 menu_stats = "Statistiques"
 menu_overquota = "Overquota"
 menu_blog = "Blog"
+menu_directory = "Annuaire"
 menu_logs = "Logs"
 
 [DE]
@@ -29,4 +31,5 @@ menu_quotas = "Quoten"
 menu_stats = "Statistiken"
 menu_overquota = "Overquota"
 menu_blog = "Blog"
+menu_directory = "Directory"
 menu_logs = "Protokolle"
