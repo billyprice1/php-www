@@ -40,6 +40,20 @@ update = "Modifier"
 noreply = "Cette demande a été fermée, vous ne pouvez donc plus y répondre. Merci d'ouvrir une nouvelle demande en cas de nécessité."
 closed = "Demande fermée"
 
+[DE]
+title = "Nachfrage"
+reply = "Antworten"
+dateformat = "d/m/Y H:i:s"
+delete = "Löschen"
+delete_text = "Sind sie sicher, diese Nachfrage zu löschen ?"
+delete_now = "Bestätigen"
+reply = "Antworten"
+content_help = "Ihre Nachricht"
+send = "Senden"
+update = "Bearbeiten"
+noreply = "Diese Nachfrage wurde geschlossen. Sie können nicht mehr antworten. Bitte füllen Sie wieder den Nachfrage Formular wenn nötig."
+closed = "Geschlossene Nachfrage"
+
 [IT]
 title = "Richiesta"
 reply = "Rispondi"

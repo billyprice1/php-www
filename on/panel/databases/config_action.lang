@@ -10,6 +10,10 @@ error = "Tu descripción es demasiado larga !"
 success = "La description a bien été modifiée."
 error = "Votre description est trop longue !"
 
+[DE]
+success = "Die Beschreibung ist geändert worden."
+error = "Ihre Beschreibung ist zu lang oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+
 [IT]
 success = "La descrizione è stata aggiornata."
 error = "La tua descrizione è troppo lunga !"

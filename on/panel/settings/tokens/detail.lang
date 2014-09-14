@@ -40,6 +40,20 @@ back = "Retour aux accès"
 dateformat = "Y-m-d"
 maintoken_text = "Il s'agit de votre token de connexion principal, vous ne pouvez donc pas le modifier."
 
+[DE]
+title = "Token Details"
+grants = "Privilegen"
+grantname = "Name des Privilegs"
+granted = "Abgestimmt"
+tokeninfo = "Token Informationen"
+tokenname = "Name"
+tokenlease = "Ablauf (AAAA-MM-JJ)"
+update = "Ändern"
+tokentoken = "Benutzeridentifizierung des tokens"
+back = "Back to the access"
+dateformat = "Y-m-d"
+maintoken_text = "Es handelt sich um ihre Haupttoken, Sie dürfen folglich nicht ihm bearbeiten. "
+
 [IT]
 title = "Dettagli Token"
 grants = "Assegnazioni"

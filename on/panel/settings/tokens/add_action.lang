@@ -7,5 +7,8 @@ error = "No puedes crear un nuevo token \"Olympe\"."
 [FR]
 error = "Vous ne pouvez pas créer un nouveau token nommé \"Olympe\"."
 
+[DE]
+error = "Sie dürfen nicht einen namentlichen token \"Olympe\" erstellen."
+
 [IT]
 error = "Non puoi creare un altro token chiamato \"Olympe\"."
