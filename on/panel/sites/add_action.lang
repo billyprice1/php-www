@@ -7,5 +7,8 @@ error = "El nombre del sitio ya esta usado, o no tiene el formato correcto (sól
 [FR]
 error = "Le nom du site est déjà utilisé, ou n'est pas correctement formaté (uniquement minuscules et chiffres) ou votre <a href='/panel/quotas'>quota</a> est atteint."
 
+[DE]
+error = "Diese Webseite ist schon erstellt worden oder das Format ist nicht korrekt  (nur Kleinbuchstaben und Zahlen) oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+
 [IT]
 error = "Il nome del sito non è configurato correttamente (sono consentiti solo numeri e lettere minuscole) oppure hai esaurito il tuo <a href='/panel/quotas'>spazio disponibile</a>."
