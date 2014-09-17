@@ -9,6 +9,9 @@ if( !defined('PROPER_START') )
 $site = api::send('site/list', array('id'=>$_GET['id'], 'directory'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $site = $site[0];
 
+if(!$site)
+	template::redirect('/directory');
+
 $lang['TITLE'] = $lang['olympe'] . $site['title'];
 
 if( $security->hasAccess('/panel') )
