@@ -10,7 +10,10 @@ site = "First website creation"
 site_text = "To create your site, you have to be on the home of your panel, and click on the <strong>" + "</strong> to the left. The site name can only contain lowercase and numbers."
 site_text2 = "Now, you can click the thumbnail to get the access details, and configure few informations about your website."
 site_error = "An error occured"
-site_error_text = ""
+site_error_text = "If the site creation failed, there are three possible reasons: <ul class='classic'><li><u>the site name is already used</u> : another user is already using that name for his site,
+<li><u>the site name is misconfigured</u> : it must contain only lowercase and numbers</li> <li><u>the site name contains a blocked keyword</u> : to avoid phishing attempts, 
+Olympe has chosen to block certain words that are frequently used for this type of activity. If you think your site name has no reason to be blocked, you can contact the 
+<a href='http://community.olympe.in'>support forum</a>.</li></ul>"
 next_text = "Once the site is created, you can access its root via the chosen address (<em>name</em>.olympe.in). The next step is to publish your pages to finally create your website."
 next_button = "Publish the website online"
 
