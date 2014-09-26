@@ -13,7 +13,6 @@ checking
 confirm
 connect
 edf
-fb
 facbook
 faceb
 facebok
@@ -27,7 +26,6 @@ fbconnect
 fbook
 fbprofi
 fcebook
-feed
 identification
 instagram
 log-in
@@ -41,7 +39,6 @@ paypal-objects
 paypel
 peypal
 paypoul
-pay
 redirect
 redit
 reddit
@@ -51,7 +48,6 @@ security
 societegenerale
 steam
 subscribe
-step
 snapshat
 twitt
 update-
@@ -59,7 +55,6 @@ updateyo
 verf
 verif
 verification
-www
 youtube
 flickr
 wordpress
