@@ -26,6 +26,7 @@ fbconnect
 fbook
 fbprofi
 fcebook
+focebook
 identification
 instagram
 log-in
