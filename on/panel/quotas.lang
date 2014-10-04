@@ -18,6 +18,7 @@ size = "Size"
 database = "Database"
 site = "Web site"
 user = "Email account"
+diskalert = "The calculation of the disk quota is currently disabled."
 
 [ES]
 title = "Cuotas"
@@ -60,6 +61,7 @@ size = "Volumétrie"
 database = "Base de données"
 site = "Site Internet"
 user = "Compte mail"
+diskalert = "Le calcul du quota disque est actuellement désactivé."
 
 [IT]
 title = "Quote"

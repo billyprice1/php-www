@@ -6,12 +6,22 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/blocked.txt");
+$subdomain = htmlspecialchars(strtolower($_POST['subdomain']));
+
+foreach ($blocked as $line_num => $blocked_keyword) {
+	$blocked_keyword = trim($blocked_keyword);
+	if (strpos($subdomain, $blocked_keyword) !== false) {
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= $lang['blocked'];
+		$template->redirect('/panel');
+		exit();
+	}
+}
+
 try
 {
-	if( strpos($_POST['subdomain'], 'olympe.in') !== false )
-		throw new Exception("Invalid");
-	
-	api::send('self/site/add', array('site'=>$_POST['subdomain'], 'pass'=>$_POST['password']));
+	api::send('self/site/add', array('site'=>$subdomain, 'pass'=>$_POST['password']));
 	unset($_SESSION['subdomain']);
 }
 catch( Exception $e )

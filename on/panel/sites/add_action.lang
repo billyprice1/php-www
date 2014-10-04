@@ -1,11 +1,19 @@
 ﻿[EN]
 error = "The site name is already used, or is not formatted correctly (only lowercase letters and numbers) or your <a href='/panel/quotas'>quota</a> is reached."
+blocked = "<strong>The site name contains a keyword that can not be used.</strong> For more information, please read <a href='/doc/first'>the documentation</a>."
 
 [ES]
 error = "El nombre del sitio ya esta usado, o no tiene el formato correcto (sólo letras minúsculas y números) o se alcance tu <a href='/panel/quotas'>cuota</a>."
+blocked = "<strong>El nombre del sitio contiene una palabra que no se puede utilizar.</strong> Para obtener más información, por favor lea <a href='/doc/first'>la documentación</a>."
 
 [FR]
 error = "Le nom du site est déjà utilisé, ou n'est pas correctement formaté (uniquement minuscules et chiffres) ou votre <a href='/panel/quotas'>quota</a> est atteint."
+blocked = "<strong>Le nom du site contient un mot-clé qui ne peut être utilisé.</strong> Pour plus d'informations, pensez à lire <a href='/doc/first'>la documentation</a>."
+
+[DE]
+error = "Diese Webseite ist schon erstellt worden oder das Format ist nicht korrekt  (nur Kleinbuchstaben und Zahlen) oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+blocked = "<strong>The site name contains a keyword that can not be used.</strong> For more information, please read <a href='/doc/first'>the documentation</a>."
 
 [IT]
 error = "Il nome del sito non è configurato correttamente (sono consentiti solo numeri e lettere minuscole) oppure hai esaurito il tuo <a href='/panel/quotas'>spazio disponibile</a>."
+blocked = "<strong>Il nome del sito contiene una parola che non può essere utilizzato.</strong> Per ulteriori informazioni, si prega di leggere <a href='/doc/first'>la documentazione</a>."

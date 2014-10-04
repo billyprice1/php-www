@@ -7,5 +7,8 @@ error = "El correo electrónico no tiene el formato correcto."
 [FR]
 error = "L'adresse email n'est pas correctement formatée."
 
+[DE]
+error = "Das Format der Email-Adresse ist falsch"
+
 [IT]
 error = "L'email non è stat configurata correttamente."
