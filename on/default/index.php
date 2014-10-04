@@ -157,6 +157,13 @@ $content .= "
 					var options = { direction: \"up\"};
 					$(\"#signupform\").toggle(\"blind\", options, 200);
 				}
+				
+				$(function() {
+					$('.msignup').click(function() {
+						$('#signup').dialog('open');
+						return false;
+					});
+				});
 			</script>
 ";
 

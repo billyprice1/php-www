@@ -35,6 +35,10 @@ $content = "
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/2.png\" alt=\"2\" />
 				<p>{$lang['site_text2']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/3.png\" alt=\"3\" />
+				<br />
+				<h2 class=\"dark\">{$lang['site_error']}</h2>
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/notifications/error.png\" alt=\"\" style=\"float: right;\" />
+				<p>{$lang['site_error_text']}</p>
 				
 				<br /><hr /><br />
 				<div>
