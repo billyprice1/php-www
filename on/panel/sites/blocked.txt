@@ -12,6 +12,7 @@ check
 checking
 confirm
 connect
+dofus
 edf
 facbook
 faceb

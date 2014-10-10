@@ -335,7 +335,7 @@ div.panel div.site div.database div.image {
 	height: 120px;
 }
 
-div.panel a.action {
+div.panel a.action, div.admin a.action {
 	width: 90px;
 	display: inline-block;
 	margin: 4px 0 0 10px;
@@ -356,61 +356,70 @@ div.panel a.action.big {
 	background-size: 40%;
 }
 
-div.panel a.action:hover {
+div.panel a.action:hover, div.admin a.action:hover {
 	text-decoration: none;
 	background-color: #f8f8f8;
 }
 
-div.panel a.action.apps {
+a.action.apps {
 	background-image: url('../images/illu/apps.png');
 }
 
-div.panel a.action.apps:hover {
+a.action.apps:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/apps_hover.png');
 }
 
-div.panel a.action.pass {
+a.action.pass {
 	background-image: url('../images/illu/pass.png');
 }
 
-div.panel a.action.pass:hover {
+a.action.pass:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/pass_hover.png');
 }
 
-div.panel a.action.download {
+a.action.email {
+	background-image: url('../images/illu/mail.png');
+}
+
+a.action.email:hover {
+	color: #eb782b;
+	background-image: url('../images/illu/mail_hover.png');
+}
+
+a.action.download {
 	background-image: url('../images/illu/backup.png');
 }
 
-div.panel a.action.download:hover {
+a.action.download:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/backup_hover.png');
 }
 
-div.panel a.action.bill {
+a.action.bill {
 	background-image: url('../images/illu/bill.png');
 }
 
-div.panel a.action.bill:hover {
+a.action.bill:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/bill_hover.png');
 }
 
-div.panel a.action.certificate {
+a.action.certificate {
 	background-image: url('../images/illu/certificate.png');
 }
 
-div.panel a.action.certificate:hover {
+a.action.certificate:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/certificate_hover.png');
 }
 
-div.panel a.action.disable {
+a.action.disable {
 	background-image: url('../images/illu/kill.png');
 }
 
-div.panel a.action.disable:hover {
+a.action.disable:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/kill_hover.png');
 }
@@ -419,88 +428,88 @@ div.panel a.action.settings {
 	background-image: url('../images/illu/settings.png');
 }
 
-div.panel a.action.settings:hover {
+a.action.settings:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/settings_hover.png');
 }
 
-div.panel a.action.delete {
+a.action.delete {
 	background-image: url('../images/illu/delete.png');
 }
 
-div.panel a.action.delete:hover {
+a.action.delete:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/delete_hover.png');
 }
 
-div.panel a.action.buy {
+a.action.buy {
 	background-image: url('../images/illu/buy.png');
 }
 
-div.panel a.action.buy:hover {
+a.action.buy:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/buy_hover.png');
 }
 
-div.panel a.action.alert {
+a.action.alert {
 	background-image: url('../images/illu/alert.png');
 }
 
-div.panel a.action.alert:hover {
+a.action.alert:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/alert_hover.png');
 }
 
-div.panel a.action.graph {
+a.action.graph {
 	background-image: url('../images/illu/graph.png');
 }
 
-div.panel a.action.graph:hover {
+a.action.graph:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/graph_hover.png');
 }
 
-div.panel a.action.print {
+a.action.print {
 	background-image: url('../images/illu/print.png');
 }
 
-div.panel a.action.print:hover {
+a.action.print:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/print_hover.png');
 }
 
-div.panel a.action.pay {
+a.action.pay {
 	background-image: url('../images/illu/pay.png');
 }
 
-div.panel a.action.pay:hover {
+a.action.pay:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/pay_hover.png');
 }
 
-div.panel a.action.adddatabase {
+a.action.adddatabase {
 	background-image: url('../images/illu/adddatabase.png');
 }
 
-div.panel a.action.adddatabase:hover {
+a.action.adddatabase:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/adddatabase_hover.png');
 }
 
-div.panel a.action.reporting {
+a.action.reporting {
 	background-image: url('../images/illu/pdf.png');
 }
 
-div.panel a.action.reporting:hover {
+a.action.reporting:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/pdf_hover.png');
 }
 
-div.panel a.action.reporting {
+a.action.reporting {
 	background-image: url('../images/illu/pdf.png');
 }
 
-div.panel a.action.reporting:hover {
+a.action.reporting:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/pdf_hover.png');
 }
@@ -510,9 +519,9 @@ div.panel div.database {
 	height: 70px;
 	display: inline-block;
 	margin: 0 0 26px 10px;
-    padding: 15px;
+	padding: 15px;
 	background-color: #f1f1f1;
-    border-radius: 3px;
+	border-radius: 3px;
 	box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.5);
 	border: 1px solid #e0e0e0;
 	text-align: left;

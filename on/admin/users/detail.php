@@ -23,15 +23,17 @@ else
 $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
-				<div class=\"left\" style=\"width: 700px; padding-top: 5px;\">
-					<h1 class=\"dark\">{$lang['title']} : {$user['name']}</h1>
+				<div class=\"left\" style=\"width: 500px;\">
+					<img style=\"width: 60px; height: 60px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>{$user['name']}</strong></span>
+					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
-				<div class=\"right\" style=\"width: 360px;\">
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-						<span style=\"display: block; padding-top: 3px;\">{$lang['delete_user']}</span>
+				<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
+					<a class=\"action email\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\">
+						{$lang['email_help']}
 					</a>
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\" style=\"width: 80px; height: 22px; float: right; margin-right: 15px;\">
-						<span style=\"display: block; padding-top: 3px;\">{$lang['email_help']}</span>
+					<a class=\"action delete\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\">
+						{$lang['delete_user']}
 					</a>
 				</div>
 			</div>
@@ -198,9 +200,10 @@ $content .= "
 					<h2 class=\"dark\" id=\"databases\">{$lang['databases']}</h2>
 					<table>
 						<tr>
-							<th>{$lang['type']}</th>
-							<th>{$lang['server']}</th>
 							<th>{$lang['database']}</th>
+							<th>{$lang['description']}</th>
+							<th>{$lang['server']}</th>
+							<th>{$lang['type']}</th>
 							<th>{$lang['size']}</th>
 							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
@@ -214,9 +217,10 @@ if( security::hasGrant('DATABASE_SELECT') )
 	{		
 		$content .= "
 						<tr>
-							<td>{$d['type']}</td>
-							<td>{$d['server']}</td>
 							<td>{$d['name']}</td>
+							<td>{$d['desc']}</td>
+							<td>{$d['server']}</td>
+							<td>{$d['type']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#user7').val('{$user['id']}'); $('#db_id').val('{$d['name']}'); $('#deletedatabase').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
@@ -290,6 +294,7 @@ $content .= "
 				<table>
 					<tr>
 						<th>{$lang['subject']}</th>
+						<th>{$lang['type_message']}</th>
 						<th>{$lang['date']}</th>
 						<th>{$lang['status']}</th>
 						<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
@@ -306,6 +311,7 @@ if( security::hasGrant('MESSAGE_SELECT') )
 		$content .= "
 						<tr>
 							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">{$m['title']}</a></td>
+							<td>{$lang['type_'.$m['type']]}</td>
 							<td>".date($lang['dateformat'], $m['date'])."</td>
 							<td>".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 50px; text-align: center;\">
@@ -412,7 +418,7 @@ if( security::hasGrant('USER_SELECT') )
 					</fieldset>
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"ip\" value=\"{$user['ip']}\" disabled />
-						<span class=\"help-block\">{$lang['ip_help']}</span>
+						<span class=\"help-block\">{$lang['ip_help']} - <a href=\"http://www.ipgetinfo.com/?mode=ip&ip={$user['ip']}\" target=\"_blank\">(whois)</a></span>
 					</fieldset>
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"firstname\" value=\"{$user['firstname']}\" />
