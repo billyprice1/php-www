@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if( $_POST['name'] != $lang['name'] )
+if( $_POST['name'] != '' )
 {
 	$user = api::send('user/select', array('user'=>$_POST['name'], 'search'=>1));
 	
@@ -47,7 +47,7 @@ if( $_POST['name'] != $lang['name'] )
 							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
-	";
+			";
 		}
 	
 		$content .= "
@@ -57,14 +57,14 @@ if( $_POST['name'] != $lang['name'] )
 		";
 
 		$template->output($content);
-	}	
+	}
 	else if( count($user) == 1 )
 		$template->redirect('/admin/users/detail?id='.$user[0]['id']);
 	else
-		template::redirect('/admin');
+		template::redirect('/admin?error=user');
 		
 }
-else if( $_POST['email'] != $lang['email'] )
+else if( $_POST['email'] != '' )
 {
 	$user = api::send('user/select', array('email'=>$_POST['email']));
 
@@ -105,7 +105,7 @@ else if( $_POST['email'] != $lang['email'] )
 							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
-	";
+			";
 		}
 	
 		$content .= "
@@ -115,13 +115,13 @@ else if( $_POST['email'] != $lang['email'] )
 		";
 
 		$template->output($content);
-	}	
+	}
 	else if( count($user) == 1 )
 		$template->redirect('/admin/users/detail?id='.$user[0]['id']);
 	else
 		template::redirect('/admin');
 }
-else if( $_POST['site'] != $lang['site'] )
+else if( $_POST['site'] != '' )
 {
 	try
 	{
@@ -134,7 +134,7 @@ else if( $_POST['site'] != $lang['site'] )
 
 	$template->redirect('/admin/users/detail?id='.$site[0]['user']['id']);
 }
-else if( $_POST['domain'] != $lang['domain'] )
+else if( $_POST['domain'] != '' )
 {
 	try
 	{

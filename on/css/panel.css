@@ -388,6 +388,16 @@ a.action.email:hover {
 	background-image: url('../images/illu/mail_hover.png');
 }
 
+a.action.ban {
+	color:#C14444;
+	background-image: url('../images/illu/ban.png');
+}
+
+a.action.ban:hover {
+	color: #CD6868;
+	background-image: url('../images/illu/ban_hover.png');
+}
+
 a.action.download {
 	background-image: url('../images/illu/backup.png');
 }

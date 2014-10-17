@@ -1,0 +1,11 @@
+[EN]
+success = "This domain name has been added successfully."
+error = "Domain name format or folder format is wrong, or quota is reached."
+
+[FR]
+success = "Ce nom de domaine a été ajouté avec succès."
+error = "Le format du nom de domaine ou de dossier est incorrect ou le quota est atteint."
+
+[DE]
+success = "This domain name has been added successfully."
+error = "Das Format der Domäne/Ordner-Name ist falsch oder Ihre Quote ist erreicht."

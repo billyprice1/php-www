@@ -19,6 +19,7 @@ add = "Create a user"
 add_error = "One or more fields are not well filled."
 desc = "Subject"
 type = "Type"
+error_search = "No results match the search criteria."
 
 [FR]
 title = "Olympe Admin Dashboard"
@@ -41,6 +42,7 @@ add = "Créer un utilisateur"
 add_error = "Un ou plusieurs champs ne sont pas bien renseignés."
 desc = "Sujet"
 type = "Type"
+error_search = "Aucun résultat ne correspond aux critères de recherches."
 
 [DE]
 title = "Olympe Admin Dashboard"
@@ -63,3 +65,4 @@ add = "Benutzer erstellen"
 add_error = "Ein oder mehrere Felder sind schlecht ausgefüllt"
 desc = "Betreff"
 type = "Typ"
+error_search = "No results match the search criteria."

@@ -32,6 +32,17 @@ $content = "
 					<a class=\"action email\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\">
 						{$lang['email_help']}
 					</a>
+";
+
+/* -----------------------------------
+$content .= "
+					<a class=\"action ban\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#ban').dialog('open'); return false;\">
+						{$lang['ban_user']}
+					</a>
+";
+-------------------------------------- */
+
+$content .= "
 					<a class=\"action delete\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\">
 						{$lang['delete_user']}
 					</a>
@@ -130,7 +141,15 @@ if( security::hasGrant('BACKUP_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
-					<h2 class=\"dark\" id=\"domains\">{$lang['domains']}</h2>
+					<div style=\"float: left; width: 300px; padding-top: 5px;\">
+						<h2 class=\"dark\" id=\"domains\">{$lang['domains']}</h2>
+					</div>
+					<div style=\"float: right; width: 200px;\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('.user_id').val('{$user['id']}'); $('#newdomain').dialog('open'); return false;\" style=\"float: right; padding: 10px; width: 15px; height: 14px;\">
+							<img style=\"float: left; width: 100%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" alt=\"\" />
+						</a>
+					</div>
+					<div class=\"clear\"></div>
 					<table>
 						<tr>
 							<th style=\"width: 60px; text-align: center;\">{$lang['id']}</th>
@@ -205,7 +224,7 @@ $content .= "
 							<th>{$lang['server']}</th>
 							<th>{$lang['type']}</th>
 							<th>{$lang['size']}</th>
-							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 ";
 		
@@ -222,7 +241,8 @@ if( security::hasGrant('DATABASE_SELECT') )
 							<td>{$d['server']}</td>
 							<td>{$d['type']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
-							<td style=\"width: 50px; text-align: center;\">
+							<td style=\"width: 100px; text-align: center;\">
+								<a href=\"#\" onclick=\"$('.user_id').val('{$user['id']}'); $('#dbpass').text('{$d['name']}'); $('#database_id').val('{$d['name']}'); $('#dbpassword').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
 								<a href=\"#\" onclick=\"$('#user7').val('{$user['id']}'); $('#db_id').val('{$d['name']}'); $('#deletedatabase').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
@@ -236,12 +256,11 @@ $content .= "
 						<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['tokens']}</h2>
 					</div>
 					<div style=\"float: right; width: 200px;\">
-						<a class=\"button classic\" href=\"#\" onclick=\"$('#user3').val('{$user['id']}'); $('#newtoken').dialog('open'); return false;\" style=\"width: 22px; height: 22px; float: right;\">
-							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" alt=\"\" />
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#user3').val('{$user['id']}'); $('#newtoken').dialog('open'); return false;\" style=\"float: right; padding: 10px; width: 15px; height: 14px;\">
+							<img style=\"float: left; width: 100%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" alt=\"\" />
 						</a>
 					</div>
 					<div class=\"clear\"></div>
-					<br />
 					<table>
 						<tr>
 							<th>{$lang['tokenname']}</th>
@@ -331,17 +350,16 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 {
 	$userquotas = api::send('quota/user/list', array('user'=>$_GET['id']));
 
-	$content .= "
+	$content .= "	
 				<div style=\"float: left; width: 300px; padding-top: 5px;\">
 					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"quotas\">{$lang['quotas']} (".date($lang['dateformat'], $user['last']).")</h2>
 				</div>
 				<div style=\"float: right; width: 200px;\">
-					<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"width: 22px; height: 22px; float: right;\">
-						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/refresh-white.png\" alt=\"\" />
+					<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"float: right; padding: 10px; width: 15px; height: 14px;\">
+						<img style=\"float: left; width: 100%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/refresh-white.png\" alt=\"\" />
 					</a>
 				</div>
 				<div class=\"clear\"></div>
-				<br />
 				<table>
 					<tr>
 						<th style=\"width: 100px;\">{$lang['quotaname']}</th>
@@ -684,6 +702,42 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"newdomain\" class=\"floatingdialog delete-link\">
+			<br />
+			<h3 class=\"center\">{$lang['newdomain']}</h3>
+			<p style=\"text-align: center;\">{$lang['newdomain_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/domains/add_action\" method=\"post\" class=\"center\">
+					<input class=\"user_id\" type=\"hidden\" value=\"\" name=\"user\" />
+					<fieldset>
+						<input type=\"text\" name=\"domain\" placeholder=\"domain.com\" />
+						<span class=\"help-block\">{$lang['domainname_help']}</span>
+					</fieldset>
+					<fieldset>
+						<select name=\"site\">
+";
+
+foreach( $sites as $s )
+{
+	$content .= "
+							<option value=\"{$s['name']}\">{$s['hostname']}</option>
+	";
+}
+
+$content .= "
+						</select>
+						<span class=\"help-block\">{$lang['domainsite_help']}</span>
+					</fieldset>
+					<fieldset>
+						<input type=\"text\" name=\"dir\" placeholder=\"/\" />
+						<span class=\"help-block\">{$lang['domaindir_help']}</span>
+					</fieldset>
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['create']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
 		<div id=\"email\" class=\"floatingdialog delete-link\">
 			<br />
 			<h3 class=\"center\">{$lang['send_mail']}</h3>
@@ -698,6 +752,29 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"dbpassword\" class=\"floatingdialog delete-link\">
+			<br />
+			<h3 class=\"center\">{$lang['dbpassword']}</h3>
+			<p style=\"text-align: center;\">{$lang['dbpassword_text']} (<span style=\"font-weight:bold;\" id=\"dbpass\"></span>)</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/databases/password_action\" method=\"post\" class=\"center\">
+					<input type=\"hidden\" name=\"user\" class=\"user_id\" value=\"\" />
+					<input type=\"hidden\" name=\"database\" id=\"database_id\" value=\"\" />
+					<fieldset>
+						<input type=\"password\" name=\"pass\" style=\"width: 400px;\" />
+						<span class=\"help-block\">{$lang['dbpassword_new']}</span>
+					</fieldset>
+					<fieldset>
+						<input type=\"password\" name=\"pass2\" style=\"width: 400px;\" />
+						<span class=\"help-block\">{$lang['dbpassword_confirm']}</span>
+					</fieldset>
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['update']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		
 		<div id=\"overview\" class=\"floatingdialog delete-link\">
 			<br />
 			<h3 class=\"center\">{$lang['overview']} (<span id=\"site_overview_name\"></span>)</h3>
@@ -718,6 +795,8 @@ $content .= "
 			newFlexibleDialog('newtoken', 550);
 			newFlexibleDialog('email', 700);
 			newFlexibleDialog('overview', 700);
+			newFlexibleDialog('newdomain', 550);
+			newFlexibleDialog('dbpassword', 550);
 			$(function() {
 				$('#admincomment').focus(function() {
  
