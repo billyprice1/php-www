@@ -28,7 +28,7 @@ $content = "
 if( count($issues) > 0 ) {
 
 	$content .= "
-				<h2 class=\"dark\">{$lang['issues']}</h3>
+				<h2 class=\"dark\">{$lang['issues']}</h2>
 				
 				<table>
 					<tr>
@@ -85,7 +85,7 @@ if(!$user) {
 
 $content .= "		
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\"type=\"text\" name=\"email\" id=\"email\" placeholder=\"{$lang['email']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" id=\"email\" placeholder=\"{$lang['email']}\" />
 						</fieldset>
 						<fieldset>
 							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" placeholder=\"{$lang['subject']}\" />
