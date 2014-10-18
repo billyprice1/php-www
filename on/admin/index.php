@@ -10,6 +10,11 @@ $users = api::send('user/list', array('limit' => 10, 'order'=>'user_date', 'orde
 $overquotas = api::send('quota/nearlimit', array('quota'=>'BYTES'));
 $messages = api::send('message/list', array('topic'=>1, 'status'=>1));
 
+if(isset($_GET['error'])) {
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error_search'];
+}
+
 $content = "
 	<div class=\"admin\">
 		<div class=\"top\">
@@ -27,18 +32,18 @@ $content = "
 		<div class=\"container\">
 			<div style=\"width: 350px; float: left;\">
 				<h3 class=\"colored\">{$lang['search']}</h3>
-				<form action=\"/admin/search_action\" method=\"post\">
+				<form action=\"/admin/search_action\" method=\"post\" id=\"site_search_form\">
 					<fieldset>
-						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" value=\"{$lang['name']}\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" placeholder=\"{$lang['name']}\" />
 					</fieldset>
 					<fieldset>
-						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"site\" value=\"{$lang['site']}\" onfocus=\"this.value = this.value=='{$lang['site']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['site']}' : this.value; this.value=='{$lang['site']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<input class=\"auto\" id=\"site_search_val\" style=\"width: 300px;\" type=\"text\" name=\"site\" placeholder=\"{$lang['site']}\" />
 					</fieldset>
 					<fieldset>
-						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" value=\"{$lang['email']}\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" placeholder=\"{$lang['email']}\" />
 					</fieldset>
 					<fieldset>
-						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"domain\" value=\"{$lang['domain']}\" onfocus=\"this.value = this.value=='{$lang['domain']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['domain']}' : this.value; this.value=='{$lang['domain']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"domain\" placeholder=\"{$lang['domain']}\" />
 					</fieldset>
 					<fieldset>
 						<input type=\"submit\" value=\"{$lang['go']}\" />
@@ -161,6 +166,16 @@ $content .= "
 	</div>
 	<script>
 		newFlexibleDialog('adduser', 550);
+		
+		$(document).ready(function() {
+			$('#site_search_form').submit(function() {
+				var site = $('#site_search_val').val();
+				var site = site.replace(\"http://\", \"\");
+				var site = site.replace(\".olympe.in/\", \"\");
+				var site = site.replace(\".olympe.in\", \"\");
+				$('#site_search_val').val(site);
+			});
+		});
 	</script>
 ";
 
