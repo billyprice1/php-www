@@ -1,3 +1,4 @@
+akamaihd
 access
 account
 account-info
@@ -21,12 +22,16 @@ facebook
 faceboook
 faceboolk
 facedook
+facelbook
 faceook
 faebook
+fbcdn
 fbconnect
 fbook
 fbprofi
+fcbk
 fcebook
+fecabook
 focebook
 identification
 instagram
@@ -41,6 +46,7 @@ paypal-objects
 paypel
 peypal
 paypoul
+recovery
 redirect
 redit
 reddit
@@ -55,6 +61,7 @@ twitt
 update-
 updateyo
 verf
+veri
 verif
 verification
 youtube
