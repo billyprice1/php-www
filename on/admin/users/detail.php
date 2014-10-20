@@ -24,7 +24,7 @@ $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"width: 700px;\">
-					<img style=\"width: 60px; height: 60px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+					<img style=\"width: 60px; height: 60px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>{$user['name']}</strong></span>
 					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
