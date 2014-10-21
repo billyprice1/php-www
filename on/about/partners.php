@@ -18,7 +18,7 @@ $content = "
 				<p>{$lang['interxion']}</p>
 			</div>
 			<div style=\"float: right; width: 500px;\">
-				<a href=\"http://www.anotherservice.com\" style=\"display: block; height: 120px;\"><img style=\"padding-top: 30px; display: block; margin: 0 auto;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/partners/as.png\" alt=\"\" /></a>
+				<a href=\"http://www.anotherservice.com\" style=\"display: block; height: 120px;\"><img style=\"padding-top: 0px; display: block; margin: 0 auto;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/partners/as.png\" alt=\"\" /></a>
 				<p>{$lang['as']}</p>			
 			</div>
 			<div class=\"clear\"></div><br />

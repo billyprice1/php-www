@@ -112,7 +112,7 @@ $content .= "
 					<h4>{$lang['meet']}</h4>
 					<p>{$lang['meet_text']}</p>
 					<div style=\"width: 330px; height: 330px;\">
-						<iframe width=\"330\" height=\"330\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=40%2Bbis%2Brue%2BFaubourg%2BPoissoni%C3%A8re%2C%2BParis&ie=UTF8&z=5&t=m&iwloc=near&output=embed\"></iframe>
+						<iframe width=\"330\" height=\"330\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=19%2Brue%2BPierre%2BLescot%C3%A8re%2C%2BParis&ie=UTF8&z=5&t=m&iwloc=near&output=embed\"></iframe>
 					</div>
 				</div>
 				<div class=\"clear\"></div>
