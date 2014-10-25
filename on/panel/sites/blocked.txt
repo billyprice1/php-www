@@ -26,6 +26,7 @@ facehook
 facelbook
 faceook
 faebook
+fbc
 fbcdn
 fbconnect
 fbook
@@ -49,8 +50,12 @@ paypal
 paypal-objects
 paypel
 peypal
+paypoal
 paypol
 paypoul
+poypal
+poypol
+ppl
 recovery
 redirect
 redit
