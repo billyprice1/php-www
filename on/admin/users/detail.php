@@ -95,7 +95,7 @@ if( security::hasGrant('SITE_SELECT') )
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 100px; text-align: center;\">
-								<a href=\"#\" onclick=\"$('#site_overview_link').attr('href', '/admin/sites/overview_action?user={$user['id']}&site={$s['hostname']}'); $('#site_overview').attr('src','/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}'); $('#site_overview_name').text('{$s['hostname']}'); $('#overview').dialog('open'); return false;\" title=\"{$lang['overview']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/view.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#site_overview').attr('src','/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}'); $('#site_overview_name').text('{$s['hostname']}'); $('#overview').dialog('open'); return false;\" title=\"{$lang['overview']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/view.png\" alt=\"\" /></a>
 								
 								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"{$lang['delete_site']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
@@ -826,6 +826,16 @@ $content .= "
 				var comment_height = (comment_lines * 20);
 				
 				$('#admincomment').css('min-height', comment_height +'px');
+				
+				$('#site_overview_link').click(function() {
+				  var url_refresh = '/on/images/sites/?url=' + $('#site_overview_name').text() + '&refresh';
+				  
+				  $.get( url_refresh, function( data ) {
+					  $('#site_overview').attr('src', url_refresh).css('background','transparent');
+				  });
+
+				  return false;
+				});
 				
 			});
 			
