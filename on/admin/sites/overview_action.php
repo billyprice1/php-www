@@ -19,7 +19,7 @@ $url = str_replace(array('..', '\\', '|', '*', ' ', 'http://'), array('', '', ''
 $file = $url.'.png';
 
 if( file_exists($file) )
-	unlink($file);
+	require("/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site}&refresh");
 
 
 if( isset($_GET['redirect']) )
