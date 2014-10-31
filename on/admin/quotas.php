@@ -41,7 +41,7 @@ foreach( $quotas as $q )
 	if( security::hasGrant('QUOTA_DELETE') )
 	{
 		$content .= "
-						<a href=\"/admin/quotas/del_action?id={$q['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
+						<a href=\"#\" onclick=\"$('#quota').val('{$q['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
 	}
 	
 	$content .= "
@@ -72,12 +72,26 @@ if( security::hasGrant('QUOTA_INSERT') )
 					</fieldset>
 				</form>
 			</div>
+		</div>
+		
+		<div id=\"delete\" class=\"floatingdialog delete-link\">
+			<h3 class=\"center\">{$lang['delete']}</h3>
+			<p style=\"text-align: center;\">{$lang['confirm_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/quotas/del_action\" method=\"post\" class=\"center\">
+					<input id=\"quota\" type=\"hidden\" value=\"\" name=\"quota\" />
+					<fieldset autofocus>
+						<input type=\"submit\" value=\"{$lang['confirm_title']}\" />
+					</fieldset>
+				</form>
+			</div>
 		</div>";
 }
 
 $content .= "
 		<script type=\"text/javascript\">
 			newFlexibleDialog('new', 550);
+			newFlexibleDialog('delete', 550);
 		</script>";
 
 /* ========================== OUTPUT PAGE ========================== */
