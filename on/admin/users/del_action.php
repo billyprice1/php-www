@@ -25,8 +25,10 @@ if(isset($_POST['reason']) && $_POST['reason'] != 0) {
 
 	api::send('user/del', array('id'=>$_POST['user']));
 	
-	$email = str_replace(array('{USER}'), array($user['name']), $content);
-	mail($user['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
+	if($_POST['reason'] != 5) {
+		$email = str_replace(array('{USER}'), array($user['name']), $content);
+		mail($user['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
+	}
 	
 	if( isset($_GET['redirect']) )
 		template::redirect($_GET['redirect']);
