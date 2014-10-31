@@ -12,7 +12,7 @@ if( strlen($_GET['id']) < 1 )
 $user = api::send('user/list', array('id'=>$_GET['id']));
 
 if( count($user) == 0 )
-	template::redirect('/admin');
+	template::redirect('/admin?error=user');
 $user = $user[0];
 
 if($user['comment'] == "0" || $user['comment'] == '')
@@ -605,6 +605,17 @@ $content .= "
 			<div class=\"form-small\">		
 				<form action=\"/admin/users/del_action\" method=\"post\" class=\"center\">
 					<input id=\"user\" type=\"hidden\" value=\"\" name=\"user\" />
+					<fieldset>
+						<select name=\"reason\">
+							<option value=\"0\">{$lang['delete_user_reason_0']}</option>
+							<option value=\"1\">{$lang['delete_user_reason_1']}</option>
+							<option value=\"2\">{$lang['delete_user_reason_2']}</option>
+							<option value=\"3\">{$lang['delete_user_reason_3']}</option>
+							<option value=\"4\">{$lang['delete_user_reason_4']}</option>
+							<option value=\"5\" style=\"color:red;\">{$lang['delete_user_reason_5']}</option>
+						</select>
+						<span class=\"help-block\">{$lang['delete_user_reason_help']}</span>
+					</fieldset>
 					<fieldset autofocus>	
 						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
 					</fieldset>
