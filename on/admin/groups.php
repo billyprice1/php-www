@@ -35,15 +35,7 @@ foreach( $groups as $g )
 					<tr>
 						<td>{$g['name']}</td>
 						<td style=\"width: 100px; text-align: center;\">
-							<a href=\"/admin/groups/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>";
-
-	if( security::hasGrant('GROUP_DELETE') )
-	{
-		$content .= "
-											<a href=\"/admin/groups/del_action?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
-	}
-	
-	$content .= "
+							<a href=\"/admin/groups/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>
 						</td>
 					</tr>";
 }

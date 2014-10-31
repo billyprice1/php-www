@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('quota/del', array('id'=>$_GET['id']));
+api::send('quota/del', array('id'=>$_POST['quota']));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

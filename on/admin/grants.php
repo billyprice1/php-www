@@ -36,15 +36,7 @@ foreach( $grants as $g )
 					<tr>
 						<td>{$g['name']}</td>
 						<td style=\"width: 100px; text-align: center;\">
-							<a href=\"/admin/grants/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>";
-
-	if( security::hasGrant('GRANT_DELETE') )
-	{
-		$content .= "
-											<a href=\"/admin/grants/del_action?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
-	}
-	
-	$content .= "
+							<a href=\"/admin/grants/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>
 						</td>
 					</tr>";
 }
