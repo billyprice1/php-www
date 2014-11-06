@@ -265,7 +265,7 @@ $content .= "
 						<tr>
 							<th>{$lang['tokenname']}</th>
 							<th>{$lang['tokenvalue']}</th>
-							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
+							<th style=\"width: 110px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 	";
 

@@ -44,7 +44,8 @@ question_7 = "Where are my website statistics ?"
 question_8 = "Why my website thumbnail is outdated ?"
 question_9 = "How Olympe is funded ?"
 question_10 = "How opensource is Olympe ?"
-
+question_11 = "What format for the account name ?"
+ 
 dns = "In order to configure properly your domain name, you have to change the DNS settings of your domain (on your <em>registrar</em> website), with the information below."
 serv = "Server"
 ip = "IP Address"
@@ -66,7 +67,7 @@ address = "Address"
 capture = "Websites thumbnails are updated every 30 days. So just be patient ;)"
 finance = "Olympe is self-financed. Our infrastructure and servers are maintained with the help of our <a href='/about/partners'>partners</a> and the whole <a href='/about/team'>team</a>."
 opensource = "Olympe is invested in opensource through <a href='/org'>many initiatives</a>. All our source codes and projects are open source and released on Github. A powerful API and many other tools are available for developers."
-
+nom_compte = "The account name must be lowercase. Accepted his tiny 'a' to 'z', numbers '0' to '9' and the characters '-' or '_'. The minimum length of 3 and a maximum of 26."
 
 [FR]
 title = "Documentation Olympe"
@@ -114,6 +115,7 @@ question_7 = "Où sont les statistiques de mon site ?"
 question_8 = "Pourquoi la miniature de mon site n'est pas à jour ?"
 question_9 = "Comment Olympe est-il financé ?"
 question_10 = "En quoi Olympe est-il Open Source ?"
+question_11 = "Quel format pour le nom de compte ?"
 
 dns = "Afin que votre nom de domaine soit pleinement fonctionnel sur notre plateforme, vous devez modifier les paramètres DNS de votre domaine chez votre <i>registrar</i> avec les informations ci-dessous."
 serv = "Serveur"
@@ -134,7 +136,8 @@ db_conf = "Gestion des bases de données"
 service = "Service"
 desc = "Description"
 address = "Adresse"
-capture = "Les captures d'écran des sites Internet sont actualisées tous les trente jours. Il suffit donc d'être patient ;)"
+capture = "Les captures d'écran des sites Internet sont actualisées tous les trente jours. Il suffit donc d'être patient ;). Vous pouvez cependant demander à un membre de l'équipe de régénérer cette dernière."
 finance = "Olympe est entièrement autofinancé, son infrastructure et les serveurs qu'elle possède sont maintenus grâce à l'aide des <a href='/about/partners'>partenaires</a> et de l'ensemble de l'<a href='/about/team'>équipe</a>."
 opensource = "Olympe est investi dans l'Open Source via de <a href='/org'>multiples initiatives</a> mais également dans sa démarche de développement et d'administration système. Nous publions l'ensemble des <a href='/developers/tools'>outils</a> 
 que nous avons créés dans le cadre du service."
+nom_compte = "Le nom d'un compte doit être en minuscule. Son accepté les minuscules de 'a' à 'z', les chiffres de '0' à '9' et les caractères '-' ou '_'. La longueur minimum est de 3 et la maximum de 26."
