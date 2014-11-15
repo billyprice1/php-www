@@ -39,7 +39,7 @@ $content = "
 						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-php.png\" style=\"width: 40px;\" alt=\"PHP\"></td>
 						<td>PHP</td>
 						<td>{$lang['script']}</td>
-						<td>5.5.3</td>
+						<td>5.5.12</td>
 						<td><a href=\"http://www.php.net\">http://www.php.net</a></td>
 					</tr>
 				</table>
