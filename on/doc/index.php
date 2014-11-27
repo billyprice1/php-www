@@ -80,6 +80,7 @@ $content = "
 									<div id=\"question-3\" class=\"question\" onclick=\"showAnswer(3); return false;\">{$lang['question_3']}</div>
 									<div id=\"question-4\" class=\"question\" onclick=\"showAnswer(4); return false;\">{$lang['question_4']}</div>
 									<div id=\"question-5\" class=\"question\" onclick=\"showAnswer(5); return false;\">{$lang['question_5']}</div>
+									<div id=\"question-11\" class=\"question\" onclick=\"showAnswer(11); return false;\">{$lang['question_11']}</div>
 								</div>
 								<div style=\"float: right; width: 400px;\">
 									<div id=\"question-6\" class=\"question\" onclick=\"showAnswer(6); return false;\">{$lang['question_6']}</div>
@@ -87,6 +88,7 @@ $content = "
 									<div id=\"question-8\" class=\"question\" onclick=\"showAnswer(8); return false;\">{$lang['question_8']}</div>
 									<div id=\"question-9\" class=\"question\" onclick=\"showAnswer(9); return false;\">{$lang['question_9']}</div>
 									<div id=\"question-10\" class=\"question\" onclick=\"showAnswer(10); return false;\">{$lang['question_10']}</div>
+									<div id=\"question-12\" class=\"question\" onclick=\"showAnswer(12); return false;\">{$lang['question_12']}</div>
 								</div>
 							</div>
 							<div id=\"answer-2\" class=\"answer\">
@@ -180,6 +182,14 @@ $content = "
 							<div id=\"answer-10\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(10); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
 								<p>{$lang['opensource']}</p>
+							</div>
+							<div id=\"answer-11\" class=\"answer\">
+								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(11); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
+								<p>{$lang['nom_compte']}</p>
+							</div>
+							<div id=\"answer-12\" class=\"answer\">
+								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(12); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
+								<p>{$lang['cgu']}</p>
 							</div>
 						</div>
 					</div>

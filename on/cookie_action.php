@@ -6,8 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-setcookie("OLYMPE_CGU_201404", "1", time() + (60 * 24 * 60 * 60));
+setcookie("OLYMPE_COOKIE_AUTHORIZE", "1", time() + (60 * 24 * 60 * 60));
 
 $template->redirect($_SERVER['HTTP_REFERER']);
+
+// test modification
 
 ?>
