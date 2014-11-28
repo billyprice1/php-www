@@ -26,7 +26,7 @@ view = "Overview"
 folder = "Path"
 directory = "Directory"
 no_directory = "An administrator has suspended your website on the index: you can not display it anymore.<br />This is <u>especially</u> the case when :
-<ul class=\"classic\"><li>it violated the <a href=\"http://local.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Terms of Service</a>,</li>
+<ul class=\"classic\"><li>it violated the <a href=\"https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Terms of Service</a>,</li>
 <li>it was inaccessible partially or completely,</li></ul>For more information on this, please <a href="/about/contact">contact us</a>."
 title_help = "Your site title"
 description_help = "Your site description"
@@ -95,7 +95,7 @@ view = "Overview"
 folder = "Camino"
 directory = "Directorio"
 no_directory = "Un administrador ha suspendido tu sitio web en el directorio.<br />Es <u>particularmente</u> el caso cuando el sitio :
-<ul class=\"classic\"><li>violaba las <a href=\"http://local.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Condiciones de Utilizacion</a>,</li>
+<ul class=\"classic\"><li>violaba las <a href=\"https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Condiciones de Utilizacion</a>,</li>
 <li>era inaccesible parcial o completamente,</li></ul>Para más información, por favor <a href="/about/contact">contactanos</a>."
 title_help = "Título de tu sitio"
 description_help = "Descripción de tu sitio"
@@ -164,7 +164,7 @@ view = "Aperçu du site"
 folder = "Chemin d'accès"
 directory = "Annuaire des sites"
 no_directory = "Un administrateur a suspendu votre site de l'annuaire : vous ne pouvez plus l'y faire figurer.<br />C'est <u>notamment</u> le cas lorsque :
-<ul class=\"classic\"><li>celui-ci contrevenait aux <a href=\"http://local.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Conditions générales d'utilisation</a>,</li>
+<ul class=\"classic\"><li>celui-ci contrevenait aux <a href=\"https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Conditions générales d'utilisation</a>,</li>
 <li>il était inaccessible partiellement ou totalement,</li></ul>Pour plus d'informations à ce sujet, n'hésitez pas à <a href="/about/contact">nous contacter</a>."
 title_help = "Le titre de votre site"
 description_help = "La description de votre site"
@@ -233,7 +233,7 @@ view = "Webseite Einblick"
 folder = "Pfadname"
 directory = "Webseite Referenzen"
 no_directory = "Ihre Webseite wird nicht mehr in unserem Referenzen angezeigen werden.<br />Es geht <u>insbesondere</u> ab wenn :
-<ul class=\"classic\"><li>diese nicht in Zusammenhang mit unsere <a href=\"http://local.olympe.in/on/documents/Olympe-CGS-FR.pdf\">allgemeine Nutzungsbedingungen </a> ist,</li>
+<ul class=\"classic\"><li>diese nicht in Zusammenhang mit unsere <a href=\"https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf\">allgemeine Nutzungsbedingungen </a> ist,</li>
 <li>diese teilweise oder total unerreichbar war,</li></ul>Sie können <a href="/about/contact">uns kontaktieren</a> um mehr Informationen zu erhalten."
 title_help = "Webseite Name"
 description_help = "Webseite Zusammenfassung"
@@ -302,7 +302,7 @@ view = "Panoramica"
 folder = "Indirizzo"
 directory = "Cartella"
 no_directory = "An administrator has suspended your website on the index: you can not display it anymore.<br />This is <u>especially</u> the case when :
-<ul class=\"classic\"><li>it violated the <a href=\"http://local.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Terms of Service</a>,</li>
+<ul class=\"classic\"><li>it violated the <a href=\"https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf\">Terms of Service</a>,</li>
 <li>it was inaccessible partially or completely,</li></ul>For more information on this, please <a href="/about/contact">contact us</a>."
 title_help = "Il nome del tuo sito"
 description_help = "La descrizione del tuo sito"
