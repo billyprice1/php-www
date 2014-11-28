@@ -43,7 +43,7 @@ capture = "Websites thumbnails are updated every 30 days. So just be patient ;)"
 finance = "Olympe is self-financed. Our infrastructure and servers are maintained with the help of our <a href='/about/partners'>partners</a> and the whole <a href='/about/team'>team</a>."
 opensource = "Olympe is invested in opensource through <a href='/org'>many initiatives</a>. All our source codes and projects are open source and released on Github. A powerful API and many other tools are available for developers."
 nom_compte = "The account name must be lowercase. Accepted his tiny 'a' to 'z', numbers '0' to '9' and the characters '-' or '_'. The minimum length of 3 and a maximum of 26."
-cgu = "Our Terms are available here : <a href='http://local.olympe.in/service/hosting'>Terms of Use</a>"
+cgu = "Our Terms are available here : <a href='https://www.olympe.in/service/hosting'>Terms of Use</a>"
 
 [FR]
 title = "Questions fréquentes"
@@ -90,4 +90,4 @@ finance = "Olympe est entièrement autofinancé, son infrastructure et les serve
 opensource = "Olympe est investi dans l'Open Source via de <a href='/org'>multiples initiatives</a> mais également dans sa démarche de développement et d'administration système. Nous publions l'ensemble des <a href='/developers/tools'>outils</a> 
 que nous avons créés dans le cadre du service."
 nom_compte = "Le nom d'un compte doit être en minuscule. Son accepté les minuscules de 'a' à 'z', les chiffres de '0' à '9' et les caractères '-' ou '_'. La longueur minimum est de 3 et la maximum de 26."
-cgu = "Nos CGU sont consultable ici : <a href='http://local.olympe.in/service/hosting'>Conditions générales</a>"
+cgu = "Nos CGU sont consultable ici : <a href='https://www.olympe.in/service/hosting'>Conditions générales</a>"
