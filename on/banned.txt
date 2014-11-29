@@ -14,6 +14,7 @@
 20mm.in
 21cn.com
 2prong.com
+2trom.com
 33mail.com
 3d-painting.com
 4warding.com
@@ -80,6 +81,7 @@ cellurl.com
 chammy.info
 chcb.info
 cheatmail.de
+chef.net
 chogmail.com
 chong-mail.com
 chong-mail.net
@@ -324,12 +326,14 @@ manybrain.com
 masterhost.ru
 mbx.cc
 mega.zik.dj
+mel.fr.cf
 meltmail.com
 mierdamail.com
 migumail.com
 mintemail.com
 mobileninja.co.uk
 moburl.com
+mohmal.com
 moncourrier.fr.nf
 monemail.fr.nf
 monmail.fr.nf
@@ -439,6 +443,7 @@ snkmail.com
 sofimail.com
 sofort-mail.de
 sogetthis.com
+soisz.com
 soodonims.com
 spam.la
 spam.su
