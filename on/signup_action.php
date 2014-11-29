@@ -24,6 +24,9 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] && 
 
 		if( array_search($parts[1], $banned) !== false )
 			throw new SiteException('Invalid or missing arguments', 400, 'Parameter email is on a spammer domain');
+	
+		if( in_array(gethostbyname($parts[1]), array(gethostbyname("this_is_a_wrong_url.com"))) || !checkdnsrr($parts[1] , 'MX') )
+			throw new SiteException('Invalid or missing arguments', 400, 'Parameter email does not exist');
 
 		$result = api::send('registration/add', array('auth'=>'', 'email'=>$_POST['email']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
