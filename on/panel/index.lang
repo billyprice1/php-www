@@ -13,7 +13,7 @@ disk_intro = "You use"
 request = "Ask more"
 DATEFORMAT = "M d, Y"
 create = "Create"
-name = "name"
+name = "Name"
 size = "Size :"
 mb = "MB"
 password = "Password"
@@ -25,6 +25,8 @@ help = "Olympe is an independent non-profit association and self-financing. Feel
 help_text = "help us"
 thanks = "Follow us on"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> and <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+reached_site_quota = "You have reached your quota. To create an additional site, you need to <a href='/panel/messages'>request an increase</a> of it. For more information, 
+please <a href='/doc/quotas'>read the documentation</a>." 
 
 [ES]
 new = "Nuevo espacio"
@@ -41,7 +43,7 @@ disk_intro = "Utiliza"
 request = "Solicitar más"
 DATEFORMAT = "M d, Y"
 create = "Crear"
-name = "nombre"
+name = "Nombre"
 size = "Tamaño :"
 mb = "MB"
 password = "Contraseña"
@@ -53,6 +55,8 @@ help = "Olympe es una organización sin fines de lucro independiente y autofinan
 help_text = "ayudarnos"
 thanks = "Siguenos en"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> y <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+reached_site_quota = "Has llegado el número de sitios que puedes crear. Para crear un sitio adicional, es necesario <a href='/panel/messages'>solicitar un aumento</a> de esta cuota. 
+Para obtener más información, por favor <a href='/doc/quotas'>lea la documentación</a>."
 
 [FR]
 new = "Nouvel espace"
@@ -69,7 +73,7 @@ disk_intro = "Vous utilisez"
 request = "Demander plus"
 DATEFORMAT = "d M, Y"
 create = "Créer"
-name = "nom"
+name = "Nom"
 size = "Taille :"
 mb = "Mo"
 password = "Mot de passe"
@@ -81,6 +85,8 @@ help = "Olympe est une association à but non lucratif indépendante et autofina
 help_text = "nous aider"
 thanks = "Suivez-nous sur"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> et <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+reached_site_quota = "Vous avez atteint le quota de nombre de site qui vous est octroyé. Pour créer un site supplémentaire, vous devez <a href='/panel/messages'>demander une 
+augmentation</a> de ce quota." 
 
 [IT]
 new = "Nuovo spazio"
@@ -97,7 +103,7 @@ disk_intro = "Hai usato"
 request = "Hai bisogni di più spazio?"
 DATEFORMAT = "M d, Y"
 create = "Crea"
-name = "nome"
+name = "Nome"
 size = "Dimensione :"
 mb = "MB"
 password = "Password"
@@ -109,3 +115,4 @@ help = "Olympe è un'organizzazione indipendente no-profit e autofinanziata. Sen
 help_text = "aiutarci"
 thanks = "Seguici su"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> e <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+reached_site_quota = "Hai raggiunto la quota. Per creare un sito aggiuntivo, è necessario <a href='/panel/messages'>chiedere un aumento</a>."
