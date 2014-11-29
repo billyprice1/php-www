@@ -1,19 +1,24 @@
 ﻿[EN]
 folder = "Folder"
 error = "Domain name format or folder format is wrong, or your <a href='/panel/quotas'>quota</a> is reached."
+blocked = "<strong>The domain name contains a keyword that can not be used.</strong> For more information, please read <a href='/doc/domains'>the documentation</a>."
 
 [ES]
 folder = "Carpeta"
 error = "El formato del nombre de dominio o la carpeta es incorrecta o se alcance la <a href='/panel/quotas'>cuota</a>."
+blocked = "<strong>El nombre de dominio contiene una palabra que no se puede utilizar.</strong> Para obtener más información, por favor lea <a href='/doc/domains'>la documentación</a>."
 
 [FR]
 folder = "Dossier de destination"
 error = "Le format du nom de domaine ou de dossier est incorrect ou votre <a href='/panel/quotas'>quota</a> est atteint."
+blocked = "<strong>Le nom de domaine contient un mot-clé qui ne peut être utilisé.</strong> Pour plus d'informations, pensez à lire <a href='/doc/domains'>la documentation</a>."
 
 [DE]
 folder = "Zielordner"
 error = "Das Format der Domäne/Ordner-Name ist falsch oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+blocked = "<strong>The domain name contains a keyword that can not be used.</strong> For more information, please read <a href='/doc/domains'>the documentation</a>."
 
 [IT]
 folder = "Cartella"
 error = "Il formato del nome di dominio o della cartella è errato, oppure  hai esaurito lo <a href='/panel/quotas'>spazio disponibile</a>."
+blocked = "<strong>Il nome di dominio contiene una parola che non può essere utilizzato.</strong> Per ulteriori informazioni, si prega di leggere <a href='/doc/domains'>la documentazione</a>."
