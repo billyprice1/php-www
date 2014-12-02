@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/blocked.txt");
+$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/sitename_blacklist.txt");
 $subdomain = htmlspecialchars(strtolower($_POST['subdomain']));
 
 foreach ($blocked as $line_num => $blocked_keyword) {

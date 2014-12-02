@@ -14,8 +14,15 @@ $sites =  api::send('self/site/list');
 
 foreach( $quotas as $q )
 {
-	if( $q['name'] == 'BYTES' )
-		$quota = $q;
+	if( $q['name'] == 'BYTES' ) {
+		$quota['used'] = $q['used'];
+		$quota['max'] = $q['max'];
+	}
+	
+	if( $q['name'] == 'SITES' ) {
+		$quota_sites['used'] = $q['used'];
+		$quota_sites['max'] = $q['max'];
+	}
 }
 
 $percent = $quota['used']*100/$quota['max'];
@@ -66,20 +73,39 @@ $content = "
 					</div>
 					<div id=\"formsite\" style=\"display: none; position: relative; padding: 30px 10px 10px 10px;\">
 						<a href=\"#\" style=\"display: block; position: absolute; top: 5px; left: 5px;\" onclick=\"showNew(); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowLeft.png\" alt=\"\" /></a>
-						<div class=\"form-small\">		
+						<div class=\"form-small\">					
+";
+
+
+if( $quota_sites['used'] == $quota_sites['max'] )
+	$content .= "
+							<div style=\"text-align: justify; line-height: 25px; padding: 25px 10px 10px;\">{$lang['reached_site_quota']}</div>
+	";
+	
+else 
+	$content .= "
 							<form action=\"/panel/sites/add_action\" method=\"post\" class=\"center\">
 								<fieldset style=\"padding-top: 10px;\">
-									<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+									<input class=\"auto\" type=\"text\" placeholder=\"{$lang['name']}\" name=\"subdomain\" />
 									<span class=\"help-block\">{$lang['tipsite']}</span>
 								</fieldset>
 								<fieldset>
-									<input class=\"auto\" type=\"password\" value=\"{$lang['password']}\" name=\"password\" onfocus=\"this.value = this.value=='{$lang['password']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['password']}' : this.value; this.value=='{$lang['password']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+									<input class=\"auto\" type=\"password\" placeholder=\"{$lang['password']}\" name=\"password\" />
 									<span class=\"help-block\">{$lang['tippassword']}</span>
 								</fieldset>
 								<fieldset>	
 									<input autofocus type=\"submit\" value=\"{$lang['create']}\" style=\"width: 120px;\" />
 								</fieldset>
 							</form>
+	";
+	
+$content .= "
+						</div>
+					</div>
+					<div id=\"nonewsite\" style=\"display:none; position: relative; padding: 50px 20px 20px; text-align: justify; line-height: 25px;\">
+						<a href=\"#\" style=\"display: block; position: absolute; top: 5px; left: 5px;\" onclick=\"showNew(); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowLeft.png\" alt=\"\" /></a>
+						<div class=\"form-small\">		
+							{$lang['reached_site_quota']}
 						</div>
 					</div>
 				</div>
