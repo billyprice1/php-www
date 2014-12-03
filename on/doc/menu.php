@@ -34,5 +34,9 @@ $menu = "
 								<a href=\"/doc/techno\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/techno', '/'))===0?"active":"")."\">{$lang['techno']}</li></a>
 								<a href=\"/about/contact\"><li>{$lang['contact']}</li></a>
 							</ul>
+							<li style=\"cursor: auto;\">{$lang['more']}</li>
+							<ul>
+								<a href=\"/doc/email\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/email', '/'))===0?"active":"")."\">{$lang['email']}</li></a>
+							</ul>
 						</ul>
 ";
