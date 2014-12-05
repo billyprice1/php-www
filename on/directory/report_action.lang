@@ -4,7 +4,7 @@ content = "<p style='margin: 20px 0;'>A new abuse report has been posted on the 
 <p style='margin: 20px 0;'>Summary : {DESCRIPTION}</p>
 <p style='margin: 20px 0;'>Content : {CONTENT}</p>
 "
-success = "Your message has been successfully sent. Thanks for your bug report!"
+success = "Your message has been successfully sent. Thanks for your report!"
 
 [FR]
 subject = "Olympe - Nouveau rapport d'abus"
