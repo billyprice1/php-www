@@ -1,4 +1,14 @@
 [EN]
+title = "Access rights"
+intro = "Introduction"
+main_token = "Modification or deletion of the token \"Olympe\""
+intro_text = "If you access your panel with your <i>username</i> and your <i>password</i>, know that you can also access your <i>username</i> your <i>token</i> (in the password field), 
+that you can find in the <a href='/panel/settings/tokens'>access rights</a> of your <a href='/panel/settings'>account settings</a>."
+create = "Create a new token"
+create_text = "You can create new tokens to give differentiated access to your account. For example, by creating a token <i>Database administrator</i>, you can give only those rights on the databases
+to another person. She can identify with your username and her personalized token."
+create_text2 = "Once new the token created, you can go to check the rights which are allotted to him and possibly if necessary to adjust according to your needs."
+main_token_text = "The \"Olympe\" token is the one originally present at the creation of your account, it gives all access rights to your account. You can add, modify and delete other tokens, but it is protected to guarantee you access to your account. The removal or modification of it is, therefore, not allowed to prevent incorrect operation that would make it impossible to access your account."
 
 
 [FR]
