@@ -1,4 +1,15 @@
 [EN]
+title = "Backups"
+intro = "Introduction"
+intro_text = "From your panel, you cas access the backups of your site in the corresponding <a href='/panel/backups'>section</a>."
+backup_site = "Backup of your site"
+backup_site_text = "To create an archive of your site, you must be in its configuration page:"
+backup_site_text2 = "Then clicking on <i>Backup</i>, you can create a new archive and download it then."
+backup_database = "Backup of your database"
+backup_databas_text = "To create an archive of your database, you must be in its configuration page."
+backup_database_text2 = "You have then a button allowing you to create an archive."
+backups = "Download the archives"
+backups_text = "To download an archive, just select the one you want."
 
 
 [FR]

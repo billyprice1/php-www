@@ -1,4 +1,25 @@
 [EN]
+title = "Errors logs"
+intro = "Get PHP errors"
+intro_text = "By default, the errors which occur in your PHP pages are not displayed, to avoid transmitting the sometimes sensitives informations. If a minor error occurs, it is
+simply ignored and the script continues to run (be careful, however, the potential implications). If, however, the error is critical, then a 500 error is returned or
+a blank page is displayed as appropriate. <b>Attention: the parsing errors are not displayed.</b><br /><br />
+You can activate an error log (private) to allow you to fix your scripts. For this, you must include the following directive to one of your pages is called
+<br /> (ideally the main index) :"
+
+intro2 = "You can (and we recommend) specify a different file name error.log. The specified error file will be created in the root of your account. This means that if you have multiple sites,
+it will be the same error file (unless you specify a different name, hence the interest). An error log file is as follows :"
+
+intro3 = "The date, the type of error, the error code, file and line are mentioned to help you with the resolution. (or assist WordPress in this case ;-) ). However careful the error log
+respects the error level imposed by the directive error_reporting ( http://php.net/manual/fr/function.error-reporting.php ).<br /><br />
+This means that if you specify error_reporting (0); then no error will be logged. If you use a blog/forum/... try to search the files to determine the log level used.
+<br /><br />However, it is possible to ignore the error level by specifying the directive :"
+
+intro4 = "In this case, all errors will be recorded. Be careful as this can rise very quickly !<br />
+Attention to the size of the file can grow quite quickly. To respect your quota of disk space, it is recommended not to leave the error log on if this is the time to solve a problem.
+As order of magnitude, the Wordpress blog taken in example above generates 1576 lines of log, that is to say 98KB, for each displayed page !"
+
+back = "Back"
 
 
 [FR]
@@ -13,13 +34,13 @@ Vous avez la possibilité d'activer un log d'erreur (privé) afin de vous permet
 intro2 = "Vous pouvez (et nous recommandons de) spécifier un autre nom de fichier que error.log. Le fichier d'erreur spécifié sera alors créé à la racine de votre compte. Ceci signifie que si vous avez plusieurs sites, 
 ce sera le même fichier d'erreur (sauf si vous spécifiez un nom différent, d'où l'intérêt). Une erreur du fichier de log se présente comme suit :"
 
-intro3 = "La date, le type d'erreur, le code d'erreur, le fichier et la ligne sont mentionnés afin de vous aider à la résolution. (ou aider Wordpress en l'occurrence ;-) ) Attention toutefois, que le log d'erreur 
+intro3 = "La date, le type d'erreur, le code d'erreur, le fichier et la ligne sont mentionnés afin de vous aider à la résolution. (ou aider WordPress en l'occurrence ;-) ). Attention toutefois, que le log d'erreur 
 respecte le niveau d'erreur imposé par la directive error_reporting ( http://php.net/manual/fr/function.error-reporting.php ).<br /><br />
 Ce qui signifie que si vous spécifiez error_reporting(0); alors aucune erreur ne sera loggée. Si vous utilisez un blog/forum/... essayez de faire une recherche dans les fichiers afin de déterminer le niveau de log utilisé.
 <br /><br />Il est néanmoins possible d'ignorer le niveau d'erreur en spécifiant la directive :"
 
 intro4 = "Dans ce cas, toutes les erreurs seront enregistrées. Faites attention car cela peut monter très vite !<br />
 Attention à la taille du fichier qui peut grossir assez rapidement. Afin de respecter votre quota d'espace disque, il est recommandé de ne pas laisser le log d'erreur activé si ce n'est le temps de résoudre un problème.
-Comme ordre de grandeur, le blog Wordpress pris en exemple ci-dessus génère 1576 lignes de log, soit 98KB, pour chaque page affichée !"
+Comme ordre de grandeur, le blog WordPress pris en exemple ci-dessus génère 1576 lignes de log, soit 98KB, pour chaque page affichée !"
 
 back = "Retour"
