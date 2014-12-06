@@ -19,7 +19,7 @@ create_text = "Once attached to your Olympe account, you can manage all the sett
 To add a domain, simply go to the domain section :"
 create_text2 = "Then fill out the form :"
 create_text3 = "Once the domain added to the panel, you must change the DNS servers in your domain name to your supplier with the following parameters :"
-primary = "PrimaryDNS server :"
+primary = "Primary DNS server :"
 secondary = "Secondary DNS server :"
 create_text4 = "An example at Gandi :"
 back = "Back"
