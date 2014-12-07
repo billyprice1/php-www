@@ -29,7 +29,7 @@ techno = "Used technologies"
 contact = "Contact us"
 
 more = "Tutorial"
-about_email = "About sending emails"
+sendEmail = "About sending emails"
 
 
 [FR]
@@ -63,4 +63,4 @@ techno = "Technologies utilisées"
 contact = "Nous contacter"
 
 more = "Tutoriel"
-about_email = "Optimiser l'envoi d'email"
+sendEmail = "Optimiser l'envoi d'email"
