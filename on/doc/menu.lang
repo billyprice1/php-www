@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 index = "Index"
 
 started = "First website"
@@ -27,6 +27,10 @@ about = "About us"
 what = "What is Olympe ?"
 techno = "Used technologies"
 contact = "Contact us"
+
+more= "Tutorial"
+about_email = "About sending emails"
+
 
 [FR]
 index = "Accueil de l'aide"
@@ -57,3 +61,6 @@ about = "A propos"
 what = "Qu'est-ce qu'Olympe ?"
 techno = "Technologies utilisées"
 contact = "Nous contacter"
+
+more= "Tutoriel"
+about_email = "Optimiser l'envoi d'email"
