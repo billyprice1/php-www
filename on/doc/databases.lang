@@ -1,4 +1,11 @@
 [EN]
+title = "Databases"
+intro = "Introduction"
+intro_text = "The databases enable you to store information in an independent way and then to be able to re-use them on your site. Olympe supports <a href='/doc/techno'>many engines</a> of databases."
+create = "Create a database"
+create_text = "To create a database, you must go to the <a href='/panel/databases'>corresponding section</a> of your panel:"
+create_text2 = "Then fill out the form by selecting the desired database type:"
+create_text3 = "Once the database created, you can use it. Some databases, in particular <i>MySQL</i> can be migrated of a cluster to another according to the load and of the performances, you have the choice to change cluster if you wish it."
 
 
 [FR]
