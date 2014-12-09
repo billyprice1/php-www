@@ -28,9 +28,8 @@ what = "What is Olympe ?"
 techno = "Used technologies"
 contact = "Contact us"
 
-more= "Tutorial"
+more = "Tutorial"
 about_email = "About sending emails"
-
 
 [FR]
 index = "Accueil de l'aide"
@@ -62,5 +61,5 @@ what = "Qu'est-ce qu'Olympe ?"
 techno = "Technologies utilisées"
 contact = "Nous contacter"
 
-more= "Tutoriel"
+more = "Tutoriel"
 about_email = "Optimiser l'envoi d'email"
