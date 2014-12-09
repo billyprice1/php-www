@@ -2,21 +2,21 @@
 
 
 [FR]
-title = "Envoi d'email"
+title = "Gestion des emails"
 
 intro = "Envoyer un email"
 intro_text = "Vous vous êtes peut-être déjà demandé comment un site faisait pour vous envoyer un mail directement après votre inscription ou encore selon des paramètres que vous avez renseignés. 
 La réponse est simple, l'envoi de mails se fait en appelant une fonction, la fonction <b>mail()</b> directement depuis PHP. <br /> <br />
 La fonction mail s'utilise comme suit:<br />"
 
-intro2 = "Vous pouvez, si vous le souhaitez, définir des entêtes supplémentaires telles que : <i>From, Cc, Bcc</i> ou <i>Reply-To</i>. Afin de vérifier si l'email a bien été envoyé, il vous suffit de tester par une simple condition la valeur retournée par la fonction <b>mail()</b><br /> 
+intro2 = "Vous pouvez, si vous le souhaitez, définir des entêtes supplémentaires telles que : From, Cc, Bcc ou Reply-To. Afin de vérifier si l'email a bien été envoyé, il vous suffit de tester par une simple condition la valeur retournée par la fonction <b>mail()</b><br /> 
 La fonction retourne <b>TRUE</b> si le mail a été accepté pour livraison, <b>FALSE</b> dans tous les autres cas. <br />"
 
 documentation = "Pour plus d'informations, nous vous invitons à lire <a href='http://php.net/manual/fr/function.mail.php'> la documentation PHP</a>."
 
 verify = "Vérifier l'email d'un utilisateur"
 verify_text = "Afin de vérifier si un utilisateur est légitime ou non, il est courant d'envoyer un email de validation contenant un lien de confirmation, généralement utilisable dans les 24 heures. 
-La question étant, avec un quota limité à 100 mails par jour, <b>comment vérifier l'adresse email de l'utilisateur</b> afin d'éviter les abus et ne pas dépasser le quota imparti.<br/><br/>"
+La question étant, avec un quota limité à 100 mails par jour, <b>comment vérifier l'adresse email de l'utilisateur</b> afin d'éviter les abus et ne pas dépasser le quota imparti.<br/>"
 
 filter = "D'abord et avant toute chose, il faut vérifier le format de l'adresse email rentrée. 
 Pour ce faire, on utilise une fonction telle que <a href='http://php.net/manual/fr/function.filter-var.php'>filter_var()</a>, qui retourne <b>TRUE</b> ou <b>FALSE</b> en fonction de la validité de l'adresse email. 
