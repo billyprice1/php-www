@@ -5,8 +5,8 @@ intro_text = "Besides the hosting service, Olympe provides other tools to help y
 
 stats = "Piwik statistics"
 stats_text = "Our statistics are based on the <a href='http://www.piwik.com'>Piwik system</a>, an opensource equivalent of Google Analytics. Whenever you add a website, it is automatically set in the management of Piwik."
-stats_text2 = "If you want to use the statistics system, you have to log in<a href='http://stats.olympe.in'>Piwik</a>, with your Olympe account login. 
-You have to choose the website, and click <em>\"Display the code\"</em>. This tracking code is, like Google Analytics', to insert on your website."
+stats_text2 = "If you want to use the statistics system, you have to log in <a href='http://stats.olympe.in'>Piwik</a>, with your Olympe account login. 
+You have to choose the website, and click <em>\"Display the code\"</em>. This tracking code is, like Google Analytics, to insert on your website."
 
 access = "Access to your website statistics"
 access_text = "You can access your website statistics by logging <a href='http://stats.olympe.in/index.php?module=Login'>the Piwik module</a>, with your Olympe account login. "
