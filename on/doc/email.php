@@ -25,18 +25,13 @@ $content = "
 			<div class=\"right big\">	
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
-				<code> 
-					mail('to@domain.com', 'subject', 'message');
-				</code>
+				<pre><code class=\"php\">mail('to@domain.com', 'subject', 'message');</code></pre>
 				<br />
 				<p>{$lang['intro2']}</p>
-				<code>
-				 \$headers = 'From: webmaster@example.com' . '\r\n' . <br>
-				 'Reply-To: webmaster@example.com' . '\r\n'; <br>
-
-				 if(! mail('to@domain.com', 'subject', 'message', \$headers)) <br>
-					die('An error has occured'); <br>
-				</code>
+				<pre><code>\$headers = 'From: webmaster@example.com' . ' ' .
+'Reply-To: webmaster@example.com' . ' ';
+if(! mail('to@domain.com', 'subject', 'message', \$headers))
+	die('An error has occured');</code></pre>
 				<br />
 				<p>{$lang['documentation']}</p>
 				<br /><br />
@@ -44,33 +39,27 @@ $content = "
 				<h3>{$lang['verify']}</h3>
 				<p>{$lang['verify_text']}</p>
 				<p>{$lang['filter']}</p>
-				<code>
-				if( filter_var(\$_POST['email'], FILTER_VALIDATE_EMAIL) )
-				</code>
+				<pre><code>if( filter_var(\$_POST['email'], FILTER_VALIDATE_EMAIL) )</code></pre>
 				<br/>
 				<p>{$lang['check_dns']}</p>
-				<code>
-				\$parts = explode('@',\$_POST['email']); <br><br>
-				if( in_array(gethostbyname(\$parts[1]), array( gethostbyname('ns1.olympe.in'), gethostbyname('ns2.olympe.in') )) ) <br>
-				die('Email does not exist');
-				</code>
+				<pre><code>\$parts = explode('@',\$_POST['email']);
+
+if( in_array(gethostbyname(\$parts[1]), array( gethostbyname('ns1.olympe.in'), gethostbyname('ns2.olympe.in') )) )
+	die('Email does not exist');</code></pre>
 				<br/>
 				<p>{$lang['blacklist']}</p>
-				<code>
-				\$lines = file('banned.txt'); <br />
-				\$search = array(' ', '\\t', '\\n', '\\r'); <br /><br />
+				<pre><code>\$lines = file('banned.txt');
+\$search = array(' ', '\\t', '\\n', '\\r');
 
-				foreach (\$lines as \$key => \$content) <br />
-					{ <br />
-					 &emsp; &emsp; \$banned .= \$content.'|'; <br />
-					} <br /><br />
+foreach (\$lines as \$key => \$content) {
+	\$banned .= \$content.'|';
+}
 
-				\$contents = str_replace(\$search, '', \$banned); <br />
-				\$contents = explode('|', \$contents); <br /><br />
-							
-				if(in_array(\$parts[1], \$contents))<br />
-				die('Temporary emails are not allowed');
-				</code>
+\$contents = str_replace(\$search, '', \$banned);
+\$contents = explode('|', \$contents);
+			
+if(in_array(\$parts[1], \$contents))
+	die('Temporary emails are not allowed');</code></pre>
 				<br />
 				<p>{$lang['quota_request']}</p>
 			</div>
