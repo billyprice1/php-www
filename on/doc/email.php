@@ -55,7 +55,7 @@ $content = "
 				die('Email does not exist');
 				</code>
 				<br/>
-				<p>{$lang['blacklist']}</p><br />
+				<p>{$lang['blacklist']}</p>
 				<code>
 				\$lines = file('banned.txt'); <br />
 				\$search = array(' ', '\\t', '\\n', '\\r'); <br /><br />
