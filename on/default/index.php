@@ -194,9 +194,9 @@ $content .= "
 			
 			<style>
 			.tree {
-				background: url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/tree.png) bottom left repeat-x;
+				background: url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/tree.png) bottom left no-repeat;
 				width: 219px;
-				height: 195px;
+				height: 193px;
 				position: absolute;
 				top: 0;
 				left: -10px;
