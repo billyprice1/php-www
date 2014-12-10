@@ -1,7 +1,7 @@
 [EN]
 title = "Access rights"
 intro = "Introduction"
-main_token = "Modification or deletion of the token \"Olympe\""
+main_token = "Modification or deletion of the \"Olympe\" token"
 intro_text = "If you access your panel with your <i>username</i> and your <i>password</i>, know that you can also access your <i>username</i> your <i>token</i> (in the password field), 
 that you can find in the <a href='/panel/settings/tokens'>access rights</a> of your <a href='/panel/settings'>account settings</a>."
 create = "Create a new token"
