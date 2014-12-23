@@ -11,6 +11,6 @@ api::send('quota/user/update', array('user'=>$_POST['user'], 'quota'=>$_POST['qu
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/users/detail?id='.$_POST['user']);
+	template::redirect('/admin/users/detail?id='.$_POST['user'].'#quotas');
 
 ?>
