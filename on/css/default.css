@@ -543,10 +543,6 @@ code {
 	line-height: 20px;
 }
 
-code span {
-	color: #81007f;
-}
-
 blockquote {
 	background: #f9f9f9;
 	border-left: 4px solid #ccc;
@@ -726,4 +722,17 @@ ol li {
     padding: 10px;
     position: fixed;
     width: 100%;
+}
+
+span.tag {
+    background-color: #de5711;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9em;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+
+span.tag.important {
+    background-color: #CC0000;
 }

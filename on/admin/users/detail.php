@@ -384,6 +384,11 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 		if( $percent > 100 )
 			$percent = 100;
 			
+		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES') 
+			$step = 1;
+		if($u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
+			$step = 100;
+			
 		$content .= "
 					<tr>
 						<td>{$u['name']}</td>
@@ -394,7 +399,7 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 							<span class=\"quota\"><span style='font-weight: bold;'>{$u['used']}</span> {$lang['of']} {$u['max']}</span>
 						</td>
 						<td style=\"width: 50px; text-align: center;\">
-							<a href=\"#\" onclick=\"$('#user2').val('{$user['id']}'); $('#quota').val('{$u['name']}'); $('#max').val('{$u['max']}'); $('#quotachange').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#user2').val('{$user['id']}'); $('#quota').val('{$u['name']}'); $('#max').val('{$u['max']}'); $('#max').attr('step', '{$step}'); $('#quotachange').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
 						</td>
 					</tr>
 		";
@@ -590,7 +595,7 @@ $content .= "
 					<input id=\"user2\" type=\"hidden\" value=\"\" name=\"user\" />
 					<input id=\"quota\" type=\"hidden\" value=\"\" name=\"quota\" />
 					<fieldset>
-						<input id=\"max\" type=\"text\" name=\"max\" value=\"\" />
+						<input id=\"max\" type=\"number\" name=\"max\" value=\"\" step=\"1\" min=\"0\" style=\"height: 30px;\" />
 						<span class=\"help-block\">{$lang['max_help']}</span>
 					</fieldset>
 					<fieldset autofocus>	

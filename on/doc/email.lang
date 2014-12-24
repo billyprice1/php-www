@@ -1,32 +1,62 @@
 ﻿[EN]
+title = "About sending emails"
 
+intro = "Sending an email"
+intro_text = "Have you ever wondered about how some websites sent you some emails, right after your registration, or notifying you their news ? It is quite a simple answer : these websites are 
+using the <strong>mail()</strong> function in PHP.<br /><br/>The mail() function can be used as follow :<br />"
+
+intro2 = "You are able to set other headers if you want to, for example : <em>From, Cc, Bcc</em> or <em>Reply-To</em>. In order to know if the email has been sent, you can just check the return value with a condition. 
+The function mail() returns <strong>TRUE</strong> if the mail was successfully accepted for delivery, <strong>FALSE</strong> otherwise. <br />"
+
+documentation = "For more information, please read the <a href='http://php.net/manual/en/function.mail.php'>PHP documentation</a>."
+
+verify = "Check if an email address is real"
+verify_text = "It is common practice to check, right after the registration, if the user gave a real email address. Frequently, the website send an email containing a validation link.
+The question is : <strong>how to check if the email address is real without exceed the quota of 100 mails a day ?</strong><br/>"
+
+filter = "First, we have to check the format of the email address.
+We are using another one PHP function : <a href='http://php.net/manual/en/function.filter-var.php'>filter_var()</a>. This one is returning <strong>TRUE</strong> or <strong>FALSE</strong>, depending on whether the format is
+correct or wrong. A single condition allows us to check whether the string entered by the user complies with the format of an email address: <br />"
+
+check_dns = "We now have to check if the domain name – the second part of the email address – is existing or not. Using functions like  
+<a href='http://php.net/manual/en/function.checkdnsrr.php'>checkdnsrr</a> will not work on Olympe, because the DNS lookup of your website (name.olympe.in) will return the DNS lookup of the Olympe website (www.olympe.in). 
+That is why you have to proceed as follows :"
+
+blacklist = "Moreover, you are able to prohibit the use of temporary emails. To do so, you can use <a href='https://gist.github.com/adamloving/4401361'>this blacklist</a>.
+Once the file <a href='/doc/publish'>is online</a>, you only have to test the email in question:"
+
+quota_request= "<u>Information</u> : You can ask more than 100 mails a day, right in your <a href='https://www.olympe.in/panel/messages'>panel</a>."
+back = "Retour"
 
 [FR]
-title = "Envoi d'email"
+title = "Gestion des emails"
 
 intro = "Envoyer un email"
 intro_text = "Vous vous êtes peut-être déjà demandé comment un site faisait pour vous envoyer un mail directement après votre inscription ou encore selon des paramètres que vous avez renseignés. 
-La réponse est simple, l'envoi de mails se fait en appelant une fonction, la fonction <b>mail()</b> directement depuis PHP. <br /> <br />
-La fonction mail s'utilise comme suit:<br />"
+La réponse est simple, l'envoi de mails se fait en appelant une fonction, la fonction <strong>mail()</strong> directement depuis PHP. <br /> <br />
+La fonction mail() s'utilise comme suit :<br />"
 
-intro2 = "Vous pouvez, si vous le souhaitez, définir des entêtes supplémentaires telles que : <i>From, Cc, Bcc</i> ou <i>Reply-To</i>. Afin de vérifier si l'email a bien été envoyé, il vous suffit de tester par une simple condition la valeur retournée par la fonction <b>mail()</b><br /> 
-La fonction retourne <b>TRUE</b> si le mail a été accepté pour livraison, <b>FALSE</b> dans tous les autres cas. <br />"
+intro2 = "Vous pouvez, si vous le souhaitez, définir des entêtes supplémentaires telles que : <em>From, Cc, Bcc</em> ou <em>Reply-To</em>. Afin de vérifier si l'email a bien été envoyé, il vous suffit de tester par une 
+simple condition la valeur retournée par la fonction <strong>mail()</strong><br /> La fonction retourne <strong>TRUE</strong> si le mail a été accepté pour livraison, <strong>FALSE</strong> dans tous 
+les autres cas. <br />"
 
 documentation = "Pour plus d'informations, nous vous invitons à lire <a href='http://php.net/manual/fr/function.mail.php'> la documentation PHP</a>."
 
 verify = "Vérifier l'email d'un utilisateur"
 verify_text = "Afin de vérifier si un utilisateur est légitime ou non, il est courant d'envoyer un email de validation contenant un lien de confirmation, généralement utilisable dans les 24 heures. 
-La question étant, avec un quota limité à 100 mails par jour, <b>comment vérifier l'adresse email de l'utilisateur</b> afin d'éviter les abus et ne pas dépasser le quota imparti.<br/><br/>"
+La question étant, avec un quota limité à 100 mails par jour, <strong>comment vérifier l'adresse email de l'utilisateur</strong> afin d'éviter les abus et ne pas dépasser le quota imparti.<br/>"
 
 filter = "D'abord et avant toute chose, il faut vérifier le format de l'adresse email rentrée. 
-Pour ce faire, on utilise une fonction telle que <a href='http://php.net/manual/fr/function.filter-var.php'>filter_var()</a>, qui retourne <b>TRUE</b> ou <b>FALSE</b> en fonction de la validité de l'adresse email. 
-Une seule et unique condition permet donc de vérifier si la chaîne de caractère rentrée par l'utilisateur respecte bien le format d'une adresse email: <br />"
+Pour ce faire, on utilise une fonction telle que <a href='http://php.net/manual/fr/function.filter-var.php'>filter_var()</a>, qui retourne <strong>TRUE</strong> ou <strong>FALSE</strong> en fonction 
+de la validité de l'adresse email. 
+Une seule et unique condition permet donc de vérifier si la chaîne de caractère rentrée par l'utilisateur respecte bien le format d'une adresse email : <br />"
 
-check_dns = "Il nous faut à présent vérifier si le nom de domaine - à savoir la deuxième partie de l'adresse email - existe ou non. Utiliser des fonctions telles que <a href='http://php.net/manual/fr/function.checkdnsrr.php'>checkdnsrr</a> ne fonctionnera pas sur notre plateforme, puisque la résolution DNS de nom de domaine non enregistrés retournera les enregistrement DNS d'Olympe.
-Il vous faudra donc procéder comme suit :"
+check_dns = "Il nous faut à présent vérifier si le nom de domaine – à savoir la deuxième partie de l'adresse email – existe ou non. Utiliser des fonctions telles que 
+<a href='http://php.net/manual/fr/function.checkdnsrr.php'>checkdnsrr</a> ne fonctionnera pas sur notre plateforme, puisque la résolution DNS de nom de domaine non enregistrés retournera 
+les enregistrement DNS d'Olympe. Il vous faudra donc procéder comme suit :"
 
-blacklist = "Il vous est également possible d'interdire l'utilisation d'emails temporaires. Pour ce faire, vous pouvez <a href='https://gist.github.com/adamloving/4401361'>utiliser cette \"blacklist\"</a>.
-Le fichier une fois <a href='/doc/publish'>enregistré sur le serveur</a>, vous pourrez procéder comme suit:"
+blacklist = "Il vous est également possible d'interdire l'utilisation d'emails temporaires. Pour ce faire, vous pouvez utiliser <a href='https://gist.github.com/adamloving/4401361'>cette \"blacklist\"</a> (liste noire).
+Le fichier une fois <a href='/doc/publish'>enregistré sur le serveur</a>, vous n'aurez plus qu'à tester l'email en question :"
 
-quota_request= "<u>A noter</u> : Vous pouvez faire une demande d'augmentation de votre quota <a href='https://www.olympe.in/panel/messages'>directement depuis le panel</a>."
+quota_request= "<u>A noter</u> : Vous pouvez faire une demande d'augmentation de votre quota de mails <a href='https://www.olympe.in/panel/messages'>directement depuis le panel</a>."
 back = "Retour"

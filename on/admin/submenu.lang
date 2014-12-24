@@ -9,6 +9,7 @@ menu_overquota = "Overquota"
 menu_blog = "Blog"
 menu_directory = "Directory"
 menu_logs = "Logs"
+menu_registrations = "Registrations"
 
 [FR]
 menu_home = "Accueil"
@@ -21,6 +22,7 @@ menu_overquota = "Overquota"
 menu_blog = "Blog"
 menu_directory = "Annuaire"
 menu_logs = "Logs"
+menu_registrations = "Inscriptions"
 
 [DE]
 menu_home = "Startseite"
@@ -33,3 +35,4 @@ menu_overquota = "Overquota"
 menu_blog = "Blog"
 menu_directory = "Directory"
 menu_logs = "Protokolle"
+menu_registrations = "Registrations"

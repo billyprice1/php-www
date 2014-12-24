@@ -8,10 +8,10 @@ if( !defined('PROPER_START') )
 
 require_once('on/doc/menu.php');
 
-if( $_GET['keyword'] )
+if( isset($_GET['keyword']) )
 {
 	$search = new search(__DIR__);
-	$results = $search->find($_GET['keyword']);
+	$results = $search->find(security::encode($_GET['keyword']));
 }
 
 $content = "
@@ -29,7 +29,7 @@ $content = "
 				</div>					
 			</div>
 			<div class=\"right big\">	
-				<h3>{$lang['result']} \"".security::encode($_GET['keyword'])."\"</h3>
+				<h3>{$lang['result']} \"".security::encode($_GET['keyword'], true, true)."\"</h3>
 				<br />
 				
 ";

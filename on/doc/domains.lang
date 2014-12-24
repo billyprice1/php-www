@@ -6,7 +6,7 @@ A domain name consists of a label and an extension, for example: <i>toto.com</i>
 buy = "Requirements"
 buy_text = "There are several types of domain names (paying: fr, net, org, com etc ...) or free (fr.nf, asso.st etc ...). Domain names called \"free\" are actually subdomains domains
 short (<i>toto.fr.nf</i> is a subdomain short domain <i>fr.nf</i>).<br /><br />
-<span style='font-weight: bold;'>Attention Olympe is not a domain provider</span>, you can therefore neither book nor buy a domain name directly on our panel. Some recognized suppliers:
+<span style='font-weight: bold;'>Warning, Olympe is not a registrar</span>, you can therefore neither book nor buy a domain name directly on our panel. Some recognized suppliers:
 <br />
 <ul class='classic'>
 	<li><a href='http://www.gandi.net' target='_blank'>Gandi</a> (classical domains, paying)</li>
