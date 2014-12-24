@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$site = api::send('site/list', array('id'=>$_GET['id'], 'directory'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$site = api::send('site/list', array('id'=> security::encode($_GET['id'], true, true), 'directory'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $site = $site[0];
 
 if(!$site)
@@ -15,7 +15,7 @@ if(!$site)
 $lang['TITLE'] = $lang['olympe'] . $site['title'];
 
 if( $security->hasAccess('/panel') )
-	$rating = api::send('self/site/getrate', array('id'=>$_GET['id']));
+	$rating = api::send('self/site/getrate', array('id'=> security::encode($_GET['id'], true, true) ));
 
 if( $site['rating']['count'] == 0 )
 	$site['rating']['count'] = 1;
