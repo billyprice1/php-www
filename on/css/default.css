@@ -736,3 +736,14 @@ span.tag {
 span.tag.important {
     background-color: #CC0000;
 }
+.profile-pic {
+    width: 30px; 
+    height: 30px;
+    border-radius: 100px;
+}
+.lg-profile-pic {
+    width: 80px; 
+    height: 80px; 
+    display: block;
+    border-radius: 100px;
+}

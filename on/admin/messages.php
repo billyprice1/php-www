@@ -79,7 +79,7 @@ if( count($messages) > 0 )
 						<tr>
 							<td style=\"text-align: center; width: 40px;\"><a href=\"/admin/messages/detail?id={$m['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/email.png\" /></a></td>
 							<td>{$m['title']}</td>
-							<td><a href=\"/admin/users/detail?id={$m['user']['id']}\"><img style=\"width: 30px; height: 30px; float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a><a style=\"display: block; float: left; padding-top: 6px;\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a></td>
+							<td><a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"profile-pic\" style=\"float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a><a style=\"display: block; float: left; padding-top: 6px;\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a></td>
 							<td>".date($lang['dateformat'], $m['date'])."</a></td>
 							<td>".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 100px; text-align: center;\">
