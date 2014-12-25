@@ -83,7 +83,7 @@ $content = "
 				<form action=\"/panel/settings/upload_action\" method=\"post\" enctype=\"multipart/form-data\">
 					<input type=\"hidden\" name=\"id\" value=\"{$connector['connector_id']}\" />
 					<fieldset>
-						<img style=\"width: 100px; height: 100px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /><br /><br />
+						<img style=\"width: 100px; height: 100px; border-radius: 100px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /><br /><br />
 						<input type=\"file\" name=\"avatar\" />
 						<span class=\"help-block\">{$lang['avatar_100']}</span>
 					</fieldset>

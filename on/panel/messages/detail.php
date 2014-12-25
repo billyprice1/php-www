@@ -75,7 +75,7 @@ foreach( $messages as $m )
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 						<br />
 						{$m['user']['name']}
 					</div>
@@ -117,7 +117,7 @@ $content .= "
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 						<br />
 						{$message['user']['name']}
 					</div>
