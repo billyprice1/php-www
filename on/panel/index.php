@@ -73,7 +73,8 @@ $content = "
 				case 1:
 					$content .= "
 					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; margin:15px 10px\">{$lang['twitter']}</span><br /><br />";
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position:absolute; margin: -7px 70px\">{$lang['share']}</span>";
 					break;
 				}
 
