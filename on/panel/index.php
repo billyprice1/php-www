@@ -66,9 +66,9 @@ $content = "
 				switch ($display) {
 				case 0:
 					$content .= "
-					<img style=\"display: block; float: left; margin-right: 10px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/donation.png\" />
-					<span style=\"font-size: 18px; display: block; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"font-size: 12px; color: #ff8827; display: block; float: left; padding-top: 10px;\"\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/illu/secure.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; padding:10px\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
+					<span style=\"display: block; color: #FF8827; font-size: 12px; position:absolute; margin-left:90px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
 					break;
 				case 1:
 					$content .= "
