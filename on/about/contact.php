@@ -5,16 +5,20 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-
+/*
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
-
+*/
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
+	
+$time = time();
+$random = md5(uniqid($time, true));
+$_SESSION[$random] = 1;
 
 $content = "
 		<div class=\"head-light\">
@@ -96,6 +100,10 @@ $content .= "
 						<fieldset>
 							<input type=\"submit\" value=\"{$lang['send_now']}\" />
 						</fieldset>
+						<input style=\"display:none;\" type=\"text\" id=\"ck1\" name=\"ck1\" value=\"{$time}\" />
+						<input style=\"display:none;\" type=\"text\" id=\"ck2\" name=\"ck2\" value=\"\" />
+						<input style=\"display:none;\" type=\"text\" id=\"email2\" name=\"email2\" value=\"\" />
+						<input type=\"hidden\" value=\"{$random}\" name=\"random\" />
 					</form>
 				</div>
 				<div class=\"right border\">
@@ -133,6 +141,8 @@ $content .= "
 				newFlexibleDialog('email_check', 250);
 				
 				$('form#contact').submit(function() {
+					$('#ck2').val($('#ck1').val());
+					
 					var input = $('#email', this);
 					var re = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 					var is_email = re.test(input.val());
