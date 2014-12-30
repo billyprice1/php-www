@@ -59,11 +59,26 @@ $content = "
 		<br />
 		<div class=\"sites\">
 			<div class=\"sitescontent\">
-				<div style=\"width: 1080px; padding: 10px; background-color: #ffffff; opacity: 0.6; border-radius: 5px; margin-bottom: 20px;\">
+				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
+				
+				$display = rand(1);
+				
+				switch ($display) {
+				case 0:
+					$content .= "
 					<img style=\"display: block; float: left; margin-right: 10px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/donation.png\" />
 					<span style=\"font-size: 18px; display: block; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"font-size: 12px; color: #ff8827; display: block; float: left; padding-top: 10px;\"\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>
-					<div class=\"clear\"></div>
+					<span style=\"font-size: 12px; color: #ff8827; display: block; float: left; padding-top: 10px;\"\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					break;
+				case 1:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:15px 10px\">{$lang['twitter']}</span><br /><br />";
+					break;
+				}
+
+				$content .="
+				<div class=\"clear\"></div>
 				</div>
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
