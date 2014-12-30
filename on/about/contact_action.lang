@@ -1,16 +1,16 @@
 ﻿[ES]
 success = "Tu mensaje ha sido enviado. Gracias por su interés."
+error_empty_field = "Su mensaje no se pudo enviar: algunos campos están vacíos."
+error_email_wrong = "Su formato de dirección email es erróneo."
+error_referer = "Su mensaje no se pudo enviar."
+error_js = "Su mensaje no se pudo enviar : por favor, verificas que JavaScript está activado en tu navegador."
+
+[EN]
+success = "Your message has been succesfully sent. Thanks for your interest in Olympe!"
 error_empty_field = "Your message could not be sent: one or more field(s) are empty."
 error_email_wrong = "Your email address format is wrong."
 error_referer = "Your message could not be sent."
 error_js = "Your message could not be sent : please make sure javascript is enabled in your browser."
-
-[EN]
-success = "Your message has been succesfully sent. Thanks for your interest in Olympe!"
-error_empty_field = "Su mensaje no se pudo enviar: algunos campos están vacíos."
-error_email_wrong = "Su formato de dirección email es erróneo."
-error_referer = "Su mensaje no se pudo enviar."
-error_js = "Su mensaje no se pudo enviar : vérifiez que le javascript est activé dans votre navigateur."
 
 [FR]
 success = "Votre message a bien été envoyé. Merci de votre intérêt pour Olympe !"
