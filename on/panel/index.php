@@ -61,7 +61,7 @@ $content = "
 			<div class=\"sitescontent\">
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
-				$display = rand(1);
+				$display = rand(0, 1);
 				
 				switch ($display) {
 				case 0:
