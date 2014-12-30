@@ -52,6 +52,7 @@ $content = "
 			</div>
 			<div style=\"width: 700px; float: right;\">
 				<h3 class=\"colored\">{$lang['messages']}</h3>
+				<div style='height: 300px; overflow: auto;'>
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>
@@ -83,6 +84,7 @@ else
 
 $content .= "
 				</table>
+			    </div>
 			</div>
 			<div class=\"clear\"></div>
 			<br />
