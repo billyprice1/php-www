@@ -61,20 +61,26 @@ $content = "
 			<div class=\"sitescontent\">
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
-				$display = rand(0, 1);
+				$display = rand(0, 2);
 				
 				switch ($display) {
 				case 0:
 					$content .= "
 					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/illu/secure.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; padding:10px\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"display: block; color: #FF8827; font-size: 12px; position:absolute; margin-left:90px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
+					<span style=\"color: #FF8827; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
 					break;
 				case 1:
 					$content .= "
 					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
 					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
-					<span style=\"display: block; color: #959595; font-size: 12px; position:absolute; margin: -7px 70px\">{$lang['share']}</span>";
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					break;
+				case 2:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@2x.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
 					break;
 				}
 
