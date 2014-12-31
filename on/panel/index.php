@@ -89,8 +89,8 @@ $content = "
 				</div>
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
-						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button classic\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white-big.png\" />
+						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button grey\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center; \">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" style=\"margin: 3px 0px 0px;\" />
 						</a>
 					</div>
 					<div id=\"formsite\" style=\"display: none; position: relative; padding: 30px 10px 10px 10px;\">

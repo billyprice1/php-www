@@ -127,6 +127,17 @@ a.button.classic:hover {
 	background-color: #eb782b;
 }
 
+a.button.grey {
+	background-color: rgb(122, 122, 122);
+	color: #ffffff;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+a.button.grey:hover {
+	background-color: #8C8C8C;
+}
+
 a.button.main {
 	color: #de5711;
 	background-color: #ffffff;
