@@ -21,20 +21,20 @@ catch( Exception $e )
 }
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-file_put_contents($site['homeDirectory'].'file.zip', $content);
+file_put_contents($site['homeDirectory'].'/file.zip', $content);
 
-if ( file_exists($site['homeDirectory'].'file.zip') )
+if ( file_exists($site['homeDirectory'].'/file.zip') )
 {
 	$zip = new ZipArchive;
-	$res = $zip->open($file);
+	$res = $zip->open($site['homeDirectory'].'/file.zip');
 	if ($res === TRUE) 
 	{
 		 // extract it to the path we determined above
-		  $zip->extractTo($path);
+		  $zip->extractTo($site['homeDirectory']);
 		  $zip->close();
 		  
 		  // delete zip file
-		  unlink($_GLOBALS['CONFIG']['FILE']['NAME']);
+		  unlink($site['homeDirectory'].'/file.zip');
 		  
 		  // redirect
 		  header('Location: http://'.$_GET['site'].'olympe.in/wordpress/wp-admin/setup-config.php');
