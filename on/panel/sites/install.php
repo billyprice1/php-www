@@ -19,7 +19,7 @@ catch( Exception $e )
 	
 $url = 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip';
 $content = file_get_contents( $url );
-$file = '/dns/in/olympe/'.$_GET['site']'.file.zip';
+$file = "/dns/in/olympe/".$_GET['site']."/file.zip";
 file_put_contents($file, $content);
 
 if ( file_exists($file) )
