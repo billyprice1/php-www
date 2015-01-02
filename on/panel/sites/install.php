@@ -6,6 +6,8 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$site = api::send('self/site/list', array('id'=>$_GET['id']));
+
 try
 {
 	$_GLOBALS['APP']['PASSWORD'] = random(15);
@@ -19,13 +21,33 @@ catch( Exception $e )
 	
 $url = 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip';
 $content = file_get_contents( $url );
-$file = "/dns/in/olympe/".$_GET['site']."/file.zip";
+$file = "/dns/in/olympe/{$site['name']}/file.zip";
+
+print_r($site);
+return;
+
+/* set the FTP hostname */
+$user = $_GET['site'];
+$host = "ftp.olympe.in";
+$file = "file.zip";
+$hostname = $user . ":" . $pass . "@" . $host . "/" . $file;
+
+/* the file content */
+$content = "this is just a test.";
+
+/* create a stream context telling PHP to overwrite the file */
+$options = array('ftp' => array('overwrite' => true));
+$stream = stream_context_create($options);
+
+/* and finally, put the contents */
+file_put_contents($hostname, $content, 0, $stream); 
+
 file_put_contents($file, $content);
 
 if ( file_exists($file) )
 {
 	$zip = new ZipArchive;
-	$res = $zip->open('file.zip');
+	$res = $zip->open($file);
 	if ($res === TRUE) 
 	{
 		 // extract it to the path we determined above

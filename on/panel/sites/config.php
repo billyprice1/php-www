@@ -119,7 +119,7 @@ $content .= "
 						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
 						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">{$lang['wordpress']}</span>
 					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px;\" onclick=\"window.location.href = '/panel/sites/install?site={$site['name']}'; \">{$lang['start']}</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px;\" onclick=\"window.location.href = '/panel/sites/install?id=".$_GET['id']."'; \">{$lang['start']}</span>
 				</div>
 				<br /><br />
 				<h2 class=\"dark\">{$lang['response']}</h2>
