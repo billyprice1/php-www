@@ -205,6 +205,10 @@ CAT_19 = "Sport"
 CAT_20 = "Tourisme"
 note = "* : <i>Le temps de réponse n'est calculé que si le site est présent dans l'annuaire.</i>"
 
+install = "Installation rapide"
+wordpress = "wordpress (4.1)"
+start = "Lancer l'installation"
+
 [DE]
 title = "Webseite Einstellungen"
 subtitle = "Ändern"
