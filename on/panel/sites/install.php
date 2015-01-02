@@ -6,13 +6,13 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$site = api::send('self/site/list', array('id'=>$_GET['id']));
+$site = api::send('self/site/list', array('id'=> security::encode($_GET['id']) ));
 $site = $site[0];
 
 try
 {
 	$_GLOBALS['APP']['PASSWORD'] = random(15);
-	api::send('self/database/add', array('type'=>$_POST['type'], 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 }
 catch( Exception $e )
 {
@@ -37,7 +37,7 @@ if ( file_exists($site['homeDirectory'].'/file.zip') )
 		  unlink($site['homeDirectory'].'/file.zip');
 		  
 		  // redirect
-		  header('Location: http://'.$_GET['site'].'olympe.in/wordpress/wp-admin/setup-config.php');
+		  header("Location: http://{$site['name']}.olympe.in/wordpress/wp-admin/setup-config.php");
 		  return;
 	} 
 	else 
