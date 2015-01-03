@@ -29,7 +29,7 @@
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
 			
 			
-	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ))[0];
+	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) );
 	
 	/* debug */
