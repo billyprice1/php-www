@@ -26,7 +26,7 @@ catch( Exception $e )
 }
 
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, ' FILE_USE_INCLUDE_PATH ', stream_context_create( array('ftp' => array('overwrite' => true)) ));
+file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, FILE_APPEND | LOCK_EX , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
 $zip = new ZipArchive;
 $res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
