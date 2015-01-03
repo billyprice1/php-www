@@ -14,9 +14,9 @@ try
 	$_GLOBALS['APP']['PASSWORD'] = random(15);
 	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	
-	$database = api::send('self/database/list')[0];
+	$database = api::send('self/database/list');
 	
-	if ($database['desc'] != 'wordpress')
+	if ($database[0]['desc'] != 'wordpress')
 		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
 }
 catch( Exception $e )
@@ -24,18 +24,24 @@ catch( Exception $e )
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
 	$_SESSION['MESSAGE']['TEXT']= $lang['error'];
 }
+
+$con = ftp_connect('ftp.olympe.in');
+$login = ftp_login($con, $site['name'], $_POST['pass']);
+
+if ( !is_array( ftp_nlist($con, ".") ) )
+	throw new SiteException('FTP connection to the server failed. Invalid password supplied', 400, 'connection failed');
+
+ftp_close($con);
+
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-
-if ( file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, 0, stream_context_create( array('ftp' => array('overwrite' => true)) )) === FALSE )
-	throw new SiteException('FTP connection to the server failed. Invalid password supplied', 400, 'connection failed');
-	
+file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, 0, stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
 if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip') )
 {
 	$zip = new ZipArchive;
 	$res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
-	if ($res === TRUE) 
+	if ( $res  === TRUE) 
 	{
 		 // extract it to the path we determined above
 		  $zip->extractTo('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in');
@@ -49,7 +55,7 @@ if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.
 		  return;
 	} 
 	else 
-	  throw new SiteException('Internal Error', 400, 'File can not be extracted');
+	  throw new SiteException('Internal Error '.$res, 400, 'File can not be extracted');
 }
 else
 	throw new SiteException('Invalid argument', 400, 'File not uploaded');
