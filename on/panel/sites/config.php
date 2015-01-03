@@ -236,6 +236,7 @@ $content .= "
 	</div>
 	<div id=\"install\" class=\"floatingdialog\"><br>
 		<h3 class=\"center\">{$lang['quick']}</h3>
+		<div id=\"form\">
 		<p style=\"text-align: center;\">{$lang['prompt']}</p>
 		<div class=\"form-small\">		
 			<form action=\"/panel/sites/install\" method=\"post\" class=\"center\">
@@ -245,10 +246,11 @@ $content .= "
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
 				</fieldset>
 				<fieldset>	
-					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').prop('disabled', true); $('#launch').val('{$lang['do']}'); $('#note').fadeIn('slow'); \" />
-					<div id=\"note\"><br />
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').val('{$lang['do']}'); $('#form').fadeOut('slow'); $('#note').fadeIn('slow'); \" />
+					</div>
+					<div id=\"note\" style=\"display:none\"><br />
 					<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
-					<span style=\"font-size: 12px;\">{$lang['wait']}</span>
+					<span style=\"font-size: 12px;\">{$lang['wait']}</span><br /><br />
 					</div>
 				</fieldset>
 			</form>
