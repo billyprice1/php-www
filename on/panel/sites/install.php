@@ -13,12 +13,12 @@
 	$me = api::send('self/whoami', array('quota'=>true));
 	$me = $me[0];
 			
-	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
-	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
-	
 	print_r( $database );
 	print_r( $me );
 	return;
+	
+	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
+	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	
 	if ($database[0]['desc'] != 'wordpress')
 		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
