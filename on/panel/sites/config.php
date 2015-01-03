@@ -119,7 +119,7 @@ $content .= "
 						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
 						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">{$lang['wordpress']}</span>
 					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px;\" onclick=\"window.location.href = '/panel/sites/install?id=".$_GET['id']."'; \">{$lang['start']}</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px;\" onclick=\" $('#download').dialog('install'); return false; \">{$lang['start']}</span>
 				</div>
 				<br /><br />
 				<h2 class=\"dark\">{$lang['response']}</h2>
@@ -234,11 +234,29 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"install\" class=\"floatingdialog\"><br>
+		<h3 class=\"center\">{$lang['quick']}</h3>
+		<p style=\"text-align: center;\">{$lang['prompt']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/sites/install\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<fieldset>
+					<input type=\"password\" name=\"pass\" />
+					<span class=\"help-block\">{$lang['ftp_pass']}</span>
+				</fieldset>
+				<fieldset>	
+					<input autofocus type=\"submit\" value=\"{$lang['install_btn']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	
 	<script type=\"text/javascript\">
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('download', 550);
+		newFlexibleDialog('install', 550);
 		
 		$(function()
 		{

@@ -208,6 +208,10 @@ note = "* : <i>Le temps de réponse n'est calculé que si le site est présent d
 install = "Installation rapide"
 wordpress = "wordpress (4.1)"
 start = "Lancer l'installation"
+quick = "Installation rapide"
+prompt = "Merci de renseigner le mot de passe de votre site."
+ftp_pass = "Mot de passe FTP"
+install_btn = "Installer"
 
 [DE]
 title = "Webseite Einstellungen"

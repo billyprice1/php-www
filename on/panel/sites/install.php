@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$site = api::send('self/site/list', array('id'=> security::encode($_GET['id']) ));
+$site = api::send('self/site/list', array('id'=> security::encode($_POST['id']) ));
 $site = $site[0];
 
 try
@@ -21,20 +21,20 @@ catch( Exception $e )
 }
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-file_put_contents($site['homeDirectory'].'/file.zip', $content);
+file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $content);
 
 if ( file_exists($site['homeDirectory'].'/file.zip') )
 {
 	$zip = new ZipArchive;
-	$res = $zip->open($site['homeDirectory'].'/file.zip');
+	$res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
 	if ($res === TRUE) 
 	{
 		 // extract it to the path we determined above
-		  $zip->extractTo($site['homeDirectory']);
+		  $zip->extractTo('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in');
 		  $zip->close();
 		  
 		  // delete zip file
-		  unlink($site['homeDirectory'].'/file.zip');
+		  unlink('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
 		  
 		  // redirect
 		  header("Location: http://{$site['name']}.olympe.in/wordpress/wp-admin/setup-config.php");
