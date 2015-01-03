@@ -22,7 +22,10 @@
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
 			
 	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
-	$database = api::send('self/database/list')[0];
+	$database = api::send('self/database/list');
+	
+	print_r($database);
+	return;
 
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
