@@ -13,6 +13,11 @@ try
 {
 	$_GLOBALS['APP']['PASSWORD'] = random(15);
 	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	
+	$database = api::send('self/database/list')[0];
+	
+	if ($database['desc'] != 'wordpress')
+		throw new SiteException('Internal Error', 400, 'database was not created');
 }
 catch( Exception $e )
 {
@@ -23,7 +28,7 @@ catch( Exception $e )
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content);
 
-if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content) )
+if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip') )
 {
 	$zip = new ZipArchive;
 	$res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
@@ -37,7 +42,7 @@ if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.
 		  unlink('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
 		  
 		  // redirect
-		  header("Location: http://{$site['name']}.olympe.in/wordpress/wp-admin/setup-config.php");
+		  header("Location: http://{$site['name']}.olympe.in/wordpress/wp-admin/setup-config.php?name={$database['name']}&server={$database['server']}");
 		  return;
 	} 
 	else 
