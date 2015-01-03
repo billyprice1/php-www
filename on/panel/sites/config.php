@@ -249,11 +249,11 @@ $content .= "
 					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').val('{$lang['do']}'); $('#form').fadeOut('slow'); $('#note').fadeIn('slow'); \" />
 				</fieldset>
 			</form>
-			</div>
-			<div id=\"note\" style=\"display:none\"><br />
+		</div>
+		</div>
+		<div id=\"note\" style=\"display:none\"><br />
 			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
-			<span style=\"font-size: 12px;\">{$lang['wait']}</span><br /><br />
-			</div>
+			<span style=\"font-size: 12px; text-align: center;\">{$lang['wait']}</span><br /><br />
 		</div>
 	</div>
 	
