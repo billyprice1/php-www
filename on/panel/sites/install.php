@@ -17,13 +17,13 @@ try
 catch( Exception $e )
 {
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+	$_SESSION['MESSAGE']['TEXT']= $lang['error'];
 }
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $content);
 
-if ( file_exists($site['homeDirectory'].'/file.zip') )
+if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $content) )
 {
 	$zip = new ZipArchive;
 	$res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
@@ -45,7 +45,6 @@ if ( file_exists($site['homeDirectory'].'/file.zip') )
 }
 else
 	throw new SiteException('Invalid argument', 400, 'File not uploaded');
-
 	
 function random($car) 
 {
