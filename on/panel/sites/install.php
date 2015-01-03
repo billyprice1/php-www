@@ -15,23 +15,28 @@
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	
 	/*  cleaning unused databases */
-	if ( $me['quotas'][2]['used'] >= $me['quotas'][2]['max'] )
+	foreach( $databases as $d )
 	{
-		foreach( $databases as $d )
+		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
 		{
-			if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
-			{
-				api::send('self/database/del', array( 'database'=>  $d['name'] ));
-				$count++;
-			}
+			api::send('self/database/del', array( 'database'=>  $d['name'] ));
+			$count++;
 		}
+	}
+	
+	if ( $me['quotas'][2]['used'] >= $me['quotas'][2]['max'] )
 		if ( $count <= 0)
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
-	}
 			
-	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ))[0];
-	$database = api::send( 'self/database/list', array( 'database' => $new ) )[0];
-
+			
+	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));//[0]
+	$database = api::send( 'self/database/list', array( 'database' => $new ) );
+	
+	/* debug */
+	print_r($new);
+	print_r($database);
+	return;
+	
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
 	
