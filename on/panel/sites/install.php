@@ -30,7 +30,7 @@
 	}
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ))[0];
-	$database = api::send( 'self/database/list', array( 'database' => $new ) );
+	$database = api::send( 'self/database/list', array( 'database' => $new ) )[0];
 
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
