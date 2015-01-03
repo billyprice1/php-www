@@ -247,13 +247,13 @@ $content .= "
 				</fieldset>
 				<fieldset>	
 					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').val('{$lang['do']}'); $('#form').fadeOut('slow'); $('#note').fadeIn('slow'); \" />
-					</div>
-					<div id=\"note\" style=\"display:none\"><br />
-					<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
-					<span style=\"font-size: 12px;\">{$lang['wait']}</span><br /><br />
-					</div>
 				</fieldset>
 			</form>
+			</div>
+			<div id=\"note\" style=\"display:none\"><br />
+			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
+			<span style=\"font-size: 12px;\">{$lang['wait']}</span><br /><br />
+			</div>
 		</div>
 	</div>
 	
