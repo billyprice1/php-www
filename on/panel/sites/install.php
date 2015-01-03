@@ -15,7 +15,7 @@
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	
 	/*  cleaning unused databases */
-	foreach( $databases as $d )
+	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
 		{
