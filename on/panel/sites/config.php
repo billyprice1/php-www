@@ -246,7 +246,7 @@ $content .= "
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
 				</fieldset>
 				<fieldset>	
-					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').val('{$lang['do']}'); $('#form').fadeOut('slow'); $('#note').fadeIn('slow'); \" />
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#form').fadeOut('slow', function() { $('#note').fadeIn('slow'); }); \" />
 				</fieldset>
 			</form>
 		</div>
