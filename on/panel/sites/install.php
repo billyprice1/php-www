@@ -14,21 +14,27 @@
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	
+	/*  cleaning unused databases */
 	if ( $me['quotas'][2]['used'] >= $me['quotas'][2]['max'] )
-		
-		if ( ( empty( $database[0]['size'] ) || $database[0]['size']  == 0 ) && $database[0]['desc'] == 'wordpress')
-			api::send('self/database/del', array( 'database'=> $database[0]['name'] ));
-		else
+	{
+		foreach( $databases as $d )
+		{
+			if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
+			{
+				api::send('self/database/del', array( 'database'=>  $d['name'] ));
+				$count++;
+			}
+		}
+		if ( $count <= 0)
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
+	}
 			
-	$get = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
-	$database = api::send('self/database/list');
-	
-	print_r($get);
-	return;
+	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	$database = api::send( 'self/database/list', array( 'database' => $new ) );
 
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
+	
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
@@ -52,7 +58,6 @@
 		throw new SiteException("An error has occured. File couldn't be extracted ", 400, 'File can not be extracted');
 	else
 		throw new SiteException('An error has occured.', 400, 'File can not be extracted');
-		
 		
 	function random($length = 15) 
 	{
