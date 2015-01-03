@@ -9,24 +9,17 @@
 	$site = api::send('self/site/list', array('id'=> security::encode($_POST['id']) ));
 	$site = $site[0];
 
-	try
-	{
-		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
-		api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
+	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 		
-		$database = api::send('self/database/list');
+	$database = api::send('self/database/list');
 		
-		print_r( $database );
-		return;
+	print_r( $database );
+	return;
 		
-		if ($database[0]['desc'] != 'wordpress')
-			throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
-	}
-	catch( Exception $e )
-	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= $lang['error'];
-	}
+	if ($database[0]['desc'] != 'wordpress')
+		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
+
 
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
