@@ -34,7 +34,7 @@ $check = file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
 	
 	if ($check == 'done')
 	{
-		$config = file_get_contents( "/on/panel/sites/import/wp-config.php" );
+		$config = file_get_contents( __DIR__."/import/wp-config.php" );
 		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
 		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
