@@ -251,9 +251,9 @@ $content .= "
 			</form>
 		</div>
 		</div>
-		<div id=\"note\" style=\"display:none\"><br />
+		<div id=\"note\" style=\"display:none; text-align: center; padding: 10px 0px 20px 0px;\"><br />
 			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
-			<span style=\"font-size: 12px; text-align: center;\">{$lang['wait']}</span><br /><br />
+			<span style=\"font-size: 12px; \">{$lang['wait']}</span><br /><br />
 		</div>
 	</div>
 	

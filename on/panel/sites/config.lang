@@ -212,8 +212,7 @@ quick = "Installation rapide"
 prompt = "Merci de renseigner le mot de passe de votre site."
 ftp_pass = "Mot de passe FTP"
 install_btn = "Installer"
-wait = "Veuillez patienter.<br />Cela peut prendre quelques minutes"
-do = "Installation en cours"
+wait = "Installation en cours. Merci de bien vouloir patienter. <br />Cela peut prendre quelques minutes"
 
 [DE]
 title = "Webseite Einstellungen"
