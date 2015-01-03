@@ -1,6 +1,6 @@
 <?php
 
-	$path = pathinfo(realpath('file.zip'), PATHINFO_DIRNAME);
+	$path = pathinfo( realpath('file.zip'), PATHINFO_DIRNAME );
 
 	$zip = new ZipArchive;
 	$res = $zip->open('file.zip');
@@ -12,10 +12,9 @@
 		  
 		  // delete zip file
 		  unlink('file.zip');
-
 		  die('done'); 
 	}
-	else 
-	 	  die('error');
+	else 	
+		  die('error');
 
 ?>
