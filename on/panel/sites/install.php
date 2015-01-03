@@ -30,7 +30,7 @@
 			
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ))[0];
-	$database = api::send( 'self/database/list', array( 'database' => $new ) );
+	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) );
 	
 	/* debug */
 	print_r($new);
