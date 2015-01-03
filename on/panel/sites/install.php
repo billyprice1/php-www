@@ -10,19 +10,18 @@
 	$site = $site[0];
 
 	$database = api::send('self/database/list');
-	$me = api::send('self/whoami', array('quota'=>true));
-	$me = $me[0];
-			
-	print_r( $database );
-	print_r( $me );
-	return;
+	$me = api::send('self/whoami', array('quota'=>true))[0];
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
-	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	
-	if ($database[0]['desc'] != 'wordpress')
-		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
-
+	if ( $me['quotas'][2]['used'] >= $me['quotas'][2]['max'] )
+		
+		if ( ( empty( $database[0]['size'] ) || $database[0]['size']  == 0 ) && $database[0]['desc'] == 'wordpress')
+			api::send('self/database/del', array( 'database'=> $database[0]['name'] ));
+		else
+			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
+			
+	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 
 	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
