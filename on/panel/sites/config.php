@@ -241,11 +241,15 @@ $content .= "
 			<form action=\"/panel/sites/install\" method=\"post\" class=\"center\">
 				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
 				<fieldset>
-					<input type=\"password\" name=\"pass\" />
+					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
 				</fieldset>
 				<fieldset>	
-					<input autofocus type=\"submit\" value=\"{$lang['install_btn']}\" />
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#launch').prop('disabled', true); $('#launch').val('{$lang['do']}'); $('#note').fadeIn('slow'); \" />
+					<div id=\"note\"><br />
+					<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
+					<span style=\"font-size: 12px;\">{$lang['wait']}</span>
+					</div>
 				</fieldset>
 			</form>
 		</div>
