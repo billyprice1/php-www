@@ -26,7 +26,7 @@ catch( Exception $e )
 }
 
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-$unzip = file_get_contents( '/on/panel/sites/unzip.php' );
+$unzip = file_get_contents( __DIR__.'/unzip.php' );
 file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
