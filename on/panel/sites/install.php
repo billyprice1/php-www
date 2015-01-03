@@ -9,14 +9,17 @@
 	$site = api::send('self/site/list', array('id'=> security::encode($_POST['id']) ));
 	$site = $site[0];
 
+	$database = api::send('self/database/list');
+	$me = api::send('self/whoami', array('quota'=>true));
+	$me = $me[0];
+			
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
-		
-	$database = api::send('self/database/list');
-		
+	
 	print_r( $database );
+	print_r( $me );
 	return;
-		
+	
 	if ($database[0]['desc'] != 'wordpress')
 		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
 
