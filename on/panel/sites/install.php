@@ -21,9 +21,9 @@ catch( Exception $e )
 }
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $content);
+file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content);
 
-if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $content) )
+if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content) )
 {
 	$zip = new ZipArchive;
 	$res = $zip->open('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip');
