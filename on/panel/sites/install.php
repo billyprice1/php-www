@@ -17,7 +17,7 @@ try
 	$database = api::send('self/database/list')[0];
 	
 	if ($database['desc'] != 'wordpress')
-		throw new SiteException('Internal Error', 400, 'database was not created');
+		throw new SiteException('Internal Error. Database could not be created', 400, 'database was not created');
 }
 catch( Exception $e )
 {
@@ -26,7 +26,10 @@ catch( Exception $e )
 }
 	
 $content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
-file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content);
+
+if ( file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, 0, stream_context_create( array('ftp' => array('overwrite' => true)) )) === FALSE )
+	throw new SiteException('FTP connection to the server failed. Invalid password supplied', 400, 'connection failed');
+	
 
 if ( file_exists('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip') )
 {
