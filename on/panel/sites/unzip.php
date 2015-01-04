@@ -1,6 +1,6 @@
 <?php
 
-	$path = pathinfo( realpath('file.zip'), PATHINFO_DIRNAME );
+	$path = pathinfo( realpath('##PATH##'), PATHINFO_DIRNAME );
 
 	$zip = new ZipArchive;
 	$res = $zip->open('file.zip');

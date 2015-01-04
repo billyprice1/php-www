@@ -12,9 +12,19 @@
 	$database = api::send('self/database/list');
 	$me = api::send('self/whoami', array('quota'=>true))[0];
 	
-	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	
-	/*  cleaning unused databases */
+	if( !isset($_POST['sql']) )	
+		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
+	else
+		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
+		
+
+	if( $_POST['path'] == 1 )
+		$_GLOBALS['APP']['PATH'] = '/folder';
+	else
+		$_GLOBALS['APP']['PATH'] = '/';
+		
+	/*  clean unused databases */
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -25,15 +35,38 @@
 	}
 	
 	if ( $me['quotas'][2]['used'] >= $me['quotas'][2]['max'] )
-		if ( $count <= 0)
+		if ( $count <= 0 )
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
-			
+
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
 	
-	$content = file_get_contents( 'https://fr.wordpress.org/wordpress-4.1-fr_FR.zip' );
+	/* take account of language preference */
+	switch ($_COOKIE['language']) {
+		case 'FR':
+			$lang = "fr_FR";
+			break;
+		case 'EN':
+			$lang = "en_EN";
+			break;
+		case 'DE':
+			$lang = "de_DE";
+			break;
+		case 'IT':
+			$lang = "it_IT";
+			break;
+		case 'ES':
+			$lang = "es_ES";
+			break;
+		default:
+			$lang = "fr_FR";
+	}
+	
+	$content = file_get_contents( __DIR__.'/import/wordpress-'.$lang.'.zip' );
+	
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
+	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
@@ -49,9 +82,9 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/wordpress/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in'.$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		
-		header("Location: http://".$site['name'].".olympe.in/wordpress/wp-admin/setup-config.php");
+		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
 	else if ($check == 'error')

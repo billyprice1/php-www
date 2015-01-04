@@ -117,7 +117,7 @@ $content .= "
 				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
 					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
 						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">{$lang['wordpress']}</span>
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">wordpress 4.1</span>
 					</span>
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\" $('#install').dialog('open'); return false; \">{$lang['start']}</span>
 				</div>
@@ -235,7 +235,7 @@ $content .= "
 		</div>
 	</div>
 	<div id=\"install\" class=\"floatingdialog\"><br>
-		<h3 class=\"center\">{$lang['quick']}</h3>
+		<h3 class=\"center\">{$lang['install']}</h3>
 		<div id=\"form\">
 		<p style=\"text-align: center;\">{$lang['prompt']}</p>
 		<div class=\"form-small\">		
@@ -245,7 +245,21 @@ $content .= "
 					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
 				</fieldset>
-				<fieldset>	
+				<fieldset>
+					<input type=\"password\" name=\"sql\" style=\"color: #68686B;\" />
+					<span class=\"help-block\">{$lang['sql_pass']}</span>
+				</fieldset>
+				<span style=\"cursor: pointer; color: #68686B; font-size: 12px;\" id=\"options\">{$lang['more']}</span><br />
+				<div id= \"more\">
+				<fieldset>
+					<select name=\"path\">
+						<option value=\"0\">{$lang['root']}</option>
+						<option value=\"1\">{$lang['folder']}</option>
+					</select>
+					<span class=\"help-block\">{$lang['path']}</span>
+				</fieldset>
+				</div>
+				<fieldset>
 					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#form').fadeOut('slow', function() { $('#note').fadeIn('slow'); }); \" />
 				</fieldset>
 			</form>
@@ -258,11 +272,27 @@ $content .= "
 	</div>
 	
 	<script type=\"text/javascript\">
+		init = 0;
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('download', 550);
 		newFlexibleDialog('install', 550);
+	
+		$('#options').on('click', function() {
+		if (init == 0)
+			{
+				$('#more').fadeIn('slow');
+				$('#options').html('{$lang['more_toggle']}');
+				init++;
+			}
+			else
+			{
+				$('#more').fadeOut('slow');
+				$('#options').html('{$lang['more']}');
+				init = 0;
+			}
+		});
 		
 		$(function()
 		{
