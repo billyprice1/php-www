@@ -279,21 +279,7 @@ $content .= "
 		newFlexibleDialog('download', 550);
 		newFlexibleDialog('install', 550);
 	
-		$('#options').on('click', function() {
-		if (init == 0)
-			{
-				$('#more').fadeIn('slow');
-				$('#options').html('{$lang['more_toggle']}');
-				init++;
-			}
-			else
-			{
-				$('#more').fadeOut('slow');
-				$('#options').html('{$lang['more']}');
-				init = 0;
-			}
-		});
-		
+		$('#options').on('click', function() { if (init == 0) { $('#more').fadeIn('slow');	$('#options').html(\"{$lang['more_toggle']}\");	init++;	} else	{ $('#more').fadeOut('slow'); $('#options').html(\"{$lang['more']}\"); init = 0; } });
 		$(function()
 		{
 			var dataSourceDay = [";
