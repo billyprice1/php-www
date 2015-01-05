@@ -13,7 +13,7 @@
 	$me = api::send('self/whoami', array('quota'=>true))[0];
 	
 	
-	if( !isset($_POST['sql']) )	
+	if( !isset($_POST['sql']) || empty($_POST['sql']) )	
 		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	else
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );

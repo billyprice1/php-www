@@ -245,12 +245,12 @@ $content .= "
 					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
 				</fieldset>
+				<span style=\"cursor: pointer; color: #68686B; font-size: 12px;\" id=\"options\">{$lang['more']}</span><br />
+				<div id= \"more\" style=\"display:none\"><br /><br />
 				<fieldset>
 					<input type=\"password\" name=\"sql\" style=\"color: #68686B;\" />
 					<span class=\"help-block\">{$lang['sql_pass']}</span>
 				</fieldset>
-				<span style=\"cursor: pointer; color: #68686B; font-size: 12px;\" id=\"options\">{$lang['more']}</span><br />
-				<div id= \"more\">
 				<fieldset>
 					<select name=\"path\">
 						<option value=\"0\">{$lang['root']}</option>
