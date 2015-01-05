@@ -258,7 +258,7 @@ $content .= "
 					</select>
 					<span class=\"help-block\">{$lang['path']}</span>
 				</fieldset>
-				</div>
+				</div><br /><br />
 				<fieldset>
 					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#form').fadeOut('slow', function() { $('#note').fadeIn('slow'); }); \" />
 				</fieldset>
