@@ -44,25 +44,25 @@
 	/* take account of language preference */
 	switch ($_COOKIE['language']) {
 		case 'FR':
-			$lang = "fr_FR";
+			$_lang = "fr_FR";
 			break;
 		case 'EN':
-			$lang = "en_EN";
+			$_lang = "en_EN";
 			break;
 		case 'DE':
-			$lang = "de_DE";
+			$_lang = "de_DE";
 			break;
 		case 'IT':
-			$lang = "it_IT";
+			$_lang = "it_IT";
 			break;
 		case 'ES':
-			$lang = "es_ES";
+			$_lang = "es_ES";
 			break;
 		default:
-			$lang = "fr_FR";
+			$_lang = "fr_FR";
 	}
 	
-	$content = file_get_contents( __DIR__.'/import/wordpress-'.$lang.'.zip' );
+	$content = file_get_contents( __DIR__.'/import/wordpress-'.$_lang.'.zip' );
 	
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
