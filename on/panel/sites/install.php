@@ -21,7 +21,7 @@
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
-		$_GLOBALS['APP']['PATH'] = '/';
+		$_GLOBALS['APP']['PATH'] = '';
 		
 	/*  clean unused databases */
 	foreach( $database as $d )
