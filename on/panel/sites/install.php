@@ -79,10 +79,10 @@
 		; #### PLEASE DO NOT REMOVE ####
 		
 		[CONFIG]
-		cms = \"".$_GLOBALS['APP']['NAME']."\"
-		version = \"".$_GLOBALS['APP']['VERSION']."\"
-		directory = \"".$_GLOBALS['APP']['PATH']."\"
-		database = \"{$database['name']}\"
+		cms = '".$_GLOBALS['APP']['NAME']."'
+		version = '".$_GLOBALS['APP']['VERSION']."'
+		directory = '".$_GLOBALS['APP']['PATH']."'
+		database = '{$database['name']}'
 		";
 	
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
