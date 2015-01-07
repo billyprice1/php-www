@@ -9,7 +9,12 @@
 	$site = api::send('self/site/list', array('id'=> security::encode($_POST['id']) ));
 	$site = $site[0];
 
-	$conf = parse_ini_file( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini' );
+	$config = file_get_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini' );
+	$directory = __DIR__.'/temp/'.'file'.time().'.ini';
+	
+	file_put_contents ( $directory , $config);
+	
+	$conf = parse_ini_file( $directory );
 	api::send('self/database/del', array('database'=> $conf['CONFIG']['database'] ));	
 	
 	$destroy = file_get_contents( __DIR__.'/destroy.php' );
