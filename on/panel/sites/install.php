@@ -16,8 +16,16 @@
 		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	else
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
-		
+	
+	
+	/* ========= CONFIG ============ */
+	
+	$_GLOBALS['APP']['VERSION'] = "4.1";
+	$_GLOBALS['APP']['NAME'] = "wordpress";
+	
+	/* ========================== */
 
+	
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
@@ -83,6 +91,22 @@
 		
 		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in'.$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		
+		// write config file on remote directory
+		$conf = "
+		; This is a configuration file linked to the quick installation
+		; It has been automatically generated
+		; #### PLEASE DO NOT REMOVE ####
+		
+		[CONFIG]
+		cms = \"".$_GLOBALS['APP']['NAME']."\"
+		version = \"".$_GLOBALS['APP']['VERSION']."\"
+		directory = \"".$_GLOBALS['APP']['PATH']."\"
+		database = \"{$database['name']}\"
+		";
+		
+		umask('400');
+		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini', $conf, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
