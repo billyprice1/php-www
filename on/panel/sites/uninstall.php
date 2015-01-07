@@ -18,12 +18,10 @@
 	file_put_contents ( $directory , $config);
 	
 	$conf = parse_ini_file( $directory );
-	print_r( $conf );
-	
-	api::send('self/database/del', array('database'=> $conf['CONFIG']['database'] ));	
+	api::send('self/database/del', array('database'=> $conf['database'] ));	
 	
 	$destroy = file_get_contents( __DIR__.'/destroy.php' );
-	$destroy = str_replace("##PATH##", $conf['CONFIG']['directory'], $destroy);
+	$destroy = str_replace("##PATH##", $conf['directory'], $destroy);
 	
 	$check = file_get_contents( "http://".$site['name'].".olympe.in/destroy.php" );
 	unlink('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/destroy.php');
