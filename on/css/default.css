@@ -723,3 +723,16 @@ ol li {
     position: fixed;
     width: 100%;
 }
+
+span.tag {
+    background-color: #de5711;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9em;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+
+span.tag.important {
+    background-color: #CC0000;
+}
