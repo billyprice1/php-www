@@ -10,7 +10,7 @@
 	$site = $site[0];
 
 	$config = file_get_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini' );
-	$directory = __DIR__.'/temp/'.'file'.time().'.ini';
+	$directory = __DIR__.'/temp/temp.txt';
 	
 	file_put_contents ( $directory , $config);
 	
