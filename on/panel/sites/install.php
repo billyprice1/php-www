@@ -72,8 +72,22 @@
 	
 	$content = file_get_contents( __DIR__.'/import/wordpress-'.$_lang.'.zip' );
 	
+		// write config file on remote directory
+		$conf = "
+		; This is a configuration file linked to the quick installation
+		; It has been automatically generated
+		; #### PLEASE DO NOT REMOVE ####
+		
+		[CONFIG]
+		cms = \"".$_GLOBALS['APP']['NAME']."\"
+		version = \"".$_GLOBALS['APP']['VERSION']."\"
+		directory = \"".$_GLOBALS['APP']['PATH']."\"
+		database = \"{$database['name']}\"
+		";
+	
 	$unzip = file_get_contents( __DIR__.'/unzip.php' );
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
+	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
@@ -90,23 +104,6 @@
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
 		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in'.$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-		
-		// write config file on remote directory
-		$conf = "
-		; This is a configuration file linked to the quick installation
-		; It has been automatically generated
-		; #### PLEASE DO NOT REMOVE ####
-		
-		[CONFIG]
-		cms = \"".$_GLOBALS['APP']['NAME']."\"
-		version = \"".$_GLOBALS['APP']['VERSION']."\"
-		directory = \"".$_GLOBALS['APP']['PATH']."\"
-		database = \"{$database['name']}\"
-		";
-		
-		umask('400');
-		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini', $conf, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}

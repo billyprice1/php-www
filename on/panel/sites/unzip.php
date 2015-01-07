@@ -11,11 +11,17 @@
 		  $zip->extractTo($path);
 		  $zip->close();
 		  
+		  // create config.ini file
+		  $conf = "##FILE##";
+		  
+		  if ( file_put_contents( 'config.ini' , $conf ) === FALSE || !chmod('config.ini', 0400) )
+		  die('error');
+		  
 		  // delete zip file
 		  unlink('file.zip');
 		  die('done'); 
 	}
-	else 	
+	else 
 		  die('error');
 
 	
