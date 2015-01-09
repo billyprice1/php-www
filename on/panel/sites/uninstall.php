@@ -30,12 +30,14 @@
 	if ( $check == '1' )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'success';
-		$_SESSION['MESSAGE']['TEXT']= $lang['success'];	
+		$_SESSION['MESSAGE']['TEXT']= 'aaa';	
+		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	else 
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= $lang['error'];
+		$_SESSION['MESSAGE']['TEXT']= 'bbb';
+		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 
 ?>
