@@ -23,12 +23,12 @@
 	$destroy = file_get_contents( __DIR__.'/destroy.php' );
 	$destroy = str_replace("##PATH##", $conf['directory'], $destroy);
 	
-	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in', $destroy, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	file_put_contents('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/destroy.php', $destroy, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	
 	$check = file_get_contents( "http://".$site['name'].".olympe.in/destroy.php" );
 	unlink('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/destroy.php');
 	
-	if ($check == 'done')
+	if ( $check == 'done' )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'success';
 		$_SESSION['MESSAGE']['TEXT']= $lang['success'];	
