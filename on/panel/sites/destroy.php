@@ -27,7 +27,7 @@
 	$_try->delTree( $GLOBALS['DEFINED']['PATH'] );
 	$_try->delConfigFile( 'config.ini' );
 	
-	if ( file_exists ( $GLOBALS['DEFINED']['PATH'].'/index.php' ) )
+	if ( !file_exists ( $GLOBALS['DEFINED']['PATH'].'/index.php' ) )
 	die( '1' );
 
 	
