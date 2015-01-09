@@ -13,10 +13,14 @@
 		} 
 		
 		function delConfigFile( $file ) {
-			unlink( $file );
+			if ( file_exists ( $file ) )
+			unlink( $file )
 		}
 	}
 
+	ignore_user_abort( true );
+	set_time_limit( 0 );
+	
 	$_try = new destroy;
 	$_try->delTree(__DIR__.'##PATH##');
 	$_try->delConfigFile( 'config.ini' );
