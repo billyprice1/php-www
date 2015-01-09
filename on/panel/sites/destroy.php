@@ -14,17 +14,21 @@
 		
 		function delConfigFile( $file ) {
 			if ( file_exists ( $file ) )
-			unlink( $file )
+			unlink( $file );
 		}
 	}
 
 	ignore_user_abort( true );
 	set_time_limit( 0 );
 	
+	$GLOBALS['DEFINED']['PATH'] = __DIR__.'##PATH##';
+	
 	$_try = new destroy;
-	$_try->delTree(__DIR__.'##PATH##');
+	$_try->delTree( $GLOBALS['DEFINED']['PATH'] );
 	$_try->delConfigFile( 'config.ini' );
 	
-	( file_exists ( __DIR__.'##PATH##'.'/index.php' ) ) ? die('22') : die ('25');
+	if ( file_exists ( $GLOBALS['DEFINED']['PATH'].'/index.php' ) )
+	die( '1' );
 
+	
 ?>
