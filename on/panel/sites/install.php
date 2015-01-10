@@ -109,10 +109,18 @@
 		return;
 	}
 	else if ($check == 'error')
-		throw new SiteException("An error has occured. File couldn't be extracted ", 400, 'File can not be extracted');
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. File couldn't be extracted ";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
 	else
-		throw new SiteException('An error has occured.', 400, 'File can not be extracted');
-		
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password is not correct ";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
+	
 	function random($length = 15) 
 	{
 			$characters = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
