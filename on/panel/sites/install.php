@@ -85,16 +85,16 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
-	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in:22";
+	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in";
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
-	unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
+	@unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
 			
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
 	$check = file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
-	unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
+	@unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
 	
 	if ($check == 'done')
 	{
@@ -104,7 +104,7 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
