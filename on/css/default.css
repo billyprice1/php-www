@@ -139,8 +139,7 @@ a.button.grey:hover {
 }
 
 a.button.main {
-	/*color: #de5711;*/
-	color:#000000;
+	color: #de5711;
 	background-color: #ffffff;
 	background-image: linear-gradient(rgb(255, 255, 255), rgb(231, 228, 238));
 	margin: 0 auto;
