@@ -10,14 +10,14 @@
 	$site = $site[0];
 
 	$config = file_get_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/config.ini' );
-	$directory = __DIR__.'/temp/temp.txt';
+	$directory = __DIR__.'/temp/temp'.time().'.txt';
 	
-	unlink ($directory);
 	fopen( $directory , "w") ;
-	
 	file_put_contents ( $directory , $config);
 	
 	$conf = parse_ini_file( $directory );
+	unlink ($directory);
+	
 	api::send('self/database/del', array('database'=> $conf['database'] ));	
 	
 	$destroy = file_get_contents( __DIR__.'/destroy.php' );
