@@ -66,9 +66,9 @@ $content = "
 				switch ($display) {
 				case 0:
 					$content .= "
-					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/illu/secure.png\" />
-					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"color: #FF8827; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
+					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\" style=\"color:#5EA9DD\">{$lang['help_text']}</a> !</span><br /><br />
+					<span style=\"color: #6C6C6C; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
 					break;
 				case 1:
 					$content .= "
@@ -84,7 +84,7 @@ $content = "
 					break;
 				case 3:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/suitcase.png\" />
 					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['talk']}</span><br /><br />
 					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['involved']}</span>";
 					break;
