@@ -104,20 +104,20 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
 	else if ($check == 'error')
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. File couldn't be extracted ";
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password is not correct ";
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password seems to be not correct. ";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	
