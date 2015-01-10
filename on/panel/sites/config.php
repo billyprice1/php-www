@@ -213,7 +213,7 @@ $content .= "
 			</form>
 		</div>
 	</div>
-	<div id=\"changepassword\" class=\"floatingdialog\">
+	<div id=\"changepassword\" class=\"floatingdialog\"><br />
 		<h3 class=\"center\">{$lang['changepassword']}</h3>
 		<p style=\"text-align: center;\">{$lang['changepassword_text']}</p>
 		<div class=\"form-small\">		
@@ -234,7 +234,7 @@ $content .= "
 			</form>
 		</div>
 	</div>
-	<div id=\"install\" class=\"floatingdialog\"><br>
+	<div id=\"install\" class=\"floatingdialog\"><br />
 		<h3 class=\"center\">{$lang['install']}</h3>
 		<div id=\"form\">
 		<p style=\"text-align: center;\">{$lang['prompt']}</p>
@@ -271,6 +271,29 @@ $content .= "
 		</div>
 	</div>
 	
+	<div id=\"uninstall\" class=\"floatingdialog\"><br />
+		<h3 class=\"center\">{$lang['uninstall']}</h3>
+		<div id=\"form2\">
+		<p style=\"text-align: center;\">{$lang['prompt']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/sites/uninstall\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<fieldset>
+					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
+					<span class=\"help-block\">{$lang['ftp_pass']}</span>
+				</fieldset><br />
+				<fieldset>
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['uninstall_btn']}\" onclick=\"$('#form2').fadeOut('slow', function() { $('#note2').fadeIn('slow'); }); \" />
+				</fieldset>
+			</form>
+		</div>
+		</div>
+		<div id=\"note2\" style=\"display:none; text-align: center; padding: 10px 0px 20px 0px;\"><br />
+			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
+			<span style=\"font-size: 12px; \">{$lang['wait2']}</span><br /><br />
+		</div>
+	</div>
+	
 	<script type=\"text/javascript\">
 		init = 0;
 		newFlexibleDialog('settings', 550);
@@ -278,6 +301,7 @@ $content .= "
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('download', 550);
 		newFlexibleDialog('install', 550);
+		newFlexibleDialog('uninstall', 550);
 	
 		$('#options').on('click', function() { if (init == 0) { $('#more').fadeIn('slow');	$('#options').html(\"{$lang['more_toggle']}\");	init++;	} else	{ $('#more').fadeOut('slow'); $('#options').html(\"{$lang['more']}\"); init = 0; } });
 		$(function()

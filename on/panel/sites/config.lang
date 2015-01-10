@@ -218,6 +218,10 @@ folder = "sous dossier"
 install_btn = "Installer"
 wait = "Installation en cours. Merci de bien vouloir patienter. <br />Cela peut prendre quelques minutes"
 
+uninstall = "Supprimer l'installation existante"
+uninstall_btn =  "Désinstaller"
+wait2 = "Désinstallation en cours. Merci de bien vouloir patienter. <br />Cela peut prendre quelques minutes"
+
 [DE]
 title = "Webseite Einstellungen"
 subtitle = "Ändern"

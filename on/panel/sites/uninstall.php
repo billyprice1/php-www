@@ -30,7 +30,7 @@
 	if ( $check == '1' )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'success';
-		$_SESSION['MESSAGE']['TEXT']= str_replace('{[cms]}', $conf['cms'] , $lang['success']);	
+		$_SESSION['MESSAGE']['TEXT']= str_replace('~', $conf['cms'] , $lang['success']);	
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	else 

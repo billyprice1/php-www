@@ -18,12 +18,8 @@
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
 	
 	
-	/* ========= CONFIG ============ */
-	
 	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
-	
-	/* ========================== */
 
 	
 	if( $_POST['path'] == 1 )
