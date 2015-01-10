@@ -18,12 +18,8 @@
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
 	
 	
-	/* ========= CONFIG ============ */
-	
 	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
-	
-	/* ========================== */
 
 	
 	if( $_POST['path'] == 1 )
@@ -89,11 +85,16 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
-	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in";
+	
+	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
+	@unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
+			
+	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
-	$check = file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
-	unlink('ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/unzip.php');
+	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
+	@unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
 	
 	if ($check == 'done')
 	{
@@ -103,15 +104,23 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in'.$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
 	else if ($check == 'error')
-		throw new SiteException("An error has occured. File couldn't be extracted ", 400, 'File can not be extracted');
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
 	else
-		throw new SiteException('An error has occured.', 400, 'File can not be extracted');
-		
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password seems to be not correct. ";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
+	
 	function random($length = 15) 
 	{
 			$characters = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
