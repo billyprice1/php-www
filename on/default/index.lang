@@ -14,7 +14,7 @@ open_text = "All our <a href='https://github.com/OlympeNetwork'>source codes</a>
 innovation = "Innovative"
 innovation_text = "We provide the last <a href='/service/infrastructure'>technologies</a>, focusing on quality and <a href='/status'>availability</a> of the services."
 app = "PHP applications and services"
-app_text = "For more than six years now, the Olympe organization provides an ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
+app_text = "For more than seven years now, the Olympe organization provides an ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
 other <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 <br />More than a simple disk space, we provide also a <a href='/service/offer'>full domain names management</a> (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
 
@@ -48,7 +48,7 @@ open_text = "Publicamos nuestros <a href='https://github.com/OlympeNetwork'>cód
 innovation = "Innovador"
 innovation_text = "Utilizamos las últimas <a href='/service/infrastructure'>tecnologías</a> y nos centramos principalmente en la <a href='/status'>disponibilidad</a> de los servicios."
 app = "Aplicaciones PHP y servicios"
-app_text = "Desde hace más de 6 años, Olympe ofrece un servicio gratuito de <a href='/service/hosting'>web hosting</a> y sin ningún publicidad. Desde una oferta básica con PHP/MySQL, hemos desarrollado la plataforma y ahora podemos proponer muchas otras <a href='/service/offer'>tecnologías</a> (PostgreSQL, MongoDB ...).<br /><br />
+app_text = "Desde hace más de 7 años, Olympe ofrece un servicio gratuito de <a href='/service/hosting'>web hosting</a> y sin ningún publicidad. Desde una oferta básica con PHP/MySQL, hemos desarrollado la plataforma y ahora podemos proponer muchas otras <a href='/service/offer'>tecnologías</a> (PostgreSQL, MongoDB ...).<br /><br />
 Además, ofrecemos la <a href='/service/offer'>gestión completa</a> de los nombres de dominio (subdominios, registros DNS...), cuentas de correo POP / IMAP (redirecciones, alias...), calendarios y más."
 
 manage = "Ampliadas funcionalidades"
@@ -82,7 +82,7 @@ sont disponibles pour les <a href='/developers'>développeurs</a>."
 innovation = "Innovant"
 innovation_text = "Nous utilisons les dernières <a href='/service/infrastructure'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
 app = "Applications PHP et services"
-app_text = "Depuis plus de 6 ans, l'association Olympe fournit un <a href='/service/hosting'>service d'hébergement</a> gratuit et sans publicité. D'une offre PHP/MySQL basique, nous avons progressivement
+app_text = "Depuis plus de 7 ans, l'association Olympe fournit un <a href='/service/hosting'>service d'hébergement</a> gratuit et sans publicité. D'une offre PHP/MySQL basique, nous avons progressivement
 développé la plateforme et proposons aujourd'hui d'autres types de <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 <br />En plus de l'espace d'hébergement, nous fournissons la <a href='/service/offer'>gestion complète</a> des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), 
 des calendriers et agendas partagés."
@@ -118,7 +118,7 @@ open_text = "Wir veröffentlichen unsere <a href='https://github.com/OlympeNetwo
 innovation = "Innovative"
 innovation_text = "Wir verwenden die neuesten <a href='/service/infrastructure'>Technologien</a> und konzentrieren uns hauptsächlich auf die <a href='/status'>Service-Verfügbarkeit.</a>"
 app = "PHP-Anwendungen und Dienste"
-app_text = "Seit mehr als 6 Jahren, bietet Olympe eine <a href='/service/hosting'>kostenloses Hosting</a> ohne Werbung. Von eine einfache PHP/MySQL Anbieten, ist die Plattformnach nach und nach entwickelt worden, und bietet heute <a href='/service/offer'>andere Technologien</a>(PostgreSQL, MongoDB...).<br/><br/>Neben der hosting-Raum bieten wir <a href='/service/offer'>vollständige Verwaltung</a> von Domain-Namen (Sub-Domains, DNS-Records), die POP/IMAP (Weiterleitungen, Aliase...)-Mail-Konten, Kalender und geteilten Agenden."
+app_text = "Seit mehr als 7 Jahren, bietet Olympe eine <a href='/service/hosting'>kostenloses Hosting</a> ohne Werbung. Von eine einfache PHP/MySQL Anbieten, ist die Plattformnach nach und nach entwickelt worden, und bietet heute <a href='/service/offer'>andere Technologien</a>(PostgreSQL, MongoDB...).<br/><br/>Neben der hosting-Raum bieten wir <a href='/service/offer'>vollständige Verwaltung</a> von Domain-Namen (Sub-Domains, DNS-Records), die POP/IMAP (Weiterleitungen, Aliase...)-Mail-Konten, Kalender und geteilten Agenden."
 manage = "Erweiterte Funktionen"
 manage_text = "Wir fördern eine <a href='/doc/cloud'>Cloud Anwendung</a>, die Synchronisation, Speicherung und gemeinsame Nutzung von Dateien erlaubt. 
 Diese Lösung enthält eine Schnittstelle für die Visualisierung von Dateien (Download, Edition, Galerien...), sowie die Wiederherstellung von gelöschten Dateien.
@@ -149,7 +149,7 @@ open_text = "Tutti i nostri <a href='https://github.com/OlympeNetwork'>codici so
 innovation = "Innovativo"
 innovation_text = "Forniamo le più recenti <a href='/service/infrastructure'>tecnologie</a>, concentrandoci sulla <a href='/status'>disponibilità</a> dei servizi."
 app = "Applicazioni PHP e servizi"
-app_text = "Per più di sei anni ormai, l'organizzazione Olympe fornisce un <a href='/service/hosting'>servizio di hosting gratuito</a> e libero da pubblicità. Agli inizi, il nostro piano offriva solamente PHP/MySQL. In seguito, la nostra squadra ha migliorato la capacità della piattaforma e ora proponiamo molte
+app_text = "Per più di sette anni ormai, l'organizzazione Olympe fornisce un <a href='/service/hosting'>servizio di hosting gratuito</a> e libero da pubblicità. Agli inizi, il nostro piano offriva solamente PHP/MySQL. In seguito, la nostra squadra ha migliorato la capacità della piattaforma e ora proponiamo molte
 altre <a href='/service/offer'>tecnologie</a> (PostgreSQL, MongoDB...).<br />
 <br />Più di un semplice spazio di stoccaggio (memoria), vi forniamo inoltre un <a href='/service/offer'>servizio completo di gestione dei domi di dominio</a> (sottodomini, DNS records...), account email POP/IMAP (redirect, aliases...), calendari condivisi e molto altro ancora."
 

@@ -61,7 +61,7 @@ $content = "
 			<div class=\"sitescontent\">
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
-				$display = rand(0, 2);
+				$display = rand(3, 3);
 				
 				switch ($display) {
 				case 0:
@@ -81,6 +81,22 @@ $content = "
 					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
 					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
 					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					break;
+				case 3:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 5px;\" width=\"25px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
+					<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
+					<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
+						<a class=\"twitter-share-button\"
+						   href=\"https://twitter.com/share\"
+						  data-url=\"https://www.olympe.in\"
+						  data-via=\"OlympeNet\"
+						  data-text=\"{$lang['twitter_text']}\"
+						  data-count=\"none\">
+						Tweet
+						</a>
+						<div class=\"fb-share-button\" data-href=\"https://www.olympe.in\" data-layout=\"button\" style=\"top: -5px; margin-left: 20px;\"></div>
+					</div>";
 					break;
 				}
 
@@ -178,6 +194,17 @@ $content .= "
 			</div>
 		</div>	
 	</div>
+	<div id=\"fb-root\"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = \"//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0\";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+	window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src=\"https://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,\"script\",\"twitter-wjs\"));
+	</script>
 	<script>
 		function showForm()
 		{
