@@ -85,11 +85,7 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
-	$con = ssh2_connect('ftp.olympe.in', 22);
-	ssh2_auth_password($con, $site['name'], $_POST['pass']);
-	
-	$sftp = ssh2_sftp($con);
-	$GLOBALS['CONFIG']['CONNECT'] = 'ssh2.sftp://'.$sftp;
+	$GLOBALS['CONFIG']['CONNECT'] = "ssh2.sftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in:22";
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
 	unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
