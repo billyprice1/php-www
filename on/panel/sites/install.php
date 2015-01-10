@@ -93,7 +93,7 @@
 	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 
-	$check = file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
+	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
 	@unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
 	
 	if ($check == 'done')
