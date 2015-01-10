@@ -27,10 +27,13 @@
 	
 	$check = file_get_contents( "http://".$site['name'].".olympe.in/destroy.php" );
 	
+	if ( file_exists ( "http://".$site['name'].".olympe.in/destroy.php" ) )
+		unlink( 'ftp://'.$site['name'].':'.$_POST['pass'].'@ftp.olympe.in/destroy.php' );
+	
 	if ( $check == '1' )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'success';
-		$_SESSION['MESSAGE']['TEXT']= str_replace('~', $conf['cms'] , $lang['success']);	
+		$_SESSION['MESSAGE']['TEXT']= str_replace('[[]]', $conf['cms'] , $lang['success']);	
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	else 
