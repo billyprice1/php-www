@@ -112,7 +112,10 @@ $content .= "
 						<a href=\"http://{$site['name']}.olympe.in\">{$site['name']}.olympe.in</a>
 					</span>
 				</div>
-				<br /><br />
+				<br /><br />";
+				
+				/* Temp Disable for : I am Charlie
+				
 				<h2 class=\"dark\">{$lang['install']}</h2>
 				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
 					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
@@ -122,6 +125,10 @@ $content .= "
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\" $('#install').dialog('open'); return false; \">{$lang['start']}</span>
 				</div>
 				<br /><br />
+				
+				*/
+				
+$content .= "			
 				<h2 class=\"dark\">{$lang['response']}</h2>
 				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>
 				<div id=\"chart2\" style=\"margin-bottom: 20px;\"></div>

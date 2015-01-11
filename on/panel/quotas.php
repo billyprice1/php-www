@@ -39,7 +39,7 @@ foreach( $me['quotas'] as $q )
 $percent_disk = $disk['used']*100/$disk['max'];
 $percent_sites = $sites['used']*100/$sites['max'];
 $percent_databases = $databases['used']*100/$databases['max'];
-$percent_mails = $mails['used']*100/$mails['max'];
+@$percent_mails = $mails['used']*100/$mails['max'];
 
 if( $percent_disk > 100 )
 	$percent_disk = 100;
