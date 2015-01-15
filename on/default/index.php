@@ -9,8 +9,11 @@ if( !defined('PROPER_START') )
 $content = "
 			<div class=\"head\">
 				<br />
-				<h1>{$lang['title']}</h1>
-				<h2 style=\"margin: 15px 0 15px 0;\">{$lang['subtitle']}</h2>
+				<div id=\"homepage\">
+					<h3 style=\"font-size: 60px; color: rgb(229, 120, 57);\">Bienvenue ".security::get('USER')." !</h3>
+					<h1>{$lang['title']}</h1>
+					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
+				</div>
 				<br />
 ";
 
