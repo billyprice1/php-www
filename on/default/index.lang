@@ -66,8 +66,8 @@ hosted = "¿Quiénes son las personas y las organizaciones alojados en Olympe?"
 directory = "Ver el directorio"
 
 [FR]
-title = "Nous pensons fort aux victimes de l'attentat de Charlie hebdo ainsi que ceux de la prise d'otage."
-subtitle = "Solidarité et innovation <br />Hébergement gratuit sans publicité et services associés."
+title = "Solidarité et Innovation"
+subtitle = "Hébergement gratuit sans publicité et services associés."
 signup = "S'inscrire"
 login_now = "ou se connecter"
 username = "Utilisateur"
