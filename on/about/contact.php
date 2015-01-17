@@ -12,7 +12,6 @@ $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['RE
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
 
-
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
 
@@ -62,7 +61,6 @@ if( count($issues) > 0 ) {
 				<div style=\"height: 40px;\"></div>
 	";
 }
-	
 	
 $content .= "
 				<div class=\"left\">
