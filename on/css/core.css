@@ -94,7 +94,7 @@ div.core div.head:hover h2 {
 		transform: rotate(20deg);
 	}
 	80% {
-		top: 20px;
+		top: 30px;
 		transform: rotate(0deg);
 	}
 	100% {

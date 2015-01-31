@@ -762,3 +762,11 @@ span.tag.important {
     display: block;
     border-radius: 100px;
 }
+.author-name {
+	display:inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	max-width:150px;
+	color:#4c4c4c;
+}

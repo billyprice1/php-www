@@ -384,10 +384,8 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 		if( $percent > 100 )
 			$percent = 100;
 			
-		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES') 
+		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES' || $u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
 			$step = 1;
-		if($u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
-			$step = 100;
 			
 		$content .= "
 					<tr>

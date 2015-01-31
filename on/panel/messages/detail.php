@@ -77,7 +77,7 @@ foreach( $messages as $m )
 					<div class=\"meta\">
 						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 						<br />
-						{$m['user']['name']}
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
 					</div>
 					<div class=\"text\">
 						<form action=\"/panel/messages/update_action\" method=\"post\">
@@ -119,7 +119,7 @@ $content .= "
 					<div class=\"meta\">
 						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 						<br />
-						{$message['user']['name']}
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
 					</div>
 					<div class=\"text\">
 						<form action=\"/panel/messages/update_action\" method=\"post\">
