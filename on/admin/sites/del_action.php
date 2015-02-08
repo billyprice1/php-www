@@ -6,19 +6,15 @@
 		exit;
 	}
 
-	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
 	$sites = api::send('site/list', array('user'=>$_POST['user']));
-	
 	foreach( $sites as $s )
 	{
-		echo $s['id']."+".$_POST['site']."\n";
 		if ( $s['id'] == $_POST['site'] )
 			$_GLOBALS['APP']['SITE'] = $s['name'];
 	}
-	echo $_GLOBALS['APP']['SITE'];
-	die();
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
+	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
 	
 	$htaccess = file_get_contents( __DIR__.'/404/.htaccess' );
 	$font = file_get_contents( __DIR__.'/404/BebasNeue Regular.ttf' );
@@ -26,7 +22,7 @@
 	$index = file_get_contents( __DIR__.'/404/index.html' );
 	$index = str_replace("**DATE**", date("F j, Y, g:i a"), $index);
 	$index = str_replace("**EXPLAIN**", empty($_POST['explain'])?'No reason provided':htmlentities($_POST['explain']), $index);
-		
+	
 	sleep(2);
 	api::send('self/site/add', array('site'=>$_GLOBALS['APP']['SITE'], 'pass'=> $_GLOBALS['APP']['PASSWORD']));
 	sleep(2);
