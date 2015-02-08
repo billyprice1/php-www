@@ -10,8 +10,13 @@
 	$sites = api::send('site/list', array('user'=>$_POST['user']));
 	
 	foreach( $sites as $s )
+	{
+		// debug
+		print_r($s);
 		if ( $s['id'] == $_POST['site'] )
 			$_GLOBALS['APP']['SITE'] = $s['name'];
+	}
+	die();
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	
