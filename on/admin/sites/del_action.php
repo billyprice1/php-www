@@ -7,7 +7,7 @@
 	}
 
 	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
-	$tmp = api::send('site/list', array('site'=>$_POST['site']));
+	$tmp = api::send('site/list', array('user'=>$_POST['user']));
 	print_r($tmp); return;
 	
 	$htaccess = file_get_contents( __DIR__.'/404/.htaccess' );
