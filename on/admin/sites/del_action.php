@@ -7,7 +7,7 @@
 	}
 
 	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
-	$tmp = api::send('site/list', array('user'=>$_POST['user']));
+	$sites = api::send('site/list', array('user'=>$_POST['user']));
 	
 	foreach( $sites as $s )
 		if ( $s['id'] == $_POST['site'] )
