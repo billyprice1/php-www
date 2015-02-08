@@ -7,6 +7,8 @@
 	}
 
 	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
+	$tmp = api::send('site/list', array('site'=>$_POST['site']));
+	print_r($tmp); return;
 	
 	$htaccess = file_get_contents( __DIR__.'/404/.htaccess' );
 	$font = file_get_contents( __DIR__.'/404/BebasNeue Regular.ttf' );
