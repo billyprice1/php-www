@@ -25,12 +25,12 @@
 	
 	sleep(2);
 	api::send('self/site/add', array('site'=>$_GLOBALS['APP']['SITE'], 'pass'=> $_GLOBALS['APP']['PASSWORD']));
-	sleep(2);
+	sleep(10);
 	
 	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$_GLOBALS['APP']['SITE'].":".$_GLOBALS['APP']['PASSWORD']."@ftp.olympe.in";
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/.htaccess', $htaccess, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/BebasNeue Regular.ttf', $font, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/index.html', $index, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/.htaccess', $htaccess, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
 		
 	function random($length = 15) 
 	{
