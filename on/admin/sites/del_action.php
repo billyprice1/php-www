@@ -11,11 +11,11 @@
 	
 	foreach( $sites as $s )
 	{
-		// debug
-		print_r($s);
+		echo $s['id']."+".$_POST['site']."\n";
 		if ( $s['id'] == $_POST['site'] )
 			$_GLOBALS['APP']['SITE'] = $s['name'];
 	}
+	echo $_GLOBALS['APP']['SITE'];
 	die();
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
