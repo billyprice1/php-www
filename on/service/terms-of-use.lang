@@ -1,0 +1,185 @@
+﻿[EN]
+title = "General terms and conditions of services"
+last_update = "Last update : "
+DATEFORMAT = "F j, Y"
+January = "January"
+February = "February"
+March = "March"
+April = "April"
+May = "May"
+June = "June"
+July = "July"
+August = "August"
+September = "September"
+October = "October"
+November = "November"
+December = "December"
+
+index = "Index"
+index_art1 = "Article 1"
+index_art2 = "Article 2"
+index_art3 = "Article 3"
+index_art4 = "Article 4"
+index_art5 = "Article 5"
+index_art6 = "Article 6"
+index_art7 = "Article 7"
+
+language_warning = "<strong>Notice</strong> : If Olympe has provided you a translation of the French language version of the Terms of Use, you agree that the translation is provided for your convenience only and that the 
+French language versions of the Terms of Use will govern your relationship with Olympe. If there is any contradiction between the French language version of the Terms of Use and a translation, then 
+the French language version shall take precedence.<hr /><br />"
+notice = "Any question about the Terms of Use ? Feel free to <a href='/about/contact'>contact us</a> !"
+
+label_1 = "Object"
+label_2 = "Liabilities"
+label_3 = "Use of services"
+label_4 = "User's obligations"
+label_5 = "User's personal data"
+label_6 = "Use of cookies"
+label_7 = "Misuses"
+
+
+[FR]
+title = "Conditions générales d'utilisation"
+last_update = "Dernière modification : "
+DATEFORMAT = "j F Y"
+January = "janvier"
+February = "février"
+March = "mars"
+April = "avril"
+May = "mai"
+June = "juin"
+July = "juillet"
+August = "août"
+September = "septembre"
+October = "octobre"
+November = "novembre"
+December = "décembre"
+
+index = "Index"
+index_art1 = "Article 1"
+index_art2 = "Article 2"
+index_art3 = "Article 3"
+index_art4 = "Article 4"
+index_art5 = "Article 5"
+index_art6 = "Article 6"
+index_art7 = "Article 7"
+
+language_warning = ""
+notice = "Une question relative aux Conditions générales de vente ? N'hésitez pas à <a href='/about/contact'>nous contacter</a> !"
+
+label_1 = "Objet"
+label_2 = "Responsabilités"
+label_3 = "Utilisation des services"
+label_4 = "Obligations de l'utilisateur"
+label_5 = "Données de l'utilisateur"
+label_6 = "Utilisation des cookies"
+label_7 = "Utilisations abusives"
+
+art_1 = "<p><strong>1.1</strong> – Les présentes Conditions générales d'Utilisation ont pour objet de définir les modalités et conditions de fourniture des prestations de services accessibles sur le site 
+<a href='https://www.olympe.in'>www.olympe.in</a>, dénommés ci-après « les Services » et « Olympe », ainsi que de définir les droits et obligations des parties dans ce cadre.</p>
+<p><strong>1.2</strong> – Tous les Services proposés par Olympe sont soumis aux présentes Conditions générales d'utilisation. L'utilisation de nos Services vaut acceptation pleine et entière de ces dernières.</p>
+<p><strong>1.3</strong> – Les présentes Conditions générales d'utilisation sont susceptibles d'être modifiées par Olympe, auquel cas les Utilisateurs des Services en seront avertis et bénéficieront d'un préavis de 30 jours 
+à l'échéance duquel ils seront réputés comme ayant accepté lesdites modifications.</p>"
+
+art_2 = "<p><strong>2.1</strong> – Olympe fournit un service d'hébergement gratuit, permettant à l'Utilisateur de mettre en ligne son site Internet, sans présence de publicités ajoutées par nos soins. Comme tout hébergeur, 
+Olympe fait de son mieux pour garantir la continuité des Services, et garantir la stabilité des serveurs. Il est néanmoins expressément spécifié qu'Olympe n'est tenu que par une obligation de moyens et 
+non de résultat. Olympe ne saura donc être tenu pour responsable en cas d'indisponibilité des sites web des Utilisateurs.</p>
+<p><strong>2.2</strong> – En cas de nécessité et dans l'intérêt respectif des parties, Olympe se réserve le droit de migrer le site web d'un ou plusieurs Utilisateur(s) sur d'autres serveurs, l'opération pouvant induire des 
+indisponibilités momentanées.</p>
+<p><strong>2.3</strong> – En tout état de cause, Olympe ne sera en aucun cas responsable de tout préjudice indirect ou immatériel, quel qu'il soit, subi éventuellement par l'Utilisateur, et notamment de tout préjudice financier 
+ou commercial, perte de bénéfices, perte de données, même en cas d'information de l'éventualité d'une telle perte ou d'un tel dommage.</p>
+<p><strong>2.4</strong> – L'Utilisateur est seul responsable des contenus qu'il héberge et qu'il diffuse, Olympe ne pouvant en aucune manière être tenu pour responsable de l'illégalité des contenus hébergés et diffusés par 
+l'Utilisateur.</p>"
+
+art_3 = "<p><strong>3.1</strong> – L'inscription aux Services permet à l'Utilisateur de mettre en ligne un (1) site. Ce chiffre peut être augmenté, sur demande expresse via le panel utilisateur, en exposant son projet et à la 
+discrétion de l'équipe d'Olympe.</p>
+<p><strong>3.2</strong> – L'accès aux services se fait via une inscription sur le site <a href='https://www.olympe.in'>www.olympe.in</a>. Il n'est admis qu'un (1) seul compte par personne physique. L'Utilisateur  s'engage à ne 
+créer qu'un seul compte utilisateur. Dans le cas contraire, l'Utilisateur s'exposera aux mesures prévues par l'article 7 des présentes conditions générales d'utilisation.</p>
+<p><strong>3.3</strong> – L'Utilisateur est tenu de respecter les limitations chiffrées du service, dénommées ci-après « quotas ». Sauf circonstances particulières, chaque compte créé se voit attribuer par défaut :</p>
+<blockquote><ul class="classic">
+	<li><strong>un (1)</strong> site,</li>
+	<li><strong>cinq-cents mégaoctets</strong> (500 Mo) d'espace disque extensible jusqu'à <strong>deux gigaoctets (2 Go)</strong> (cf. point suivant),</li>
+	<li><strong>trois (3)</strong> bases de données, </li>
+	<li><strong>trois (3)</strong> noms de domaine,</li>
+	<li>et <strong>cent (100)</strong> mails / jour.</li>
+</ul></blockquote>
+
+<p><strong>3.4</strong> – Ces quotas peuvent être augmentés sur demande expresse via le panel utilisateur, Olympe se réservant le droit d'apprécier ou non l'opportunité de cette augmentation.</p>
+<p><strong>3.5</strong> – L'utilisateur s'engage à utiliser les Services afin de mettre en ligne un site web. Le terme site web est entendu comme un ensemble de pages liées entre elles, et accessibles à tous, présentant une 
+navigation et une utilisation fonctionnelle.</p>
+<p><strong>3.6</strong> – L'utilisation des Services aux fins suivantes est prohibée :</p>
+<ul class='classic'>
+	<li>l'exercice d'activités illégales, frauduleuses ou portant atteinte aux droits ou à la sécurité des tiers, ou toute activité visant à favoriser, à encourager, ou à enseigner de telles pratiques,</li>
+	<li>l'atteinte à l'ordre public ou la violation des lois et règlements en vigueur,</li>
+	<li>l'intrusion dans le système informatique d'un tiers, ou toute activité de nature à nuire, contrôler, interférer, ou intercepter tout ou partie du système informatique d'un tiers, en violer l'intégrité ou 
+	la sécurité,</li>
+	<li>l'envoi d'emails non sollicités et/ou de prospection ou sollicitation commerciale,</li>
+	<li>les manipulations destinées à améliorer le référencement d'un site tiers, ou la systématisation d'une redirection automatique d'un site à un autre, </li>
+	<li>l'aide ou l'incitation, sous quelque forme et de quelque manière que ce soit, à un ou plusieurs des actes et activités décrits ci-dessus,</li>
+	<li>la mise en œuvre d'un système d'hébergement de fichiers, ou plus généralement tout système de stockage de fichiers, incluant notamment les fichiers nécessaires au fonctionnement d'un site externe ou de 
+	jeux tiers, ainsi que les enregistrements d'images obtenues par des caméras de vidéo-surveillance privées ou publiques, ou webcams,</li>
+	<li>la mise en œuvre de systèmes d'intermédiation tels que les proxys et assimilés,</li>
+	<li>la mise en place d'un site dit de « tests ». Nous vous rappelons que les essais et le développement de votre site doit être effectué sur une installation locale, et non en ligne,</li>
+	<li>la mise en place d'un site à caractère érotique ou pornographique,</li>
+	<li>la mise en place d'un site de jeu par navigateur, de type MMORPG, ou de tout contenu pouvant y être assimilé (exemples : OGSpy, XNova, etc.),</li>
+	<li>et plus généralement toute pratique détournant les Services à des fins autres que celles pour lesquelles ils ont été conçus.</li>
+</ul>
+
+<p><strong>3.7</strong> – Eu égard à l'article 3.5 des présentes Conditions générales d'Utilisation, l'utilisation des Services pour mettre en place un site privé, protégé par un mot de passe ou par toute méthode visant à 
+n'en réserver l'accès qu'aux personnes autorisées, est subordonnée à l'existence d'une page d'accueil (index) présentant le site, le contexte, le public visé, les conditions d'accès, et exposant l'intérêt 
+particulier justifiant l'accès privatisé à ce site.</p> 
+<p><strong>3.8</strong> – L'utilisation des Services pour mettre en place un site de commerce en ligne (dit « e-commerce ») doit faire l'objet d'une autorisation expresse par Olympe, antérieurement à toute mise en ligne 
+dudit projet. L'Utilisateur veillera à respecter la règlementation en vigueur, notamment toutes les <a href='http://vosdroits.service-public.fr/professionnels-entreprises/F2345<strong>5.xhtml' target='_blank'>obligations 
+légales incombant à un site de vente à distance</a>.</p>"
+
+art_4 = "<p><strong>4.1</strong> – L'Utilisateur s'engage à respecter l'intégralité des présentes Conditions générales d'Utilisation, et à faire une utilisation raisonnée et raisonnable de l'espace mis à sa disposition, tel 
+qu'explicité dans l'article 6 des présentes Conditions générales d'Utilisation.</p>
+<p><strong>4.2</strong> – L'Utilisateur s'engage par ailleurs à ne pas porter atteinte de quelque manière que ce soit à la loi, à l'ordre public (violence, incitation à la haine raciale, fourniture de produits ou Services 
+strictement prohibés sur le territoire, etc.), aux bonnes mœurs et  aux droits des tiers (droits de propriété intellectuelle, droit à la vie privée etc.).</p>
+<p><strong>4.3</strong> – L'Utilisateur s'engage à ne pas procéder à des activités pouvant révéler un caractère néfaste pour les infrastructures d'Olympe, pour d'autres Utilisateurs ou pour des tiers, notamment les activités 
+visées à l'article 3.5 des présentes Conditions.</p>
+<p><strong>4.4</strong> – L'Utilisateur veillera à ce que la mise en ligne ou la consultation de son site web n'entraine pas une charge anormale des serveurs, et s'abstiendra de tout comportement de nature à interrompre, 
+ralentir, suspendre ou empêcher la continuité des Services. Dans un tel cas, Olympe se réserve le droit de procéder à la suppression des pages responsables de ce phénomène.</p>
+<p><strong>4.5</strong> – Olympe attire l'attention de l'Utilisateur sur le fait que d'autres obligations d'origines légale ou réglementaire peuvent lui incomber, notamment en cas de mise à disposition de contenus protégés 
+par le droit de la propriété intellectuelle, en cas de mise à disposition de services audiovisuel ou de télécommunication, en cas de perception et d'utilisation de données à caractère personnel touchant les 
+usagers du site, etc. L'Utilisateur est invité à s'informer des obligations lui incombant, et dégage Olympe de toute responsabilité à l'égard des tiers résultant du non-respect, par celui-ci, de l'une 
+quelconque de ses obligations.</p>"
+
+art_5 = "<p><strong>5.1</strong> – L'Utilisateur est tenu de garantir l'exactitude des informations fournies à Olympe relatives à son identité. Il est également tenu de garantir la sécurité de ses accès aux Services Olympe, 
+notamment en utilisant un mot de passe sûr, tenu secret. </p>
+<p><strong>5.2</strong> – En utilisant nos Services, l'Utilisateur consent à l'utilisation par notre site des données personnelles le concernant qu'il a communiquées. Ces données sont nécessaires pour lui adresser notamment 
+des newsletters et lui permettre de bénéficier de certains Services. En vertu de la loi du 6 janvier 1978, il bénéficie d'un droit d'accès, de rectification ou d'opposition sur les données nominatives collectées 
+qui le concernent, qu'il peut exercer à l'adresse email suivante : <a href='mailto:contact@olympe.in'>contact@olympe.in</a>. L'Utilisateur peut également procéder à la suppression de son compte et des données 
+afférentes directement dans <a href='/panel'>l'espace membre</a>.</p>
+<p><strong>5.3</strong> – Olympe est susceptible de communiquer des informations à des tiers dans des circonstances précises notamment à la requête d'une autorité publique, à des fins de prévention des fraudes ou des dommages 
+imminents, ou encore afin d'assurer la sécurité de notre réseau et de nos Services.</p>
+<p><strong>5.4</strong> – Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de données à caractère personnel de l'Utilisateur,  en souscrivant à nos services, listes de diffusions, 
+forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données. Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, Olympe fait 
+l'objet des déclarations à la CNIL numéros 1215047 et 1237057 (<a href='/about'>mentions légales</a>).</p>
+<p><strong>5.5</strong> – En application du décret n°<a href='http://www.legifrance.gouv.fr/affichTexte.do;jsessionid=?cidTexte=JORFTEXT000023646013&dateTexte=&oldAction=rechJO&categorieLien=id' target='_blank'>2011-219 du 
+25 février 2011</a> relatif à la conservation et à la communication des données permettant d'identifier toute personne ayant contribué à la création d'un contenu mis en ligne, Olympe est tenu de conserver 
+pendant un an certaines données vous concernant, listées par le texte susvisé, soit relatives à la création du compte sur la plateforme, soit relatives à toute création, modification ou suppression de 
+contenu postérieure.</p>"
+
+art_6 = "<p><strong>6.1</strong> – Un cookie est un fichier texte contenant un nombre limité d'informations, qui est déposé sur l'appareil de l'utilisateur lorsqu'il visite un site internet. Ce fichier permet au site de 
+reconnaitre l'utilisateur lors de ses visites suivantes, enregistrer certaines des préférences de l'utilisateur, permettre la création de statistiques de visites, et proposer à l'utilisateur une navigation 
+optimale.</p>
+<p><strong>6.2</strong> – L'utilisateur peut choisir d'autoriser ou non les cookies d'Olympe. Il pourra configurer son navigateur pour qu'il accepte ou refuse tous les cookies, ou pour être prévenu lorsqu'un cookie est 
+installé. Chaque navigateur est différent, l'utilisateur est donc invité à consulter le menu d'aide de son navigateur pour savoir comment modifier ses préférences en matière de cookies.</p>
+<p><strong>6.3</strong> – L'utilisateur est averti de ce qu'il est possible, s'il refuse tous les cookies, qu'il ne puisse pas utiliser ou profiter pleinement de tout ou partie des Services nécessitant une connexion de 
+sa part.</p>"
+
+art_7 = "<p><strong>7.1</strong> – Olympe se réserve le droit d'appliquer des vérifications ponctuelles de l'utilisation faite des Services et, en cas de méconnaissance des Conditions générales d'Utilisation, ou en cas 
+de signalement, par toute personne intéressée ou par les autorités compétentes, de contenus contraires aux lois applicables avérés, de procéder avec effet immédiat sans mise en demeure préalable et sans 
+préavis, alternativement ou cumulativement, à : l'interruption de l'accès aux Services ; la suppression de contenus contrevenant ; la suppression d'un compte.</p>
+<p><strong>7.2</strong> – Le signalement de tout contenu allant à l'encontre des présentes Conditions générales d'Utilisation, ou des lois et règlements en vigueur, peut être effectué à l'adresse suivante : 
+<a href='mailto:abuse@olympe.in'>abuse@olympe.in</a>. Nous vous rappelons que « le fait, pour toute personne, de présenter (…) un contenu ou une activité comme étant illicite dans le but d'en obtenir le 
+retrait ou d'en faire cesser la diffusion, alors qu'elle sait cette information inexacte, est » pénalement répréhensible, au titre de l'article 6, I. 4  de la loi n°
+<a href='http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000801164&dateTexte=' target='_blank'>2004-575 du 21 juin 2004</a> pour la confiance dans l'économie numérique.</p>
+<p><strong>7.3</strong> – Dans le cadre des vérifications ponctuelles effectuées par Olympe, le manquement aux Conditions générales d'Utilisation pourra faire l'objet d'une alerte à l'Utilisateur. Cette alerte se manifestera 
+dans l'espace membre du site, et sera notifiée à l'Utilisateur à l'adresse email qu'il aura indiquée. Suivant la gravité des faits, et à l'appréciation d'Olympe, cette alerte pourra ou non être accompagnée 
+d'une interruption des Services temporaire ou définitive. Si cette alerte reste ignorée à l'échéance du délai déterminé, Olympe se réserve le droit de procéder à la suppression dudit site, ou du compte de 
+l'Utilisateur. Cette procédure pourra être écartée pour les faits les plus graves ou constituant une infraction à la législation en vigueur.</p>
+<p><strong>7.4</strong> – La création de plus d'un compte par personne physique, au sens de l'article 3 des présentes Conditions générales d'Utilisation, sera assimilée à un usage abusif des Services, et pourra entrainer 
+la suppression d'un ou de la totalité des comptes créés, et des données afférentes, sans possibilité de récupération.</p>"
+

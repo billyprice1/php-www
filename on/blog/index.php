@@ -17,7 +17,7 @@ $content = "
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/rss.png\" />
 						<span style=\"display: block; padding-top: 3px;\">{$lang['rss']}</span>
 					</a>
-					<a class=\"button classic\" href=\"http://twitter.com/Olympe_fr\" style=\"width: 120px; height: 23px; padding: 8px 5px 3px 8px; margin: 0 0 0 10px; display: inline-block; font-size: 12px;\">
+					<a class=\"button classic\" href=\"http://twitter.com/OlympeNet\" style=\"width: 120px; height: 23px; padding: 8px 5px 3px 8px; margin: 0 0 0 10px; display: inline-block; font-size: 12px;\">
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/twitter.png\" />
 						<span style=\"display: block; padding-top: 3px;\">{$lang['follow']}</span>
 					</a>
