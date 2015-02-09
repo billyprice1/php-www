@@ -27,10 +27,12 @@
 	api::send('self/site/add', array('site'=>$_GLOBALS['APP']['SITE'], 'pass'=> $_GLOBALS['APP']['PASSWORD']));
 	sleep(10);
 	
-	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$_GLOBALS['APP']['SITE'].":".$_GLOBALS['APP']['PASSWORD']."@ftp.olympe.in";
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/BebasNeue Regular.ttf', $font, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/index.html', $index, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/.htaccess', $htaccess, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	
+	$connection = ssh2_connect('ftp.olympe.in', 22);
+	ssh2_auth_password($connection, $_GLOBALS['APP']['SITE'], $_GLOBALS['APP']['PASSWORD']);
+	ssh2_scp_send($connection, $htaccess, '/.htaccess', 0644);
+	ssh2_scp_send($connection, $font, '/BebasNeue Regular.ttf', 0644);
+	ssh2_scp_send($connection, $index, '/index.html', 0644);
 		
 	function random($length = 15) 
 	{
