@@ -24,9 +24,9 @@ index_art5 = "Article 5"
 index_art6 = "Article 6"
 index_art7 = "Article 7"
 
-language_warning = "<strong>Notice</strong> : If Olympe has provided you a translation of the French language version of the Terms of Use, you agree that the translation is provided for your convenience only and that the 
-French language versions of the Terms of Use will govern your relationship with Olympe. If there is any contradiction between the French language version of the Terms of Use and a translation, then 
-the French language version shall take precedence.<hr /><br />"
+language_warning = "<p style=\"text-align: justify; background-color:rgb(240, 240, 240); padding: 20px;\"><strong>Notice</strong> : If Olympe has provided you a translation of the French language version of the Terms of Use, 
+you agree that the translation is provided for your convenience only and that the <a href='?lang=FR'>French language versions</a> of the Terms of Use will govern your relationship with Olympe. If there is any contradiction 
+between the French language version of the Terms of Use and a translation, then the French language version shall take precedence.</p><hr /><br />"
 notice = "Any question about the Terms of Use ? Feel free to <a href='/about/contact'>contact us</a> !"
 
 label_1 = "Object"
@@ -37,6 +37,66 @@ label_5 = "User's personal data"
 label_6 = "Use of cookies"
 label_7 = "Misuses"
 
+art_1 = "<p><strong>1.1</strong> – These Terms of Use are intended to define the terms and conditions of the services provision on the website <a href='https://www.olympe.in'>www.olympe.in</a>, hereinafter referred to as
+\"Services\" and \"Olympe\", as well as to define the rights and obligations of the parties.</p>
+<p><strong>1.2</strong> – All our Services are subject to these Terms of Use. The use of our Services means a full and complete acceptance of these terms and conditions in their entirety.</p>
+<p><strong>1.3</strong> – These terms of service might be modified at any moment by Olympe. The Users will be warned, and 30 days after, they will be deemed to have accepted such changes.</p>"
+
+art_2 = "<p><strong>2.1</strong> – Olympe provides a free hosting service, allowing the User to upload a website, without any advertisements added by us. Like any host, Olympe does its best to ensure the continuity of 
+services and ensure server stability. However, it is expressly stated that Olympe is only held by an best-efforts obligation, not a performance obligation. Olympe will not be held responsible in case of unavailability 
+of Users websites.</p>
+<p><strong>2.2</strong> – In case of necessity and in the respective interests of the parties, Olympe reserves the right to migrate one or more User website(s) on other servers, the operation can induce momentary downtimes.</p>
+<p><strong>2.3</strong> – Under no circumstances shall Olympe be liable for any indirect or consequential loss of any kind, possibly suffered by the User, including any financial or commercial loss, loss of profits, loss of 
+data, even if we were advised of the possibility of such loss or such damage, including without limitation, any fault, error, omission, interruption, or delay with respect thereto.</p>
+<p><strong>2.4</strong> – Users are solely responsible for the contents that he has hosted or shared, Olympe can not in any way be held responsible for the illegality or violation of public morals of contents hosted by the User.</p>"
+
+art_3 = "<p><strong>3.1</strong> – The registration allows the User to upload one (1) website. This figure can be increased on specific request via the user panel, exposing his project and at the discretion of the Olympe team.</p>
+<p><strong>3.2</strong> – It is only allowed one (1) account per individual. The User agrees to create only one account, otherwise, he will be subject to the measures provided for by Article 7 of these terms and conditions.</p>
+<p><strong>3.3</strong> – The User has to respect the numerical limitations of the service, hereinafter referred to as "quotas". Except in special circumstances, each account created is assigned by default:</p>
+<blockquote><ul class="classic">
+	<li><strong>one (1)</strong> website,</li>
+	<li><strong>five hundred megabytes</strong> (500 MB) of disk space expandable up to <strong>two gigabytes (2GB)</strong> (see next point),</li>
+	<li><strong>three (3)</strong> databases, </li>
+	<li><strong>three (3)</strong> domain names to link,</li>
+	<li>et <strong>one hundred (100)</strong> emails a day.</li>
+</ul></blockquote>
+
+<p><strong>3.4</strong> – These quotas can be increased on specific request via the user panel, Olympe reserves the discretionary right to appreciate the opportunity or not of this increase.</p>
+<p><strong>3.5</strong> – The User agrees to use the Services in order to upload a website. The term "website" is understood as a set of pages linked together and accessible to all, with navigation and functional use.</p>
+<p><strong>3.6</strong> – Use of the Services for the following purposes is prohibited:</p>
+<ul class='classic'>
+	<li>the exercise of illegal activity, fraudulent activity or violating the rights or safety of others or any activity to promote, encourage, or teach such practices,</li>
+	<li>the breach of public order or violation of laws and regulations,</li>
+	<li>the intrusion into any IT system, or any activity that adversely affect, control, interfere or intercept all or part of the IT system of a third party, or to violate its integrity or security,</li>
+	<li>the sending of unsolicited emails and / or prospecting or commercial solicitation,</li>
+	<li>operations to improve the SEO of an external website, or systematization of automatic redirection from one website to another, </li>
+	<li>the help or incitement, by any form and by any means whatsoever, to one or more of the above described acts and activities,</li>
+	<li>the implementation of a file hosting system, or more generally any file storage system, including files needed to run an external site or third-party games, and image recordings obtained by private or public 
+	cameras, or webcams,</li>
+	<li>the implementation of intermediation systems such as proxies and the like,</li>
+	<li>the implementation of a "test" website. We remind you that the testing and development of your website should be done on a local installation, not online,</li>
+	<li>the implementation of an erotic or pornographic website,</li>
+	<li>the implementation of a browser game website, as a MMORPG, or any content that may be assimilated (examples: OGSpy, XNova, etc.),</li>
+	<li>and more generally any practice diverting Services for purposes other than those for which they were designed.</li>
+</ul>
+
+<p><strong>3.7</strong> – In view of Article 3.5 of these Terms of Use, using the Services to set up a private website, protected by a password (or by any method allowing access only to authorized persons) requires the 
+existence of a home page (index) that introduces the website, context, audience, access conditions, and the particular interest justifying the privatized access to this it.</p> 
+<p><strong>3.8</strong> – The use of the Services to set up an online business site ("e-commerce") must be expressly authorized by Olympe, prior to any uploading of the project. The User will comply with current regulations, 
+including all the legal obligations of a distance selling website</a>.</p>"
+
+art_4 = "<p><strong>4.1</strong> – L'Utilisateur s'engage à respecter l'intégralité des présentes Conditions générales d'Utilisation, et à faire une utilisation raisonnée et raisonnable de l'espace mis à sa disposition, tel 
+qu'explicité dans l'article 6 des présentes Conditions générales d'Utilisation.</p>
+<p><strong>4.2</strong> – L'Utilisateur s'engage par ailleurs à ne pas porter atteinte de quelque manière que ce soit à la loi, à l'ordre public (violence, incitation à la haine raciale, fourniture de produits ou Services 
+strictement prohibés sur le territoire, etc.), aux bonnes mœurs et  aux droits des tiers (droits de propriété intellectuelle, droit à la vie privée etc.).</p>
+<p><strong>4.3</strong> – L'Utilisateur s'engage à ne pas procéder à des activités pouvant révéler un caractère néfaste pour les infrastructures d'Olympe, pour d'autres Utilisateurs ou pour des tiers, notamment les activités 
+visées à l'article 3.5 des présentes Conditions.</p>
+<p><strong>4.4</strong> – L'Utilisateur veillera à ce que la mise en ligne ou la consultation de son site web n'entraine pas une charge anormale des serveurs, et s'abstiendra de tout comportement de nature à interrompre, 
+ralentir, suspendre ou empêcher la continuité des Services. Dans un tel cas, Olympe se réserve le droit de procéder à la suppression des pages responsables de ce phénomène.</p>
+<p><strong>4.5</strong> – Olympe attire l'attention de l'Utilisateur sur le fait que d'autres obligations d'origines légale ou réglementaire peuvent lui incomber, notamment en cas de mise à disposition de contenus protégés 
+par le droit de la propriété intellectuelle, en cas de mise à disposition de services audiovisuel ou de télécommunication, en cas de perception et d'utilisation de données à caractère personnel touchant les 
+usagers du site, etc. L'Utilisateur est invité à s'informer des obligations lui incombant, et dégage Olympe de toute responsabilité à l'égard des tiers résultant du non-respect, par celui-ci, de l'une 
+quelconque de ses obligations.</p>"
 
 [FR]
 title = "Conditions générales d'utilisation"
@@ -100,7 +160,7 @@ créer qu'un seul compte utilisateur. Dans le cas contraire, l'Utilisateur s'exp
 	<li><strong>un (1)</strong> site,</li>
 	<li><strong>cinq-cents mégaoctets</strong> (500 Mo) d'espace disque extensible jusqu'à <strong>deux gigaoctets (2 Go)</strong> (cf. point suivant),</li>
 	<li><strong>trois (3)</strong> bases de données, </li>
-	<li><strong>trois (3)</strong> noms de domaine,</li>
+	<li><strong>trois (3)</strong> noms de domaine à lier,</li>
 	<li>et <strong>cent (100)</strong> mails / jour.</li>
 </ul></blockquote>
 

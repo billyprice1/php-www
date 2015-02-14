@@ -70,7 +70,7 @@ $content .= "
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 500px;\">
 				<img style=\"width: 100px; height: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
-				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
+				<span style=\"font-size: 38px; display: block; margin-bottom: 15px; max-width: 500px; overflow: hidden; text-overflow: ellipsis;\" title=\"{$site['hostname']}\">{$site['hostname']}</span>
 				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
 			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
@@ -117,7 +117,7 @@ $content .= "
 				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
 					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
 						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">wordpress 4.1</span>
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">Wordpress 4.1</span>
 					</span>
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\" $('#install').dialog('open'); return false; \">{$lang['start']}</span>
 				</div>

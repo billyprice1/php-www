@@ -42,7 +42,7 @@ $content .= "
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
 				".$replyButton."
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\"></div><br />
 		</div>
 		<div class=\"container\">
 			<div class=\"topic\">
@@ -50,34 +50,29 @@ $content .= "
 
 foreach( $messages as $m )
 {
+	if($message['user']['status'] == '99')
+		$staff = "<span class=\"staff\">Equipe Olympe</span>";
+	
 		$content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$m['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $m['date'])."
-						</div>
 						<div class=\"icons\">
 		";
-	
+
 		if( $m['user']['name'] == security::get('USER') && ($message['status']!=3) )
-		{
 			$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 			";
-		}
-		
+			
 		$content .= "
 						</div>
+						<a class=\"author-name\" href=\"#\">{$m['user']['name']}</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
 						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
-						<br />
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
+						{$staff}
 					</div>
 					<div class=\"text\">
 						<form action=\"/panel/messages/update_action\" method=\"post\">
@@ -89,37 +84,33 @@ foreach( $messages as $m )
 						</form>
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $m['date'])."</span>
+						<span class=\"messageid\">#{$m['id']}</span>
+					</div>
 				</div>
 		";
 }
+
 $content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$message['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $message['date'])."
-						</div>
 						<div class=\"icons\">
 ";
 
 if( $message['status']!=3 )
-{
 	$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 	";
-}
 
 $content .= "
 						</div>
+						<a class=\"author-name\" href=\"#\">{$message['user']['name']}</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
-						<br />
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
+						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
 					</div>
 					<div class=\"text\">
 						<form action=\"/panel/messages/update_action\" method=\"post\">
@@ -131,10 +122,19 @@ $content .= "
 						</form>						
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $message['date'])."</span>
+						<span class=\"messageid\">#{$message['id']}</span>
+					</div>
 				</div>
+				
+				
+				
+				
+				
 			</div>
 			<br />
-			".$replyButton."
+			{$replyButton}
 		</div>
 		<div class=\"clear\"></div><br /><br />
 	</div>

@@ -5,13 +5,13 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-
+/*
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
-
+*/
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
@@ -114,7 +114,7 @@ $content .= "
 				
 					<h4>{$lang['infos']}</h4>
 					<p>Paris, France</p>
-					<p><a href=\"mailto: contact@olympe.in\">contact@olympe.in</a></p>
+					<p><a href=\"#\">contact<img src=\"/on/images/thin-arobase-2.png\">olympe.in</a></p>
 					<p>#olympe@irc.freenode.net</p>
 					<br />
 					<h4>{$lang['meet']}</h4>

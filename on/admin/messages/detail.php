@@ -31,6 +31,9 @@ $content .= "
 				<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 					<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
 				</a>
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#settings').dialog('open'); return false;\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+					<img style=\"float: left; height: 98%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/settings.png\" />
+				</a>
 			</div>
 			<div class=\"clear\"></div>
 		</div>
@@ -40,25 +43,22 @@ $content .= "
 
 foreach( $messages as $m )
 {
+	if($message['user']['status'] == '99')
+		$staff = "<span class=\"staff\">Equipe Olympe</span>";
+	
 		$content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$m['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $m['date'])."
-						</div>
 						<div class=\"icons\">
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 						</div>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
 						<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-						<br />
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
+						{$staff}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
@@ -70,28 +70,25 @@ foreach( $messages as $m )
 						</form>
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $m['date'])."</span>
+						<span class=\"messageid\">#{$m['id']}</span>
+					</div>
 				</div>
 		";
 }
 $content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$message['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $message['date'])."
-						</div>
 						<div class=\"icons\">
 							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 						</div>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
 						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-						<br />
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
@@ -103,7 +100,14 @@ $content .= "
 						</form>						
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $message['date'])."</span>
+						<span class=\"messageid\">#{$message['id']}</span>
+					</div>
 				</div>
+				
+				
+				
 			</div>
 			<br />
 			<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
@@ -114,16 +118,16 @@ $content .= "
 if( $message['status'] != 3 )
 {
 	$content .= "
-			<a class=\"button classic\" href=\"#\" onclick=\"$('#close').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['close']}</span>
+			<a class=\"button classic\" href=\"#\" onclick=\"$('#close').dialog('open'); return false;\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+				<img style=\"float: left; height: 98%;\" title=\"{$lang['close']}\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/lock.png\" />
 			</a>
 	";
 }
 else
 {
 	$content .= "
-			<a class=\"button classic\" href=\"/admin/messages/open_action?id={$message['id']}\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['open']}</span>
+			<a class=\"button classic\" href=\"/admin/messages/open_action?id={$message['id']}\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+				<img style=\"float: left; height: 98%;\" title=\"{$lang['open']}\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/unlock.png\" />
 			</a>
 	";
 }
@@ -149,6 +153,27 @@ $content .= "
 				</fieldset>
 				<fieldset>
 					<input autofocus type=\"submit\" value=\"{$lang['send']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id=\"settings\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['settings']}</h3>
+		<div class=\"form-small\">		
+			<form action=\"/admin/messages/status_action\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" value=\"{$message['id']}\" name=\"id\" />
+				<fieldset>
+					<select name=\"new_status\">
+						<option value=\"1\">{$lang['status_1']}</option>
+						<option value=\"2\">{$lang['status_2']}</option>
+						<option value=\"4\">{$lang['status_4']}</option>
+						<option value=\"3\">{$lang['status_3']}</option>
+					</select>
+					<span class=\"help-block\">{$lang['settings_help']}</span>
+				</fieldset>
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['send']}\" />
 				</fieldset>
 			</form>
 		</div>
@@ -183,6 +208,7 @@ $content .= "
 		newFlexibleDialog('reply', 550);
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('close', 550);
+		newFlexibleDialog('settings', 550);
 		var status = 0;
 		function showEdit(id)
 		{

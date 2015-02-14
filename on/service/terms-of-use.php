@@ -41,7 +41,7 @@ $content = "
 				</div>					
 			</div>
 			<div class=\"right big\">
-				<p style=\"text-align: justify;\">{$lang['language_warning']}</p>
+				{$lang['language_warning']}
 				<h2 class=\"dark\" style=\"font-size: 0.9em; float:right;\">{$lang['last_update']} {$last_update}</h2>
 ";
 

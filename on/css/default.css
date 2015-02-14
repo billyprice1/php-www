@@ -770,3 +770,16 @@ span.tag.important {
 	max-width:150px;
 	color:#4c4c4c;
 }
+.status {
+	font-size: 14px;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	display:inline-block;
+}
+
+td .status {
+	width: 100%;
+	max-width: 120px;
+}
