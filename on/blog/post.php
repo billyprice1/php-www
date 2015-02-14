@@ -28,7 +28,7 @@ $content = "
 								<div class=\"fb-like\" data-href=\"https://www.olympe.in/blog/post?id={$news['id']}\" data-width=\"\" data-height=\"\" data-colorscheme=\"light\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-send=\"false\"></div>
 							</div>
 							<div style=\"float: left; width: 80px; margin-left: 10px;\">
-								<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"olympe_fr\">Tweet</a>
+								<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"OlympeNet\">Tweet</a>
 							</div>
 							<div style=\"float: left; width: 80px; margin-left: 10px;\">
 								<div class=\"g-plusone\" data-size=\"medium\"></div>
