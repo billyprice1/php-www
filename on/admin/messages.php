@@ -46,6 +46,7 @@ $content = "
 								<option value=\"1\">{$lang['status_1']}</option>
 								<option value=\"2\">{$lang['status_2']}</option>
 								<option value=\"3\">{$lang['status_3']}</option>
+								<option value=\"4\">{$lang['status_4']}</option>
 							</select>
 							<input type=\"hidden\" name=\"action\" value=\"search\" />
 							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />

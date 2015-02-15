@@ -71,7 +71,7 @@ div.topic div.message .author-name {
 	overflow: visible;
 }
 
-div.topic div.message span.staff {
+div.topic div.message span.staff, div.topic div.message span.online {
     background-color: #de5711;
     border-radius: 2px;
     color: white;
@@ -81,6 +81,10 @@ div.topic div.message span.staff {
     padding: 2px;
     text-align: center;
     width: 92px;
+}
+
+div.topic div.message span.online {
+    background-color: #7bbb51;
 }
 
 div.topic div.message div.meta {

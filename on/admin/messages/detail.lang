@@ -19,6 +19,9 @@ status_3 = "<span class='status' style='background-color: #5b64e5;'>Closed</span
 status_4 = "<span class='status' style='background-color: #800080;'>Suspended</span>"
 settings = "Change the request status"
 settings_help = "Choose the new status"
+quote = "Quote"
+online = "Online"
+team = "Olympe Team"
 
 [FR]
 title = "Demande"
@@ -41,6 +44,9 @@ status_3 = "<span class='status' style='background-color: #5b64e5;'>Fermé</span
 status_4 = "<span class='status' style='background-color: #800080;'>Suspendu</span>"
 settings = "Modifier le statut de la demande"
 settings_help = "Choisissez le nouveau statut de la demande"
+quote = "Citer"
+online = "En ligne"
+team = "Équipe Olympe"
 
 [DE]
 title = "Anwendung"
@@ -63,3 +69,6 @@ status_3 = "<span class='status' style='background-color: #5b64e5;'>Geschlossen<
 status_4 = "<span class='status' style='background-color: #800080;'>Suspended</span>"
 settings = "Change the request status"
 settings_help = "Choose the new status"
+quote = "Quote"
+online = "Online"
+team = "Olympe Team"

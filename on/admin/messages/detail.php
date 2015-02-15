@@ -20,6 +20,9 @@ catch( Exception $e )
 if( !$message['id'] || !$_GET['id'] )
 	template::redirect('/admin/messages');
 
+$staff_icon = "<span class=\"staff\">{$lang['team']}</span>";
+$online_icon = "<span class=\"online\">{$lang['online']}</span>";
+
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
@@ -43,15 +46,20 @@ $content .= "
 
 foreach( $messages as $m )
 {
-	if($message['user']['status'] == '99')
-		$staff = "<span class=\"staff\">Equipe Olympe</span>";
+	if($m['user']['status'] == '99')
+		$staff = $staff_icon;
+	else 
+		$staff = "";
+	
+	$online = ''; //$staff_icon;
 	
 		$content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
 						<div class=\"icons\">
-							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
-							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<a href=\"#\" onclick=\"quote('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>
+							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
 						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
 						<div class=\"clear\"></div>
@@ -59,6 +67,7 @@ foreach( $messages as $m )
 					<div class=\"meta\">
 						<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
 						{$staff}
+						{$online}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
@@ -77,18 +86,29 @@ foreach( $messages as $m )
 				</div>
 		";
 }
+
+if($message['user']['status'] == '99')
+	$staff = $staff_icon;
+else 
+	$staff = "";
+
+$online = ''; //$staff_icon;
+
 $content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
 						<div class=\"icons\">
-							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
-							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<a href=\"#\" onclick=\"quote('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>
+							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
 						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
 						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
+						{$staff}
+						{$online}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
@@ -144,7 +164,7 @@ $content .= "
 				<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
 				<input type=\"hidden\" name=\"type\" value=\"{$message['type']}\" />
 				<fieldset>
-					<textarea class=\"auto\" style=\"text-align: left; width: 400px; height: 150px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
+					<textarea style=\"text-align: left; width: 400px; height: 150px;\" name=\"content\" id=\"replyField\"></textarea>
 					<span class=\"help-block\">{$lang['content_help']}</span>
 				</fieldset>
 				<fieldset>
@@ -227,6 +247,17 @@ $content .= "
 				$(\"#text\"  + id).show(\"fade\", options, 200);
 				status = 0;
 			}
+		}
+		
+		function quote(e)
+		{
+			var quotation = $('#edit' + e).val(); 
+			var regExpE = /\[quote\]([^§]+)\[\/quote\]/;
+			var clean_quotation = $.trim(quotation.replace(regExpE, '(...)'));
+	
+			$('#replyField').val('[quote]' + clean_quotation + '[/quote]');
+			$('#reply').dialog('open'); 
+			return false;
 		}
 	</script>
 ";
