@@ -66,12 +66,15 @@ foreach( $messages as $m )
 						<div class=\"icons\">
 		";
 
-		if( $m['user']['name'] == security::get('USER') && ($message['status']!=3) )
-			$content .= "
-							<a href=\"#\" onclick=\"quote('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>
-							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
-							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
-			";
+		if($message['status']!=3) {
+			$content .= "<a href=\"#\" onclick=\"quote('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>";
+			
+			if($m['user']['name'] == security::get('USER')) 
+				$content .= "
+								<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
+								<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
+				";
+		}
 			
 		$content .= "
 						</div>
@@ -87,7 +90,7 @@ foreach( $messages as $m )
 						<form action=\"/panel/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$m['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$m['id']}\">".bbcode::display($m['content'])."</p>
+							<div id=\"text{$m['id']}\">".bbcode::display($m['content'])."</div>
 							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 800px; height: 100px;\" name=\"content\">".bbcode::edit($m['content'])."</textarea>
 							<input id=\"submit{$m['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>
@@ -136,7 +139,7 @@ $content .= "
 						<form action=\"/panel/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$message['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$message['id']}\">".bbcode::display($message['content'])."</p>
+							<div id=\"text{$message['id']}\">".bbcode::display($message['content'])."</div>
 							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($message['content'])."</textarea>
 							<input id=\"submit{$message['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>						

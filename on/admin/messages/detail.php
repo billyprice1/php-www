@@ -73,7 +73,7 @@ foreach( $messages as $m )
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$m['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$m['id']}\">".bbcode::display($m['content'])."</p>
+							<div id=\"text{$m['id']}\">".bbcode::display($m['content'])."</div>
 							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($m['content'])."</textarea>
 							<input id=\"submit{$m['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>
@@ -114,7 +114,7 @@ $content .= "
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$message['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$message['id']}\">".bbcode::display($message['content'])."</p>
+							<div id=\"text{$message['id']}\">".bbcode::display($message['content'])."</div>
 							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($message['content'])."</textarea>
 							<input id=\"submit{$message['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>						
