@@ -776,10 +776,8 @@ span.tag.important {
 	padding: 5px 10px;
 	border-radius: 3px;
 	box-sizing: border-box;
-	display:inline-block;
-}
-
-td .status {
-	width: 100%;
-	max-width: 120px;
+	display:block;
+	color: white;
+	width: 100px;
+	text-align: center;
 }
