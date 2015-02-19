@@ -6,6 +6,8 @@
 		exit;
 	}
 
+	/* =========
+
 	$sites = api::send('site/list', array('user'=>$_POST['user']));
 	foreach( $sites as $s )
 	{
@@ -14,8 +16,12 @@
 	}
 	
 	$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
+
+	============= */
+
 	api::send('site/del', array('user'=>$_POST['user'], 'site'=>$_POST['site']));
-	
+
+	/* ========= 
 	$htaccess = file_get_contents( __DIR__.'/404/.htaccess' );
 	$font = file_get_contents( __DIR__.'/404/BebasNeue Regular.ttf' );
 	
@@ -29,7 +35,7 @@
 	
 	
 	$connection = ssh2_connect('ftp.olympe.in', 22);
-	ssh2_auth_password($connection, $_GLOBALS['APP']['SITE'], $_GLOBALS['APP']['PASSWORD']);
+	ssh2_auth_password( $connection, $_GLOBALS['APP']['SITE'], $_GLOBALS['APP']['PASSWORD'] );
 	ssh2_scp_send($connection, $htaccess, '/.htaccess', 0644);
 	ssh2_scp_send($connection, $font, '/BebasNeue Regular.ttf', 0644);
 	ssh2_scp_send($connection, $index, '/index.html', 0644);
@@ -43,6 +49,7 @@
 			}
 			return $randomString;
 	} 
+	============= */
 	
 	
 	if( isset($_GET['redirect']) )
