@@ -5,11 +5,33 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-
-$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$cache = 'cache/count.txt';
+$expire = time() -3600 ; // valable une heure
+ 
+if(file_exists($cache) && filemtime($cache) > $expire)
+{
+	$file = fopen($cache, 'r+');
+	$txt = fgets($file);
+	$txt = explode('-', $txt);
+	$users = $xt['0'];
+	$sites = $txt['1'];
+	$dbs = $txt['2'];
+	$domains = $txt['3'];
+	fclose($file);
+}
+else{
+	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	if($file_exists($cache)){
+		$file = fopen($cache, 'r+');
+		$txt = $users.'-'.$sites.'-'.$dbs.'-'.$domains;
+		fseek($file, 0); // On remet le curseur au début du fichier
+		fputs($file, $txt); // On écrit le nouveau nombre de pages vues
+		fclose($file);
+	}
+}
 
 switch( translator::getLanguage() )
 {
