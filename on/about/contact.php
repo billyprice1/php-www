@@ -5,13 +5,13 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-/*
+
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
-*/
+
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
@@ -75,7 +75,7 @@ $content .= "
 					<br />
 					<form action=\"/about/contact_action\" method=\"post\" id=\"contact\">
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" placeholder=\"{$lang['name']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" required placeholder=\"{$lang['name']}\" />
 						</fieldset>
 		";
 		
@@ -89,13 +89,16 @@ if(!$user) {
 
 $content .= "		
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" id=\"email\" placeholder=\"{$lang['email']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" required id=\"email\" placeholder=\"{$lang['email']}\" />
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" placeholder=\"{$lang['subject']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" required placeholder=\"{$lang['subject']}\" />
 						</fieldset>
 						<fieldset>
-							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" placeholder=\"{$lang['message']}\"></textarea>
+							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" required placeholder=\"{$lang['message']}\"></textarea>
+						</fieldset>
+						<fieldset>
+							<input class=\"auto\" style=\"width: 300px; display:none;\" type=\"text\" name=\"phone\" placeholder=\"\" />
 						</fieldset>
 						<fieldset>
 							<input type=\"submit\" value=\"{$lang['send_now']}\" />
