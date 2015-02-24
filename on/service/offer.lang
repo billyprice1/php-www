@@ -2,6 +2,7 @@
 title = "Web hosting offer"
 service = "Service"
 description = "Description"
+default = "Default"
 quota = "Limit"
 intro = "We have only one offer which includes as many services as possible in the limit of the available ressources. However, <span style='color: #de5711;'>this limits can be increased</a>
 if your request is properly justified."
