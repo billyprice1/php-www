@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL);
 if( !defined('PROPER_START') )
 {
 	header("HTTP/1.0 403 Forbidden");
