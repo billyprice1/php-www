@@ -1,10 +1,10 @@
 <?php
 error_reporting(E_ALL);
-/*if( !defined('PROPER_START') )
+if( !defined('PROPER_START') )
 {
 	header("HTTP/1.0 403 Forbidden");
 	exit;
-}*/
+}
 $cache = 'cache/count.txt';
 $expire = time() -3600 ; // valable une heure
  
