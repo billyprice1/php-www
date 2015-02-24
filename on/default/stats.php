@@ -7,7 +7,7 @@ if( !defined('PROPER_START') )
 $cache = 'cache/count.txt';
 $expire = time() -3600 ; // valable une heure
  
-if(file_exists($cache) && filemtime($cache) > $expire)
+/*if(file_exists($cache) && filemtime($cache) > $expire)
 {
 	$file = fopen($cache, 'r+');
 	$txt = fgets($file);
@@ -27,10 +27,15 @@ else{
 		$file = fopen($cache, 'r+');
 		$txt = $users.'-'.$sites.'-'.$dbs.'-'.$domains;
 		fseek($file, 0); // On remet le curseur au début du fichier
-		fputs($file, $txt); // On écrit le nouveau nombre de pages vues
+		fputs($file, $txt);
 		fclose($file);
 	}
-}
+}*/
+$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+var_dump($users);
 
 switch( translator::getLanguage() )
 {
