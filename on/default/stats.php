@@ -1,6 +1,9 @@
 <?php
-
-echo realpath('stats.txt');
+if( !defined('PROPER_START') ) 
+{ 
+    header("HTTP/1.0 403 Forbidden"); 
+    exit; 
+} 
 $cache = __DIR__.'/cache/stats.txt';
 $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement de 17h30 à 22h et de 6h à 10h (les périodes de rush)
 $file = fopen($cache, 'a+');
