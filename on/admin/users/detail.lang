@@ -118,6 +118,7 @@ send_mail = "Send an email to the user"
 send_mail_title = "Subject"
 send_mail_text = "Message"
 send = "Send"
+logs = "Logs"
 
 [FR]
 title = "Détails"
@@ -243,6 +244,7 @@ send_mail = "Envoyer un email à l'utilisateur"
 send_mail_title = "Titre du mail"
 send_mail_text = "Message"
 send = "Envoyer"
+logs = "Logs"
 
 [DE]
 title = "Benutzerdaten"
@@ -364,3 +366,4 @@ send_mail = "E-Mail an Benutzer senden"
 send_mail_title = "Titel der E-Mail"
 send_mail_text = "Nachricht"
 send = "Senden"
+logs = "Logs"
