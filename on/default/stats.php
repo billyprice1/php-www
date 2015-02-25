@@ -1,41 +1,29 @@
 <?php
-if( !defined('PROPER_START') )
+
+echo realpath('stats.txt');
+$cache = __DIR__.'/cache/stats.txt';
+$expire = time() -3600 ; //cache une heure à voir si je l'active entièrement de 17h30 à 22h et de 6h à 10h (les périodes de rush)
+$file = fopen($cache, 'a+');
+$txt = fgets($file);
+$txt = explode('-', $txt);
+if($txt['0'] > $expire)
 {
-	header("HTTP/1.0 403 Forbidden");
-	exit;
-}
-$cache = 'cache/count.txt';
-$expire = time() -3600 ; // valable une heure
- 
-/*if(file_exists($cache) && filemtime($cache) > $expire)
-{
-	$file = fopen($cache, 'r+');
-	$txt = fgets($file);
-	$txt = explode('-', $txt);
-	$users = $xt['0'];
-	$sites = $txt['1'];
-	$dbs = $txt['2'];
-	$domains = $txt['3'];
-	fclose($file);
+	$users['count'] = $txt['1'];
+	$sites['count'] = $txt['2'];
+	$dbs['count'] = $txt['3'];
+	$domains['count'] = $txt['4'];
 }
 else{
 	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	if($file_exists($cache)){
-		$file = fopen($cache, 'r+');
-		$txt = $users['count'].'-'.$sites['count'].'-'.$dbs['count'].'-'.$domains['count'];
-		fseek($file, 0); // On remet le curseur au début du fichier
-		fputs($file, $txt);
-		fclose($file);
-	}
-}*/
-$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-
+	$txt = time().'-'.$users['count'].'-'.$sites['count'].'-'.$dbs['count'].'-'.$domains['count'];
+	ftruncate($file, 0);
+	fseek($file, 0);
+	fputs($file, $txt);
+}
+	fclose($file);
 switch( translator::getLanguage() )
 {
 	case 'FR':
