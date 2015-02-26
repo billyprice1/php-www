@@ -41,7 +41,7 @@ $content = "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 500px;\">
-				<img style=\"width: 60px; height: 60px; float: left; margin: 5px 10px 0px 0px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+				<img style=\"width: 60px; height: 60px; float: left; margin: 0px 15px 0px 0px; border-radius: 100px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 				<h1 class=\"dark title\">".security::get('USER')."</h1>
 				<h2 class=\"dark title\">".($userinfo['firstname']?"{$userinfo['firstname']} {$userinfo['lastname']}":"{$lang['nolastname']}")."</h2>
 			</div>
@@ -59,16 +59,55 @@ $content = "
 		<br />
 		<div class=\"sites\">
 			<div class=\"sitescontent\">
-				<div style=\"width: 1080px; padding: 10px; background-color: #ffffff; opacity: 0.6; border-radius: 5px; margin-bottom: 20px;\">
-					<img style=\"display: block; float: left; margin-right: 10px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/donation.png\" />
-					<span style=\"font-size: 18px; display: block; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"font-size: 12px; color: #ff8827; display: block; float: left; padding-top: 10px;\"\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>
-					<div class=\"clear\"></div>
+				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
+				
+				$display = rand(0, 3);
+				
+				switch ($display) {
+				case 0:
+					$content .= "
+					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
+					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\" style=\"color:#5EA9DD\">{$lang['help_text']}</a> !</span><br /><br />
+					<span style=\"color: #6C6C6C; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					break;
+				case 1:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					break;
+				case 2:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					break;
+				case 3:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 5px;\" width=\"25px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
+					<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
+					<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
+						<a class=\"twitter-share-button\"
+						   href=\"https://twitter.com/share\"
+						  data-url=\"https://www.olympe.in\"
+						  data-via=\"OlympeNet\"
+						  data-text=\"{$lang['twitter_text']}\"
+						  data-count=\"none\">
+						Tweet
+						</a>
+						<div class=\"fb-share-button\" data-href=\"https://www.olympe.in\" data-layout=\"button\" style=\"top: -5px; margin-left: 20px;\"></div>
+					</div>";
+					
+					break;
+				}
+
+				$content .="
+				<div class=\"clear\"></div>
 				</div>
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
-						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button classic\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white-big.png\" />
+						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button grey\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center; \">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" style=\"margin: 3px 0px 0px;\" />
 						</a>
 					</div>
 					<div id=\"formsite\" style=\"display: none; position: relative; padding: 30px 10px 10px 10px;\">
@@ -156,6 +195,17 @@ $content .= "
 			</div>
 		</div>	
 	</div>
+	<div id=\"fb-root\"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = \"//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0\";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+	window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src=\"https://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,\"script\",\"twitter-wjs\"));
+	</script>
 	<script>
 		function showForm()
 		{

@@ -127,6 +127,17 @@ a.button.classic:hover {
 	background-color: #eb782b;
 }
 
+a.button.grey {
+	background-color: rgb(122, 122, 122);
+	color: #ffffff;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+a.button.grey:hover {
+	background-color: #8C8C8C;
+}
+
 a.button.main {
 	color: #de5711;
 	background-color: #ffffff;
@@ -220,6 +231,8 @@ h1 {
 	margin-bottom: 10px;
 	padding: 0;
 	text-align: center;
+	max-width: 1000px;
+	transition-duration: 1s;
 }
 
 h1.dark {
@@ -254,6 +267,8 @@ h2 {
 	padding: 0;
 	text-align: center;
 	line-height: 20px;
+	max-width: 1000px;
+	transition-duration: 1s;
 }
 
 h2.dark {
@@ -735,4 +750,34 @@ span.tag {
 
 span.tag.important {
     background-color: #CC0000;
+}
+.profile-pic {
+    width: 30px; 
+    height: 30px;
+    border-radius: 11px;
+}
+.lg-profile-pic {
+    width: 80px; 
+    height: 80px; 
+    display: block;
+    border-radius: 100px;
+}
+.author-name {
+	display:inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	max-width:150px;
+	color:#4c4c4c;
+}
+.status {
+	font-size: 14px;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	display:block;
+	color: white;
+	width: 100px;
+	text-align: center;
 }

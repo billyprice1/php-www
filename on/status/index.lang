@@ -1,8 +1,8 @@
 ﻿[EN]
 online = "Online"
 offline = "Current incident"
-monitor = "We monitor our infrastructure 24/24 7/7, if you are having access problems and they do not appear here, you can write to us at 
-<a style='color: #ffffff; font-weight: bold;' href='mailto:hosting@olympe.in'>hosting@olympe.in</a>."
+monitor = "We monitor our infrastructure 24/24 7/7, if you are having access problems and they do not appear here, please  
+<a style='color: #ffffff; font-weight: bold;' href='about/contact'>contact us</a>."
 30days = "Uptime last 30 days"
 365days = "Uptime last 365 days"
 24up = "Up 24 hours"
@@ -44,8 +44,8 @@ priority = "Priority"
 [ES]
 online = "En línea"
 offline = "Incidentes actuales"
-monitor = "Hacemos un seguimiento de nuestra infraestructura de 24/24 7.7, si tienes problemas de acceso y que no aparecen aquí, puedes escribirnos a 
-<a style='color: #ffffff; font-weight: bold;' href='mailto:hosting@olympe.in'>hosting@olympe.in</a>."
+monitor = "Hacemos un seguimiento de nuestra infraestructura de 24/24 7.7, si tienes problemas de acceso y que no aparecen aquí, puedes 
+<a style='color: #ffffff; font-weight: bold;' href='about/contact'>contactarnos</a>."
 30days = "Uptime últimos 30 días"
 365days = "Uptime últimos 365 días"
 24up = "Up 24 horas"
@@ -87,8 +87,8 @@ priority = "Prioridad"
 [FR]
 online = "En ligne"
 offline = "Incident en cours"
-monitor = "Nous surveillons nos infrastructures 24/24 7/7, si vous rencontrez des problèmes d'accès et qu'ils n'apparaissent pas ici, vous pouvez nous écrire à 
-<a style='color: #ffffff; font-weight: bold;' href='mailto:hosting@olympe.in'>hosting@olympe.in</a>."
+monitor = "Nous surveillons nos infrastructures 24/24 7/7, si vous rencontrez des problèmes d'accès et qu'ils n'apparaissent pas ici, vous pouvez nous 
+<a style='color: #ffffff; font-weight: bold;' href='about/contact'>envoyer un message</a>."
 30days = "Uptime des 30 derniers jours"
 365days = "Uptime des 365 derniers jours"
 24up = "Up 24 heures"
@@ -130,8 +130,8 @@ priority = "Priorité"
 [DE]
 online = "Online"
 offline = "Ablaufende Vorfall"
-monitor = "Wir überwachen unsere Infrastruktur 24/24 7/7. Wenn Sie beim Zugriff Probleme auftreten, die nicht hier erschienen sind, können Sie sich an uns wenden
-<a style='color: #ffffff; font-weight: bold;' href='mailto:hosting@olympe.in'>hosting@olympe.in</a>."
+monitor = "Wir überwachen unsere Infrastruktur 24/24 7/7. Wenn Sie beim Zugriff Probleme auftreten, die nicht hier erschienen sind, können Sie sich an 
+<a style='color: #ffffff; font-weight: bold;' href='about/contact'>uns wenden</a>."
 30days = "Verfügbare Betriebszeit letzten 30 Tagen"
 365days = "Verfügbare Betriebszeit letzten 365 Tagen"
 24up = "Up 24 Stunden"
@@ -173,8 +173,8 @@ priority = "Priorität"
 [IT]
 online = "Online"
 offline = "Stiamo avendo dei problemi"
-monitor = "Monitoriamo i nostri sistemi 24 ore su 24, 7 giorni su 7, se hai problemi di accesso e non compaiono qui, puoi scriverci a 
-<a style='color: #ffffff; font-weight: bold;' href='mailto:hosting@olympe.in'>hosting@olympe.in</a>."
+monitor = "Monitoriamo i nostri sistemi 24 ore su 24, 7 giorni su 7, se hai problemi di accesso e non compaiono qui, puoi  
+<a style='color: #ffffff; font-weight: bold;' href='about/contact'>scriverci</a>."
 30days = "Attività negli ultimi 30 giorni"
 365days = "Attività negli ultimi 365 giorni"
 24up = "Up 24 ore"

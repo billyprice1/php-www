@@ -70,7 +70,7 @@ $content .= "
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 500px;\">
 				<img style=\"width: 100px; height: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
-				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
+				<span style=\"font-size: 38px; display: block; margin-bottom: 15px; max-width: 500px; overflow: hidden; text-overflow: ellipsis;\" title=\"{$site['hostname']}\">{$site['hostname']}</span>
 				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
 			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
@@ -111,6 +111,15 @@ $content .= "
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\">
 						<a href=\"http://{$site['name']}.olympe.in\">{$site['name']}.olympe.in</a>
 					</span>
+				</div>
+				<br /><br />
+				<h2 class=\"dark\">{$lang['install']}</h2>
+				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
+					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">Wordpress 4.1</span>
+					</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\" $('#install').dialog('open'); return false; \">{$lang['start']}</span>
 				</div>
 				<br /><br />
 				<h2 class=\"dark\">{$lang['response']}</h2>
@@ -204,7 +213,7 @@ $content .= "
 			</form>
 		</div>
 	</div>
-	<div id=\"changepassword\" class=\"floatingdialog\">
+	<div id=\"changepassword\" class=\"floatingdialog\"><br />
 		<h3 class=\"center\">{$lang['changepassword']}</h3>
 		<p style=\"text-align: center;\">{$lang['changepassword_text']}</p>
 		<div class=\"form-small\">		
@@ -225,12 +234,76 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"install\" class=\"floatingdialog\"><br />
+		<h3 class=\"center\">{$lang['install']}</h3>
+		<div id=\"form\">
+		<p style=\"text-align: center;\">{$lang['prompt']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/sites/install\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<fieldset>
+					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
+					<span class=\"help-block\">{$lang['ftp_pass']}</span>
+				</fieldset>
+				<span style=\"cursor: pointer; color: #68686B; font-size: 12px;\" id=\"options\">{$lang['more']}</span><br />
+				<div id= \"more\" style=\"display:none\"><br /><br />
+				<fieldset>
+					<input type=\"password\" name=\"sql\" style=\"color: #68686B;\" />
+					<span class=\"help-block\">{$lang['sql_pass']}</span>
+				</fieldset>
+				<fieldset>
+					<select name=\"path\">
+						<option value=\"0\">{$lang['root']}</option>
+						<option value=\"1\">{$lang['folder']}</option>
+					</select>
+					<span class=\"help-block\">{$lang['path']}</span>
+				</fieldset>
+				</div><br /><br />
+				<fieldset>
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['install_btn']}\" onclick=\"$('#form').fadeOut('slow', function() { $('#note').fadeIn('slow'); }); \" />
+				</fieldset>
+			</form>
+		</div>
+		</div>
+		<div id=\"note\" style=\"display:none; text-align: center; padding: 10px 0px 20px 0px;\"><br />
+			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
+			<span style=\"font-size: 12px; \">{$lang['wait']}</span><br /><br />
+		</div>
+	</div>
+	
+	<div id=\"uninstall\" class=\"floatingdialog\"><br />
+		<h3 class=\"center\">{$lang['uninstall']}</h3>
+		<div id=\"form2\">
+		<p style=\"text-align: center;\">{$lang['prompt']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/sites/uninstall\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<fieldset>
+					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
+					<span class=\"help-block\">{$lang['ftp_pass']}</span>
+				</fieldset><br />
+				<fieldset>
+					<input autofocus id=\"launch\" type=\"submit\" value=\"{$lang['uninstall_btn']}\" onclick=\"$('#form2').fadeOut('slow', function() { $('#note2').fadeIn('slow'); }); \" />
+				</fieldset>
+			</form>
+		</div>
+		</div>
+		<div id=\"note2\" style=\"display:none; text-align: center; padding: 10px 0px 20px 0px;\"><br />
+			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
+			<span style=\"font-size: 12px; \">{$lang['wait2']}</span><br /><br />
+		</div>
+	</div>
+	
 	<script type=\"text/javascript\">
+		init = 0;
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('download', 550);
-		
+		newFlexibleDialog('install', 550);
+		newFlexibleDialog('uninstall', 550);
+	
+		$('#options').on('click', function() { if (init == 0) { $('#more').fadeIn('slow');	$('#options').html(\"{$lang['more_toggle']}\");	init++;	} else	{ $('#more').fadeOut('slow'); $('#options').html(\"{$lang['more']}\"); init = 0; } });
 		$(function()
 		{
 			var dataSourceDay = [";

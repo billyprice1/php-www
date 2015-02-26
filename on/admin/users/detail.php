@@ -24,11 +24,14 @@ $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"width: 700px;\">
-					<img style=\"width: 60px; height: 60px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+					<img style=\"width: 60px; height: 60px; border-radius: 100px; padding: 5px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>{$user['name']}</strong></span>
 					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
 				<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
+					<a class=\"action archive\" href=\"/admin/logs?user={$user['id']}\">
+						{$lang['logs']}
+					</a>
 					<a class=\"action email\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\">
 						{$lang['email_help']}
 					</a>
@@ -384,10 +387,8 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 		if( $percent > 100 )
 			$percent = 100;
 			
-		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES') 
+		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES' || $u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
 			$step = 1;
-		if($u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
-			$step = 100;
 			
 		$content .= "
 					<tr>
