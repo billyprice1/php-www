@@ -9,7 +9,7 @@ $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement d
 $file = fopen($cache, 'a+');
 $txt = fgets($file);
 $txt = explode('-', $txt);
-if($txt['0'] > $expire)
+if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
 	$users['count'] = $txt['1'];
 	$sites['count'] = $txt['2'];
@@ -17,16 +17,25 @@ if($txt['0'] > $expire)
 	$domains['count'] = $txt['4'];
 }
 else{
-	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$txt = time().'-'.$users['count'].'-'.$sites['count'].'-'.$dbs['count'].'-'.$domains['count'];
-	ftruncate($file, 0);
-	fseek($file, 0);
-	fputs($file, $txt);
+	if($txt['0'] > $expire)
+	{
+		$users['count'] = $txt['1'];
+		$sites['count'] = $txt['2'];
+		$dbs['count'] = $txt['3'];
+		$domains['count'] = $txt['4'];
+	}
+	else{
+		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$txt = time().'-'.$users['count'].'-'.$sites['count'].'-'.$dbs['count'].'-'.$domains['count'];
+		ftruncate($file, 0);
+		fseek($file, 0);
+		fputs($file, $txt);
+	}
 }
-	fclose($file);
+fclose($file);
 switch( translator::getLanguage() )
 {
 	case 'FR':
