@@ -4,8 +4,8 @@ RewriteEngine On
 # force https
 # =====================================
 
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+#NOT_IN_DEV RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#NOT_IN_DEV RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
 
 # =====================================
 # deny access to the libs and to any php
