@@ -29,6 +29,9 @@ $content = "
 					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
 				<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
+					<a class=\"action archive\" href=\"/admin/logs?user={$user['id']}\">
+						{$lang['logs']}
+					</a>
 					<a class=\"action email\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\">
 						{$lang['email_help']}
 					</a>

@@ -6,8 +6,8 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if(isset($_POST['action']) && $_POST['action']=='search') {
-	$user = security::encode($_POST['user']);
+if(isset($_GET['user']) && $_GET['user'] != '') {
+	$user = security::encode($_GET['user']);
 	$logs = api::send('log/list', array('user'=>$user));
 } else {
 	$display = 'display:none';
@@ -42,10 +42,9 @@ if($search == 1) {
 				</div>
 				<div class=\"clear\"></div><br />
 				<div id=\"searchlogs\" class=\"container\" style=\"{$display};\">
-					<form action=\"\" method=\"post\">
+					<form action=\"\" method=\"get\">
 						<fieldset>
 							<input type=\"text\" name=\"user\" placeholder=\"{$lang['user']}\" value=\"{$user}\" style=\"width: 300px; display: inline-block;\" />
-							<input type=\"hidden\" name=\"action\" value=\"search\" />
 							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />
 						</fieldset>
 					</form>
