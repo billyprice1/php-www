@@ -27,7 +27,7 @@
 	else
 		$_GLOBALS['APP']['PATH'] = '';
 		
-	/*  clean unused databases */
+	/* ================ CLEAN UNUSED DATABASES ================ */
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -45,7 +45,7 @@
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
 	
-	/* take account of language preference */
+	/* =========== TAKE LANGUAGE PREFERENCE INTO ACCOUNT =========== */ 
 	switch ($_COOKIE['language']) {
 		case 'FR':
 			$_lang = "fr_FR";
@@ -85,7 +85,12 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
-	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in";
+	
+	// set up basic ssl connection
+	$con = @ftp_ssl_connect( 'ftp.olympe.in' );
+	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
+	var_dump ( @ftp_pwd($con) );
+	die();
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
 	@unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
