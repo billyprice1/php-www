@@ -89,17 +89,15 @@
 	// set up basic ssl connection
 	var_dump( function_exists('ftp_ssl_connect') );
 	var_dump( function_exists('ftp_login') );
-	var_dump( function_exists('ssh2_sftp') );	
 	
 	$con = @ftp_ssl_connect( 'ftp.olympe.in' );
 	var_dump ( $con );
 	
-	$try = @ssh2_connect('ftp.olympe.in', 22);
-	var_dump ( $try );
+	$con = @ftp_ssl_connect( 'ftp.olympe.in', 22 );
+	var_dump ( $con );
 	
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
-	var_dump ( $login );
-	var_dump ( @ftp_pwd($con) );
+	var_dump ( 'login:'.$login );
 	die();
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
