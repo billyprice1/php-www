@@ -92,12 +92,12 @@
 	
 	$con = @ftp_ssl_connect( 'ftp.olympe.in' );
 	var_dump ( $con );
-	
-	$con = @ftp_ssl_connect( 'ftp.olympe.in', 22 );
-	var_dump ( $con );
+	var_dump ( $site['name'] );
+	var_dump ( $_POST['pass'] );
 	
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
-	var_dump ( 'login:'.$login );
+	var_dump ( $login );
+	
 	die();
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
