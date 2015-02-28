@@ -90,15 +90,16 @@
 	var_dump( function_exists('ftp_ssl_connect') );
 	var_dump( function_exists('ftp_login') );
 	
-	$con = ftp_ssl_connect( 'sftp://ftp.olympe.in' );
+	$con = @ftp_ssl_connect( 'sftp://ftp.olympe.in' );
 	var_dump ( $con );
 	
-	$con = ftp_ssl_connect( 'ftp.olympe.in' );
+	$con = @ftp_ssl_connect( 'ftp.olympe.in' );
 	var_dump ( $con );
 	
 	
-	$login = ftp_login( $con, $site['name'], $_POST['pass']);
-	var_dump ( ftp_pwd($con) );
+	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
+	var_dump ( $login );
+	var_dump ( @ftp_pwd($con) );
 	die();
 	
 	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
