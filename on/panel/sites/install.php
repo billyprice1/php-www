@@ -90,7 +90,7 @@
 	var_dump( function_exists('ftp_ssl_connect') );
 	var_dump( function_exists('ftp_login') );
 	
-	$con = @ftp_ssl_connect( 'ftp.olympe.in' );
+	$con = @ftp_connect( 'ftp.olympe.in' );
 	var_dump ( $con );
 	var_dump ( $site['name'] );
 	var_dump ( $_POST['pass'] );
