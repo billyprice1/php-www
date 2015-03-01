@@ -92,9 +92,10 @@
 	
 	// generate temporary files
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
-	var_dump ( file_put_contents ( __DIR__.'/temp/unzip.php', $unzip ) );
+	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
-	var_dump ( @ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY ) );
+	var_dump ( @ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII ) );
+	ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
 	
 	@ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY );
 	@ftp_put( $con, 'unzip.php', __DIR__.'/temp/unzip.php', FTP_BINARY );
