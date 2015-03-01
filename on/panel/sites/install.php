@@ -86,7 +86,7 @@
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	
-	// set up basic FTP connection
+	/* ================ SET UP BASIC FTP CONNECTION ================ */
 	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
@@ -97,7 +97,7 @@
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	
-	// generate temporary files
+	/* ================ GENERATE TEMPORARY FILES ================ */
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
 	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
@@ -108,6 +108,10 @@
 	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
 	@ftp_delete($con, '/unzip.php');
 	
+	/* ================ CLEAN UP ================ */
+	unlink (  __DIR__.'/temp/archive.zip' );
+	unlink (  __DIR__.'/temp/unzip.php' );
+	
 	if ($check == 'done')
 	{
 		$config = file_get_contents( __DIR__."/import/wp-config.php" );
@@ -116,7 +120,10 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		@ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, FTP_ASCII );
+		file_put_contents ( __DIR__.'/temp/config', $config );
+		@ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config' , FTP_ASCII );	
+		unlink (  __DIR__.'/temp/config' );
+		
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
