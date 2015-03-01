@@ -10,7 +10,6 @@ $content = "
 			<div class=\"head\">
 				<br />
 				<div id=\"homepage\">
-					<h3 style=\"font-size: 60px; color: rgb(229, 120, 57);\">Bienvenue ".security::get('USER')." !</h3>
 					<h1>{$lang['title']}</h1>
 					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
 				</div>

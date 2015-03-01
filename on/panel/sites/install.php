@@ -27,7 +27,7 @@
 	else
 		$_GLOBALS['APP']['PATH'] = '';
 		
-	/*  clean unused databases */
+	/* ================ CLEAN UNUSED DATABASES ================ */
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -45,7 +45,7 @@
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
 	
-	/* take account of language preference */
+	/* =========== TAKE LANGUAGE PREFERENCE INTO ACCOUNT =========== */ 
 	switch ($_COOKIE['language']) {
 		case 'FR':
 			$_lang = "fr_FR";
@@ -85,16 +85,32 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
-	$GLOBALS['CONFIG']['CONNECT'] = "ftp://".$site['name'].":".$_POST['pass']."@ftp.olympe.in";
 	
-	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
-	@unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
-			
-	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	/* ================ SET UP BASIC FTP CONNECTION ================ */
+	$con = @ftp_connect( 'ftp.olympe.in' );
+	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
+	
+	if ( !$login )
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up any connection to the remote directory.";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
+	
+	/* ================ GENERATE TEMPORARY FILES ================ */
+	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
+	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
+	
+	ftp_pasv($con, true);
+	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
+	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
 
-	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
-	@unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
+	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
+	@ftp_delete($con, '/unzip.php');
+	
+	/* ================ CLEAN UP ================ */
+	unlink (  __DIR__.'/temp/archive.zip' );
+	unlink (  __DIR__.'/temp/unzip.php' );
 	
 	if ($check == 'done')
 	{
@@ -104,7 +120,10 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		file_put_contents ( __DIR__.'/temp/config.php', $config );
+		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
+		unlink (  __DIR__.'/temp/config.php' );
+		
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
@@ -112,12 +131,6 @@
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
-	}
-	else
-	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password seems to be not correct. ";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	
