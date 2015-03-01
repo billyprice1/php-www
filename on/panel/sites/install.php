@@ -20,7 +20,7 @@
 	
 	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
-	$_GLOBALS['FILE']['UNIQUE'] = random( rand(2, 12) )
+
 	
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
@@ -98,19 +98,19 @@
 	}
 	
 	/* ================ GENERATE TEMPORARY FILES ================ */
-	file_put_contents ( __DIR__.'/temp/archive-'.$_GLOBALS['FILE']['UNIQUE'].'.zip', $content );
-	file_put_contents ( __DIR__.'/temp/unzip-'.$_GLOBALS['FILE']['UNIQUE'].'.php', $unzip );
+	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
+	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
 	ftp_pasv($con, true);
-	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive-'.$_GLOBALS['FILE']['UNIQUE'].'.zip', FTP_ASCII );
-	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip-'.$_GLOBALS['FILE']['UNIQUE'].'.php', FTP_ASCII );
+	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
+	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
 
 	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
 	@ftp_delete($con, '/unzip.php');
 	
 	/* ================ CLEAN UP ================ */
-	unlink (  __DIR__.'/temp/archive-'.$_GLOBALS['FILE']['UNIQUE'].'.zip' );
-	unlink (  __DIR__.'/temp/unzip-'.$_GLOBALS['FILE']['UNIQUE'].'.php' );
+	unlink (  __DIR__.'/temp/archive.zip' );
+	unlink (  __DIR__.'/temp/unzip.php' );
 	
 	if ($check == 'done')
 	{
@@ -121,8 +121,8 @@
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
 		file_put_contents ( __DIR__.'/temp/config.php', $config );
-		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config-'.$_GLOBALS['FILE']['UNIQUE'].'.php' , FTP_ASCII );	
-		unlink (  __DIR__.'/temp/config-'.$_GLOBALS['FILE']['UNIQUE'].'.php' );
+		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
+		unlink (  __DIR__.'/temp/config.php' );
 		
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
