@@ -94,6 +94,8 @@
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
 	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
+	ftp_pasv($con, true);
+	
 	var_dump ( @ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII ) );
 	ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
 	
