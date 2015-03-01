@@ -86,28 +86,22 @@
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	
-	// set up basic ssl connection
-	var_dump( function_exists('ftp_ssl_connect') );
-	var_dump( function_exists('ftp_login') );
-	
+	// set up basic FTP connection
 	$con = @ftp_connect( 'ftp.olympe.in' );
-	var_dump ( $con );
-	var_dump ( $site['name'] );
-	var_dump ( $_POST['pass'] );
-	
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
-	var_dump ( $login );
+	$list = @ftp_nlist($con, '.');
 	
-	die();
+	if ( in_array ( 'file.zip', $list ) )
+	@ftp_delete($con, 'file.zip');
 	
-	if ( file_exists ( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' ) )
-	@unlink( $GLOBALS['CONFIG']['CONNECT'].'/file.zip' );
-			
-	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/file.zip', $content, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
-	@file_put_contents( $GLOBALS['CONFIG']['CONNECT'].'/unzip.php', $unzip, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+	@ftp_put( $con, 'file.zip', $content, FTP_ASCII );
+	@ftp_put( $con, 'unzip.php', $unzip, FTP_ASCII );
 
 	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
-	@unlink($GLOBALS['CONFIG']['CONNECT'].'/unzip.php');
+	@ftp_delete($con, 'unzip.php');
+	
+	var_dump ( $check );
+	exit ();
 	
 	if ($check == 'done')
 	{
