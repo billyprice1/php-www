@@ -91,17 +91,14 @@
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	$list = @ftp_nlist($con, '.');
 	
-	var_dump ( $con );
-	var_dump ( $login );
-	var_dump ( $list );
-	var_dump ( @ftp_pwd($con) );
-	var_dump ( @ftp_put( $con, '/file.zip', $content, FTP_ASCII ) );
+	// generate temporary files
+	@file_put_contents ( 'temp/archive.zip', $content );
+	@file_put_contents ( 'temp/unzip.php', $unzip );
 	
-	if ( @in_array ( 'file.zip', $list ) )
-	@ftp_delete($con, 'file.zip');
+	var_dump ( @ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY ) );
 	
-	@ftp_put( $con, '/file.zip', $content, FTP_ASCII );
-	@ftp_put( $con, '/unzip.php', $unzip, FTP_ASCII );
+	@ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY );
+	@ftp_put( $con, 'unzip.php', __DIR__.'/temp/unzip.php', FTP_BINARY );
 
 	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
 	@ftp_delete($con, '/unzip.php');
