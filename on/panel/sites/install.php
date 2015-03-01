@@ -89,11 +89,10 @@
 	// set up basic FTP connection
 	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
-	$list = @ftp_nlist($con, '.');
 	
 	// generate temporary files
-	@file_put_contents ( 'temp/archive.zip', $content );
-	@file_put_contents ( 'temp/unzip.php', $unzip );
+	file_put_contents ( __DIR__.'temp/archive.zip', $content );
+	var_dump ( file_put_contents ( __DIR__.'temp/unzip.php', $unzip ) );
 	
 	var_dump ( @ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY ) );
 	
