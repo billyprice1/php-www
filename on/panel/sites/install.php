@@ -91,7 +91,11 @@
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	$list = @ftp_nlist($con, '.');
 	
-	if ( in_array ( 'file.zip', $list ) )
+	var_dump ( $con );
+	var_dump ( $login );
+	var_dump ( $list );
+	
+	if ( @in_array ( 'file.zip', $list ) )
 	@ftp_delete($con, 'file.zip');
 	
 	@ftp_put( $con, 'file.zip', $content, FTP_ASCII );
@@ -111,7 +115,7 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents( $GLOBALS['CONFIG']['CONNECT'].$_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, NULL , stream_context_create( array('ftp' => array('overwrite' => true)) ));
+		@ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php', $config, FTP_ASCII );
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
 	}
@@ -124,7 +128,7 @@
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. The supplied password seems to be not correct. ";
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up a connection to the remote directory.";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	
