@@ -86,8 +86,8 @@
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	
-	/* ================ SET UP BASIC SFTP CONNECTION ================ */
-	$con = @ftp_connect( 'ftp.olympe.in', 22 );
+	/* ================ SET UP BASIC FTP CONNECTION ================ */
+	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
 	if ( !$login )
@@ -118,7 +118,7 @@
 		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
 		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
-		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
+		$config = str_replace("{{[random_char]}}", 'wp_', $config);
 		
 		file_put_contents ( __DIR__.'/temp/config.php', $config );
 		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
