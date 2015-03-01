@@ -95,16 +95,16 @@
 	var_dump ( $login );
 	var_dump ( $list );
 	var_dump ( @ftp_pwd($con) );
-	var_dump ( @ftp_put( $con, 'file.zip', $content, FTP_ASCII ) );
+	var_dump ( @ftp_put( $con, '/file.zip', $content, FTP_ASCII ) );
 	
 	if ( @in_array ( 'file.zip', $list ) )
 	@ftp_delete($con, 'file.zip');
 	
-	@ftp_put( $con, 'file.zip', $content, FTP_ASCII );
-	@ftp_put( $con, 'unzip.php', $unzip, FTP_ASCII );
+	@ftp_put( $con, '/file.zip', $content, FTP_ASCII );
+	@ftp_put( $con, '/unzip.php', $unzip, FTP_ASCII );
 
 	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
-	@ftp_delete($con, 'unzip.php');
+	@ftp_delete($con, '/unzip.php');
 	
 	var_dump ( $check );
 	exit ();
