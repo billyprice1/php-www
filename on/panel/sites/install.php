@@ -90,23 +90,23 @@
 	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
+	if ( !$login )
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up any connection to the remote directory.";
+		$template->redirect('/panel/sites/config?id='.$site['id']);
+	}
+	
 	// generate temporary files
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
 	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
 	ftp_pasv($con, true);
-	
-	var_dump ( @ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII ) );
-	ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
-	
-	@ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY );
-	@ftp_put( $con, 'unzip.php', __DIR__.'/temp/unzip.php', FTP_BINARY );
+	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
+	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
 
-	$check = @file_get_contents( "http://".$site['name'].".olympe.in/unzip.php" );
+	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
 	@ftp_delete($con, '/unzip.php');
-	
-	var_dump ( $check );
-	exit ();
 	
 	if ($check == 'done')
 	{
@@ -124,12 +124,6 @@
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
-	}
-	else
-	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up a connection to the remote directory.";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
 	}
 	
