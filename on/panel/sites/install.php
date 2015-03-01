@@ -91,8 +91,8 @@
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
 	// generate temporary files
-	file_put_contents ( __DIR__.'temp/archive.zip', $content );
-	var_dump ( file_put_contents ( __DIR__.'temp/unzip.php', $unzip ) );
+	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
+	var_dump ( file_put_contents ( __DIR__.'/temp/unzip.php', $unzip ) );
 	
 	var_dump ( @ftp_put( $con, 'file.zip', __DIR__.'/temp/archive.zip', FTP_BINARY ) );
 	
