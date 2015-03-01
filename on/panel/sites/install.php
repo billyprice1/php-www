@@ -120,9 +120,9 @@
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
 		$config = str_replace("{{[random_char]}}", random( 2 ), $config);
 		
-		file_put_contents ( __DIR__.'/temp/config', $config );
-		@ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config' , FTP_ASCII );	
-		unlink (  __DIR__.'/temp/config' );
+		file_put_contents ( __DIR__.'/temp/config.php', $config );
+		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
+		// unlink (  __DIR__.'/temp/config' );
 		
 		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
 		return;
