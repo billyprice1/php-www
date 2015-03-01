@@ -86,8 +86,8 @@
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	
-	/* ================ SET UP BASIC FTP CONNECTION ================ */
-	$con = @ftp_connect( 'ftp.olympe.in' );
+	/* ================ SET UP BASIC SFTP CONNECTION ================ */
+	$con = @ftp_connect( 'ftp.olympe.in', 22 );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
 	if ( !$login )
