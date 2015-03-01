@@ -94,6 +94,8 @@
 	var_dump ( $con );
 	var_dump ( $login );
 	var_dump ( $list );
+	var_dump ( @ftp_pwd($con) );
+	var_dump ( @ftp_put( $con, 'file.zip', $content, FTP_ASCII ) );
 	
 	if ( @in_array ( 'file.zip', $list ) )
 	@ftp_delete($con, 'file.zip');
