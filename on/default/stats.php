@@ -4,11 +4,30 @@ if( !defined('PROPER_START') )
     header("HTTP/1.0 403 Forbidden"); 
     exit; 
 } 
-$cache = __DIR__.'/cache/stats.txt';
+/*$cache = __DIR__.'/cache/stats.txt';
 $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement de 17h30 à 22h et de 6h à 10h (les périodes de rush)
 $file = fopen($cache, 'a+');
 $txt = fgets($file);
-$txt = explode('-', $txt);
+$txt = explode('-', $txt);*/
+$memcache = new Memcache;
+$memcache->connect('sys-001.vlan-102', 11211) or die ("Could not connect");
+
+$tmp_object = new stdClass;
+$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$tmp_object->sites = $sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$memcache->set('cache', $tmp_object, false, 3600) or 
+die ("Failed to save data at the server");
+
+$get_result = $memcache->get('cache');
+
+$users['count'] = $get_result->{'users'};
+$sites['count'] = $get_result->{'sites'};
+$dbs['count'] = $get_result->{'dbs'};
+$domains['count'] = $get_result->{'domains'};
+
+/*var_dump($get_result);
 if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
 	$users['count'] = $txt['1'];
@@ -34,8 +53,8 @@ else{
 		fseek($file, 0);
 		fputs($file, $txt);
 	}
-}
-fclose($file);
+}*/
+//fclose($file);
 switch( translator::getLanguage() )
 {
 	case 'FR':
