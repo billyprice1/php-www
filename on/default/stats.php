@@ -4,12 +4,12 @@ if( !defined('PROPER_START') )
     header("HTTP/1.0 403 Forbidden"); 
     exit; 
 } 
-/*$cache = __DIR__.'/cache/stats.txt';
+$cache = __DIR__.'/cache/stats.txt';
 $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement de 17h30 à 22h et de 6h à 10h (les périodes de rush)
 $file = fopen($cache, 'a+');
 $txt = fgets($file);
-$txt = explode('-', $txt);*/
-$memcache = new Memcache;
+$txt = explode('-', $txt);
+/*$memcache = new Memcache;
 $memcache->connect('sys-001.vlan-102', 11211) or die ("Could not connect");
 
 $tmp_object = new stdClass;
@@ -27,7 +27,7 @@ $sites['count'] = $get_result->{'sites'};
 $dbs['count'] = $get_result->{'dbs'};
 $domains['count'] = $get_result->{'domains'};
 
-/*var_dump($get_result);
+var_dump($get_result);*/
 if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
 	$users['count'] = $txt['1'];
@@ -53,8 +53,8 @@ else{
 		fseek($file, 0);
 		fputs($file, $txt);
 	}
-}*/
-//fclose($file);
+}
+fclose($file);
 switch( translator::getLanguage() )
 {
 	case 'FR':
