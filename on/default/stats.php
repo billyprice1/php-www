@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 } 
 $cache = __DIR__.'/cache/stats.txt';
 $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement de 17h30 à 22h et de 6h à 10h (les périodes de rush)
-$file = fopen($cache, 'a+');
+$file = fopen($cache, 'w+');
 $txt = fgets($file);
 $txt = explode('-', $txt);
 if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')

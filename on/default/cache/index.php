@@ -5,6 +5,6 @@
 	<title>Système de cache privée d'Olympe</title>
 </head>
 <body>
-	<h1>Sytsème de cache</h1>
+	<h1>Système de cache</h1>
 </body>
 </html>

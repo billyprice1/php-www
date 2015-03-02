@@ -8,10 +8,22 @@ if( !defined('PROPER_START') )
 
 require_once 'on/status/vendor/autoload.php';
 
-$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
-$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
-$issues = $issues['issues'];
+// projets.olympe.in status
+$url = 'https://projets.olympe.in';
+libxml_use_internal_errors(true);
+$doc = new DOMDocument();
+$doc->loadHTMLFile($url);
+libxml_clear_errors();
+$title = $doc->getElementsByTagName('title')->item(0);
+$chaine = $title->nodeValue;
+$dispo = "0";
 
+if ($chaine == "Espace de travail Olympe") {
+	$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
+	$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
+	$issues = $issues['issues'];
+	$dispo = "1";
+} 
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
@@ -20,19 +32,9 @@ $time = time();
 $random = md5(uniqid($time, true));
 $_SESSION[$random] = 1;
 
-$content = "
-		<div class=\"head-light\">
+$content = "<div class=\"head-light\">
 			<div class=\"container\">
-				<h1 class=\"dark\">{$lang['title']}</h1>
-			</div>
-		</div>
-		<div class=\"content\">
-";
-
-if( count($issues) > 0 ) {
-
-	$content .= "
-				<h2 class=\"dark\">{$lang['issues']}</h2>
+			<h2 class=\"dark\">{$lang['issues']}</h2>
 				
 				<table>
 					<tr>
@@ -43,9 +45,11 @@ if( count($issues) > 0 ) {
 						<th style=\"color: #a4a4a4;\">{$lang['date']}</th>
 						<th style=\"color: #a4a4a4;\">{$lang['status']}</th>
 						<th style=\"color: #a4a4a4;\">{$lang['updated']}</th>
-					</tr>";
-				
+					</tr>
+";
 
+if( count($issues) > 0 )
+{
 	foreach( $issues as $i )
 	{
 		$content .= "
@@ -60,15 +64,34 @@ if( count($issues) > 0 ) {
 					</tr>
 		";
 	}
+}
+else
+{
+	$content .= "
+				<tr>
+					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
+			";
+			
+	if ($chaine === false) {
+			$content .= $lang['intervention'];
+	}else{
+			$content .= $lang['unavailable'];
+	}
+	
+	$content .= "
+					</td>
+				</tr>
+	";
+
+}
 
 	$content .= "
-				</table>
-				<div style=\"height: 40px;\"></div>
-	";
-}
-	
-	
-$content .= "
+			</table>
+			<br /><br />
+			<h1 class=\"dark\">{$lang['title']}</h1>
+			</div>
+		</div>
+		<div class=\"content\">
 				<div class=\"left\">
 					<h4>{$lang['send']}</h4>
 					<p>{$lang['send_text']}</p>
