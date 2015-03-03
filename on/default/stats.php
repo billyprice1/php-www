@@ -10,17 +10,17 @@ $file = fopen($cache, 'w+');
 $txt = fgets($file);
 $txt = explode('-', $txt);*/
 $memcache = new Memcache;
-$memcache->connect('sys-001.vlan-102', 11211) or die ("Could not connect");
+$memcache->@connect('sys-001.vlan-102', 11211);
 
 $tmp_object = new stdClass;
 $tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $tmp_object->sites = $sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$memcache->set('cache', $tmp_object, false, 3600) or 
+$memcache->@set('cache', $tmp_object, false, 3600) or 
 die ("Failed to save data at the server");
 
-$get_result = $memcache->get('cache');
+$get_result = $memcache->@get('cache');
 
 $users['count'] = $get_result->{'users'};
 $sites['count'] = $get_result->{'sites'};
