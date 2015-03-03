@@ -44,29 +44,7 @@
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
-	
-	/* =========== TAKE LANGUAGE PREFERENCE INTO ACCOUNT =========== */ 
-	switch ($_COOKIE['language']) {
-		case 'FR':
-			$_lang = "fr_FR";
-			break;
-		case 'EN':
-			$_lang = "en_EN";
-			break;
-		case 'DE':
-			$_lang = "de_DE";
-			break;
-		case 'IT':
-			$_lang = "it_IT";
-			break;
-		case 'ES':
-			$_lang = "es_ES";
-			break;
-		default:
-			$_lang = "fr_FR";
-	}
-	
-	$content = file_get_contents( __DIR__.'/import/wordpress-'.$_lang.'.zip' );
+	$content = file_get_contents( __DIR__.'/import/wordpress-en_EN.zip' );
 	
 		// write config file on remote directory
 		$conf = "
@@ -114,7 +92,7 @@
 	
 	if ($check == 'done')
 	{
-		$config = file_get_contents( __DIR__."/import/wp-config.php" );
+		$config = file_get_contents( __DIR__."/import/setup-config.php" );
 		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
 		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
