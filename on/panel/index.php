@@ -25,17 +25,26 @@ foreach( $quotas as $q )
 	}
 }
 
-$percent = $quota['used']*100/$quota['max'];
+if($quota['used'] == '' && $quota['max'] == '') {
+	
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error_quotas'];
+	template::redirect('/about/contact');
+	
+} else {
+	
+	$percent = $quota['used']*100/$quota['max'];
 
-if( $quota['used'] >= 1024 )
-	$quota['used'] = round($quota['used']/1024, 2) . " {$lang['gb']}";
-else
-	$quota['used'] = "{$quota['used']} {$lang['mb']}";
+	if( $quota['used'] >= 1024 )
+		$quota['used'] = round($quota['used']/1024, 2) . " {$lang['gb']}";
+	else
+		$quota['used'] = "{$quota['used']} {$lang['mb']}";
 
-if( $quota['max'] >= 1024 )
-	$quota['max'] = round($quota['max']/1024, 2) . " {$lang['gb']}";
-else
-	$quota['max'] = "{$quota['max']} {$lang['mb']}";
+	if( $quota['max'] >= 1024 )
+		$quota['max'] = round($quota['max']/1024, 2) . " {$lang['gb']}";
+	else
+		$quota['max'] = "{$quota['max']} {$lang['mb']}";
+}
 	
 $content = "
 	<div class=\"panel\">
