@@ -25,7 +25,7 @@ foreach( $quotas as $q )
 	}
 }
 
-if($quota['used'] == '' && $quota['max'] == '') {
+/*if($quota['used'] == '' && $quota['max'] == '') {
 	
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
 	$_SESSION['MESSAGE']['TEXT']= $lang['error_quotas'];
@@ -44,7 +44,7 @@ if($quota['used'] == '' && $quota['max'] == '') {
 		$quota['max'] = round($quota['max']/1024, 2) . " {$lang['gb']}";
 	else
 		$quota['max'] = "{$quota['max']} {$lang['mb']}";
-}
+}*/
 	
 $content = "
 	<div class=\"panel\">
