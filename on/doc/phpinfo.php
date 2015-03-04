@@ -8,4 +8,6 @@ if( !defined('PROPER_START') )
 
 phpinfo();
 
+echo "Test => ok";
+
 ?>
