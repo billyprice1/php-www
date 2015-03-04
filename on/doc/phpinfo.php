@@ -11,7 +11,7 @@ phpinfo();
 echo "Test Memcache<br/>\n";
 
 $memcache = new Memcache;
-$memcache->connect('memcache', 11211) or die ("Connexion impossible");
+$memcache->connect('memcache', 11211);
 $version = $memcache->getVersion();
 
 echo "Adresse du serveur : memcache <br/>\n";
