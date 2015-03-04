@@ -11,7 +11,7 @@ phpinfo();
 echo "Test Memcache";
 
 $memcache = new Memcache;
-$memcache->connect('localhost', 11211) or die ("Connexion impossible");
+$memcache->connect('memcache', 11211) or die ("Connexion impossible");
 $version = $memcache->getVersion();
 echo "Version du serveur : ".$version."<br/>\n";
 
