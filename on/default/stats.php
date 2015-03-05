@@ -16,7 +16,7 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 }
 elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
-	$memcache = new Memcache;
+	/*$memcache = new Memcache;
 	$memcache->connect('memcache', 11211);
 
 	$tmp_object = new stdClass;
@@ -32,7 +32,25 @@ elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
 	$users['count'] = $get_result->{'users'};
 	$sites['count'] = $get_result->{'sites'};
 	$dbs['count'] = $get_result->{'dbs'};
-	$domains['count'] = $get_result->{'domains'};
+	$domains['count'] = $get_result->{'domains'};*/
+
+if( !defined('PROPER_START') )
+{
+	header("HTTP/1.0 403 Forbidden");
+	exit;
+}
+
+phpinfo();
+
+echo "Test Memcache<br/>\n";
+
+$memcache = new Memcache;
+$memcache->connect('memcache', 11211);
+$version = $memcache->getVersion();
+
+echo "Adresse du serveur : memcache <br/>\n";
+echo "Version du serveur : ".$version."<br/>\n";
+exit();
 }
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
