@@ -70,7 +70,7 @@ $content = "
 			<div class=\"sitescontent\">
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
-				$display = rand(0, 3);
+				$display = rand(0, 2);
 				
 				switch ($display) {
 				case 0:
@@ -87,12 +87,6 @@ $content = "
 					break;
 				case 2:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
-					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
-					break;
-				case 3:
-					$content .= "
 					<img style=\"display: block; float: left; margin: 5px;\" width=\"25px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
 					<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
 					<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
@@ -106,8 +100,14 @@ $content = "
 						</a>
 						<div class=\"fb-share-button\" data-href=\"https://www.olympe.in\" data-layout=\"button\" style=\"top: -5px; margin-left: 20px;\"></div>
 					</div>";
-					
 					break;
+				case 3:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					break;
+
 				}
 
 				$content .="
