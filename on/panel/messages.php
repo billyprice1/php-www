@@ -103,7 +103,7 @@ $content .= "
 							<span class=\"help-block\">{$lang['quota_select']}</span>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto req\" type=\"text\" style=\"width: 400px;\" name=\"max\" placeholder=\"{$lang['number']}\" />
+							<input class=\"auto req\" type=\"number\" style=\"width: 400px;\" name=\"max\" placeholder=\"{$lang['number']}\" />
 							<span class=\"help-block\">{$lang['number_help']}</span>
 						</fieldset>
 						<fieldset>
