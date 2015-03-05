@@ -9,24 +9,31 @@ $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement d
 $file = fopen($cache, 'w+');
 $txt = fgets($file);
 $txt = explode('-', $txt);*/
-$memcache = new Memcache;
-$memcache->@connect('memcache', 11211);
+if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' || $_SERVER["HTTP_HOST"] == 'local.olympe.in'){
+	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+}
+elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
+	$memcache = new Memcache;
+	$memcache->connect('memcache', 11211);
 
-$tmp_object = new stdClass;
-$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$tmp_object->sites = $sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-$memcache->@set('cache', $tmp_object, false, 3600) or 
-die ("Failed to save data at the server");
+	$tmp_object = new stdClass;
+	$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$tmp_object->sites = $sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$memcache->set('cache', $tmp_object, false, 3600) or 
+	die ("Failed to save data at the server");
 
-$get_result = $memcache->@get('cache');
+	$get_result = $memcache->get('cache');
 
-$users['count'] = $get_result->{'users'};
-$sites['count'] = $get_result->{'sites'};
-$dbs['count'] = $get_result->{'dbs'};
-$domains['count'] = $get_result->{'domains'};
-
+	$users['count'] = $get_result->{'users'};
+	$sites['count'] = $get_result->{'sites'};
+	$dbs['count'] = $get_result->{'dbs'};
+	$domains['count'] = $get_result->{'domains'};
+}
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
