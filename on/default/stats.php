@@ -10,7 +10,7 @@ $file = fopen($cache, 'w+');
 $txt = fgets($file);
 $txt = explode('-', $txt);*/
 $memcache = new Memcache;
-$memcache->@connect('sys-001.vlan-102', 11211);
+$memcache->@connect('memcache', 11211);
 
 $tmp_object = new stdClass;
 $tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
