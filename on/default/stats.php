@@ -1,6 +1,7 @@
 <?php
 $timestamp_debut = microtime(true);
-
+for ($i=0; $i < 100; $i++) { 
+	# code...
 if( !defined('PROPER_START') ) 
 { 
     header("HTTP/1.0 403 Forbidden"); 
@@ -95,6 +96,7 @@ $content = "
 ";
 
 echo $content; 
+}
 // timestamp en millisecondes de la fin du script
 $timestamp_fin = microtime(true);
  
