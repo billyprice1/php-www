@@ -17,7 +17,7 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 }
 elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
 	$memcache = new Memcache;
-	$memcache->connect('memcache', 11211);
+	$memcache->connect('sys-002.vlan-001', 11211);
 
 	$tmp_object = new stdClass;
 	$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
