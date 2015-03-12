@@ -21,7 +21,6 @@
 	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
 
-	
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
@@ -92,17 +91,18 @@
 	
 	if ($check == 'done')
 	{
-		$config = file_get_contents( __DIR__."/import/setup-config.php" );
+		$config = file_get_contents( __DIR__."/import/wp-config.php" );
 		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
 		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
 		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
+		$config = str_replace("{{[salt]}}", file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/') , $config);
 		$config = str_replace("{{[random_char]}}", 'on_', $config);
 		
 		file_put_contents ( __DIR__.'/temp/config.php', $config );
-		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-admin/setup-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
+		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
 		unlink (  __DIR__.'/temp/config.php' );
 		
-		header("Location: http://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/setup-config.php");
+		header("Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/install.php?step=1");
 		return;
 	}
 	else if ($check == 'error')
