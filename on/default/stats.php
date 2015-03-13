@@ -9,7 +9,7 @@ $expire = time() -3600 ; //cache une heure à voir si je l'active entièrement d
 $file = fopen($cache, 'w+');
 $txt = fgets($file);
 $txt = explode('-', $txt);*/
-if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' || $_SERVER["HTTP_HOST"] == 'local.olympe.in'){
+/*if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' || $_SERVER["HTTP_HOST"] == 'local.olympe.in'){
 	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
@@ -33,7 +33,41 @@ elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
 	$sites['count'] = $get_result->{'sites'};
 	$dbs['count'] = $get_result->{'dbs'};
 	$domains['count'] = $get_result->{'domains'};
-}
+}*/
+
+$time_start = microtime(true);
+
+$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+$time_end = microtime(true);
+$time_user = $time_end - $time_start;
+
+$time_start = microtime(true);
+
+$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+$time_end = microtime(true);
+$time_sites = $time_end - $time_start;
+
+$time_start = microtime(true);
+
+$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+$time_end = microtime(true);
+$time_dbs = $time_end - $time_start;
+
+$time_start = microtime(true);
+
+$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+$time_end = microtime(true);
+$time_domains = $time_end - $time_start;
+
+echo 'Temps user: '.$time_user.'<br />';
+echo 'Temps sites: '.$time_sites.'<br />';
+echo 'Temps dbs: '.$time_dbs.'<br />';
+echo 'Temps doamin: '.$time_domains.'<br />';
+
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
