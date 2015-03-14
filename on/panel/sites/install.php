@@ -77,7 +77,7 @@
 	$ch = curl_init();
 	curl_setopt( $ch, CURLOPT_URL, 'https://on.olympe.in/api.php');
 	curl_setopt( $ch, CURLOPT_POST, 1 );
-	curl_setopt( $ch, CURLOPT_POSTFIELDS, 'array='.base64_encode( $_push ) );
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, 'array='.$_push );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
 	
 	$_return = curl_exec( $ch );
