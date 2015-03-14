@@ -28,6 +28,7 @@
 		$_GLOBALS['APP']['PATH'] = '';
 		
 	/* ================ CLEAN UNUSED DATABASES ================ */
+	/*
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -74,7 +75,7 @@
 					 );
 	
 	$_push = serialize ( $_push );
-	/*
+	
 	$ch = curl_init();
 	curl_setopt( $ch, CURLOPT_URL, 'https://on.olympe.in/api.php');
 	curl_setopt( $ch, CURLOPT_POST, 1 );
