@@ -71,6 +71,7 @@
 	
 	var_dump ( $sftp );
 	var_dump ( $con );
+	var_dump ( function_exists ('ssh2_connect') );
 	
 	exit();
 	
