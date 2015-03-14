@@ -63,9 +63,16 @@
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
 	
-	/* ================ SET UP BASIC FTP CONNECTION ================ */
-	$con = @ftp_connect( 'ftp.olympe.in' );
-	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
+	/* ================ SET UP SECURE SFTP CONNECTION ================ */
+	$con = ssh2_connect( 'ftp.olympe.in', 22 );
+	ssh2_auth_password( $con, $site['name'], $_POST['pass']);
+
+	$sftp = ssh2_sftp( $con );
+	
+	var_dump ( $sftp );
+	var_dump ( $con );
+	
+	exit();
 	
 	if ( !$login )
 	{
@@ -78,12 +85,11 @@
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
 	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
-	ftp_pasv( $con, false );
-	ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
-	ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
+	ssh2_scp_send( $con, __DIR__.'/temp/archive.zip', '/file.zip' , 0644  );
+	ssh2_scp_send( $con, __DIR__.'/temp/unzip.php', '/unzip.php' , 0644  );
 
 	$check = file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
-	ftp_delete($con, '/unzip.php');
+	ssh2_sftp_unlink( $sftp, '/unzip.php' );
 	
 	/* ================ CLEAN UP ================ */
 	unlink (  __DIR__.'/temp/archive.zip' );
@@ -99,7 +105,7 @@
 		$config = str_replace("{{[random_char]}}", 'on_', $config);
 		
 		file_put_contents ( __DIR__.'/temp/config.php', $config );
-		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
+		ssh2_scp_send( $con, __DIR__.'/temp/config.php', $_GLOBALS['APP']['PATH'].'/wp-config.php' , 0644 );	
 		unlink (  __DIR__.'/temp/config.php' );
 		
 		header("Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/install.php?step=1");
