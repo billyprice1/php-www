@@ -84,7 +84,7 @@
 	$_return = curl_exec( $ch );
 	curl_close( $ch );
    
-   if ( $_return = '^_^' )
+   if ( $_return == '^_^' )
 		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
 	else
 	{
