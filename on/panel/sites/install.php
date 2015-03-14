@@ -28,7 +28,7 @@
 		$_GLOBALS['APP']['PATH'] = '';
 		
 	/* ================ CLEAN UNUSED DATABASES ================ */
-	/*
+	
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -82,19 +82,17 @@
 	curl_setopt( $ch, CURLOPT_POSTFIELDS, 'array='.$_push );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
 	
-	$_return = curl_exec( $ch );
+	$get = curl_exec( $ch );
 	curl_close( $ch );
 	
-	var_dump ( $_return );
-	
    
-   if ( $_return == '^_^' )
+   if ( $get == "^_^" )
 		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= $_return;	
+		$_SESSION['MESSAGE']['TEXT']= $get;	
 	}
-	*/
+	
 
 ?>
