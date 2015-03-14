@@ -80,10 +80,11 @@
 	curl_setopt( $ch, CURLOPT_POSTFIELDS, $_push );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
 	
-	$_return = curl_exec($post);
-	curl_close($post);
+	$_return = curl_exec( $ch );
+	curl_close( $ch );
    
 	var_dump( $_push );
+	var_dump( $_return );
 	/*
 	
 	if ( $_return == 'done')
