@@ -67,6 +67,9 @@
 	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
+	var_dump ($con);
+	var_dump ($login);
+	
 	if ( !$login )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
