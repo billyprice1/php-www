@@ -67,9 +67,6 @@
 	$con = @ftp_connect( 'ftp.olympe.in' );
 	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
 	
-	var_dump ($con);
-	var_dump ($login);
-	
 	if ( !$login )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
@@ -81,12 +78,12 @@
 	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
 	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
 	
-	ftp_pasv($con, true);
-	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
-	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
+	ftp_pasv( $con, true );
+	ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
+	ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
 
-	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
-	@ftp_delete($con, '/unzip.php');
+	$check = file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
+	ftp_delete($con, '/unzip.php');
 	
 	/* ================ CLEAN UP ================ */
 	unlink (  __DIR__.'/temp/archive.zip' );
