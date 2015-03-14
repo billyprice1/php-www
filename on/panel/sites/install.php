@@ -69,6 +69,7 @@
 	$_push = array ( 'unzip' => $_GLOBALS['_FILE']['UNZIP'],
 					 'connect' => $_POST['pass'],
 					 'site' => $_GLOBALS['APP']['SITE'],
+					 'path' => $_GLOBALS['APP']['PATH'],
 					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
 					 );
 	
