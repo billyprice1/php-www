@@ -83,6 +83,9 @@
 	
 	$_return = curl_exec( $ch );
 	curl_close( $ch );
+	
+	var_dump ( $_return );
+	/*
    
    if ( $_return == '^_^' )
 		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
@@ -91,5 +94,6 @@
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= $_return;	
 	}
+	*/
 
 ?>
