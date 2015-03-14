@@ -18,9 +18,10 @@
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
 	
 	
-	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
-
+	$_GLOBALS['APP']['VERSION'] = "4.1";
+	$_GLOBALS['APP']['SITE'] =  $site;
+	
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
@@ -43,6 +44,7 @@
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
+	
 	$content = file_get_contents( __DIR__.'/import/wordpress-en_EN.zip' );
 	
 		// write config file on remote directory
@@ -62,37 +64,16 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
+	$_GLOBALS['_FILE']['UNZIP'] = $unzip;
 	
-	/* ================ SET UP SECURE SFTP CONNECTION ================ */
-	$con = ssh2_connect( 'ftp.olympe.in', 22 );
-	ssh2_auth_password( $con, $site['name'], $_POST['pass']);
-
-	$sftp = ssh2_sftp( $con );
+	$_push = array ( 'unzip' => $_GLOBALS['_FILE']['UNZIP'],
+					 'connect' => $_POST['pass'],
+					 'site' => $_GLOBALS['APP']['SITE'],
+					 'database' => array ( 'name' => $_GLOBALS['APP']['DATABASE'], 'server' => '', 'password' => '' )
+					 );
 	
-	var_dump ( $sftp );
-	var_dump ( $con );
-	var_dump ( function_exists ('ssh2_connect') );
-	
-	exit();
-	
-	if ( !$login )
-	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up any connection to the remote directory.";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
-	}
-	
-	/* ================ GENERATE TEMPORARY FILES ================ */
-	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
-	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
-	
-	ssh2_scp_send( $con, __DIR__.'/temp/archive.zip', '/file.zip' , 0644  );
-	ssh2_scp_send( $con, __DIR__.'/temp/unzip.php', '/unzip.php' , 0644  );
-
-	$check = file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
-	ssh2_sftp_unlink( $sftp, '/unzip.php' );
-	
-	/* ================ CLEAN UP ================ */
+	var_dump( $_push );
+	/* ================ CLEAN UP ================ 
 	unlink (  __DIR__.'/temp/archive.zip' );
 	unlink (  __DIR__.'/temp/unzip.php' );
 	
@@ -117,7 +98,7 @@
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
-	}
+	} */
 	
 	function random($length = 15) 
 	{
