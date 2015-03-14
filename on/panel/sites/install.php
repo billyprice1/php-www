@@ -72,12 +72,21 @@
 					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
 					 );
 	
-	var_dump( $_push );
-	/* ================ CLEAN UP ================ 
-	unlink (  __DIR__.'/temp/archive.zip' );
-	unlink (  __DIR__.'/temp/unzip.php' );
+	$_push = serialize ( $_push );
 	
-	if ($check == 'done')
+	$ch = curl_init();
+	curl_setopt( $ch, CURLOPT_URL, 'https://on.olympe.in/api.php');
+	curl_setopt( $ch, CURLOPT_POST, true );
+	curl_setopt( $handle, CURLOPT_POSTFIELDS, $_push );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
+	
+	$_return = curl_exec($post);
+	curl_close($post);
+   
+	var_dump( $_push );
+	/*
+	
+	if ( $_return == 'done')
 	{
 		$config = file_get_contents( __DIR__."/import/wp-config.php" );
 		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
@@ -98,7 +107,8 @@
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
 		$template->redirect('/panel/sites/config?id='.$site['id']);
-	} */
+	}
+	*/
 	
 	function random($length = 15) 
 	{
