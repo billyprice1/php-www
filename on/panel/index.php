@@ -8,17 +8,21 @@ if( !defined('PROPER_START') )
 $time_start = microtime(true);
 $userinfo = api::send('self/user/list');
 $time_end = microtime(true);
-echo 'time userinfo: '.$time_end - $time_start.'<br />';
+$time = $time_end - $time_start;
+echo 'time userinfo: '.$time.'<br />';
 $userinfo = $userinfo[0];
 
 $time_start = microtime(true);
 $quotas =  api::send('self/quota/user/list');
 $time_end = microtime(true);
-echo 'time quota: '.$time_end - $time_start.'<br />';
+$time = $time_end - $time_start;
+echo 'time quota: '.$time.'<br />';
+
+$time = $time_end - $time_start;
 $time_start = microtime(true);
 $sites =  api::send('self/site/list');
 $time_end = microtime(true);
-echo 'time sites: '.$time_end - $time_start.'<br />';
+echo 'time sites: '.$time.'<br />';
 
 foreach( $quotas as $q )
 {
