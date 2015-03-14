@@ -92,7 +92,19 @@
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= $get;	
+		$template->redirect('/panel/sites/config?id=' . security::encode($_POST['id']));
 	}
+	
+	function random($length = 15) 
+	{
+			$characters = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
+			$charactersLength = strlen($characters);
+			for ($i = 0; $i < $length; $i++) {
+				$randomString .= $characters[rand(0, $charactersLength - 1)];
+			}
+			return $randomString;
+	} 
+	
 	
 
 ?>
