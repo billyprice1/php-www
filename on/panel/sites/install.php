@@ -74,7 +74,7 @@
 					 );
 	
 	$_push = serialize ( $_push );
-	
+	/*
 	$ch = curl_init();
 	curl_setopt( $ch, CURLOPT_URL, 'https://on.olympe.in/api.php');
 	curl_setopt( $ch, CURLOPT_POST, 1 );
@@ -85,7 +85,7 @@
 	curl_close( $ch );
 	
 	var_dump ( $_return );
-	/*
+	
    
    if ( $_return == '^_^' )
 		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
