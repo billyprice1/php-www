@@ -6,7 +6,6 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-phpinfo();
 
 echo "Test Memcache<br/>\n";
 
@@ -16,5 +15,9 @@ $version = $memcache->getVersion();
 
 echo "Adresse du serveur : memcache <br/>\n";
 echo "Version du serveur : ".$version."<br/>\n";
+
+
+phpinfo();
+
 
 ?>

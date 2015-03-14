@@ -18,15 +18,17 @@
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
 	
 	
-	$_GLOBALS['APP']['VERSION'] = "4.1";
 	$_GLOBALS['APP']['NAME'] = "wordpress";
-
+	$_GLOBALS['APP']['VERSION'] = "4.1";
+	$_GLOBALS['APP']['SITE'] =  $site;
+	
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
 		$_GLOBALS['APP']['PATH'] = '';
 		
 	/* ================ CLEAN UNUSED DATABASES ================ */
+	
 	foreach( $database as $d )
 	{
 		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
@@ -43,8 +45,7 @@
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
-	$content = file_get_contents( __DIR__.'/import/wordpress-en_EN.zip' );
-	
+		
 		// write config file on remote directory
 		$conf = "
 		; This is a configuration file linked to the quick installation
@@ -62,54 +63,34 @@
 	$unzip = str_replace("##PATH##", $_GLOBALS['APP']['PATH'], $unzip);
 	$unzip = str_replace("##FILE##", $conf, $unzip);
 	
+	$_GLOBALS['_FILE']['UNZIP'] = $unzip;
 	
-	/* ================ SET UP BASIC FTP CONNECTION ================ */
-	$con = @ftp_connect( 'ftp.olympe.in' );
-	$login = @ftp_login( $con, $site['name'], $_POST['pass']);
+	$_push = array ( 'unzip' => $_GLOBALS['_FILE']['UNZIP'],
+					 'connect' => $_POST['pass'],
+					 'site' => $_GLOBALS['APP']['SITE'],
+					 'path' => $_GLOBALS['APP']['PATH'],
+					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
+					 );
 	
-	if ( !$login )
+	$_push = serialize ( $_push );
+	
+	$ch = curl_init();
+	curl_setopt( $ch, CURLOPT_URL, 'https://on.olympe.in/api.php');
+	curl_setopt( $ch, CURLOPT_POST, 1 );
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, 'array='.$_push );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
+	
+	$get = curl_exec( $ch );
+	curl_close( $ch );
+	
+   
+   if ( $get == "^_^" )
+		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Cannot set up any connection to the remote directory.";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
-	}
-	
-	/* ================ GENERATE TEMPORARY FILES ================ */
-	file_put_contents ( __DIR__.'/temp/archive.zip', $content );
-	file_put_contents ( __DIR__.'/temp/unzip.php', $unzip );
-	
-	ftp_pasv($con, true);
-	@ftp_put( $con, '/file.zip', __DIR__.'/temp/archive.zip', FTP_ASCII );
-	@ftp_put( $con, '/unzip.php', __DIR__.'/temp/unzip.php', FTP_ASCII );
-
-	$check = @file_get_contents( "https://".$site['name'].".olympe.in/unzip.php" );
-	@ftp_delete($con, '/unzip.php');
-	
-	/* ================ CLEAN UP ================ */
-	unlink (  __DIR__.'/temp/archive.zip' );
-	unlink (  __DIR__.'/temp/unzip.php' );
-	
-	if ($check == 'done')
-	{
-		$config = file_get_contents( __DIR__."/import/wp-config.php" );
-		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
-		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
-		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
-		$config = str_replace("{{[salt]}}", file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/') , $config);
-		$config = str_replace("{{[random_char]}}", 'on_', $config);
-		
-		file_put_contents ( __DIR__.'/temp/config.php', $config );
-		ftp_put( $con, $_GLOBALS['APP']['PATH'].'/wp-config.php',  __DIR__.'/temp/config.php' , FTP_ASCII );	
-		unlink (  __DIR__.'/temp/config.php' );
-		
-		header("Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/install.php?step=1");
-		return;
-	}
-	else if ($check == 'error')
-	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
+		$_SESSION['MESSAGE']['TEXT']= $get;	
+		$template->redirect('/panel/sites/config?id=' . security::encode($_POST['id']));
 	}
 	
 	function random($length = 15) 
@@ -121,5 +102,7 @@
 			}
 			return $randomString;
 	} 
+	
+	
 
 ?>
