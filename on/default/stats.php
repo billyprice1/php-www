@@ -34,7 +34,6 @@ elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
 	$dbs = $get_result->{'dbs'};
 	$domains = $get_result->{'domains'};
 }
-print_r($users['count']);
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
 {
