@@ -29,10 +29,10 @@ elseif($_SERVER["HTTP_HOST"] == 'www.dev.olympe.in'){
 
 	$get_result = $memcache->get('cache');
 
-	$users['count'] = $get_result->{'users'};
-	$sites['count'] = $get_result->{'sites'};
-	$dbs['count'] = $get_result->{'dbs'};
-	$domains['count'] = $get_result->{'domains'};
+	$users = $get_result->{'users'};
+	$sites = $get_result->{'sites'};
+	$dbs = $get_result->{'dbs'};
+	$domains = $get_result->{'domains'};
 }
 print_r($users['count']);
 /*var_dump($get_result);*/
