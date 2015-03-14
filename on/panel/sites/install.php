@@ -84,41 +84,12 @@
 	$_return = curl_exec( $ch );
 	curl_close( $ch );
    
-	var_dump( $_return );
-	/*
-	
-	if ( $_return == 'done')
-	{
-		$config = file_get_contents( __DIR__."/import/wp-config.php" );
-		$config = str_replace("{{[database]}}", "{$database['name']}", $config);
-		$config = str_replace("{{[server]}}", "{$database['server']}", $config);
-		$config = str_replace("{{[password]}}", $_GLOBALS['APP']['PASSWORD'], $config);
-		$config = str_replace("{{[salt]}}", file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/') , $config);
-		$config = str_replace("{{[random_char]}}", 'on_', $config);
-		
-		file_put_contents ( __DIR__.'/temp/config.php', $config );
-		ssh2_scp_send( $con, __DIR__.'/temp/config.php', $_GLOBALS['APP']['PATH'].'/wp-config.php' , 0644 );	
-		unlink (  __DIR__.'/temp/config.php' );
-		
-		header("Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH']."/wp-admin/install.php?step=1");
-		return;
-	}
-	else if ($check == 'error')
+   if ( $_return = '^_^' )
+		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= "An error has occured. Files couldn't be extracted. ";
-		$template->redirect('/panel/sites/config?id='.$site['id']);
+		$_SESSION['MESSAGE']['TEXT']= $_return;	
 	}
-	*/
-	
-	function random($length = 15) 
-	{
-			$characters = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
-			$charactersLength = strlen($characters);
-			for ($i = 0; $i < $length; $i++) {
-				$randomString .= $characters[rand(0, $charactersLength - 1)];
-			}
-			return $randomString;
-	} 
 
 ?>
