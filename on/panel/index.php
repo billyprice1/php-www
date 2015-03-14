@@ -5,12 +5,20 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-
+$time_start = microtime(true);
 $userinfo = api::send('self/user/list');
+$time_end = microtime(true);
+echo $time_end - $time_start;
 $userinfo = $userinfo[0];
 
+$time_start = microtime(true);
 $quotas =  api::send('self/quota/user/list');
+$time_end = microtime(true);
+echo $time_end - $time_start;
+$time_start = microtime(true);
 $sites =  api::send('self/site/list');
+$time_end = microtime(true);
+echo $time_end - $time_start;
 
 foreach( $quotas as $q )
 {
