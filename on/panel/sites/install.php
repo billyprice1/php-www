@@ -83,7 +83,6 @@
 	$_return = curl_exec( $ch );
 	curl_close( $ch );
    
-	var_dump( $_push );
 	var_dump( $_return );
 	/*
 	
