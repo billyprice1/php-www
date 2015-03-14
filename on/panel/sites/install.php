@@ -45,9 +45,7 @@
 			
 	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
-	
-	$content = file_get_contents( __DIR__.'/import/wordpress-en_EN.zip' );
-	
+		
 		// write config file on remote directory
 		$conf = "
 		; This is a configuration file linked to the quick installation
