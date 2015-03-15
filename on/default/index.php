@@ -12,7 +12,7 @@ $content = "
 				<div id=\"homepage\">
 					<h1>{$lang['title']}</h1>
 					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
-					<p style=\"color:white\">{$lang['lock_signup']}</p>
+					
 				</div>
 				<br />
 ";
@@ -53,9 +53,9 @@ $content .= "
 					</form>
 				</div>
 			</div>
-			<!--<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
+			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
-					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
+					<!--<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
 							<input class=\"auto\" type=\"text\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"{$lang['email']}")."\" name=\"email\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
@@ -65,7 +65,8 @@ $content .= "
 							{$GLOBALS['lang']['conditions']}
 						</fieldset>
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
-					</form>
+					</form>-->
+						<p class=\"center\">{$lang['lock_signup']}</p>
 				</div>
 			</div>-->
 			<div class=\"lines\">
