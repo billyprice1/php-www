@@ -68,7 +68,7 @@ $content .= "
 					</form>-->
 						<p class=\"center\">{$lang['lock_signup']}</p>
 				</div>
-			</div>-->
+			</div>
 			<div class=\"lines\">
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
