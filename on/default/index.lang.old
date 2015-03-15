@@ -2,7 +2,7 @@
 title = "Solidarity and innovation"
 subtitle = "Free hosting service without ad and web applications."
 signup = "Register"
-login_now = "Login"
+login_now = "or login"
 username = "Username"
 password = "Password"
 login = "Login"
@@ -32,13 +32,11 @@ conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of 
 hosted = "Want to know our references ?"
 directory = "Search our index"
 
-lock_signup = "Following overcrowding, entries are temporarily closed. <br />They will resume when the infrastructure will again be able to welcome a new member. <br />We apologize also for the gene caused.";
-
 [ES]
 title = "Solidaridad e Innovación"
 subtitle = "Web hosting sin publicidad y servicios afiliados."
 signup = "Registrarse"
-login_now = "Conectarse"
+login_now = "o conectarse"
 username = "Usuario"
 password = "Contraseña"
 login = "Conectarse"
@@ -67,13 +65,11 @@ conditions = "He leído y acepto las <a href='/on/documents/Olympe-CGS-FR.pdf'>C
 hosted = "¿Quiénes son las personas y las organizaciones alojados en Olympe?"
 directory = "Ver el directorio"
 
-lock_signup = "Following overcrowding, entries are temporarily closed. <br />They will resume when the infrastructure will again be able to welcome a new member. <br />We apologize also for the gene caused.";
-
 [FR]
 title = "Solidarité et Innovation"
 subtitle = "Hébergement gratuit sans publicité et services associés."
 signup = "S'inscrire"
-login_now = "Se connecter"
+login_now = "ou se connecter"
 username = "Utilisateur"
 password = "Mot de passe"
 login = "Connexion"
@@ -106,13 +102,11 @@ conditions = "J'ai lu et j'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'
 hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
 directory = "Consultez notre annuaire"
 
-lock_signup = "Suite à une trop grande affluence, les inscriptions sont momentanément fermé.<br />Elles reprendront lorsque l'infrastructure sera de nouveau apte à accueillir de nouveau membre.<br />Nous nous excusons par ailleurs pour le gène occasionné."
-
 [DE]
 title = "Solidarität und Innovation"
 subtitle = "Free hosting ohne Werbung und verwandte Dienstleistungen."
 signup = "Registrieren"
-login_now = "Sich anmelden"
+login_now = "oder sich anmelden"
 username = "Benutzername"
 password = "Passwort"
 login = "Login"
@@ -139,14 +133,11 @@ conditions = "Ich habe <a href='/on/documents/Olympe-CGS-FR.pdf'>die allgemeinen
 hosted = "Möchten Sie unsere Referenzen erfahren?"
 directory = "Sehen Sie unser Verzeichnis"
 
-lock_signup = "Following overcrowding, entries are temporarily closed. <br />They will resume when the infrastructure will again be able to welcome a new member. <br />We apologize also for the gene caused.";
-
-
 [IT]
 title = "Solidarietà e innovazione"
 subtitle = "Servizio gratuito di hosting senza pubblicità e applicazioni web."
 signup = "Registrati"
-login_now = "Accedi"
+login_now = "o accedi"
 username = "Username"
 password = "Password"
 login = "Login"
@@ -174,5 +165,3 @@ logged = "Connesso come"
 conditions = "Accetto le <a href='/on/documents/Olympe-CGS-FR.pdf'>condizioni di utilizzo</a>."
 hosted = "Vuoi conoscere le nostre referenze ?"
 directory = "Cerca nella nostra directory"
-
-lock_signup = "Following overcrowding, entries are temporarily closed. <br />They will resume when the infrastructure will again be able to welcome a new member. <br />We apologize also for the gene caused.";

@@ -12,6 +12,7 @@ $content = "
 				<div id=\"homepage\">
 					<h1>{$lang['title']}</h1>
 					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
+					<p style=\"color:white\">{$lang['lock_signup']}</p>
 				</div>
 				<br />
 ";
@@ -26,7 +27,7 @@ if( $security->hasAccess('/panel') )
 else
 {
 	$content .= "
-				<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
+				<!--<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>-->
 				<span class=\"light\"><a href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a></span>
 	";
 }
@@ -52,7 +53,7 @@ $content .= "
 					</form>
 				</div>
 			</div>
-			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
+			<!--<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
 					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
@@ -66,7 +67,7 @@ $content .= "
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
 					</form>
 				</div>
-			</div>
+			</div>-->
 			<div class=\"lines\">
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
@@ -129,12 +130,12 @@ $content .= "
 					</blockquote>
 				</div>
 				<div class=\"separator light\"></div>
-				<div style=\"text-align: center;\">
+				<!--<div style=\"text-align: center;\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#signup').dialog('open'); return false;\" style=\"height: 22px; width: 200px; margin: 0 auto;\">
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['signup_now']}</span>
 					</a>
 					<p>{$lang['help']}</p>
-				</div>
+				</div>-->
 				<br />
 				<br />
 				<br />
