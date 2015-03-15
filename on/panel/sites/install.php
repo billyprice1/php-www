@@ -16,22 +16,29 @@
 		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	else
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
-	
-	
-	$_GLOBALS['APP']['NAME'] = "wordpress";
-	$_GLOBALS['APP']['VERSION'] = "4.1";
-	$_GLOBALS['APP']['SITE'] =  $site;
-	
+		
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
 		$_GLOBALS['APP']['PATH'] = '';
 		
+	switch ( $_POST['type'] ) {
+		case 'wordpress':			
+			$_GLOBALS['APP']['NAME'] = "wordpress";
+			$_GLOBALS['APP']['VERSION'] = "4.1";
+			break;
+		case 'joomla':
+			$_GLOBALS['APP']['NAME'] = "joomla";
+			$_GLOBALS['APP']['VERSION'] = "3.4";
+	}
+	
+	$_GLOBALS['APP']['SITE'] =  $site;
+		
 	/* ================ CLEAN UNUSED DATABASES ================ */
 	
 	foreach( $database as $d )
 	{
-		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && $d['desc'] == 'wordpress' )
+		if ( ( empty( $d['size'] ) || $d['size']  == 0 ) && ( $d['desc'] == 'wordpress' || $d['desc'] == 'joomla') )
 		{
 			api::send('self/database/del', array( 'database'=>  $d['name'] ));
 			$count++;
@@ -43,7 +50,7 @@
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
 
 			
-	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=>'wordpress', 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=> $_GLOBALS['APP']['NAME'], 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
 		
 		// write config file on remote directory
@@ -69,6 +76,7 @@
 					 'connect' => $_POST['pass'],
 					 'site' => $_GLOBALS['APP']['SITE'],
 					 'path' => $_GLOBALS['APP']['PATH'],
+					 'type' => $_GLOBALS['APP']['NAME'],
 					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
 					 );
 	
