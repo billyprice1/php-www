@@ -27,7 +27,7 @@ if( $security->hasAccess('/panel') )
 else
 {
 	$content .= "
-				<!--<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>-->
+				<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
 				<span class=\"light\"><a href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a></span>
 	";
 }
