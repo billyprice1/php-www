@@ -119,7 +119,14 @@ $content .= "
 						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/starbig-on.png\" alt=\"\" style=\"float: left; display: block;\" />
 						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">Wordpress 4.1</span>
 					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\" $('#install').dialog('open'); return false; \">{$lang['start']}</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\"$('#install').dialog('open'); $('#type').val('wordpress'); return false; \">{$lang['start']}</span>
+				</div>
+				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
+					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/joomla.png\" alt=\"\" style=\"float: left; display: block; margin-top: 2px; margin-left: 3px;\" />
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">Joomla 3.4</span>
+					</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\"$('#install').dialog('open'); $('#type').val('joomla'); return false; \">{$lang['start']}</span>
 				</div>
 				<br /><br />
 				<h2 class=\"dark\">{$lang['response']}</h2>
@@ -234,6 +241,7 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	
 	<div id=\"install\" class=\"floatingdialog\"><br />
 		<h3 class=\"center\">{$lang['install']}</h3>
 		<div id=\"form\">
@@ -241,6 +249,7 @@ $content .= "
 		<div class=\"form-small\">		
 			<form action=\"/panel/sites/install\" method=\"post\" class=\"center\">
 				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<input type=\"hidden\" name=\"type\" id=\"type\" value=\"\" />
 				<fieldset>
 					<input type=\"password\" name=\"pass\" style=\"color: #68686B;\" />
 					<span class=\"help-block\">{$lang['ftp_pass']}</span>
@@ -265,6 +274,7 @@ $content .= "
 			</form>
 		</div>
 		</div>
+		
 		<div id=\"note\" style=\"display:none; text-align: center; padding: 10px 0px 20px 0px;\"><br />
 			<img src=\"/on/images/anim_loading_16x16.gif\"></img><br /><br />
 			<span style=\"font-size: 12px; \">{$lang['wait']}</span><br /><br />
