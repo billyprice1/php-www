@@ -9,8 +9,11 @@ if( !defined('PROPER_START') )
 $content = "
 			<div class=\"head\">
 				<br />
-				<h1>{$lang['title']}</h1>
-				<h2 style=\"margin: 15px 0 15px 0;\">{$lang['subtitle']}</h2>
+				<div id=\"homepage\">
+					<h1>{$lang['title']}</h1>
+					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
+					
+				</div>
 				<br />
 ";
 
@@ -52,7 +55,7 @@ $content .= "
 			</div>
 			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
-					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
+					<!--<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
 							<input class=\"auto\" type=\"text\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"{$lang['email']}")."\" name=\"email\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
@@ -62,7 +65,8 @@ $content .= "
 							{$GLOBALS['lang']['conditions']}
 						</fieldset>
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
-					</form>
+					</form>-->
+						<p class=\"center\">{$lang['lock_signup']}</p>
 				</div>
 			</div>
 			<div class=\"lines\">
@@ -167,97 +171,6 @@ $content .= "
 				});
 			</script>
 ";
-
-
-/* -- CHRISTMAS -- */
-$content .= "
-			<div class=\"snowBackground\">&nbsp;</div>
-			<div class=\"tree\"></div>
-			<div class=\"snow\">&nbsp;</div>
-			<div class=\"snowman\">&nbsp;</div>
-			<script src=\"/{$GLOBALS['CONFIG']['SITE']}/js/christmas/jQuery.snow.min.js\" type=\"text/javascript\"></script>
-			<script type=\"text/javascript\">
-				$(document).ready( function(){
-					$.fn.snow({
-						minSize: 5,
-						maxSize: 25,
-						newOn: 350,
-						flakeColor: '#EEE'
-					});
-					
-					// Click snowman to expand
-					$('.snowman').click(function() {
-						$(this).toggleClass('expanded');
-					});
-				});
-			</script>
-			
-			<style>
-			.tree {
-				background: url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/tree.png) bottom left no-repeat;
-				width: 219px;
-				height: 193px;
-				position: absolute;
-				top: 0;
-				left: -10px;
-				animation: wind 4s linear 2s infinite alternate;
-				transform-origin: top left;
-				transform: rotate(-3deg);
-			}
-			
-			@keyframes wind {
-				0%   {transform: rotate(-3deg);}
-				50%  {transform: rotate(3deg);}
-				100% {transform: rotate(-3deg);}
-			}
-			
-			.snowBackground, .snow {
-				background: transparent url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/snow-bg.png) bottom left repeat-x;
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 40px;
-				z-index: 20;
-			}
-			
-			.snow {
-				background: transparent url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/snow.png);
-				z-index: 23;
-			}
-				
-
-			.snowman {
-				width: 187px;
-				height: 246px;
-				background: url(/{$GLOBALS['CONFIG']['SITE']}/images/christmas/snowman.png) 0 0 no-repeat;
-				position: fixed;
-				bottom: -120px;
-				right: 50px;
-				z-index: 22;
-				-webkit-transition: all 500ms ease-in-out;
-				-moz-transition: all 500ms ease-in-out;
-				-ms-transition: all 500ms ease-in-out;
-				-o-transition: all 500ms ease-in-out;
-				transition: all 500ms ease-in-out;
-				cursor: pointer;
-				animation: shake 4s linear 2s infinite alternate;
-				transform-origin: bottom center;
-			}
-			
-			@keyframes shake {
-				0%   {transform: rotate(0deg);}
-				50%  {transform: rotate(3deg);}
-				100% {transform: rotate(-3deg);}
-			} 
-			
-			.snowman.expanded {
-				bottom: 0;
-				height: 235px;
-			}
-			</style>
-";
-
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);
 

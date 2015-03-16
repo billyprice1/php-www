@@ -1,4 +1,15 @@
 [EN]
+title = "Aid, recruitment and funding"
+
+you = "We need you !"
+you_text = "Olympe is currently looking for new members to her team of administration and development. It is of course about voluntary and remote work, but if you are interested in infrastructure technologies,
+the web development or the community interactions, you can <a href='/about/contact'>contact us</a> by explaining your approach.
+<br /><br />As a team member, you become fully adherent to Olympe association and therefore you have the opportunity to go represent the association at trade shows or conferences."
+logo = "Logos and goodies"
+logo_text = "Where possible, feel free to view our <a href='/org/press'>logos</a> on your site, this allows us to be more visible, to continue our development and improvement of our services."
+donation = "Donate"
+donation_text = "Olympe is a non-profit organization self-funded by its members and partners. It is fully independent and continues to invest to maintain and expand its infrastructure. 
+You are a regular user of our services ? Feel free to participate in your scale to finance our activities."
 
 
 [FR]

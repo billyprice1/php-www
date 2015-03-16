@@ -28,8 +28,14 @@ try
 }
 catch( Exception $e )
 {
-	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT'] = $lang['error'];	
+	
+	if ( strpos($e, "Domain already exists" ) !== false ) {
+		$_SESSION['MESSAGE']['TYPE'] = 'existdomain';
+		$_SESSION['MESSAGE']['TEXT'] = $lang['existdomain'];
+	}else{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT'] = $lang['error'];	
+	}
 }
 
 if( isset($_GET['redirect']) )

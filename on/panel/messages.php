@@ -11,7 +11,7 @@ $messages = api::send('self/message/list', array('topic'=>1));
 $content = "
 			<div class=\"panel\">
 				<div class=\"top\">
-					<div class=\"left\" style=\"padding-top: 5px;\">
+					<div class=\"left\" style=\"padding-top: 5px; width: 560px;\">
 						<h1 class=\"dark\">{$lang['title']}</h1>
 					</div>
 					<div class=\"right\">
@@ -44,8 +44,8 @@ if( count($messages) > 0 )
 						<tr>
 							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/messages/detail?id={$m['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/email.png\" /></a></td>
 							<td>{$m['title']}</td>
-							<td>".date($lang['dateformat'], $m['date'])."</a></td>
-							<td>".$lang['status_' . $m['status']]."</td>
+							<td style=\"width: 150px;\">".date($lang['dateformat'], $m['date'])."</a></td>
+							<td style=\"text-align:center; width: 150px;\">".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"/panel/messages/detail?id={$m['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"\" /></a>
 		";
@@ -103,7 +103,7 @@ $content .= "
 							<span class=\"help-block\">{$lang['quota_select']}</span>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto req\" type=\"text\" style=\"width: 400px;\" name=\"max\" placeholder=\"{$lang['number']}\" />
+							<input class=\"auto req\" type=\"number\" min=\"0\" style=\"width: 400px;\" name=\"max\" placeholder=\"{$lang['number']}\" />
 							<span class=\"help-block\">{$lang['number_help']}</span>
 						</fieldset>
 						<fieldset>

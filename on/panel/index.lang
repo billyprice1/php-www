@@ -25,8 +25,14 @@ help = "Olympe is an independent non-profit association and self-financing. Feel
 help_text = "help us"
 thanks = "Follow us on"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> and <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+share = "you can also share your <a href='https://www.olympe.in/about/contact' style='color:#5EA9DD'>ideas</a>"
+join_us = "We are hiring. If you are interested, <a href='https://www.olympe.in/about/contact' style='color:#2B6FAB'>drop us a line</a> :)"
+twitter = "Having a great experience ? Follow us on <a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>Twitter</a> !"
+like_us = "If you like Olympe, <span style='color:#959595'>this needs to be said</span> !"
+twitter_text = "I wanted a #free web #hosting to create my website, and I found it!" 
 reached_site_quota = "You have reached your quota. To create an additional site, you need to <a href='/panel/messages'>request an increase</a> of it. For more information, 
-please <a href='/doc/quotas'>read the documentation</a>." 
+please <a href='/doc/quotas'>read the documentation</a>."
+error_quotas = "An error occurred with your account (quotas). Please <a href='/about/contact'>contact us</a>."
 
 [ES]
 new = "Nuevo espacio"
@@ -55,8 +61,14 @@ help = "Olympe es una organización sin fines de lucro independiente y autofinan
 help_text = "ayudarnos"
 thanks = "Siguenos en"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> y <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+share = "puedes también compartir tus <a href='https://www.olympe.in/about/contact' style='color:#5EA9DD'>sugerencias</a>"
+join_us = "Estamos reclutando. Si estás interesado/a, no dudes en <a href='https://www.olympe.in/about/contact' style='color:#2B6FAB'>contactarnos</a> :)"
+twitter = "Te gusta Olympe ? Siguenos en <a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>Twitter</a> !"
+like_us = "Si te gusta Olympe, <span style='color:#959595'>tienes que decirlo !</span>"
+twitter_text = "Quería un web #hosting #gratuito para crear mi sitio web, y lo encontré!" 
 reached_site_quota = "Has llegado el número de sitios que puedes crear. Para crear un sitio adicional, es necesario <a href='/panel/messages'>solicitar un aumento</a> de esta cuota. 
 Para obtener más información, por favor <a href='/doc/quotas'>lea la documentación</a>."
+error_quotas = "Ha ocurrido un error con esta cuenta (cuotas). Por favor, <a href='/about/contact'>contactanos</a>."
 
 [FR]
 new = "Nouvel espace"
@@ -81,12 +93,25 @@ tippassword = "Mot de passe de l'accès SFTP pour ce site."
 gb = "Go"
 disk = "Espace disque :"
 disk2 = "Espace disque"
+reached_site_quota = "Vous avez atteint le quota de nombre de site qui vous est octroyé. Pour créer un site supplémentaire, vous devez <a href='/panel/messages'>demander une 
+augmentation</a> de ce quota."
 help = "Olympe est une association à but non lucratif indépendante et autofinancée. N'hésitez pas à"
 help_text = "nous aider"
 thanks = "Suivez-nous sur"
+<<<<<<< HEAD
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> et <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+share = "des idées d'améliorations ou des suggestions ? <a href='https://www.olympe.in/about/contact' style='color:#5EA9DD'>contactez-nous</a>"
+join_us = "Nous recrutons ! Si vous êtes intéressé(e), <a href='https://www.olympe.in/about/contact' style='color:#2B6FAB'>laissez nous un message</a> :)"
+twitter = "Satisfait d'Olympe ? N'hésitez pas à nous suivre <a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>sur Twitter</a> !"
+like_us = "Vous appréciez Olympe ? <span style='color:#959595'>Alors dites-le nous !</span>"
+twitter_text = "Je voulais un #hébergeur #gratuit pour créer mon site, et je l'ai trouvé !"
 reached_site_quota = "Vous avez atteint le quota de nombre de site qui vous est octroyé. Pour créer un site supplémentaire, vous devez <a href='/panel/messages'>demander une 
 augmentation</a> de ce quota." 
+thanks2 = "<a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>Twitter</a> et <a href='https://www.facebook.com/olympe.org' style='color:#5EA9DD'>Facebook</a>"
+share = "Des idées d'améliorations ou des suggestions ? <a href='https://www.olympe.in/about/contact' style='color:#5EA9DD'>N'hésitez pas à nous contacter !</a>"
+join_us = "Nous recrutons ! Si vous êtes intéressé(e), <a href='https://www.olympe.in/about/contact' style='color:#2B6FAB'>laissez-nous un message</a> :)"
+twitter = "Satisfait d'Olympe ? N'hésitez pas à nous suivre <a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>sur Twitter</a> !"
+error_quotas = "Une erreur est survenue avec votre compte (quotas). Merci de bien vouloir <a href='/about/contact'>nous contacter</a>."
 
 [IT]
 new = "Nuovo spazio"
@@ -115,4 +140,10 @@ help = "Olympe è un'organizzazione indipendente no-profit e autofinanziata. Sen
 help_text = "aiutarci"
 thanks = "Seguici su"
 thanks2 = "<a href='https://twitter.com/OlympeNet'>Twitter</a> e <a href='https://www.facebook.com/olympe.org'>Facebook</a>"
+share = "you can also share your <a href='https://www.olympe.in/about/contact' style='color:#5EA9DD'>ideas</a>"
+join_us = "We are hiring. If you are interested <a href='https://www.olympe.in/about/contact' style='color:#2B6FAB'>drop us a line</a> :)"
+twitter = "Having a great experience ? Follow us on <a href='https://twitter.com/OlympeNet' style='color:#5EA9DD'>Twitter</a> !"
+like_us = "If you like Olympe, <span style='color:#959595'>this needs to be said</span> !"
+twitter_text = "I wanted a #free web #hosting to create my website, and I found it!" 
 reached_site_quota = "Hai raggiunto la quota. Per creare un sito aggiuntivo, è necessario <a href='/panel/messages'>chiedere un aumento</a>."
+error_quotas = "An error occurred with your account (quotas). Please <a href='/about/contact'>contact us</a>."

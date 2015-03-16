@@ -1,4 +1,34 @@
 [EN]
+title = "Olympe in action"
+conferences = "Conferences"
+conferences_text = "Olympe Association progressively expanding its research, both in the field of new technologies, but also social science applied to new modes of communication. <br /><br />Some of our members have 
+opportunity to speak at trade shows or as part of seminars / discussions on the following themes :"
+conferences_text2 = "<span style='font-weight: bold;'>Generalist</span>
+<br /><br />
+<ul class='styled'>
+	<li>The web hosting (issues, data control, freedom ...)</li>
+	<li>The digital divide (disparity, accessibility, infrastructure ...)</li>
+	<li>Social networks (the concept of community sharing ...)</li>
+</ul><br />
+<span style='font-weight: bold;'>Technical</span>
+<br /><br />
+<ul class='styled'>
+	<li>Safety data hosting</li>
+	<li>Open source « cloud » infrastructure</li>
+	<li>Storage in mass architectures</li>
+</ul>"
+formations = "Formations"
+formations_text = "Building on its experience in the field of information technology, Olympe offers training courses for associations and non-profit organizations. 
+These courses are taught by recognized professionals and covers the following fields :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Office and editorial suites</li>
+	<li>Creating sites and publishing tools</li>
+	<li>Community management and use of social networks</li>
+	<li>Systems infrastructure, networking and telecom</li>
+	<li>IT security</li>
+</ul>"
+contact = "Contact us"
 
 
 [FR]
