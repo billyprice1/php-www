@@ -19,17 +19,17 @@ else
 {
 	$memcache = new Memcache;
 	$memcache->connect('memcache', 11211);
-
-	$tmp_object = new stdClass;
-	$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$memcache->set('cache', $tmp_object, false, 3600) or 
-	die ("Failed to save data at the server");
-
-	$get_result = $memcache->get('cache');
-
+	$get_result = $memcache->get('stats');
+	if(!$get_result){
+		$tmp_object = new stdClass;
+		$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$memcache->set('stats', $tmp_object, false, 86400) or 
+		die ("Failed to save data at the server");
+		$get_result = $memcache->get('stats');
+	}
 	$users = $get_result->{'users'};
 	$sites = $get_result->{'sites'};
 	$dbs = $get_result->{'dbs'};
