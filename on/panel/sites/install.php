@@ -30,6 +30,7 @@
 		case 'joomla':
 			$_GLOBALS['APP']['NAME'] = "joomla";
 			$_GLOBALS['APP']['VERSION'] = "3.4";
+			break;
 	}
 	
 	$_GLOBALS['APP']['SITE'] =  $site;
