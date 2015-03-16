@@ -16,6 +16,7 @@
 		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	else
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
+		
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
@@ -25,12 +26,16 @@
 		case 'wordpress':			
 			$_GLOBALS['APP']['NAME'] = "wordpress";
 			$_GLOBALS['APP']['VERSION'] = "4.1";
+			$_GLOBALS['REDIRECT']['HTTPS'] = true;
 			break;
 		case 'joomla':
 			$_GLOBALS['APP']['NAME'] = "joomla";
 			$_GLOBALS['APP']['VERSION'] = "3.4";
+			$_GLOBALS['REDIRECT']['HTTPS'] = false;
+			break;
 	}
 	
+	$_GLOBALS['REDIRECT']['HTTPS'] ? $_GLOBALS['REDIRECT']['HTTPS'] = 'https' : $_GLOBALS['REDIRECT']['HTTPS'] = 'http';
 	$_GLOBALS['APP']['SITE'] =  $site;
 		
 	/* ================ CLEAN UNUSED DATABASES ================ */
@@ -75,10 +80,7 @@
 					 'connect' => $_POST['pass'],
 					 'site' => $_GLOBALS['APP']['SITE'],
 					 'path' => $_GLOBALS['APP']['PATH'],
-<<<<<<< HEAD
 					 'type' => $_GLOBALS['APP']['NAME'],
-=======
->>>>>>> 00f20efc5d8d23bd08f168c4e3507de83bd7ea6a
 					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
 					 );
 	
@@ -92,10 +94,12 @@
 	
 	$get = curl_exec( $ch );
 	curl_close( $ch );
-	
-   
-   if ( $get == "^_^" )
-		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+		
+	if ( $get == "^_^" )
+	{
+		sleep( 2 );
+		header( "Location: ". $_GLOBALS['REDIRECT']['HTTPS']."://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+	}
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';

@@ -116,7 +116,7 @@ $content .= "
 				<h2 class=\"dark\">{$lang['install']}</h2>
 				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
 					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/wordpress.jpg\" alt=\"\" style=\"float: left; display: block; margin-left: -5px;\" width=\"35\" />
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/wordpress.jpg\" alt=\"\" style=\"float: left; display: block; margin-top: -3px;\" width=\"35\" />
 						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #747474;\">Wordpress 4.1</span>
 					</span>
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 16px; background-color: #f9f9f9; height: 37px; cursor: pointer;\" onclick=\"$('#install').dialog('open'); $('#type').val('wordpress'); return false; \">{$lang['start']}</span>
