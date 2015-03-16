@@ -1,20 +1,18 @@
-[EN]
-
+﻿[EN]
 title = "About Olympe"
 
 intro = "Who are we?"
 intro_text = "<span style='font-weight: bold;'>Olympe</span> is a non-profit organization whose main purpose is to improve <span style='font-weight: bold;'>accessibility to Information and communications technology</span>. 
 Olympe is reducing the cost of content publication by providing a <a href='/service/hosting'>quality free web hosting service</a>.
 <br /><br />
-Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
-sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
-compétence ou si vous avez des propositions de travaux."
+We are both of the projects (services, platforms, innovative developments,...) and actions (training, deployment, help...). We strongly desire to develop our field activities and
+are listening to the needs both individual and collective. Do not hesitate to <a href='/about/contact'> contact us </a> if you think that we can be useful in our field of
+jurisdiction or if you have suggestions of work."
 
-data = "Protection des données"
-data_text = "Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de vos données à caractère personnel, p.ex. en souscrivant à nos services, 
-listes de diffusions, forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données.
-Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe Network fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
-<span style='font-weight:bold;'>1237057</span>."
+data = "Privacy Policy"
+data_text = "Data collected on our site may send only the voluntary registration of your personal data, e.g.. by subscribing to our services,
+mailing lists, forums, using the contact form or other automated data processing systems. They will not be transferred to company business or other organization. 
+For this, the website Olympe submitted statements to the CNIL numbers <span style='font-weight:bold;'>1215047</span> and <span style='font-weight:bold;'>1237057</span>."
 
 follow = "Follow us"
 news = "News"
@@ -26,8 +24,42 @@ legal_text = "<i>Organization number (France)</i>: 20070028<br />
 <i>Secretary</i>: Thomas Brugmans<br />
 <i>Treasurer</i>: Yann Autissier"
 
-[FR]
+cookie = "Use of cookies"
+cookie_explain = "A cookie is a small piece of text sent to your browser by a website that you visit, where informations about your visit are recorded on the website: 
+your language, and some specific parameters  usefull to the use of services. Cookies play an important role in your navigation. Olympe use it, for example, to remember 
+your language preferences and analyze visits to our pages."
+cookie_no = "Do not use cookies"
 
+[ES]
+title = "Acerca de Olympe"
+
+intro = "¿Quiénes somos?"
+intro_text = "<strong>Olympe</strong> es una asociación sin fines de lucro, cuyo el objetivo principal es trabajar por un mejor <strong>acceso a las nuevas tecnologías de la información</strong>.
+Olympe reduce los gastos de la publicación en Internet, con un servicio de <a href='/service/hosting'>web hosting</a> gratuito.
+<br /><br />
+Llevamos varios proyectos (servicios, plataformas, desarrollos innovadores...) y <a href='/org'>acciones</a> (de formación, de ayuda...). Deseamos desarrollar nuestras actividades
+y escuchamos las necesidades tanto individuales como colectivas. No dudes en <a href='/about/contact'>contactarnos</a> si crees que puedes ser útil en nuestros ámbitos de competencia."
+
+data = "Política de privacidad"
+data_text = "Los datos recogidos en nuestro sitio son sólo debidos al registro voluntario de sus datos personales, por ejemplo, con la suscripción a nuestros servicios, listas de correo, foro, usando el formulario de contacto o otros sistemas automatizados de gestión de datos. Sus datos no se transfieren a cualquier empresa comercial o otra organización. Por eso, Olympe ha sido declarado a la CNIL : n°<strong>1215047</strong> y <strong>1237057</strong>."
+
+follow = "Siguenos"
+news = "Actualidad"
+behind = "En el principio..."
+behind_text = "La asociación Olympe fue fundada en 2007. Sus servicios son desarrollados y mantenidos por un equipo de voluntarios."
+legal = "Información legal"
+legal_text = "<i>N° de la asociación</i> : 20070028<br />
+<i>Presidente</i> : Samuel Hassine<br />
+<i>Secretario</i> : Thomas Brugmans<br />
+<i>Tesorero</i> : Yann Autissier"
+
+cookie = "Uso de los cookies"
+cookie_explain = "Un cookie es un pequeño archivo de texto que se envía a su navegador a través de la página web consultada, donde las informaciónes de su visita en el sitio se registra : 
+el idioma, y algunos parámetros específicos al uso de nuestros servicios. Están hechos principalmente para facilitar su navegación. Olympe les emplea, por ejemplo, para almacenar sus preferencias 
+lingüísticas y analizar las visitas en nuestras páginas."
+cookie_no = "No utilizar cookies"
+
+[FR]
 title = "A propos d'Olympe"
 
 intro = "Qui sommes-nous ?"
@@ -35,14 +67,14 @@ intro_text = "<span style='font-weight: bold;'>Olympe</span> est un organisme à
 technologies de l'information</span>. Olympe réduit notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d'hébergement 
 gratuit de qualité</a>.
 <br /><br />
-Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
+Nous menons à la fois des projets (services, plateformes, développements innovants...) et des <a href='/org'>actions</a> (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
 sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
 compétence ou si vous avez des propositions de travaux."
 
 data = "Protection des données"
 data_text = "Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de vos données à caractère personnel, p.ex. en souscrivant à nos services, 
 listes de diffusions, forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données.
-Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe Network fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
+Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
 <span style='font-weight:bold;'>1237057</span>."
 
 follow = "Suivez nous"
@@ -54,3 +86,73 @@ legal_text = "<i>Numéro de l'association</i> : 20070028<br />
 <i>Président</i> : Samuel Hassine<br />
 <i>Secrétaire</i> : Thomas Brugmans<br />
 <i>Trésorier</i> : Yann Autissier"
+
+cookie = "Utilisation des cookies"
+cookie_explain = "Un cookie est un petit fichier texte envoyé à votre navigateur via le site Web consulté, par lequel des informations relatives à votre visite sont enregistrées sur le site : 
+votre langue, et certains paramètres propre à l'utilisation des services. Ils visent en grande partie à faciliter votre navigation. Olympe les emploie, par exemple, pour mémoriser vos préférences 
+de langage, et analyser les visites de nos pages."
+cookie_no = "Ne plus utiliser les cookies"
+
+[DE]
+title = "Über Olympe"
+
+intro = "Wer sind wir ?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> ist eine Non-Profit-Organisation, deren Hauptziel die Arbeit für eine bessere <span style='font-weight: bold;'>Zugänglichkeit in den Nachrichten Informatik </span> ist
+Olympus reduziert die Kosten für die Veröffentlichung im Internet durch die Errichtung einer <a href='/service/hosting'> hosting-Service Kostenlose Qualität</a>.
+<br /><br />
+Wir sind sowohl der Projekte (Dienste, Plattformen, innovative Entwicklungen,...) und <a href='/org'>Maßnahmen</a> (Ausbildung, Bereitstellung, Hilfe...). Wir möchten unsere Feld-Aktivitäten stark entwickeln, deswegen
+werden wir immer auf Ihre individueller und kollektiver Bedürfnisse zuhören. Zögern Sie nicht, <a href='/about/contact'> Kontakt </a> Wenn Sie denken, dass wir iIhnene nützlich sein können 
+oder wenn Sie Vorschläge haben."
+
+data = "Privacy Policy"
+data_text = "Auf unserer Website erhobenen Daten können nur die freiwillige Registrierung Ihrer persönlichen Daten, z.B. senden. Abonnieren Sie unsere Dienstleistungen, 
+Mailinglisten, Foren, über das Kontaktformular oder andere automatisierte Datenverarbeitungssysteme.Sie werden auf keine Firma oder eine andere Organisation übertragen werden.
+Dazu verfasst die Olympus Website Anweisungen an die CNIL-Zahlen <span style='font-weight:bold;'>1215047</span> und <span style='font-weight:bold;'>1237057</span>."
+
+follow = "Folgen Sie uns"
+news = "News"
+behind = "Olympe Geschichte"
+behind_text = "Die Organisation ist 2007 gegründet worden. Seine Dienstleistungen werden entwickelt und unterhaltet durch eine <a href='/about/team'> Team </a> von Freiwilligen. "
+legal = "Rechtliche Hinweise"
+legal_text = "<i>Organisationsnummer (Frankreich) </i> : 20070028<br />
+<i>Präsident</i> : Samuel Hassine<br />
+<i>Sekretär</i> : Thomas Brugmans<br />
+<i>Schatzmeister</i> : Yann Autissier"
+
+cookie = "Verwendung von Cookies"
+cookie_explain = "Ein Cookie ist ein kleines Stück des Textes, die an Ihren Browser geschickt wird, von einer Website, die Sie besuchen, wo Informationen über Ihren Besuch auf der Website aufgenommen werden: : 
+Ihre Sprache, und einige nützliche spezifische Parameter für die Nutzung der Dienste. Cookies spielen eine wichtige Rolle in Ihrer Navigation. Olympe verwendet diese, z. B. zu Errinerung 
+Ihre Spracheinstellungen und Analisierung Besuche auf unseren Seiten "
+
+cookie_no = "Cookies nicht verwenden"
+
+[IT]
+title = "Su Olympe"
+
+intro = "Chi siamo?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> è un'organizzazione non a scopo di lucro il cui obbiettivo principale è quello di migliorare <span style='font-weight: bold;'>l'accessibilitò alle tecnologie di informazione e comunicazione</span>. 
+Olympe favorisce i contenuti dei vostri siti fornendo un <a href='/service/hosting'>servizio gratuito di hosting</a>.
+<br /><br />
+Provvediamo a tutto (servizi, piattaforme, sviluppo e innovazione,...) e alle operazioni (insegnamento, sviluppo, aiuto...). Abbiamo il desiderio di sviluppare i campi delle nostre attività e
+siamo sempre attenti ad ascoltare i bisogni individuali e collettivi. Non esitate a <a href='/about/contact'>contattarci</a> se pensate che possiamo esservi utili in ambito
+giuridico o se avete sugerimenti per la piattaforma"
+
+data = "Politica sulla Privacy"
+data_text = "Le informazioni che vengono fornite su questa piattaforma, come i vostri dati personali, ecc attraverso la registrazione, le email, i forum o utilizzando il form di contatto sono gestite automaticamente dal sistema. Non saranno utilizzate a fini commerciali o trasferite a terzi.
+Per questo, la piattaforma Olympe fornisce le dichiarazioni ai numeri CNIL <span style='font-weight:bold;'>1215047</span> e <span style='font-weight:bold;'>1237057</span>"
+
+follow = "Seguici"
+news = "News"
+behind = "La storia di Olympe"
+behind_text = "L'organizzazione Olympe è stata fondata nel 2007. I servizi sono sviluppati e mantenuti da una <a href='/about/team'>squadra</a> di volontari"
+legal = "Informazioni legali"
+legal_text = "<i>Numero organizzazione (sede in Francia)</i>: 20070028<br />
+<i>Presidente</i>: Samuel Hassine<br />
+<i>Segretario</i>: Thomas Brugmans<br />
+<i>Tesoriere</i>: Yann Autissier"
+
+cookie = "Uso dei cookies"
+cookie_explain = "Un cokie è una piccola parte di testo inviata al tuo browser da un sito che visiti, in cui sono registrate delle informazioni riguardanti la tua visita: 
+la tua lingua, e altri parametri utili all'uso del servizio. I cookies giocano un ruolo importane nella navigazione. Olympe li usa, per esempio, per ricordare 
+la tua lingua e per analizzare le visite alle nostre pagina"
+cookie_no = "Non usare i cookies"

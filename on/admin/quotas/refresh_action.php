@@ -6,11 +6,11 @@ if( !defined('PROPER_START') )
         exit;
 }
 
-api::send('user/qcompute', array('user'=>$_GET['id']));
+api::send('user/qcompute', array('user'=>$_GET['id'], 'force'=>1));
 
 if( isset($_GET['redirect']) )
         template::redirect($_GET['redirect']);
 else
-        $template->redirect('/admin/users/detail?id=' . $_GET['id']);
+        $template->redirect('/admin/users/detail?id=' . $_GET['id'].'#quotas');
 
 ?>

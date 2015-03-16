@@ -53,11 +53,19 @@ input[type=button]:focus, input[type=image]:focus, input[type=submit]:focus {
 }
 
 input.auto {
-	color: #cccccc;
+	color: #CCC;
 }
 
 textarea.auto {
-	color: #cccccc;
+	color: #CCC;
+}
+
+input.auto[placeholder] {
+	color: #4C4C4C;
+}
+
+textarea.auto[placeholder] {
+	color: #4C4C4C;
 }
 
 form.center  input, form.center  select, form.center  textarea  {
@@ -210,7 +218,15 @@ form.center .help-block {
 	padding-top: 20px;
 }
 
-#delete-link {
+#delete-link, .delete-link {
+	background-color: #ffffff;
+	border-radius: 3px;
+	border: solid 1px #d3d3d3;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 30px 0px;
+	padding-top: 20px;
+}
+
+#preinfo, #report {
 	background-color: #ffffff;
 	border-radius: 3px;
 	border: solid 1px #d3d3d3;
@@ -301,4 +317,17 @@ form.center .help-block {
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 30px 0px;
 	padding-top: 20px;
 	padding-bottom: 30px;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+}
+:-moz-placeholder {
+	color: #666;
+}
+::-moz-placeholder {
+	color: #666;
+}
+:-ms-input-placeholder {
+	color: #666;
 }

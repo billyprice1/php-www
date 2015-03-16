@@ -1,0 +1,9 @@
+[EN]
+title = "Search"
+result = "Search results for "
+noresult = "No results, perhaps you should contact the <a href='https://community.olympe.in'>community</a> ?"
+
+[FR]
+title = "Rechercher"
+result = "Résultats de recherche pour "
+noresult = "Aucun résultat, peut-être devriez-vous vous adresser à la <a href='https://community.olympe.in'>communauté</a> ?"

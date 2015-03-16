@@ -6,6 +6,19 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/domains/domainname_blacklist.txt");
+$domain = htmlspecialchars(strtolower($_POST['domain']));
+
+foreach ($blocked as $line_num => $blocked_keyword) {
+	$blocked_keyword = trim($blocked_keyword);
+	if (strpos($domain, $blocked_keyword) !== false) {
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= $lang['blocked'];
+		$template->redirect('/panel/domains');
+		exit();
+	}
+}
+
 try
 {
 	if( $_POST['dir'] == $lang['folder'] )
@@ -16,7 +29,7 @@ try
 catch( Exception $e )
 {
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+	$_SESSION['MESSAGE']['TEXT'] = $lang['error'];	
 }
 
 if( isset($_GET['redirect']) )

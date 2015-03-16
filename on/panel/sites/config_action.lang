@@ -1,4 +1,24 @@
-[EN]
+﻿[EN]
+success = "Your site has been updated."
+error = "Fields \"Title\", \"Description\" and \"Category\" are required."
+passworderror = "The password and its confirmation do not match."
+
+[ES]
+success = "Tu sitio ha sido actualizado."
+error = "Los campos \"Título\", \"Descripción\" y \"Categoría\" son obligatorios."
+passworderror = "La contraseña y la confirmación no coinciden."
 
 [FR]
 success = "Votre site a bien été mis à jour."
+error = "Les champs \"Titre\", \"Description\" et \"Catégorie\" sont obligatoires."
+passworderror = "Le mot de passe et sa confirmation ne correspondent pas."
+
+[DE]
+success = "Ihre Webseite wurde upgedatet"
+error = "Felder \"Titel\", \"Zusammenfassung\" und \"Kategorie\" sind bindend."
+passworderror = "Password und Bestätigung sind nicht denselben."
+
+[IT]
+success = "Il tuo sito è stato aggiornato."
+error = "I campi \"Titolo\", \"Descrizione\" e \"Categoria\" sono obbligatori."
+passworderror = "La password e la conferma non corrispondono."

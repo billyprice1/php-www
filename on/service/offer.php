@@ -15,7 +15,7 @@ $content = "
 		<div class=\"content\">
 			<p>{$lang['intro']}</p>
 			<br />
-			<div style=\"width: 500px; float: left;\">
+			<div style=\"width: 650px; float: left;\">
 				<table>
 					<tr>
 						<th>{$lang['service']}</th>
@@ -64,7 +64,7 @@ $content = "
 					</tr>
 				</table>
 			</div>
-			<div style=\"width: 500px; float: right;\">
+			<div style=\"width: 400px; float: right;\">
 				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/apps.png\" alt=\"\" />
 			</div>
 			<div class=\"clear\"></div><br />

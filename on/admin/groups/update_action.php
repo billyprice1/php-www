@@ -7,9 +7,10 @@ if( !defined('PROPER_START') )
 }
 
 api::send('group/update', array('id'=>$_POST['id'], 'name'=>$_POST['name']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/group/detail?id=' . $_POST['id']);
+	template::redirect('/admin/groups/detail?id=' . $_POST['id']);
 
 ?>

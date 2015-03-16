@@ -7,6 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 $domains = api::send('self/domain/list');
+$sites = api::send('self/site/list');
 
 $content = "
 			<div class=\"panel\">
@@ -59,7 +60,7 @@ if( count($domains) > 0 )
 		
 		$content .= "
 						<tr>
-							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domains/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></td>
+							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domains/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></a></td>
 							<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
 							<td><span class=\"lightlarge\">{$arecord}</a></td>
 							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
@@ -90,7 +91,11 @@ $content .= "
 			</div>
 			<div id=\"new\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['new']}</h3>
-				<p style=\"text-align: center;\">{$lang['new_text']}</p>
+";
+if( count($sites) > 0 )
+{
+	$content .= "
+				<p style=\"text-align: justify;\">{$lang['new_text']}</p><hr /><br />
 				<div class=\"form-small\">		
 					<form action=\"/panel/domains/add_action\" method=\"post\" class=\"center\">
 						<fieldset>
@@ -99,15 +104,13 @@ $content .= "
 						</fieldset>
 						<fieldset>
 							<select name=\"subdomain\">";
-$sites = api::send('self/site/list');
-
-foreach( $sites as $s )
-{
-	$content .= "
+	foreach( $sites as $s )
+	{
+		$content .= "
 								<option value=\"{$s['name']}\">{$s['hostname']}</option>";
-}
+	}
 
-$content .= "							
+	$content .= "							
 							</select>
 							<span class=\"help-block\">{$lang['tipsite']}</span>
 						</fieldset>
@@ -120,6 +123,16 @@ $content .= "
 						</fieldset>
 					</form>
 				</div>
+	";
+}
+else
+{
+	$content .= "
+				<p style=\"text-align: center;\">{$lang['nosite']}</p>
+	";
+}
+
+$content.= "
 			</div>
 			<div id=\"delete\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['delete']}</h3>

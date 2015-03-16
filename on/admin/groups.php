@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 $groups = api::send('group/list');
 
 $content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -22,7 +22,7 @@ $content = "
 				</div>
 			</div>
 			<div class=\"clear\"></div><br />
-			<div class=\"content\">
+			<div class=\"container\">
 				<table>
 					<tr>
 						<th>{$lang['name']}</th>
@@ -35,15 +35,7 @@ foreach( $groups as $g )
 					<tr>
 						<td>{$g['name']}</td>
 						<td style=\"width: 100px; text-align: center;\">
-							<a href=\"/admin/groups/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>";
-
-	if( security::hasGrant('GROUP_DELETE') )
-	{
-		$content .= "
-											<a href=\"/admin/groups/del_action?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
-	}
-	
-	$content .= "
+							<a href=\"/admin/groups/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>
 						</td>
 					</tr>";
 }
@@ -61,15 +53,16 @@ if( security::hasGrant('GROUP_INSERT') )
 			<h3 class=\"center\">{$lang['add']}</h3>
 			<p style=\"text-align: center;\">{$lang['add_text']}</p>
 			<div class=\"form-small\">		
-			<form action=\"/admin/grant/add_action\" method=\"post\" class=\"center\">
-				<fieldset>
-					<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-					<span class=\"help-block\">{$lang['name_help']}</span>
-				</fieldset>
-				<fieldset>	
-					<input autofocus type=\"submit\" value=\"{$lang['create']}\" />
-				</fieldset>
-			</form>
+				<form action=\"/admin/groups/add_action\" method=\"post\" class=\"center\">
+					<fieldset>
+						<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<span class=\"help-block\">{$lang['name_help']}</span>
+					</fieldset>
+					<fieldset>	
+						<input autofocus type=\"submit\" value=\"{$lang['create']}\" />
+					</fieldset>
+				</form>
+			</div>
 		</div>";
 }
 

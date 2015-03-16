@@ -37,6 +37,22 @@ $content = "
 				</a>
 			</div>
 			<br /><br />
+			<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/techno/paris.png\" style=\"display: block; float: left; border-radius: 3px; padding: 10px; border: 1px solid #d1d1d1; margin: 0 20px 0 0;\" />
+			<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/techno/paris4.png\" style=\"display: block; float: left; border-radius: 3px; padding: 10px; border: 1px solid #d1d1d1; margin: 0 20px 0 20px;\" />
+			<div style=\"float: left; width: 370px;\">
+				<h2 class=\"dark\">{$lang['paris']}</h2>
+				<p>{$lang['paris_text']}</p>
+				<p>{$lang['paris_text2']}</p>
+			</div>
+			<div class=\"clear\"></div>	
+			<br /><br />
+			<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/techno/marseille.png\" style=\"display: block; float: right; border-radius: 3px; padding: 10px; border: 1px solid #d1d1d1; margin: 0 20px 0 0;\" />
+			<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/techno/marseille2.png\" style=\"display: block; float: right; border-radius: 3px; padding: 10px; border: 1px solid #d1d1d1; margin: 0 20px 0 20px;\" />
+			<h2 class=\"dark\">{$lang['marseille']}</h2>
+			<p>{$lang['marseille_text']}</p>
+			<p>{$lang['marseille_text2']}</p>
+			<div class=\"clear\"></div>	
+			<br /><br />		
 		</div>
 	</div>
 ";

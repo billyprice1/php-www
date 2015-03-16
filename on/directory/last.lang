@@ -1,4 +1,14 @@
-[EN]
+﻿[EN]
+last = "Latest websites added"
+
+[ES]
+last = "Últimos sitios añadidos"
 
 [FR]
 last = "Derniers sites ajoutés"
+
+[DE]
+last = "Neueste hinzugefügte Websites"
+
+[IT]
+last = "Ultimi siti web aggiunti"

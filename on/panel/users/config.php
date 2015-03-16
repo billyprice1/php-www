@@ -59,7 +59,7 @@ $content .= "
 					<h3 class=\"colored\">{$lang['redirections']}</h3>
 				</div>
 				<div style=\"float: right; width: 200px;\">
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#new-redirect').dialog('open');\" style=\"width: 22px; height: 22px; float: right;\">
+					<a class=\"button classic\" href=\"#\" onclick=\"$('#new-redirect').dialog('open'); return false;\" style=\"width: 22px; height: 22px; float: right;\">
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 					</a>
 				</div>
@@ -97,7 +97,7 @@ $content .= "
 					<h3 class=\"colored\">{$lang['alternates']}</h3>
 				</div>
 				<div style=\"float: right; width: 200px;\">
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#new-alias').dialog('open');\" style=\"width: 22px; height: 22px; float: right;\">
+					<a class=\"button classic\" href=\"#\" onclick=\"$('#new-alias').dialog('open'); return false;\" style=\"width: 22px; height: 22px; float: right;\">
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 					</a>
 				</div>

@@ -1,11 +1,29 @@
-[EN]
+﻿[EN]
 users = "users"
 databases = "databases and"
 sites = "websites"
 domains = "domains."
+
+[ES]
+users = "usuarios"
+databases = "bases de datos y"
+sites = "sitios web"
+domains = "nombre de dominios."
 
 [FR]
 users = "utilisateurs"
 databases = "bases de données et"
 sites = "sites Internet"
 domains = "noms de domaine."
+
+[DE]
+users = "Users"
+databases = "Datenbanken und"
+sites = "Webseiten"
+domains = "Domain-Namen."
+
+[IT]
+users = "utenti"
+databases = "databases e"
+sites = "siti web"
+domains = "domini."

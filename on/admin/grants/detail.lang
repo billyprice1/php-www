@@ -11,6 +11,7 @@ confirm_title = "Confirmation"
 groups = "Groups granted"
 action = "Actions"
 groupname = "Group name"
+update = "Update"
 
 [FR]
 title = "Détails du privilège"
@@ -25,3 +26,20 @@ confirm_title = "Confirmation"
 groups = "Groupes concernés"
 actions = "Actions"
 groupname = "Nom de groupe"
+update = "Modifier"
+
+[DE]
+title = "Informationen über Privilegen"
+rename = "Umbenennen"
+name = "Neuen Name"
+username = "Benutzername"
+users = "Benutzer beteiligt"
+revoke = "Privileg löschen"
+detail = "Details"
+confirm_text = "Sind Sie sicher, dass Sie dieses Privileg löschen möchten?"
+confirm_title = "Bestätigung"
+groups = "Betroffenen Gruppen"
+actions = "Aktionen"
+groupname = "Gruppe Name"
+update = "Bearbeiten"
+

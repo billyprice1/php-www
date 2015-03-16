@@ -6,15 +6,38 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$message = "
-Name: ".security::encode($_POST['name'])."
-Email: ".security::encode($_POST['email'])."
-Subjet: ".security::encode($_POST['subject'])."
+if( $security->hasAccess('/panel') )
+	$user = security::get('USER');
+else {
+	$user = utf8_decode(htmlspecialchars($_POST['account']));
+}
 
-Message: ".security::encode($_POST['message'])."
+if($_POST['email']=='' || $_POST['subject']=='' || $_POST['message']=='') {
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['empty_field'];
+	template::redirect('/about/contact');
+}
+
+if(! filter_var(security::encode($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['email_wrong'];
+	template::redirect('/about/contact');
+}
+
+$ip = $_SERVER['HTTP_X_REAL_IP'];
+$subject = utf8_decode(htmlspecialchars($_POST['subject']));
+
+$message = "
+Nom : ".utf8_decode(htmlspecialchars($_POST['name']))."
+Email : ".utf8_decode(htmlspecialchars($_POST['email']))."
+Sujet : {$subject}
+Compte : {$user}
+IP : {$ip}
+
+Message : ".utf8_decode(htmlspecialchars($_POST['message']))."
 ";
 
-mail("contact@olympe.in", "[Olympe] {$_POST['subject']}", $message, "From: ".security::encode($_POST['email']));
+mail("contact@olympe.in", "[Olympe] [Contact] {$subject}", $message, "From: ".security::encode($_POST['email']));
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['success'];

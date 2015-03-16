@@ -6,14 +6,14 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if( $_POST['name'] != $lang['name'] )
+if( $_POST['name'] != '' )
 {
 	$user = api::send('user/select', array('user'=>$_POST['name'], 'search'=>1));
 	
 	if( count($user) > 1 )
 	{
 		$content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -47,7 +47,7 @@ if( $_POST['name'] != $lang['name'] )
 							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
-	";
+			";
 		}
 	
 		$content .= "
@@ -57,21 +57,21 @@ if( $_POST['name'] != $lang['name'] )
 		";
 
 		$template->output($content);
-	}	
+	}
 	else if( count($user) == 1 )
-		$template->redirect('/admin/user/detail?id='.$user[0]['id']);
+		$template->redirect('/admin/users/detail?id='.$user[0]['id']);
 	else
-		template::redirect('/admin');
+		template::redirect('/admin?error=user');
 		
 }
-else if( $_POST['email'] != $lang['email'] )
+else if( $_POST['email'] != '' )
 {
 	$user = api::send('user/select', array('email'=>$_POST['email']));
 
 	if( count($user) > 1 )
 	{
 		$content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -105,7 +105,7 @@ else if( $_POST['email'] != $lang['email'] )
 							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
-	";
+			";
 		}
 	
 		$content .= "
@@ -115,25 +115,35 @@ else if( $_POST['email'] != $lang['email'] )
 		";
 
 		$template->output($content);
-	}	
+	}
 	else if( count($user) == 1 )
-		$template->redirect('/admin/user/detail?id='.$user[0]['id']);
+		$template->redirect('/admin/users/detail?id='.$user[0]['id']);
 	else
 		template::redirect('/admin');
 }
-else if( $_POST['site'] != $lang['site'] )
+else if( $_POST['site'] != '' )
 {
-	$site = api::send('site/select', array('site'=>$_POST['site']));
-	if( count($site) == 0 )
-			template::redirect('/admin');
+	try
+	{
+		$site = api::send('site/select', array('site'=>$_POST['site']));
+	}
+	catch(Exception $e )
+	{
+		template::redirect('/admin?error=site');
+	}
 
 	$template->redirect('/admin/users/detail?id='.$site[0]['user']['id']);
 }
-else if( $_POST['domain'] != $lang['domain'] )
+else if( $_POST['domain'] != '' )
 {
-	$domain = api::send('domain/select', array('domain'=>$_POST['domain']));
-	if( count($domain) == 0 )
-			template::redirect('/admin');
+	try
+	{
+		$domain = api::send('domain/select', array('domain'=>$_POST['domain']));
+	}
+	catch(Exception $e )
+	{	
+		template::redirect('/admin?error=domain');
+	}
 
 	$template->redirect('/admin/users/detail?id='.$domain[0]['user']['id']);
 }

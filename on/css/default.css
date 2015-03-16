@@ -3,6 +3,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	min-width: 1200px;
 }
 
 body {
@@ -18,8 +19,17 @@ body {
 	width: 100%;
 }
 
-b {
+b, strong {
 	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+hr {
+    border-color: #E1E1E1 #FFFFFF #FFFFFF;
+    border-style: solid none;
 }
 
 a {
@@ -42,6 +52,10 @@ a:focus, li:focus, ul:focus {
 
 iframe { 
 	overflow: hidden;
+}
+
+.center {
+	text-align: center;
 }
 
 @font-face {
@@ -269,6 +283,11 @@ h3 {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 0;
+}
+
+h3.bordered {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c5c5c5;
 }
 
 h3.center {
@@ -524,10 +543,6 @@ code {
 	line-height: 20px;
 }
 
-code span {
-	color: #81007f;
-}
-
 blockquote {
 	background: #f9f9f9;
 	border-left: 4px solid #ccc;
@@ -622,18 +637,18 @@ div.filluptime {
 
 img.photo {
 	display: block;
-	float: left;
+	margin: 0 auto;
 	padding: 10px;
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	margin-right: 10px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	-ms-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
+	width: 100px;
 }
 
 img.photo:hover {
@@ -685,4 +700,39 @@ ul.styled li {
 	margin: 5px 0 5px 0;
 	padding: 0 0 0 5px;
 	line-height: 20px;
+}
+
+ol {
+	list-style: decimal;
+	padding: 0;
+	margin: 0 0 0 15px;
+}
+
+ol li {
+	padding: 0 0 0 0;
+	margin: 0 0 15px 0;
+}
+
+#accept_cookie {
+    background-color: #F7F7F7;
+    bottom: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15) inset;
+    font-size: 13px;
+    height: 23px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+span.tag {
+    background-color: #de5711;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9em;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+
+span.tag.important {
+    background-color: #CC0000;
 }

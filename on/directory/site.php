@@ -9,6 +9,9 @@ if( !defined('PROPER_START') )
 $site = api::send('site/list', array('id'=>$_GET['id'], 'directory'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $site = $site[0];
 
+if(!$site)
+	template::redirect('/directory');
+
 $lang['TITLE'] = $lang['olympe'] . $site['title'];
 
 if( $security->hasAccess('/panel') )
@@ -55,8 +58,8 @@ $content .= "
 					<br />
 					<div style=\"background-color: #f2f2f2; width: 360px; height: 120px; padding: 8px 10px 10px 10px;\">
 						<div style=\"float: left; width: 150px; text-align: center;\">
-							<span style=\"font-size: 4em; text-align: center;\">".round($site['rating']['value'], 2)."</span>
-							<div class=\"bigstar\" data-score=\"{$site['rating']['value']}\"></div>
+							<span style=\"font-size: 4em; text-align: center;\">".round($site['rating']['rating'], 2)."</span>
+							<div class=\"bigstar\" data-score=\"{$site['rating']['rating']}\"></div>
 							<img style=\"display: inline-block;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/mini-user.png\" />
 							<span style=\"color: #a6a6a6; font-size: 12px;\">{$site['rating']['count']} {$lang['total']}</span>
 						</div>
@@ -103,7 +106,7 @@ $content .= "
 						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 						var disqus_developer = 0; // developer mode
 						var disqus_shortname = 'olympe'; // required: replace example with your forum shortname
-						var disqus_identifier = 'Site - {$site['title']}';
+						var disqus_identifier = 'Site - {$site['id']}';
 						var disqus_url = 'https://www.olympe.in/directory/site?id={$site['id']}';
 						/* * * DON'T EDIT BELOW THIS LINE * * */
 						(function() {
@@ -112,7 +115,6 @@ $content .= "
 							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 						})();
 					</script>
-					
 				</div>
 				<div class=\"clear\"><br /></div>
 			</div>
@@ -129,7 +131,7 @@ $content .= "
 						<span class=\"help-block\">{$lang['title_help']}</span>
 					</fieldset>
 					<fieldset>
-						<textarea class=\"auto\" style=\"width: 400px; height: 150px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
+						<textarea class=\"auto\" style=\"text-align: left; width: 400px; height: 150px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
 						<span class=\"help-block\">{$lang['content_help']}</span>
 					</fieldset>
 					<fieldset>	

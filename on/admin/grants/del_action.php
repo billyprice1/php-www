@@ -7,6 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 api::send('grant/del', array('id'=>$_GET['id']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else

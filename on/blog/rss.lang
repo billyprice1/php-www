@@ -1,6 +1,19 @@
-[EN]
+﻿[EN]
+channel = "News of the Olympe platform" 
+description = "The last ten blog posts of the Olympe association, free hosting without ads."
+
+[ES]
+channel = "Noticias de la plataforma Olympe" 
+description = "Los diez últimos mensajes del blog de ​​la asociación Olympe, web hosting gratuito y sin anuncios."
 
 [FR]
-
 channel = "Actualités du réseau Olympe" 
 description = "Les dix derniers billets du blog de l'association Olympe, hébergeur gratuit et sans publicité."
+
+[DE]
+channel = "Olympe Network News" 
+description = "Letzte zehn Blog-posts von Olympe, freie und kostenlose Werbung Hoster."
+
+[IT]
+channel = "Annunci & Aggiornamenti sulla piattaforma Olympe" 
+description = "Gli ultimi dieci post del blog dell'associazione Olympe, servizio gratuito senza pubblicità."

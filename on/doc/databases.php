@@ -6,70 +6,36 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+require_once('on/doc/menu.php');
+
 $content = "
 		<div class=\"head-light\">
 			<div class=\"container\">
-				<div style=\"float: left; width: 500px;\">
-					<h1 class=\"dark\">{$lang['title']}</h1>
-				</div>
-				<div style=\"float: right; width: 500px;\">
-					<a class=\"button classic\" href=\"/doc\" style=\"float: right; height: 22px; width: 150px; margin: 0 auto;\">
-						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['back']}</span>
-					</a>
-				</div>
+				<h1 class=\"dark\" style=\"float: left;\">{$lang['title']}</h1>
+				<form id=\"searchform\" action=\"/doc/search\" method=\"get\"><input type=\"submit\" style=\"display: none;\" /><input name=\"keyword\"  class=\"auto\" style=\"width: 380px; font-size: 15px; float: right;\" type=\"text\" id=\"search\" value=\"{$GLOBALS['lang']['search']}\" onfocus=\"this.value = this.value=='{$GLOBALS['lang']['search']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$GLOBALS['lang']['search']}' : this.value; this.value=='{$GLOBALS['lang']['search']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" /></form>
 				<div class=\"clear\"></div>
 			</div>
 		</div>
 		<div class=\"content\">		
-			<p class=\"large\">{$lang['intro_text']}</p>
-			<br />
-			<table>
-				<tr>
-					<th>{$lang['service']}</th>
-					<th>{$lang['name']}</th>
-					<th>{$lang['info']}</th>
-					<th>{$lang['version']}</th>
-				</tr>
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/mysql\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-mysql.png\" style=\"width: 50px;\" alt=\"MySQL\"></a></td>
-					<td><a href=\"/doc/mysql\">MySQL</a></td>
-					<td>{$lang['db']}</td>
-					<td>5.5</td>
-				</tr>
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/pgsql\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-postgresql.png\" style=\"width: 50px;\" alt=\"PostgeSQL\"></a></td>
-					<td><a href=\"/doc/pgsql\">PostgreSQL</a></td>
-					<td>{$lang['db']}</td>
-					<td>9.1</td>
-				</tr>
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/rails\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-mongodb.png\" style=\"width: 50px;\" alt=\"MongoDB\"></a></td>
-					<td><a href=\"/doc/rails\">MongoDB</a></td>
-					<td>{$lang['key']}</td>
-					<td>{$lang['soon']}</td>
-				</tr>	
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/redis\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-redis.png\" style=\"width: 50px;\" alt=\"Redis\"></a></td>
-					<td><a href=\"/doc/redis\">Redis</a></td>
-					<td>{$lang['key']}</td>
-					<td>{$lang['soon']}</td>
-				</tr>	
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/redis\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-memcached.png\" style=\"width: 50px;\" alt=\"Memcached\"></a></td>
-					<td><a href=\"/doc/redis\">MemCached</a></td>
-					<td>{$lang['key']}</td>
-					<td>{$lang['soon']}</td>
-				</tr>
-				<tr>
-					<td style=\"text-align: center;\"><a href=\"/doc/rabbitmq\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-rabbitmq.png\" style=\"width: 50px;\" alt=\"RabbitMQ\"></a></td>
-					<td><a href=\"/doc/rabbitmq\">RabbitMQ</a></td>
-					<td>{$lang['queue']}</td>
-					<td>{$lang['soon']}</td>
-				</tr>	
-			</table>
+			<div class=\"left small\">
+				<div class=\"sidemenu\">
+					{$menu}
+				</div>					
+			</div>
+			<div class=\"right big\">
+				<h3>{$lang['intro']}</h3>
+				<p>{$lang['intro_text']}</p>
+				<br />
+				<h3>{$lang['create']}</h3>
+				<p>{$lang['create_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/16.png\" alt=\"16\" />
+				<p>{$lang['create_text2']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/17.png\" alt=\"17\" />
+				<p>{$lang['create_text3']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/18.png\" alt=\"18\" />
+			</div>
+			<div class=\"clear\"></div><br /><br />
 		</div>
-		<div class=\"clearfix\"></div><br />
-	</div>
 ";
 
 /* ========================== OUTPUT PAGE ========================== */

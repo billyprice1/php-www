@@ -46,10 +46,27 @@ $content = "
 <!-- ARTICLE -->
 				{$news['content']}
 <!-- FIN ARTICLE -->
+				<div class=\"clear\"></div><br />
 				<br />
-				<a class=\"button classic\" style=\"float: right\" href=\"https://community.olympe.in/category/annonces\">{$lang['react']}</a>
-				<div class=\"clear\"></div>
-				<br />
+				<div class=\"comments\">
+					<h1 class=\"dark thin\">{$lang['comments']}</h1>
+					<br />
+					<div id=\"disqus_thread\"></div>
+					<script type=\"text/javascript\">
+						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+						var disqus_developer = 0; // developer mode
+						var disqus_shortname = 'olympe'; // required: replace example with your forum shortname
+						var disqus_identifier = 'Blog - {$news['id']}';
+						var disqus_url = 'https://www.olympe.in/blog/post?id={$news['id']}';
+						/* * * DON'T EDIT BELOW THIS LINE * * */
+						(function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						})();
+					</script>
+				</div>
+				<br /><br />
 			</div>
 			<script type=\"text/javascript\">
 				window.___gcfg = {lang: 'fr'};

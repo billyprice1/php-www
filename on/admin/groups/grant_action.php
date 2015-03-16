@@ -34,6 +34,6 @@ if( count($_POST['grant']) > 0 )
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/group/detail?id=' . $_POST['id']);
+	template::redirect('/admin/groups/detail?id=' . $_POST['id']);
 
 ?>

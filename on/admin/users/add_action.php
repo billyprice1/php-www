@@ -16,8 +16,9 @@ if( isset($_POST['firstname']) && strlen($_POST['firstname']) > 0 )
 	$params['firstname'] = $_POST['firstname'];
 if( isset($_POST['lastname']) && strlen($_POST['lastname']) > 0 )
 	$params['lastname'] = $_POST['lastname'];
-	
+
 $result = api::send('user/add', $params);
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else

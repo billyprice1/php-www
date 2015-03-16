@@ -1,4 +1,4 @@
-[EN]
+﻿[EN]
 success = "Congratulations! Your subscription is now complete.<br />You can enter to your <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">control panel</a>."
 
 subject = "Welcome to the Olympe platform"
@@ -7,12 +7,38 @@ content = "<p style='margin: 20px 0'>Your Olympe account is now ready! Here are 
 Password: <strong>{PASS}</strong></p>
 <p style='margin: 20px 0;'>Enjoy your free hosting space, and if you have specific needs, do not hesitate to <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
 
-[FR]
+[ES]
+success = "¡Felicidades! Su registro esta terminada.<br />Puedes visitar su <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">panel de gestión</a>."
 
+subject = "Welcome to the Olympe platform"
+content = "<p style='margin: 20px 0'>Su cuenta Olympe ya está lista. Recuerde su nombre de usuario y contraseña :</p>
+<p style='margin: 20px 0'>Nombre de usuario : <strong>{USER}</strong><br />
+Contraseña : <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Disfrute de su espacio gratuito, y si tienes necesidades específicas, no dudes en <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contactarnos</a>.</p>"
+
+[FR]
 success = "Félicitations ! Votre inscription est maintenant terminée. <br />Vous pouvez vous rendre sur votre <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">panel de gestion</a>."
 
 subject = "Bienvenue sur la plateforme Olympe"
 content = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>
 <p style='margin: 20px 0'>Utilisateur : <strong>{USER}</strong><br />
 Mot de passe : <strong>{PASS}</strong></p>
-<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>nous contacter</a>.</p>"
+<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>"
+
+[DE]
+success = "Vielen Dank! Ihre Registrierung ist jetzt abgeschlossen.<br /> Ab jetzt haben Sie einen Zugang zu<a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">unserer Panel</a>."
+
+subject = "Willkommen auf unserer Web-Plattform"
+content = "<p style='margin: 20px 0'>Ihre Olympe Account ist nun bereit ! Hier finden Sie die Authentifizierungseinstellungen, die Sie ausgewählt haben:</p>
+<p style='margin: 20px 0'>Benutzer : <strong>{USER}</strong><br />
+Passwort : <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Genießen Sie Ihrem kostenloses Hosting-Bereich und wenn Sie Nachfragen haben, zögern Sie nicht uns <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>zu kontaktieren</a>.</p>"
+
+[IT]
+success = "Congratulazioni! La tua iscrizione è completata.<br />Puoi ora accedere al <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">pannello di controllo</a>."
+
+subject = "Welcome to the Olympe platform"
+content = "<p style='margin: 20px 0'>Your Olympe account is now ready! Here are the authentification parameters you entered:</p>
+<p style='margin: 20px 0'>Username: <strong>{USER}</strong><br />
+Password: <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Goditi il tuo spazio di hosting gratuito, e se hai dei bisogni particolari, non esitare a <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contattarci</a>.</p>"

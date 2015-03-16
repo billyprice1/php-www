@@ -1,5 +1,19 @@
-[EN]
+﻿[EN]
+success = "The description has been modified."
+error = "Your description is too long !"
+
+[ES]
+success = "La descripción ha sido modificada."
+error = "Tu descripción es demasiado larga !"
 
 [FR]
 success = "La description a bien été modifiée."
 error = "Votre description est trop longue !"
+
+[DE]
+success = "Die Beschreibung ist geändert worden."
+error = "Ihre Beschreibung ist zu lang oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+
+[IT]
+success = "La descrizione è stata aggiornata."
+error = "La tua descrizione è troppo lunga !"

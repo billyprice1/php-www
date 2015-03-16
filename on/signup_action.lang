@@ -1,5 +1,4 @@
-[EN]
-
+﻿[EN]
 subject = "Olympe account confirmation"
 content = "<p style='margin: 20px 0'>Thank your for your register! You have to click on the following link in order to activate your account:</p>
 <p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
@@ -9,8 +8,17 @@ success = "Your request has been accepted.<br />You will receive an email with t
 error_mail = "An error occured, the email can not be sent.<br />Please try later."
 error_api = "The email address format is invalid or this email is already used."
 
-[FR]
+[ES]
+subject = "Confirme su cuenta de Olympe"
+content = "<p style='margin: 20px 0'>Gracias por su registro! Tiene que hacer clic en el siguiente enlace para activar su cuenta:</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Disfrute de publicar contenidos en Olympe, y no dudes enviarnos sus comentarios.</p>"
 
+success = "Su solicitud ha sido aceptada.<br />Recibirás un email con un enlace de confirmación."
+error_mail = "Se ha producido un error, el email no puede ser enviado.<br />Por favor, intentas de nuevo más tarde."
+error_api = "El formato de su dirección email es incorrecto o la dirección ya está utilizada."
+
+[FR]
 subject = "Confirmation de votre compte sur Olympe"
 content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vous devez cliquer sur le lien suivant pour activer votre compte :</p>
 <p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
@@ -19,3 +27,23 @@ content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vou
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
 error_api = "Le format de votre adresse email est incorrect ou cette adresse est déjà utilisée."
+
+[DE]
+subject = "Olympe Konto Bestätigung"
+content = "<p style='margin: 20px 0'>Vielen Dank für Ihre Registrierung auf unserer Plattform ! Um Ihr Konto zu aktivieren, bitte klicken Sie auf den folgenden Link :</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Zögern Sie nicht uns zu kontaktieren um uns Ihre Meinung mitzuteilen.</p>"
+
+success = "Ihre Anfrage ist angenommen worden.<br/>Sie  werden eine E-Mail mit dem Bestätigungslink erhalten<br/>"
+error_mail = "Ein Fehler ist aufgetreten worden und der E-Mail wurde nicht gesendet.<br />Bitte versuchen Sie es später nochmal ."
+error_api = "Der Format Ihre E-Mail-Adresse ist falsch, oder diese Adresse wird bereits verwendet."
+
+[IT]
+subject = "Attivazione account Olympe"
+content = "<p style='margin: 20px 0'>Grazie per esserti registrato! Per attivare il tuo account, clicca sul link seguente:</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Ora divertiti a pubblicare contenuti su Olympe, e non esitare a lasciare le tue opinioni.</p>"
+
+success = "La tua richiesta è stata convalidata.<br />Riceverai una email con il link di attivazione"
+error_mail = "Sembra ci sia un errore, l'email non è stata inviata<br />Prova più tardi"
+error_api = "Il formato di questo indrizzo email non è valido, oppure questa email è già stata utilizzata"

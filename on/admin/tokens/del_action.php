@@ -10,6 +10,6 @@ api::send('token/del', array('user'=>$_GET['user'], 'token'=>$_GET['token']));
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/users/detail?id='.$_GET['user']);
+	template::redirect('/admin/users/detail?id='.$_GET['user'].'#tokens');
 
 ?>

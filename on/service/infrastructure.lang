@@ -4,7 +4,7 @@
 [FR]
 title = "Infrastructure"
 datacenters = "Datacenters et réseau"
-datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
+datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> (AS 62260) et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
 de son infrastructure. Nos serveurs sont situés en France, dans plusieurs centres de données. <br /><br />Grâce aux emplacements géographiques distincts et à la flexibilité de nos fournisseurs notamment sur le routage
 et les annonces BGP, nous avons mis en place une infrastructure résistante aux pannes même en cas de coupure complète d'un site de production.<br /><br />
 Grâce à l'aide d'Interxion, Olympe dispose d'un port gigabit sur le point de peering <a href='https://www.franceix.net'>FranceIX</a>. Cela nous permet d'accroître nos capacités de transits vers 
@@ -19,3 +19,13 @@ Nous avons ensuite des colonnes duplicables comprenant des firewalls <a href='ht
 
 soft = "Applicatifs"
 status = "Statut de l'infrastructure"
+data = "Notre matériel"
+paris = "Datacentres parisiens"
+paris_text = "Nous avons deux points de présence à Paris, le premier à <i>Interxion Paris 2</i> et le second à <i>Interxion Paris 7</i>. Nous éclairons une boucle fibre noire dédiée à notre infrastructure entre ces deux datacenters."
+paris_text2 = "Ces deux centres de données (datacenters) possèdent trois points d'interconnexion dont France-IX et plus de 70 opérateurs Télécom/ISPs. Avec une densité électrique de 2300W/m² et de nombreuses innovations, nous envisageons serinement la croissance
+de nos infrastructures parisiennes."
+marseille = "Datacentres marseillais"
+marseille_text = "A Marseille, nous sommes présents chez Jaguar Network dans deux centres de données, le <i>SFR Netcenter</i> et <i>MRS-01</i>. Nous opérons le routage de notre réseau publique et gérons pleinement la redondance
+entre ces deux sites."
+marseille_text2 = "Centre de données tiers IV, notre implantation historique en Provence et dans la région nous a permis de développer une partie de notre infrastructure système et réseau en collaboration avec des acteurs locaux et des opérateurs
+indépendants."

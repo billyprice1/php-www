@@ -19,6 +19,6 @@ catch( Exception $e )
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/panel/domains');
+	$template->redirect('/panel/users/list?domain=' . security::encode($_POST['domain']));
 
 ?>

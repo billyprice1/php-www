@@ -8,6 +8,7 @@ $(function()
 	newFlexibleDialog('register', 500);
 	newFlexibleDialog('message', 250);
 	newFlexibleDialog('changepass', 350);
+	newFlexibleDialog('cookie', 700);
 	
 	// CONNECTOR RATING //
 	$('.star').raty(
@@ -59,7 +60,7 @@ $(function()
 	);
 	
 	// FIXED STORE MENU //
-	var num = 140;
+	var num = 120;
 	$(window).bind('scroll', function ()
 	{
 		if( $(window).scrollTop() > num )

@@ -12,7 +12,7 @@ $userinfo = $userinfo[0];
 if( $_FILES['avatar']['error'] == UPLOAD_ERR_OK )
 {
 	$resizer = new resizer($_FILES['avatar']['tmp_name'], 256, 256);
-	$resizer->save('on/images/users/', $userinfo['user_id'].'.png', resizer::PNG);
+	$resizer->save('on/images/users/', $userinfo['id'].'.png', resizer::PNG);
 }
 	
 if( isset($_GET['redirect']) )

@@ -68,14 +68,17 @@ for( $i = 1; $i <= 12; $i++ )
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
-			<div class=\"left\" style=\"width: 600px;\">
+			<div class=\"left\" style=\"width: 500px;\">
 				<img style=\"width: 100px; height: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
 				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
 				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
-			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
+			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepassword').dialog('open'); return false;\">
 					{$lang['password']}
+				</a>
+				<a class=\"action download big\" href=\"#\" onclick=\"$('#download').dialog('open'); return false;\">
+					{$lang['download']}
 				</a>
 				<a class=\"action delete big\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\">
 					{$lang['delete']}
@@ -113,51 +116,65 @@ $content .= "
 				<h2 class=\"dark\">{$lang['response']}</h2>
 				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>
 				<div id=\"chart2\" style=\"margin-bottom: 20px;\"></div>
+				<p>{$lang['note']}</p>
 			</div>
 			<div class=\"right border\" style=\"width: 340px; padding-left: 60px; margin-left: 40px; margin-top: 5px;\">
 				<h2 class=\"dark\">{$lang['directory']}</h2>
-				<form action=\"/panel/sites/config_action\" method=\"post\">	
-					<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
-					<fieldset>
-						<input type=\"text\" name=\"title\" value=\"{$site['title']}\" style=\"width: 300px;\" />
-						<span class=\"help-block\">{$lang['title_help']}</span>
-					</fieldset>
-					<fieldset>
-						<textarea name=\"description\" style=\"width: 300px; height: 200px;\">{$site['description']}</textarea>						
-						<span class=\"help-block\">{$lang['description_help']}</span>
-					</fieldset>
-					<fieldset>
-						<select name=\"category\" style=\"width: 320px;\">
-							<option ".($site['category']==1?"selected":"")." value=\"1\">{$lang['CAT_1']}</option>
-							<option ".($site['category']==2?"selected":"")." value=\"2\">{$lang['CAT_2']}</option>
-							<option ".($site['category']==3?"selected":"")." value=\"3\">{$lang['CAT_3']}</option>
-							<option ".($site['category']==4?"selected":"")." value=\"4\">{$lang['CAT_4']}</option>
-							<option ".($site['category']==5?"selected":"")." value=\"5\">{$lang['CAT_5']}</option>
-							<option ".($site['category']==6?"selected":"")." value=\"6\">{$lang['CAT_6']}</option>
-							<option ".($site['category']==7?"selected":"")." value=\"7\">{$lang['CAT_7']}</option>
-							<option ".($site['category']==8?"selected":"")." value=\"8\">{$lang['CAT_8']}</option>
-							<option ".($site['category']==9?"selected":"")." value=\"9\">{$lang['CAT_9']}</option>
-							<option ".($site['category']==10?"selected":"")." value=\"10\">{$lang['CAT_10']}</option>
-							<option ".($site['category']==11?"selected":"")." value=\"11\">{$lang['CAT_11']}</option>
-							<option ".($site['category']==12?"selected":"")." value=\"12\">{$lang['CAT_12']}</option>
-							<option ".($site['category']==13?"selected":"")." value=\"13\">{$lang['CAT_13']}</option>
-							<option ".($site['category']==14?"selected":"")." value=\"14\">{$lang['CAT_14']}</option>
-							<option ".($site['category']==15?"selected":"")." value=\"15\">{$lang['CAT_15']}</option>
-							<option ".($site['category']==16?"selected":"")." value=\"16\">{$lang['CAT_16']}</option>
-							<option ".($site['category']==17?"selected":"")." value=\"17\">{$lang['CAT_17']}</option>
-							<option ".($site['category']==18?"selected":"")." value=\"18\">{$lang['CAT_18']}</option>
-							<option ".($site['category']==19?"selected":"")." value=\"19\">{$lang['CAT_19']}</option>
-							<option ".($site['category']==20?"selected":"")." value=\"20\">{$lang['CAT_20']}</option>
-						</select>
-						<span class=\"help-block\">{$lang['category_help']}</span>
-					</fieldset>
-					<fieldset>
-						<input type=\"checkbox\" name=\"directory\" value=\"1\" ".($site['directory']==1?"checked":"")." > {$lang['directory_help']}
-					</fieldset>					
-					<fieldset>	
-						<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
-					</fieldset>
-				</form>
+";
+
+if($site['directory']!=4) 
+	$content .= "
+					<form action=\"/panel/sites/config_action\" method=\"post\">	
+						<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+						<input type=\"hidden\" name=\"action\" value=\"changedirectory\" />
+						<fieldset>
+							<input type=\"text\" name=\"title\" value=\"{$site['title']}\" style=\"width: 300px;\" />
+							<span class=\"help-block\">{$lang['title_help']}</span>
+						</fieldset>
+						<fieldset>
+							<textarea name=\"description\" style=\"width: 300px; height: 200px;\">{$site['description']}</textarea>						
+							<span class=\"help-block\">{$lang['description_help']}</span>
+						</fieldset>
+						<fieldset>
+							<select name=\"category\" style=\"width: 320px;\">
+								<option value=\"-1\">{$lang['choose_cat']}</option>
+								<option ".($site['category']==1?"selected":"")." value=\"1\">{$lang['CAT_1']}</option>
+								<option ".($site['category']==2?"selected":"")." value=\"2\">{$lang['CAT_2']}</option>
+								<option ".($site['category']==3?"selected":"")." value=\"3\">{$lang['CAT_3']}</option>
+								<option ".($site['category']==4?"selected":"")." value=\"4\">{$lang['CAT_4']}</option>
+								<option ".($site['category']==5?"selected":"")." value=\"5\">{$lang['CAT_5']}</option>
+								<option ".($site['category']==6?"selected":"")." value=\"6\">{$lang['CAT_6']}</option>
+								<option ".($site['category']==7?"selected":"")." value=\"7\">{$lang['CAT_7']}</option>
+								<option ".($site['category']==8?"selected":"")." value=\"8\">{$lang['CAT_8']}</option>
+								<option ".($site['category']==9?"selected":"")." value=\"9\">{$lang['CAT_9']}</option>
+								<option ".($site['category']==10?"selected":"")." value=\"10\">{$lang['CAT_10']}</option>
+								<option ".($site['category']==11?"selected":"")." value=\"11\">{$lang['CAT_11']}</option>
+								<option ".($site['category']==12?"selected":"")." value=\"12\">{$lang['CAT_12']}</option>
+								<option ".($site['category']==13?"selected":"")." value=\"13\">{$lang['CAT_13']}</option>
+								<option ".($site['category']==14?"selected":"")." value=\"14\">{$lang['CAT_14']}</option>
+								<option ".($site['category']==15?"selected":"")." value=\"15\">{$lang['CAT_15']}</option>
+								<option ".($site['category']==16?"selected":"")." value=\"16\">{$lang['CAT_16']}</option>
+								<option ".($site['category']==17?"selected":"")." value=\"17\">{$lang['CAT_17']}</option>
+								<option ".($site['category']==18?"selected":"")." value=\"18\">{$lang['CAT_18']}</option>
+								<option ".($site['category']==19?"selected":"")." value=\"19\">{$lang['CAT_19']}</option>
+								<option ".($site['category']==20?"selected":"")." value=\"20\">{$lang['CAT_20']}</option>
+							</select>
+							<span class=\"help-block\">{$lang['category_help']}</span>
+						</fieldset>
+						<fieldset>
+							<input type=\"checkbox\" name=\"directory\" value=\"1\" ".($site['directory']>0?"checked":"")." > {$lang['directory_help']}
+						</fieldset>					
+						<fieldset>	
+							<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
+						</fieldset>
+					</form>
+	";
+else 
+	$content .= "
+					<div style=\"color: rgb(204, 0, 0); text-align: justify; border: 1px solid; padding: 15px;\">{$lang['no_directory']}</div>
+	";
+
+$content .= "
 			</div>
 			<div class=\"clear\"></div><br />
 		</div>
@@ -174,12 +191,26 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"download\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['backup']}</h3>
+		<p style=\"text-align: center;\">{$lang['backup_text']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/backups/add_action\" method=\"get\" class=\"center\">
+				<input id=\"id\" type=\"hidden\" value=\"{$site['id']}\" name=\"site\" />
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['backup_now']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
 	<div id=\"changepassword\" class=\"floatingdialog\">
 		<h3 class=\"center\">{$lang['changepassword']}</h3>
 		<p style=\"text-align: center;\">{$lang['changepassword_text']}</p>
 		<div class=\"form-small\">		
 			<form action=\"/panel/sites/config_action\" method=\"post\" class=\"center\">
 				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+				<input type=\"hidden\" name=\"action\" value=\"changepass\" />
 				<fieldset>
 					<input type=\"password\" name=\"pass\" />
 					<span class=\"help-block\">{$lang['pass_help']}</span>
@@ -198,6 +229,7 @@ $content .= "
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
+		newFlexibleDialog('download', 550);
 		
 		$(function()
 		{
@@ -250,6 +282,12 @@ $content .= "
 						visible: true
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -260,10 +298,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 700,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {
@@ -287,6 +326,12 @@ $content .= "
 						visible: true
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -297,10 +342,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 700,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {
@@ -327,6 +373,12 @@ $content .= "
 						overlappingBehavior: { mode: 'rotate', rotationAngle: 50 }
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -337,10 +389,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 800,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {

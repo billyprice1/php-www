@@ -1,0 +1,65 @@
+﻿[EN]
+index = "Index"
+
+started = "First website"
+first = "Create a new website"
+publish = "Publish the website online"
+infos = "Useful informations"
+php = "Display PHP errors"
+
+features = "Features"
+sites = "Website"
+domains = "Domain names"
+databases = "Databases"
+mails = "Email accounts"
+directory = "Directory"
+backups = "Backups"
+
+services = "Services"
+stats = "Statistics"
+quota = "Quota and limits"
+tokens = "Access Rights (tokens)"
+cloud = "Cloud application"
+
+faq = "Frequently asked questions"
+
+about = "About us"
+what = "What is Olympe ?"
+techno = "Used technologies"
+contact = "Contact us"
+
+more = "Tutorial"
+about_email = "About sending emails"
+
+[FR]
+index = "Accueil de l'aide"
+
+started = "Premier site"
+first = "Créer un nouveau site"
+publish = "Publier le site en ligne"
+infos = "Informations utiles"
+php = "Afficher les erreurs PHP"
+
+features = "Fonctionnalités"
+sites = "Sites Internet"
+domains = "Noms de domaine"
+databases = "Bases de données"
+mails = "Comptes mails"
+directory = "Annuaire des sites"
+backups = "Sauvegardes"
+
+services = "Services liés"
+stats = "Statistiques"
+quota = "Quotas et limites"
+tokens = "Droits d'accès (tokens)"
+cloud = "Application cloud"
+
+faq = "Questions fréquentes"
+
+about = "A propos"
+what = "Qu'est-ce qu'Olympe ?"
+techno = "Technologies utilisées"
+contact = "Nous contacter"
+
+more = "Tutoriel"
+about_email = "Optimiser l'envoi d'email"

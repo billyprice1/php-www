@@ -83,14 +83,13 @@ div.core  div.content div.left.small {
 
 div.core  div.content div.right {
 	float: right;
-	margin: 0 0 0 60px;
+	margin: 0 0 0 20px;
 	padding: 0;
 	width: 480px;
 }
 
 div.core div.content div.right.small {
 	width: 250px;
-
 }
 
 div.core div.content div.right.border {
@@ -102,7 +101,7 @@ div.core div.content div.right.border {
 }
 
 div.core  div.content div.right.big {
-	width: 780px;
+	width: 810px;
 }
 
 div.core div.content div.form-small {
@@ -236,7 +235,8 @@ div.sidemenu ul li {
 	border-right: 1px solid #dedede;
 	border-bottom: 1px solid #dedede;
 	background-color: #ffffff;
-	color: #2b6fab;
+	color: #de5711;
+	font-size: 14px;
 }
 
 div.sidemenu ul li:first-child {
@@ -245,15 +245,30 @@ div.sidemenu ul li:first-child {
  
 div.sidemenu ul li.active {
 	background-color: #f8f8f8;
+	color: #eb782b;
 }
 
 div.sidemenu ul li:hover {
 	background-color: #f8f8f8;
-	color: #3f9fe0;
+	color: #eb782b;
 }
 
 div.sidemenu ul li.active:hover {
-	color: #2b6fab;
+	color: #eb782b;
+}
+
+div.sidemenu ul li:first-child {
+	border-top: 1px solid #dedede;
+}
+
+div.sidemenu ul ul li {
+	padding: 15px 15px 15px 40px;
+	font-size: 12px;
+	color: #a3a3a3;
+}
+
+div.sidemenu ul ul li:first-child {
+	border-top: 0;
 }
 
 div.multipoint {
@@ -328,7 +343,6 @@ ul.classic ol li {
 	line-height: 18px;
 	font-size: 12px;
 }
-
 div.faq {
 	margin: 20px 0 0 0;
 	padding: 0;
@@ -339,15 +353,15 @@ div.faq div.questions {
 }
 
 div.faq div.question {
-	margin: 15px 0 15px 0;
-	color: #6ba2df;
+	margin: 5px 0 15px 0;
+	color: #e89062;
 	text-decoration: none;	
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 div.faq div.question:hover {
-	color: #397ac1;
+	color: #eda783;
 }
 
 div.faq div.answer {
@@ -444,4 +458,15 @@ span.bigdate {
 	line-height: 19px;
 	background-color: #448cdd;
 	color: #fff;
+}
+
+ul.search {
+	margin: 0;
+	padding: 0;
+}
+
+ul.search li {
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+	border-left: 1px solid #dcdcdc; 
 }

@@ -1,0 +1,26 @@
+[EN]
+success = "This account has been created successfully."
+
+subject = "Welcome to the Olympe platform"
+content = "<p style='margin: 20px 0'>Your Olympe account is now ready! Here are the authentification parameters you entered:</p>
+<p style='margin: 20px 0'>Username: <strong>{USER}</strong><br />
+Password: <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Enjoy your free hosting space, and if you have specific needs, do not hesitate to <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
+[FR]
+success = "Ce compte a été crée avec succès."
+
+subject = "Bienvenue sur la plateforme Olympe"
+mail_add = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>
+<p style='margin: 20px 0'>Utilisateur : <strong>{USER}</strong><br />
+Mot de passe : <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>"
+
+[DE]
+success = "Dieses Konto wurde erfolgreich erstellt"
+
+subject = "Willkommen auf der Olympe-Plattform"
+mail_add = "<p style='margin: 20px 0'>Ihr Olympe-Account ist nun fertig! Hier sind die Parameter der Kennzeichnung, die Sie ausgewählt haben: </p>
+<p style='margin: 20px 0'>Benutzer : <strong>{USER}</strong><br />
+Kennwort : <strong>{PASS}</strong></p>
+<p style='margin: 20px 0;'>Genießen Sie Ihr kostenloses hosting-Raum, und wenn Sie spezielle Wünsche haben, zögern Sie nicht Ihnen mit uns <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>in Verbindung zu setzen</a>.</p>"

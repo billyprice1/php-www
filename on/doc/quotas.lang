@@ -1,0 +1,36 @@
+[EN]
+title = "Quotas and limits"
+intro = "Introduction"
+intro_text = "On Olympe, we do not have as a role to curb the resources you may need to build your website, the quota policy is implemented only to prevent abuse. In case of
+<a href='/panel/messages'>justified request</a>, our staff will increase the limits of your space (disk space, databases, domains...)"
+
+default = "Default quotas"
+name = "Quota name"
+max = "Default limit"
+sites = "Websites"
+domains = "Domain names"
+bases = "Databases"
+disk = "Disk space"
+sent = "Mails sent per day"
+mb = "Mo"
+overview = "Overview your quotas"
+overview_text = "You can access an overview of your quotas in the <a href='/panel/quotas'>corresponding section</a>  of your panel :"
+
+
+[FR]
+title = "Quotas et limitations"
+intro = "Introduction"
+intro_text = "Sur Olympe, nous n'avons pas pour rôle de brider les ressources dont vous pouvez avoir besoin pour construire votre site Internet, la politique de quota est donc mise en place uniquement pour prévenir les abus. En cas
+de <a href='/panel/messages'>demande justifiée</a>, notre équipe augmentera les limites de votre espace (espace disque, bases de données, domaines...)"
+
+default = "Quotas par défaut"
+name = "Nom du quota"
+max = "Limite par défaut"
+sites = "Sites Internet"
+domains = "Noms de domaine"
+bases = "Bases de données"
+disk = "Espace disque"
+sent = "Mails envoyés par jour"
+mb = "Mo"
+overview = "Aperçu de vos quotas"
+overview_text = "Vous pouvez accéder à l'aperçu de vos quotas dans la <a href='/panel/quotas'>rubrique correspondante</a> de votre panel :"
