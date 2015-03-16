@@ -16,7 +16,6 @@
 		$_GLOBALS['APP']['PASSWORD'] = random( rand(15, 20) );
 	else
 		$_GLOBALS['APP']['PASSWORD'] = security::encode( $_POST['sql'] );
-		
 	if( $_POST['path'] == 1 )
 		$_GLOBALS['APP']['PATH'] = '/folder';
 	else
@@ -76,7 +75,10 @@
 					 'connect' => $_POST['pass'],
 					 'site' => $_GLOBALS['APP']['SITE'],
 					 'path' => $_GLOBALS['APP']['PATH'],
+<<<<<<< HEAD
 					 'type' => $_GLOBALS['APP']['NAME'],
+=======
+>>>>>>> 00f20efc5d8d23bd08f168c4e3507de83bd7ea6a
 					 'database' => array ( 'name' => $database['name'], 'server' => $database['server'], 'password' => $_GLOBALS['APP']['PASSWORD'] )
 					 );
 	
