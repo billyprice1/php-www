@@ -1,0 +1,59 @@
+[EN]
+error = "You have to choose the reason for deleting the account."
+subject = "Olympe - Your account has been deleted"
+
+content_1 = "<p style='margin: 20px 0'>Following your request, an administrator has deleted your account <i>{USER}</i> on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>If you want to give us your feedback on our services, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>
+<p style='margin: 20px 0'>We hope to see you soon !</p>"
+
+content_2 = "<p style='margin: 20px 0'>It appears that you own more than one account on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Because this is contrary to our 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Terms of Use</a>, your account <i>{USER}</i> has been deleted by an administrator.</p>
+<p style='margin: 20px 0'>For more information, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
+content_3 = "<p style='margin: 20px 0'>Your use of the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> hosting platform is unlawful, or contrary to our 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Terms of Service</a>. Your account <i>{USER}</i> has therefore been deleted by an administrator.</p>
+<p style='margin: 20px 0'>If you think this action is unwarranted, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
+content_4 = "<p style='margin: 20px 0'>An administrator has deleted your account <i>{USER}</i> on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>For more information, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>
+<p style='margin: 20px 0'>We hope to see you soon !</p>"
+
+[FR]
+error = "Vous devez choisir la raison de suppression du compte."
+subject = "Olympe - Votre compte a été supprimé"
+
+content_1 = "<p style='margin: 20px 0'>Suite à votre demande, un administrateur vient de supprimer votre compte <i>{USER}</i> du service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>Si vous souhaitez nous apporter votre feedback sur l'utilisation de nos services, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>
+<p style='margin: 20px 0'>Nous espérons vous revoir très rapidement sur notre plateforme !</p>"
+
+content_2 = "<p style='margin: 20px 0'>Il apparait que vous possédez plus d'un compte sur le service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Ceci étant contraire à nos 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Conditions générales d'utilisation</a>, votre compte <i>{USER}</i> vient d'être supprimé par un administrateur.</p>
+<p style='margin: 20px 0'>Pour plus d'informations à ce sujet, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>"
+
+content_3 = "<p style='margin: 20px 0'>Il apparait que vous utilisez votre compte sur le service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> à des fins contraires à nos 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Conditions générales d'utilisation</a> ou aux lois en vigueur. Par conséquent, votre compte <i>{USER}</i> vient d'être supprimé par un administrateur.</p>
+<p style='margin: 20px 0'>Si vous pensez que cette action est injustifiée, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>"
+
+content_4 = "<p style='margin: 20px 0'>Un administrateur vient de supprimer votre compte <i>{USER}</i> du service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>Pour plus d'informations à ce sujet, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contacter</a>.</p>
+<p style='margin: 20px 0'>Nous espérons vous revoir très rapidement sur notre plateforme !</p>"
+
+[DE]
+error = "You have to choose the reason for deleting the account."
+subject = "Olympe - Ihr Konto wurde gelöscht"
+
+content_1 = "<p style='margin: 20px 0'>Following your request, an administrator has deleted your account <i>{USER}</i> on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>If you want to give us your feedback on our services, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>
+<p style='margin: 20px 0'>We hope to see you soon !</p>"
+
+content_2 = "<p style='margin: 20px 0'>It appears that you own more than one account on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Because this is contrary to our 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Terms of Use</a>, your account <i>{USER}</i> has been deleted by an administrator.</p>
+<p style='margin: 20px 0'>For more information, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
+content_3 = "<p style='margin: 20px 0'>Your use of the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> hosting platform is unlawful, or contrary to our 
+<a style='color: #de5711;' href="https://www.olympe.in/on/documents/Olympe-CGS-FR.pdf">Terms of Service</a>. Your account <i>{USER}</i> has therefore been deleted by an administrator.</p>
+<p style='margin: 20px 0'>If you think this action is unwarranted, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
+content_4 = "<p style='margin: 20px 0'>An administrator has deleted your account <i>{USER}</i> on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>For more information, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>
+<p style='margin: 20px 0'>We hope to see you soon !</p>"

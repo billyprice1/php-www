@@ -1,0 +1,24 @@
+[EN]
+title = "What is Olympe?"
+intro = "Free web hosting"
+intro_text = "Olympe is a <a href='https://www.olympe.in'>free web hosting</a> platform. You can register and enjoy a <a href='/service/hosting'>free space</a> to publish your website, your blog, and your web apps.
+We provide <a href='/service/offer'>extensive services</a> all around databases, domain names and development  tools."
+intro_text2 = "Olympe also offers its users a <a href='/doc/services'>Cloud app</a>
+including files synchronizing, calendars and contacts, todo list ..."
+
+who = "Who is Olympe ?"
+who_text = "Olympe is a non-profit organization under French law. It is funded by the <a href='https://www.sys.as'>SYS</a> compagny, created to make the association independant and to ensure it continues."
+who_text2 = "The association head office is located in Paris, France. Feel free to <a href='/about/contact'>contact us</a> if you have any question."
+
+[FR]
+title = "Qu'est-ce que Olympe ?"
+intro = "Hébergeur gratuit"
+intro_text = "Olympe est une plateforme d'<a href='https://www.olympe.in'>hébergement gratuit</a>. Vous pouvez créer un compte et profiter d'un <a href='/service/hosting'>espace</a> pour publier vos sites Internet, blog, CRM et autres applications web.
+Nous proposons des <a href='/service/offer'>services étendus</a> en matière de bases de données, de noms de domaine et d'outils de développement. "
+intro_text2 = "Olympe propose également à ses utilisateurs une <a href='/doc/services'>application cloud</a>
+intégrant synchronisation de fichiers, calendriers et contacts, liste de tâches..."
+
+who = "Qui est Olympe ?"
+who_text = "Olympe est une association à but non lucratif de droit français. Elle est le reflet de ses membres et des <a href='/about/team'>bénévoles</a> qui y travaillent quotidiennement. Olympe est financé par la société
+<a href='https://www.sys.as'>SYS</a>, créée dans l'objectif de donner une indépendance à l'association et d'assurer son maintien sur le long terme."
+who_text2 = "Le siège de l'association est situé en France, à Paris dans le X<sup>e</sup> arrondissement. N'hésitez pas à nous <a href='/about/contact'>contacter</a> si vous avez d'autres questions."

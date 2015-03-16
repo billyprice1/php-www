@@ -1,0 +1,14 @@
+﻿[EN]
+success = "Your settings have been successfully updated."
+
+[ES]
+success = "Preferencias han sido actualizadas correctamente."
+
+[FR]
+success = "Vos informations ont bien été mises à jour."
+
+[DE]
+success = "Ihre Einstellungen sind geändert worden."
+
+[IT]
+success = "Le tue impostazioni sono state aggiornate."

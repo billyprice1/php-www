@@ -1,0 +1,239 @@
+/* Header CSS */
+
+div.header {
+	width: 100%;
+	margin: 0;
+	padding: 15px 0 20px 0;
+	background-color: #ffffff;
+	height: 80px;
+}
+
+div.header div.content  {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+div.header div.content div.logo {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+div.header div.content div.logo-big {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+div.header div.content div.menu {
+	float: right;
+}
+
+div.header div.content div.menu ul {
+	float: left;
+	margin: 22px 0 0 50px;
+	padding: 0;
+	text-align: left;
+	list-style-type: none;
+}
+
+div.header div.content div.menu ul  li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+div.header div.content div.menu ul  li a {
+	display: block;
+	color: #4c4c4c;
+	margin: 0px 4px 0 4px;
+	padding: 10px 10px 10px 10px;
+}
+
+div.header div.content div.menu ul  li a:hover {
+	text-decoration: none;
+	color: #de5711;
+}
+
+div.header div.content div.menu ul  li a.active {
+	color: #de5711;
+}
+
+div.header div.content div.menu ul  li.mlogin a {
+	background-image: linear-gradient(rgb(255, 255, 255), rgb(222, 87, 17) 50%, rgb(222, 87, 17) 50%, rgb(255, 255, 255));
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	background-size: 1px 100%;
+	padding-left: 35px;
+	margin-left: 20px;
+}
+
+div.header div.content div.menu ul  li.mpanel a {
+	background-image: linear-gradient(rgb(255, 255, 255), rgb(222, 87, 17) 50%, rgb(222, 87, 17) 50%, rgb(255, 255, 255));
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	background-size: 1px 100%;
+	padding-left: 35px;
+	margin-left: 20px;
+}
+
+
+div.header div.content div.menu ul  li.mlogout a {
+	transition: all 0.2s;
+	background-color: #de5711;
+	border-radius: 3px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+div.header div.content div.menu ul  li.mlogout a {
+	color: #ffffff;
+}
+
+div.header div.content div.menu ul  li.mlogout a:hover {
+	background-color: #eb782b;
+}
+
+div.header div.content div.menu ul  li.msignup a {
+	transition: all 0.2s;
+	background-color: #de5711;
+	background-size: auto;
+	border-radius: 3px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+div.header div.content div.menu ul  li.msignup a {
+	color: #ffffff;
+}
+
+div.header div.content div.menu ul  li.msignup a:hover {
+	background-color: #eb782b;
+}
+
+div.menu-fixed {
+	position: absolute;
+	top: 120px;
+	width: 100%;
+	background-color: #de5711;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	z-index: 100;
+}
+
+div.fixed {
+    position: fixed;
+    top: 0;
+}
+
+div.menu-fixed div.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+div.menu-fixed  div.container ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style-type: none;
+}
+
+div.menu-fixed  div.container ul  li {
+	display: block;	
+	float: left;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+div.menu-fixed  div.container ul  li:hover {
+	text-decoration: none;
+	background-color: #eb782b;
+}
+
+div.menu-fixed  div.container ul  li.active {
+	text-decoration: none;
+	background-color: #eb782b;
+}
+
+div.menu-fixed  div.container ul li a {
+	display: block;
+	height: 32px;
+	margin: 0;
+	padding: 15px 20px 0 20px;
+	font-weight: 400;
+	font-size: 15px;
+	color: #e8e8e8;
+}
+
+div.menu-fixed  div.container ul li a:hover {
+	text-decoration: none;
+}
+
+div.menu-fixed  div.container ul  li.sub {
+	padding-right: 10px;
+	background: url('../images/arrow.png') 95% center no-repeat;
+}
+
+div.menu-fixed  div.container ul  li.sub:hover {
+	background-color: #eb782b;
+}
+
+div.menu-fixed  div.container ul  li ul {
+	display: none;
+	top: 45px;
+	padding: 5px;
+	position: absolute;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 3%;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 30px 0px;
+}
+
+div.menu-fixed  div.container ul  li ul li {
+	float: none;
+	width: 180px;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	height: 30px;
+}
+
+div.menu-fixed  div.container ul  li ul li:hover {
+	text-decoration: none;
+	background-color: #f2f2f2;
+}
+
+div.menu-fixed  div.container ul  li ul li a {
+	font-size: 12px;
+	padding: 8px;
+	margin: 0;
+	color: #616161;
+}
+
+li.snew {
+	background-image: linear-gradient(rgb(222, 87, 17), rgb(255, 255, 255) 50%, rgb(255, 255, 255) 50%, rgb(222, 87, 17));
+	background-position: 100% 0%;
+	background-repeat: no-repeat;
+	background-size: 1px 100%;
+	margin-right: 20px;	
+}
+
+#scategory ul {
+	margin-left: 20px;
+}
+
+#search-li {
+	float: right;
+}
+
+#search-li:hover {
+	background: none;
+}
+
+#search {
+	margin: 8px 0 0 0;
+	width: 180px;
+	height: 23px;
+}

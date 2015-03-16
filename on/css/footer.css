@@ -1,0 +1,64 @@
+/* Footer CSS */
+
+div.footer {
+	height: 130px;
+	margin: 0 0 0 0;
+	padding: 20px 0 0 0;
+	box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px inset;
+	background-color: #f0f0f0;
+}
+
+div.footer div.content  {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	color: #999999;
+}
+
+div.footer div.content div.social {
+	width: 170px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+div.footer div.content div.social a.link {
+	display: block;
+	float: left;
+	margin: 0 6px 0 0;
+	padding: 0;
+	opacity: 0.4;
+	transition: all 0.2s;
+}
+
+div.footer div.content div.social a.link:hover {
+	opacity: 1;
+}
+
+div.footer  div.content a {
+	color: #999999;
+}
+
+div.footer div.content a:hover {
+	color: #4d4d4d;
+	text-decoration: none;
+}
+
+div.footer div.content p {
+	margin: 10px 0 0 0;
+	padding: 0;
+	text-align: center;
+}
+
+div.footer div.content ul {
+	margin: 0 auto;
+	width: 600px;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+div.footer div.content ul li {
+	display: inline;
+	margin: 0 10px 0 10px;
+}
+

@@ -1,0 +1,14 @@
+﻿[EN]
+success = "Your database has been migrated."
+
+[ES]
+success = "Tu base de datos se ha migrada."
+
+[FR]
+success = "Votre base de données a bien été migrée."
+
+[DE]
+success = "Ihre Datenbank ist erfolgreich umgestellt worden"
+
+[IT]
+success = "Il tuo database è stato trasferito."

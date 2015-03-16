@@ -1,0 +1,18 @@
+/* CSS Styles */
+
+/* Reset */
+@import url('reset.css');
+
+/* Basic */
+@import url('default.css');
+@import url('header.css');
+@import url('core.css');
+@import url('footer.css');
+
+/* Elements */
+
+@import url('form.css');
+@import url('panel.css');
+@import url('tables.css');
+@import url('directory.css');
+@import url('messages.css');

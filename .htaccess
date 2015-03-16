@@ -1,6 +1,13 @@
 RewriteEngine On
 
 # =====================================
+# force https
+# =====================================
+
+#NOT_IN_DEV RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#NOT_IN_DEV RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+
+# =====================================
 # deny access to the libs and to any php
 # =====================================
 
@@ -13,12 +20,12 @@ RewriteRule (\.php|\.inc)$ - [F,L,NC]
 # make url /xxx/yyy into /?__rewrite=xxx/yyy
 # =====================================
 
-RewriteCond %{REQUEST_URI} !(.*/|^)(css|js|img|images|documents|tmp)(/.*$|$) [NC]
+RewriteCond %{REQUEST_URI} !(.*/|^)(css|js|img|images|documents|tmp|fonts)(/.*$|$) [NC]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !/?index.php
 RewriteRule ^(.*)$ /index.php?__rewrite=$1 [QSA,NC,L]
 
-RewriteCond %{REQUEST_URI} !(.*/|^)(css|js|img|images|documents|tmp)(/.*$|$) [NC]
+RewriteCond %{REQUEST_URI} !(.*/|^)(css|js|img|images|documents|tmp|fonts)(/.*$|$) [NC]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} /$
 RewriteCond %{REQUEST_URI} !/?index.php

@@ -1,0 +1,19 @@
+﻿[EN]
+success = "The description has been changed."
+error = "Your description is too long or your <a href='/panel/quotas'>quota</a> has been reached."
+
+[ES]
+success = "La descripción ha sido cambiada."
+error = "Tu descripción es demasiado larga o la <a href='/panel/quotas'>cuota</a> ha sida alcanzada."
+
+[FR]
+success = "La description a bien été modifiée."
+error = "Votre description est trop longue ou votre <a href='/panel/quotas'>quota</a> est atteint."
+
+[DE]
+success = "Die Beschreibung ist geändert worden."
+error = "Ihre Beschreibung ist zu lang oder Ihre <a href='/panel/quotas'>Quote</a> ist erreicht."
+
+[IT]
+success = "La descrizione è stata cambiata"
+error = "La descrizione è troppo lunga o il tuo <a href='/panel/quotas'>spazio disponibile</a> è stato superato."

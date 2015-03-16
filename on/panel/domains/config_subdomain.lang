@@ -1,0 +1,29 @@
+﻿[EN]
+title = "Config a subdomain"
+subtitle = "Configuration form"
+record = "DNS record"
+update = "Update"
+
+[ES]
+title = "Configuración de un subdominio"
+subtitle = "Formulario de configuración"
+record = "Registro DNS"
+update = "Modificar"
+
+[FR]
+title = "Configurer un sous-domaine"
+subtitle = "Formulaire de configuration"
+record = "Enregistrement DNS"
+update = "Mettre à jour"
+
+[DE]
+title = "Subdomain einstellen"
+subtitle = "Einstellung Formular"
+record = "DNS record"
+update = "Update"
+
+[IT]
+title = "Configura un sottodominio"
+subtitle = "Form per la configurazione"
+record = "DNS record"
+update = "Uggiorna"

@@ -1,0 +1,38 @@
+[EN]
+title = "Communication and press"
+kit = "Kits of logo"
+small = "Mini logo"
+normal = "Normal logo"
+square = "Square logo"
+big = "HD logo"
+press = "Olympe in the press"
+published = "Published on"
+print = "Kit trade show and print"
+flyer = "Olympe flyer distributed at trade shows and events in the association."
+affiche = "Poster A3 of the association with QR code."
+
+events = "Events"
+event1_title = "Olympe at RMLL"
+event1_date = "23 june 2012"
+event1_extract = "Olympe will attend the World Meetings of the Geneva Free Software from 7 to 12 July 2012. The opportunity for us to present our services and coming your way ! We will be in the associations
+village and participate in various workshops and conferences."
+
+
+[FR]
+title = "Communication et presse"
+kit = "Kits de logo"
+small = "Logo mini"
+normal = "Logo normal"
+square = "Logo carré"
+big = "Logo haute définition"
+press = "Olympe dans la presse"
+published = "Publié le"
+print = "Kit salon et print"
+flyer = "Le flyer Olympe distribué lors des salons et des évènements de l'association."
+affiche = "L'affiche A3 de l'association avec le QR code."
+
+events = "Evènements"
+event1_title = "Olympe aux RMLL"
+event1_date = "23 juin 2012"
+event1_extract = "Olympe sera présent aux Rencontres Mondiales du Logiciel Libre à Genève du 7 au 12 juillet 2012. L'occasion pour nous de vous présenter nos services et de venir à votre rencontre ! Nous serons dans le village
+des associations et participerons à divers ateliers et conférences."

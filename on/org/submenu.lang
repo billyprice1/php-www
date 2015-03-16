@@ -1,0 +1,23 @@
+[EN]
+menu_actions = "Actions and projects"
+menu_last = "News"
+menu_press = "Press"
+menu_help = "Help and Finance"
+
+[ES]
+menu_actions = "Acciones y proyectos" 
+menu_last = "Actualidades"
+menu_press = "Prensa"
+menu_help = "Ayuda y Financiamiento"
+
+[FR]
+menu_actions = "Actions et projets"
+menu_last = "Actualités"
+menu_press = "Presse"
+menu_help = "Aide et financement"
+
+[DE]
+menu_actions = "Aktionen und Projekt"
+menu_last = "News"
+menu_press = "Presse"
+menu_help = "Unterstützung und Finanzierung "

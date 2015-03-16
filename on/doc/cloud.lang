@@ -1,0 +1,22 @@
+[EN]
+title = "Cloud application"
+intro = "Introduction"
+intro_text = "The <a href='https://cloud.olympe.in'>Olympe cloud</a> (still in beta release) is an application included with your hosting space with multiple storage and organization features."
+cloud = "Storage and OwnCloud applications"
+cloud_text = "Olympe propels the version 7 of OwnCloud, a complete suite including: the synchronization of files (similar to Dropbox, with a customer installed on the computer or the telephone), calendars shared,
+address books etc…"
+cloud_text2 = "To access to <a href='https://cloud.olympe.in'>OwnCloud</a>, you must log in with your Olympe logins."
+client = "Client installation"
+client_text = "To automatically synchronize your device files with our platform, you must <a href='http://owncloud.org/sync-clients' target='_blank'>download</a> the OwnCloud client."
+
+
+[FR]
+title = "Application cloud"
+intro = "Introduction"
+intro_text = "Le <a href='https://cloud.olympe.in'>cloud Olympe</a> (encore en version bêta), est une application fournie avec votre espace d'hébergement comprenant de multiples fonctionnalités de stockage et d'organisation."
+cloud = "Stockage et applications OwnCloud"
+cloud_text = "Olympe propulse la version 7 d'OwnCloud, une suite complète comprenant : la synchronisation de fichiers (similaire à Dropbox, avec un client installé sur l'ordinateur ou le téléphone), les calendriers partagés,
+les carnets d'adresse etc..."
+cloud_text2 = "Pour accéder à <a href='https://cloud.olympe.in'>OwnCloud</a>, vous devez vous connecter avec vos identifiants Olympe."
+client = "Installation du client"
+client_text = "Afin de synchroniser automatiquement les fichiers de vos périphériques avec notre plateforme, vous devez <a href='http://owncloud.org/sync-clients' target='_blank'>télécharger</a> le client OwnCloud."

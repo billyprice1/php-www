@@ -1,0 +1,14 @@
+﻿[EN]
+success = "Mail account settings have been updated." 
+
+[ES]
+success = "La configuración de la cuenta de correo ha sido actualizada." 
+
+[FR]
+success = "Les paramètres du compte mail ont bien été mis à jour."
+
+[DE]
+success = "Einstellungen des E-mail Konto sind upgedatet worden."
+
+[IT]
+success = "Le impostazioni per gli account email sono state aggiornate." 

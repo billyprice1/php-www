@@ -1,0 +1,52 @@
+﻿[EN]
+title = "Services"
+stats = "Visits statistics"
+stats_text = "The <a href='/doc/stats'>statistics system</a> is based on Piwik, an open source equivalent of Google Analytics. Your Web site(s) have been automatically added when you made it, but 
+you have to include the Piwik code on your pages."
+stats_text2 = "You can login to Piwik with the same username and password that this panel, and discover by the way all the features of our web analytics platform"
+cloud = "Clouds application"
+cloud_text = "Olympe drive an <i>OwnCloud</i> platform, with <a href='/doc/cloud'>many features</a> : files storage, contacts and calendars shared, photos gallery, music player..."
+cloud_text2 = "In order to use this service, you have to login at least once at the interface with the username of your Olympe account."
+
+piwik = "Go to Piwik"
+owncloud = "Go to OwnCloud"
+
+[ES]
+title = "Services"
+stats = "Visits statistics"
+stats_text = "The <a href='/doc/stats'>statistics system</a> is based on Piwik, an open source equivalent of Google Analytics. Your Web site(s) have been automatically added when you made it, but 
+you have to include the Piwik code on your pages."
+stats_text2 = "You can login to Piwik with the same username and password that this panel, and discover by the way all the features of our web analytics platform"
+cloud = "Clouds application"
+cloud_text = "Olympe drive an <i>OwnCloud</i> platform, with <a href='/doc/cloud'>many features</a> : files storage, contacts and calendars shared, photos gallery, music player..."
+cloud_text2 = "In order to use this service, you have to login at least once at the interface with the username of your Olympe account."
+
+piwik = "Go to Piwik"
+owncloud = "Go to OwnCloud"
+
+[FR]
+title = "Services"
+stats = "Statistiques de visites"
+stats_text = "Le système de <a href='/doc/stats'>statistiques Olympe</a> est basé sur Piwik, un équivalent libre de Google Analytics. Vos sites ont automatiquement été ajoutés lors de leur création cependant, 
+vous devez tout de même insérer le code fourni par Piwik sur vos pages."
+stats_text2 = "Vous pouvez vous connecter à l'interface Piwik avec les mêmes identifiants que le panel et ainsi découvrir toutes les fonctionnalités 
+offertes par notre outil de statistiques."
+cloud = "Application clouds"
+cloud_text = "Olympe propulse une plateforme de type <i>OwnCloud</i> avec de <a href='/doc/cloud'>nombreuses fonctionnalités</a> : stockage de fichiers, calendriers et contacts partagés, galeries photos, lecteurs de musique..."
+cloud_text2 = "Afin d'utiliser le service, vous devez vous connecter au moins une fois à l'interface avec les identifiants de votre compte Olympe."
+
+piwik = "Accéder à Piwik"
+owncloud = "Accéder à OwnCloud"
+
+[IT]
+title = "Servizi"
+stats = "Statistiche delle visite"
+stats_text = "Il <a href='/doc/stats'>sistema statistiche</a> è basato su Piwik, un servizio open source simile a Google Analytics. Il tuo sito/i saranno aggiunti automaticamente, ma 
+dovrai aggiungere il codice Piwik nelle tue pagine"
+stats_text2 = "Puoi connetterti al tuo account Piwik con gli stessi dati utilizzati per accedere al pannello, e scopri tutte le funzioni della nostra piattaforma per l'analisi delle statistiche"
+cloud = "Applicazione Cloud"
+cloud_text = "Olympe lavora con la piattaforma <i>OwnCloud</i>, con <a href='/doc/cloud'>molte funzioni</a> : stoccaggio di files, contatti e calendari condivisi, gallerie di foto e lettore musicale..."
+cloud_text2 = "Per utilizzare questo servizio, è necessario connettersi almeno una volta all'interfaccia cloud con il nickname e la password del tuo account Olympe."
+
+piwik = "Vai a Piwik"
+owncloud = "Vai a OwnCloud"

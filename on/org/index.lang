@@ -1,0 +1,64 @@
+[EN]
+title = "Olympe in action"
+conferences = "Conferences"
+conferences_text = "Olympe Association progressively expanding its research, both in the field of new technologies, but also social science applied to new modes of communication. <br /><br />Some of our members have 
+opportunity to speak at trade shows or as part of seminars / discussions on the following themes :"
+conferences_text2 = "<span style='font-weight: bold;'>Generalist</span>
+<br /><br />
+<ul class='styled'>
+	<li>The web hosting (issues, data control, freedom ...)</li>
+	<li>The digital divide (disparity, accessibility, infrastructure ...)</li>
+	<li>Social networks (the concept of community sharing ...)</li>
+</ul><br />
+<span style='font-weight: bold;'>Technical</span>
+<br /><br />
+<ul class='styled'>
+	<li>Safety data hosting</li>
+	<li>Open source « cloud » infrastructure</li>
+	<li>Storage in mass architectures</li>
+</ul>"
+formations = "Formations"
+formations_text = "Building on its experience in the field of information technology, Olympe offers training courses for associations and non-profit organizations. 
+These courses are taught by recognized professionals and covers the following fields :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Office and editorial suites</li>
+	<li>Creating sites and publishing tools</li>
+	<li>Community management and use of social networks</li>
+	<li>Systems infrastructure, networking and telecom</li>
+	<li>IT security</li>
+</ul>"
+contact = "Contact us"
+
+
+[FR]
+title = "Olympe en action"
+conferences = "Conférences"
+conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux nouveaux modes de communication. <br /><br />Certains de nos membres ont la 
+possibilité d'intervenir lors de salons ou dans le cadre de séminaires/débats, sur les thématiques suivantes :"
+conferences_text2 = "<span style='font-weight: bold;'>Généraliste</span>
+<br /><br />
+<ul class='styled'>
+	<li>L'hébergement de sites web (enjeux, contrôle des données, liberté...)</li>
+	<li>La fracture numérique (disparité, accessibilité, infrastructure...)</li>
+	<li>Les réseaux sociaux (notion de communauté, partage...)</li>
+</ul><br />
+<span style='font-weight: bold;'>Technique</span>
+<br /><br />
+<ul class='styled'>
+	<li>Sécurité de l’hébergement de données</li>
+	<li>Infrastructures « cloud » Open Source</li>
+	<li>Le stockage dans les architectures de masse</li>
+</ul>"
+formations = "Formations"
+formations_text = "Fort de son expérience dans le domaine des technologies de l’information, Olympe propose des formations à destination des associations et des organisations à but non lucratif. 
+Ces formations sont assurées par des professionnels reconnus et couvrent les domaines suivants :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Suites bureautiques et rédactionnelles</li>
+	<li>Création de sites et outils de publication</li>
+	<li>Community management et utilisation des réseaux sociaux</li>
+	<li>Infrastructures systèmes, réseaux et télécoms</li>
+	<li>Sécurité informatique</li>
+</ul>"
+contact = "Contactez-nous"

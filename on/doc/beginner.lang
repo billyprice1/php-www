@@ -1,0 +1,69 @@
+[EN]
+title = "Backups"
+intro = "Introduction"
+intro_text = "From your panel, you cas access the backups of your site in the corresponding <a href='/panel/backups'>section</a>."
+backup_site = "Backup of your site"
+backup_site_text = "To create an archive of your site, you must be in its configuration page:"
+backup_site_text2 = "Then clicking on <i>Backup</i>, you can create a new archive and download it then."
+backup_database = "Backup of your database"
+backup_databas_text = "To create an archive of your database, you must be in its configuration page."
+backup_database_text2 = "You have then a button allowing you to create an archive."
+backups = "Download the archives"
+backups_text = "To download an archive, just select the one you want."
+
+
+[FR]
+title = "Mon site de A à Z"
+intro = "Préambule"
+intro_text = "Si vous consultez cette page, c'est que vous faites vos premiers pas dans la conception autonome de site Internet. Tout cela peut vous sembler 
+bien compliqué, et c'est là que cette documentation intervient. Nous considérerons ici que vous avez déjà réalisé votre <a href=\"/doc/registration\">inscription</a>,
+ainsi que la <a href=\"/doc/first\">création du site</a> dans votre panel utilisateur."
+begin_keywords = "Quelques notions importantes"
+begin_keywords_text = "Avant d'aller plus avant dans notre propos, il convient de défricher le terrain en définissant les termes que nous allons reprendre tout au long
+de cette page. 
+<ul class=\"classic\"><li style=\"line-height: 23px;\"><strong>(S)FTP</strong> : de l'anglais <em>(SSH) File Transfer Protocol</em>, désigne un protocole de transfert de 
+fichiers. Concrètement, c'est le moyen qui vous permettra de placer les fichiers présents sur votre ordinateur sur votre site. Pour y accéder et l'utiliser, il convient 
+d'utiliser un logiciel nommé <em>Client FTP</em>, tel que Filezilla. Pour faire simple, la différence entre FTP et SFTP tient à la sécurité du transfert. <a href=\"/doc/publish\">
+Plus d'informations</a></li>
+<li style=\"line-height: 23px;\"><strong>HTML, CSS, PHP, Javascript...</strong> et beaucoup d'autres sont des langages informatiques qui participent généralement à la création 
+d'un site. Ils ont chacun des utilités différentes, et il est généralement conseillé d'avoir des bases en HTML et en CSS pour bien installer votre site, c'est le minimum bien 
+que des sites puissent facilement être installé via un CMS (cf. infra). De nombreux sites proposent de vous apprendre ces langages, vous en trouverez une multitude.</li>
+<li style=\"line-height: 23px;\"><strong>Base de données (BDD)</strong> : tous les sites qui devront stocker des données auront généralement recours à une base de données. C'est 
+par exemple le cas d'un site ayant un espace membre : les utilisateurs sont enregistrés dans la base de données, avec leurs informations réciproques (âge, date d'inscription, 
+nom d'utilisateur, adresse email, etc.). Vous pouvez en créer trois type sur Olympe : <a href=\"http://fr.wikipedia.org/wiki/MySQL\">MySQL</a>, 
+<a href=\"http://fr.wikipedia.org/wiki/PostgreSQL\">PostgreSQL</a>, et <a href=\"http://fr.wikipedia.org/wiki/MongoDB\">MongoDB</a>.</li>
+<li style=\"line-height: 23px;\"><strong>phpMyAdmin (PMA)</strong> et <strong>phpPgAdmin (PPA)</strong> : <a href=\"http://pma.olympe.in\">PMA</a> et <a href=\"http://ppa.olympe.in\">PPA</a> 
+sont des application Web de gestion pour les systèmes de gestion de base de données MySQL et PostgreSQL. Ils permettent de réaliser facilement les requêtes nécessaires à la mise en place
+de vos tables.</li>
+<li style=\"line-height: 23px;\"><strong>Table</strong> : une table dans une base de données correspond à un ensemble de données organisées sous forme de tableaux, où chaque ligne 
+correspond à un enregistrement, et chaque colonne à un type d'informations (dans notre exemple précédent de l'espace membre, chaque ligne serait un utilisateur, et chaque colonne 
+contiendrait une information : email, date d'inscription, nom d'utilisateur, etc.).</li>
+<li style=\"line-height: 23px;\"><strong>CMS</strong>, de l'anglais <em>Content Management System</em>, littéralement Système de gestion de contenu. Ce terme regroupe des systèmes
+offrant une installation simple, un système de publication, et une zone réservée à l'administration (<em>back-office</em>). On peut notamment citer 
+<a target=\"_blank\" href=\"http://www.spip.net/\">SPIP</a>, <a target=\"_blank\" href=\"http://www.joomla.org\">Joomla</a>, 
+<a target=\"_blank\" href=\"https://www.drupal.org\">Drupal</a>, parmi tant d'autres.</li>
+<li style=\"line-height: 23px;\"><strong>Nom de domaine (NDD)</strong> : une fois votre site créé, il est accessible via une adresse de type <em>nomdusite.olympe.in</em>. Si vous 
+voulez que cette adresse devienne <em>www.nomdusite.fr</em>, par exemple, vous devrez alors lier à votre site un nom de domaine. <a href=\"/doc/domains\">Plus d'informations</a></li></ul>
+Vous voilà normalement armés pour comprendre la suite de ce tutoriel."
+
+begin_build = "Construction du site"
+begin_build_text = "Comme annoncé précédemment, il est généralement conseillé d'avoir quelques notions en HTML (qui est le langage utilisé pour structurer les pages d'un site), et en CSS 
+(qui est utilisé pour donner un style à cette structure). Deux méthodes existent pour réaliser votre site : 
+<ul class=\"classic\"><li style=\"line-height: 23px;\"><u>Le réaliser vous-même, à la main</u> : il vous faudra pour ça un logiciel d'édition de code, Notepad++ est sans doute le plus utilisé.</li>
+<li style=\"line-height: 23px;\"><u>Le réaliser à l'aide d'un logiciel de type WYSIWYG</u> : ce nom vient (encore) de l'anglais, et signifie <em>What you see is what you get</em>. Comprenez 
+que ces logiciels vous permettent de réaliser un site de la même manière qu'avec un logiciel de traitement de texte.</li></ul>"
+
+begin_index = "Création de la première page"
+begin_index_text1 = "Si vous visitez le site que vous avez créé (à l'adresse de type <em>nomdusite.olympe.in</em>), vous y verrez quelque chose ressemblant à ça :"
+begin_index_text2 = "Ce n'est bien sûr pas ce à quoi votre page d'accueil ressemblera une fois que vous aurez terminé votre site. Il s'agit en fait d'une page listant tous les fichiers présent dans le dossier 
+courant. En l'occurence, nous sommes à la racine du site donc il s'agit de l'ensemble de l'arborescence du site. Cette page sera présente dans tous les dossiers que vous créerez tant qu'ils ne 
+contiendront pas une page d'index. En effet, par défaut, la page affichée à l'arrivée sur votre site est une page d'index, qui doit être nommée <strong>index.html</strong> ou <strong>index.php</strong> 
+en fonction du langage que vous y utiliserez.<br /><br />"
+
+
+backup_site_text2 = "Puis en cliquant sur <i>Sauvegarde</i>, vous pouvez créer une nouvelle archive et la télécharger ensuite."
+backup_database = "Sauvegarde de votre base de données"
+backup_databas_text = "Pour créer une archive de votre base de données, vous devez aller dans sa page de configuration."
+backup_database_text2 = "Vous avez ensuite un bouton vous permettant de créer une archive."
+backups = "Télécharger les archives"
+backups_text = "Pour télécharger une archive, il suffit de sélectionner celle que vous désirez."

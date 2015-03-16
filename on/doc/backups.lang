@@ -1,0 +1,26 @@
+[EN]
+title = "Backups"
+intro = "Introduction"
+intro_text = "From your panel, you cas access the backups of your site in the corresponding <a href='/panel/backups'>section</a>."
+backup_site = "Backup of your site"
+backup_site_text = "To create an archive of your site, you must be in its configuration page:"
+backup_site_text2 = "Then clicking on <i>Backup</i>, you can create a new archive and download it then."
+backup_database = "Backup of your database"
+backup_databas_text = "To create an archive of your database, you must be in its configuration page."
+backup_database_text2 = "You have then a button allowing you to create an archive."
+backups = "Download the archives"
+backups_text = "To download an archive, just select the one you want."
+
+
+[FR]
+title = "Sauvegardes"
+intro = "Introduction"
+intro_text = "Depuis votre panel, vous pouvez accéder aux sauvegardes de votre site dans la <a href='/panel/backups'>rubrique</a> correspondante."
+backup_site = "Sauvegarde de votre site"
+backup_site_text = "Pour créer une archive de votre site, vous devez vous trouver dans sa page de configuration:"
+backup_site_text2 = "Puis en cliquant sur <i>Sauvegarde</i>, vous pouvez créer une nouvelle archive et la télécharger ensuite."
+backup_database = "Sauvegarde de votre base de données"
+backup_databas_text = "Pour créer une archive de votre base de données, vous devez aller dans sa page de configuration."
+backup_database_text2 = "Vous avez ensuite un bouton vous permettant de créer une archive."
+backups = "Télécharger les archives"
+backups_text = "Pour télécharger une archive, il suffit de sélectionner celle que vous désirez."

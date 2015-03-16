@@ -1,0 +1,16 @@
+[EN]
+title = "Website directory"
+intro = "Introduction"
+intro_text = "Olympe provides a <a href='/directory'>directory</a> of hosted websites (beta release). You can choose whether or not to show your websites."
+update = "Change the description"
+update_text = "To modify the description of your site, you must go on the management page of this one :"
+update_text2 = "Once modified your title and your description, you can go to check what that gives directly in the directory by making a research or in the last added sites :"
+
+
+[FR]
+title = "Annuaire des sites"
+intro = "Introduction"
+intro_text = "Olympe met à disposition un <a href='/directory'>annuaire</a> des sites Internet hébergés (version bêta). Vous pouvez choisir ou non d'y faire apparaître vos sites Internet."
+update = "Modifier la description"
+update_text = "Pour modifier la description de votre site, vous devez vous rendre sur la page de gestion de celui-ci :"
+update_text2 = "Une fois votre titre et vos description modifiés, vous pouvez aller vérifier ce que cela donne directement dans l'annuaire en faisant une recherche ou dans les derniers sites ajoutés :"

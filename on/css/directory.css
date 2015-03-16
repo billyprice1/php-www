@@ -1,0 +1,227 @@
+div.directory {
+	width: 100%;
+	background-color: #e5e5e5;
+	margin-top: 10px;
+	padding: 80px 0px 30px 0px;
+}
+
+div.directorylight {
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 0;
+	background-color: #ffffff;
+}
+
+div.directory a {
+	text-decoration: none;
+}
+
+div.directory a:hover {
+	text-decoration: none;
+}
+
+div.directory div.container {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+div.directory a.action {
+	width: 130px;
+	display: inline-block;
+	margin: 4px 0 0 10px;
+    padding: 45px 10px 10px 10px;
+	background-color: #f0f0f0;
+    border-radius: 3px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	background-position: center 10%;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	font-size: 13px;
+}
+
+div.directory a.action:hover {
+	text-decoration: none;
+	background-color: #f8f8f8;
+}
+
+div.directory a.action.report {
+	background-image: url('../images/illu/report.png');
+}
+
+div.directory a.action.report:hover {
+	color: #eb792b;
+	background-image: url('../images/illu/report_hover.png');
+}
+
+div.directory  div.container div.site {
+	float: left;
+	margin: 0 15px 20px 20px;
+	padding: 0;
+	width: 164px;
+	height: 235px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	border: 2px solid #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+	color: rgb(51, 51, 51);
+	transition: all 0.2s;
+}
+
+div.directory  div.container div.site.grey {
+	background-color: #ededed;
+	border: 2px solid #ededed;
+}
+
+div.directory  div.container div.site:hover {
+	border: 2px solid rgba(222, 87, 17, 0.7);
+	box-shadow: none;
+}
+
+div.directory  div.container div.site:first-child {
+	margin-left: 0;
+}
+
+div.directory  div.container div.site:last-child {
+
+}
+
+div.directory  div.container div.site div.image {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	height: 140px;
+}
+
+div.directory  div.container div.site div.hover {
+	position: relative;
+	top: 0;
+	z-index: 80;
+	width: 100%;
+	height: 140px;
+	border-radius: 3px;
+	padding: 0px;
+	background-color: rgba(44, 44, 44, 0);
+	transition: all 0.2s;
+}
+
+div.directory div.container div.site div.image img {
+	width: 100px;
+	height: 100px;
+}
+
+div.directory  div.container div.site div.text {
+	margin: 0;
+	padding: 10px 10px 10px 10px;
+}
+
+span.name {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 5px;
+	height: 30px;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+}
+
+span.editor {
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	color: #bababa;
+}
+
+span.users {
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: 400;
+	color: #bababa;
+}
+
+span.users  span.number {
+	color: #cb5555;
+}
+
+span.price {
+	display: block;
+	float: right;
+	font-size: 12px;
+	font-weight: 400;
+	color: #b3c833;
+}
+
+span.category {
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 6px 15px 6px 15px;
+	margin: 5px 0 5px 0;
+	background-color: #b3c833;
+	color: #ffffff;
+}
+
+div.directory  div.logo {
+	float: left;
+	margin-right: 15px;
+	height: 220px;
+}
+
+div.directory div.logo img {
+	width: 200px;
+	height: 180px;
+}
+
+div.directory div.left {
+	float: left;
+	width: 60%;
+}
+
+div.directory div.right {
+	float: right;
+	margin-right: 8px;
+}
+
+div.directory div.social {
+	float: right;
+	width: 65px;
+	margin-left: 10px;
+}
+
+div.directory div.star {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 20px;
+}
+
+div.directory span.label {
+	color: #9bad2d;
+	font-size: 13px;
+	background-image: url('../images/icons/info.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-left: 25px;
+}
+
+div.directory div.container div.site  div.thumbshot {
+	padding: 10px;
+	height: 110px;
+	border-radius: 3px;
+	width: 140px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+div.directory div.container div.site div.thumbshot img {
+	width: 135px;
+	height: 110px;
+}

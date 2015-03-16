@@ -1,0 +1,38 @@
+[EN]
+title = "First steps"
+start = "Create a new website"
+intro = "You just completed your registration on Olympe? Let us guide you !<br /><br />
+As a reminder, your Olympe account allow you to publish your website, and your documents on the Cloud (more about the <a href='/doc/quotas'>quotas and limits</a>).
+This small guide aims to give you all the essential information for a good start."
+panel = "Your panel"
+panel_text = "You are now logged in on your <a href='/panel'>management panel</a>, whose home looks like the screenshot below."
+site = "First website creation"
+site_text = "To create your site, you have to be on the home of your panel, and click on the <strong>" + "</strong> to the left. The site name can only contain lowercase and numbers."
+site_text2 = "Now, you can click the thumbnail to get the access details, and configure few informations about your website."
+site_error = "An error occured"
+site_error_text = "If the site creation failed, there are three possible reasons: <ul class='classic'><li><u>the site name is already used</u> : another user is already using that name for his site,
+<li><u>the site name is misconfigured</u> : it must contain only lowercase and numbers</li> <li><u>the site name contains a blocked keyword</u> : to avoid phishing attempts, 
+Olympe has chosen to block certain words that are frequently used for this type of activity. If you think your site name has no reason to be blocked, you can contact the 
+<a href='http://community.olympe.in'>support forum</a>.</li></ul>"
+next_text = "Once the site is created, you can access its root via the chosen address (<em>name</em>.olympe.in). The next step is to publish your pages to finally create your website."
+next_button = "Publish the website online"
+
+[FR]
+title = "Premiers pas"
+start = "Créer un nouveau site"
+intro = "Vous venez de terminer votre inscription sur Olympe ? Suivez le guide...<br /><br />
+Pour rappel, votre compte Olympe vous permet d'accéder à un service proposant d'héberger, de base, un site internet et des documents dans le cloud (en savoir plus sur les <a href='/doc/quotas'>quotas et 
+limitations</a>). Ce petit guide à pour but de vous donner toutes les informations essentielles pour bien commencer."
+panel = "Votre panel de gestion"
+panel_text = "Vous êtes maintenant connecté sur votre <a href='/panel'>panel de gestion</a> dont l'accueil ressemble à la capture ci-dessous."
+site = "Création du premier site"
+site_text = "Pour créer votre site, vous devez vous trouver sur l'accueil de votre panel, et cliquer sur le <i>plus</i> à gauche. Le nom du site ne peut contenir que des minuscules et des chiffres :
+aucun autre type de caractère ne sera accepté."
+site_text2 = "Désormais, vous pouvez vous rendre sur l'aperçu afin d'obtenir les détails des accès, et de configurer quelques informations relatives à votre site."
+site_error = "Une erreur est survenue"
+site_error_text = "Si la création du site a échoué, trois erreurs sont possibles : <ul class='classic'><li><u>le nom du site est déjà utilisé</u> : un autre utilisateur utilise déjà ce nom pour son site,
+<li><u>le nom du site est mal configuré</u> : il ne doit contenir que des minuscules et des chiffres</li> <li><u>le nom du site contient un mot-clé bloqué</u> : pour éviter les tentatives de phishing, 
+Olympe a choisi de bloquer certains mots qui sont fréquemment utilisés pour ce type d'activités. Si vous pensez que le nom de votre site n'a aucune raison d'être bloquée, vous pouvez vous adresser 
+au <a href='http://community.olympe.in'>forum de support</a>.</li></ul>"
+next_text = "Une fois le site crée, vous pouvez accéder à sa racine via l'adresse choisie (<em>nom</em>.olympe.in). L'étape suivante consiste à y publier vos pages, pour enfin créer votre site Internet."
+next_button = "Publier le site en ligne"

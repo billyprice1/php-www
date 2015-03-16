@@ -1,0 +1,26 @@
+[EN]
+title = "Aid, recruitment and funding"
+
+you = "We need you !"
+you_text = "Olympe is currently looking for new members to her team of administration and development. It is of course about voluntary and remote work, but if you are interested in infrastructure technologies,
+the web development or the community interactions, you can <a href='/about/contact'>contact us</a> by explaining your approach.
+<br /><br />As a team member, you become fully adherent to Olympe association and therefore you have the opportunity to go represent the association at trade shows or conferences."
+logo = "Logos and goodies"
+logo_text = "Where possible, feel free to view our <a href='/org/press'>logos</a> on your site, this allows us to be more visible, to continue our development and improvement of our services."
+donation = "Donate"
+donation_text = "Olympe is a non-profit organization self-funded by its members and partners. It is fully independent and continues to invest to maintain and expand its infrastructure. 
+You are a regular user of our services ? Feel free to participate in your scale to finance our activities."
+
+
+[FR]
+title = "Aide, recrutement et financement"
+
+you = "Nous avons besoin de vous !"
+you_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
+le développement web ou les interactions communautaires, vous pouvez nous <a href='/about/contact'>contacter</a> en nous expliquant votre démarche.
+<br /><br />En tant que membre de l'équipe, vous devenez pleinement adhérent à l'association Olympe et de ce fait vous avez la possibilité d'aller représenter l'association lors de salons ou de conférences."
+logo = "Logos et goodies"
+logo_text = "Lorsque c'est possible, n'hésitez pas à afficher nos <a href='/org/press'>logos</a> sur votre site, cela nous permet d'être plus visibles, de poursuivre notre développement et l'amélioration de nos services."
+donation = "Faire un don"
+donation_text = "Olympe est une association à but non lucratif auto-financée par ses membres et ses partenaires. Elle est parfaitement indépendante et continue d'investir pour maintenir et étendre son infrastructure. 
+Vous êtes un utilisateur régulier de nos services ? N'hésitez pas à participer à votre échelle au financement de nos activités."

@@ -1,0 +1,44 @@
+﻿[EN]
+title = "Team blog"
+
+rss = "Subscribe"
+follow = "Follow"
+read = "Read more"
+by = "by"
+DATEFORMAT = "M d, Y"
+
+[ES]
+title = "Blog del equipo"
+
+rss = "Suscribir"
+follow = "Seguir"
+read = "Leer más"
+by = "por"
+DATEFORMAT = "d M, Y"
+
+[FR]
+title = "Blog de l'équipe"
+
+rss = "S'abonner"
+follow = "Suivre"
+read = "Lire la suite"
+by = "par"
+DATEFORMAT = "d M, Y"
+
+[DE]
+title = "Team Blog"
+
+rss = "Abonnieren"
+follow = "Folgen"
+read = "Weiterlesen"
+by = "von"
+DATEFORMAT = "d M, Y"
+
+[IT]
+title = "Team blog"
+
+rss = "Sottoscrivi"
+follow = "Segui"
+read = "Continua a leggere"
+by = "da"
+DATEFORMAT = "d M, Y"

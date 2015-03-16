@@ -1,0 +1,8 @@
+[EN]
+success = "Your email has been sent to the user."
+
+[FR] 
+success = "Votre email a bien été envoyé à l'utilisateur."
+
+[DE] 
+success = "Ihre E-Mail ist an den Benutzer gesendet worden."

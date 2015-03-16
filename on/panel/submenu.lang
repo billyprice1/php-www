@@ -1,0 +1,43 @@
+﻿[EN]
+phome = "Sites"
+pdomains = "Domains"
+pdatabases = "Databases"
+pmails = "Mail accounts"
+pservices = "Services"
+pquotas = "Quotas"
+pmessages = "Requests"
+psettings = "Settings"
+pbackups = "Backups"
+
+[ES]
+phome = "Sitios"
+pdomains = "Dominios"
+pdatabases = "Bases de datos"
+pmails = "Cuentas de correo"
+pservices = "Servicios"
+pquotas = "Cuotas"
+pmessages = "Solicitud"
+psettings = "Configuración"
+pbackups = "Backups"
+
+[FR]
+phome = "Sites"
+pdomains = "Domaines"
+pdatabases = "Bases de données"
+pmails = "Comptes mails"
+pservices = "Services"
+pquotas = "Quotas"
+pmessages = "Demandes"
+psettings = "Paramètres"
+pbackups = "Sauvegardes"
+
+[IT]
+phome = "Siti"
+pdomains = "Domini"
+pdatabases = "Database"
+pmails = "Account email"
+pservices = "Servizi"
+pquotas = "Quote"
+pmessages = "Richieste"
+psettings = "Impostazioni"
+pbackups = "Backup"
