@@ -36,25 +36,13 @@ else {
 	$up365 = "";
 }
 
+/*
 require_once 'on/status/vendor/autoload.php';
 
-
-// projets.olympe.in status
-$url = 'https://projets.olympe.in';
-libxml_use_internal_errors(true);
-$doc = new DOMDocument();
-$doc->loadHTMLFile($url);
-libxml_clear_errors();
-$title = $doc->getElementsByTagName('title')->item(0);
-$chaine = $title->nodeValue;
-$dispo = "0";
-
-
-if ($chaine == "Espace de travail Olympe") {
-	$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
-	$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
-	$issues = $issues['issues'];
-} 
+$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
+$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
+$issues = $issues['issues'];
+*/
 
 $content = "
 		<div class=\"head\" style=\"background-color: ".($status!=2?"#ca0101":"#7bbb51")."; background-image: url('/{$GLOBALS['CONFIG']['SITE']}/images/dotgrid-black.png'); margin-bottom: 0;\">
@@ -119,22 +107,16 @@ else
 	$content .= "
 				<tr>
 					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
-			";
-			
-	if ($chaine === false) {
-			$content .= $lang['intervention'];
-	}else{
-			$content .= $lang['unavailable'];
-	}
-	
-	$content .= "
+					".$lang['intervention'].".
 					</td>
 				</tr>
 	";
 
 }
 
-	$content .= "
+
+
+$content .= "
 			</table>
 			<br /><br />
 			<div style=\"float: left; width: 500px;\">
