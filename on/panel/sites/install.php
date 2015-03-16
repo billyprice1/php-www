@@ -96,7 +96,10 @@
 	curl_close( $ch );
 		
 	if ( $get == "^_^" )
+	{
+		sleep( 2 );
 		header( "Location: ". $_GLOBALS['REDIRECT']['HTTPS']."://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+	}
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
