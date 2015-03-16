@@ -16,8 +16,7 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 }
 else
-{	
-	$time_start = microtime(true);
+{
 	$memcache = new Memcache;
 	$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
@@ -35,17 +34,6 @@ else
 	$sites = $get_result->{'sites'};
 	$dbs = $get_result->{'dbs'};
 	$domains = $get_result->{'domains'};
-	$time_end = microtime(true);
-	$time_memcache = $time_end - $time_start;
-	$time_start = microtime(true);
-	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$time_end = microtime(true);
-	$time_api = $time_end - $time_start;
-	echo 'temps memcache: '.$time_memcache.'s <br />';
-	echo 'temps api: '.$time_api.'s<br />';
 }
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
