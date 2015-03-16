@@ -26,13 +26,16 @@
 		case 'wordpress':			
 			$_GLOBALS['APP']['NAME'] = "wordpress";
 			$_GLOBALS['APP']['VERSION'] = "4.1";
+			$_GLOBALS['REDIRECT']['HTTPS'] = true;
 			break;
 		case 'joomla':
 			$_GLOBALS['APP']['NAME'] = "joomla";
 			$_GLOBALS['APP']['VERSION'] = "3.4";
+			$_GLOBALS['REDIRECT']['HTTPS'] = false;
 			break;
 	}
 	
+	$_GLOBALS['REDIRECT']['HTTPS'] ? $_GLOBALS['REDIRECT']['HTTPS'] = 'https' : $_GLOBALS['REDIRECT']['HTTPS'] = 'http';
 	$_GLOBALS['APP']['SITE'] =  $site;
 		
 	/* ================ CLEAN UNUSED DATABASES ================ */
@@ -91,10 +94,9 @@
 	
 	$get = curl_exec( $ch );
 	curl_close( $ch );
-	
-   
-   if ( $get == "^_^" )
-		header( "Location: https://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
+		
+	if ( $get == "^_^" )
+		header( "Location: ". $_GLOBALS['REDIRECT']['HTTPS']."://".$site['name'].".olympe.in".$_GLOBALS['APP']['PATH'] );
 	else
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
