@@ -106,7 +106,7 @@ conditions = "J'ai lu et j'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'
 hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
 directory = "Consultez notre annuaire"
 
-lock_signup = "Suite à une trop grande affluence, les inscriptions sont momentanément fermé.<br />Elles reprendront lorsque l'infrastructure sera de nouveau apte à accueillir de nouveau membre.<br />Nous nous excusons par ailleurs pour le gène occasionné."
+lock_signup = "Suite à une trop grande affluence, les inscriptions sont momentanément fermées.<br />Elles reprendront lorsque l'infrastructure sera de nouveau apte à accueillir de nouveaux membres.<br />Nous nous excusons par ailleurs pour la gêne occasionnée."
 
 [DE]
 title = "Solidarität und Innovation"

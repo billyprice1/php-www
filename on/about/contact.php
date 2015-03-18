@@ -18,13 +18,6 @@ $title = $doc->getElementsByTagName('title')->item(0);
 $chaine = $title->nodeValue;
 $dispo = "0";
 
-if ($chaine == "Espace de travail Olympe") {
-	$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
-	$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
-	$issues = $issues['issues'];
-	$dispo = "1";
-} 
-
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
 	
@@ -84,7 +77,6 @@ else
 	";
 
 }
-
 	$content .= "
 			</table>
 			<br /><br />
