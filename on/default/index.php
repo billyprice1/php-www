@@ -55,7 +55,7 @@ $content .= "
 			</div>
 			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
-					<!--<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
+					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
 							<input class=\"auto\" type=\"text\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"{$lang['email']}")."\" name=\"email\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
@@ -65,8 +65,7 @@ $content .= "
 							{$GLOBALS['lang']['conditions']}
 						</fieldset>
 						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
-					</form>-->
-						<p class=\"center\">{$lang['lock_signup']}</p>
+					</form>
 				</div>
 			</div>
 			<div class=\"lines\">
