@@ -33,6 +33,16 @@
 			$_GLOBALS['APP']['VERSION'] = "3.4";
 			$_GLOBALS['REDIRECT']['HTTPS'] = false;
 			break;
+		case 'drupal':
+			$_GLOBALS['APP']['NAME'] = "drupal";
+			$_GLOBALS['APP']['VERSION'] = "Unknown";
+			$_GLOBALS['REDIRECT']['HTTPS'] = false;
+			break;
+		case 'fluxbb':
+			$_GLOBALS['APP']['NAME'] = "drupal";
+			$_GLOBALS['APP']['VERSION'] = "Unknown";
+			$_GLOBALS['REDIRECT']['HTTPS'] = false;
+			break;
 	}
 	
 	$_GLOBALS['REDIRECT']['HTTPS'] ? $_GLOBALS['REDIRECT']['HTTPS'] = 'https' : $_GLOBALS['REDIRECT']['HTTPS'] = 'http';
