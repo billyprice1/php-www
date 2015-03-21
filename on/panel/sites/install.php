@@ -39,7 +39,7 @@
 			$_GLOBALS['REDIRECT']['HTTPS'] = false;
 			break;
 		case 'fluxbb':
-			$_GLOBALS['APP']['NAME'] = "drupal";
+			$_GLOBALS['APP']['NAME'] = "fluxbb";
 			$_GLOBALS['APP']['VERSION'] = "Unknown";
 			$_GLOBALS['REDIRECT']['HTTPS'] = false;
 			break;
