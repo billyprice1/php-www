@@ -20,8 +20,8 @@ else
 	//$memcache = new Memcache;
 	/*$memcache->addServer('outdoor', 11211);
 	echo $memcache->getServerStatus('outdo2or', 11211);*/
-	$memcache = memcache_connect('memcach', 11211);
-	$r=memcache_get_server_status($memcache, 'memcach', 11211);
+	$memcache = new Memcache;
+	$memcache->connect('memcache', 11211) or die ("Could not connect");
 	/*$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
 	if(!$get_result){
