@@ -19,7 +19,7 @@ else
 {
 	$memcache = new Memcache;
 	$memcache->addServer('outdoor', 11211);
-	echo $memcache->getServerStatus('outdoor', 11211);
+	echo $memcache->getServerStatus('outdoor2', 11211);
 	/*$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
 	if(!$get_result){
