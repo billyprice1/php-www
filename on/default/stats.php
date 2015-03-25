@@ -36,7 +36,7 @@ else
 		$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$m->set('stats', $tmp_object, false, 86400) or die ("Failed to save data at the server");
+		$m->set('stats', $tmp_object, false, 86400);
 		$get_result = $m->get('stats');
 	}
 	
