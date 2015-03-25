@@ -16,15 +16,14 @@ else
 
 	try {
 		$m = new Memcache;
-		$m->connect('tralala', 11211);
-		$r=memcache_get_server_status($m, 'tralala', 11211);
+		$m->connect('memcache', 11211);
+		$r=memcache_get_server_status($m, 'memcache', 11211);
 	}
 
 	catch( Exception $e )
 	{
 		$r="1";
 	}
-
 	
 	if ( $r =="1" ) {
 		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
