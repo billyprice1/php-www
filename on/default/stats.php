@@ -16,13 +16,14 @@ else
 
 	try {
 		$m = new Memcache;
-		$m->connect('memcache', 11211);
-		$r=memcache_get_server_status($m, 'memcache', 11211);
+		$m->connect('tralala', 11211);
+		$r=memcache_get_server_status($m, 'tralala', 11211);
 	}
 
 	catch( Exception $e )
 	{
-		$r="1";
+		template:output("tralala memcache");
+		//$r="1";
 	}
 	
 	if ( $r =="1" ) {
