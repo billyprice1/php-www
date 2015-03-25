@@ -18,9 +18,8 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 else
 {
 	$memcache = new Memcache;
-	$available = $memcache->connect('memcache', 11211);
+	$available = $memcache->connect('memche', 11211);
 	if($available){
-		echo 'available';
 		$get_result = $memcache->get('stats');
 		if(!$get_result){
 			$tmp_object = new stdClass;
