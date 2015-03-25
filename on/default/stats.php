@@ -19,7 +19,7 @@ else
 {
 	$memcache = new Memcache;
 	$memcache->connect('memcache', 11211);
-	echo $memcache->getServerStatus('memcache', 11211);*/
+	echo $memcache->getServerStatus('memcache', 11211);
 	/*$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
 	if(!$get_result){
