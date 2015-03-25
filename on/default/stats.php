@@ -18,7 +18,6 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 else
 {
 	$memcache = new Memcache;
-<<<<<<< HEAD
 	$memcache->connect('memcach', 11211);
 	echo $memcache->getServerStatus('memcach', 11211);
 	/*$memcache->connect('memcache', 11211);
@@ -31,11 +30,10 @@ else
 		$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$memcache->set('stats', $tmp_object, false, 86400) or 
 		die ("Failed to save data at the server");
-=======
+
 	$memcache->addServer('memcach', 11211);
 	$status = $memcache->getServerStatus('memcach', 11211);
 	if($status == '1'){
->>>>>>> hotfix/322
 		$get_result = $memcache->get('stats');
 		if(!$get_result){
 			$tmp_object = new stdClass;
