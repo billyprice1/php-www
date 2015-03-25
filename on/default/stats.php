@@ -17,10 +17,11 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 }
 else
 {
-	$memcache = new Memcache;
-	$memcache->addServer('outdoor', 11211);
-	//$memcache->connect('outdoor', 11211);
-	echo $memcache->getServerStatus('outdo2or', 11211);
+	//$memcache = new Memcache;
+	/*$memcache->addServer('outdoor', 11211);
+	echo $memcache->getServerStatus('outdo2or', 11211);*/
+	$memcache = memcache_connect('localhost', 11211);
+	$r=memcache_get_server_status($memcache, 'localhost', 11211);
 	/*$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
 	if(!$get_result){
