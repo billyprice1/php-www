@@ -18,8 +18,8 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 else
 {
 	$memcache = new Memcache;
-	$memcache->addServer('memcach', 11211);
-	echo $memcache->getServerStatus('memcach', 11211);
+	$memcache->addServer('memcache', 11211);
+	echo $memcache->getServerStatus('memcache', 11211);
 	/*$memcache->connect('memcache', 11211);
 	$get_result = $memcache->get('stats');
 	if(!$get_result){
