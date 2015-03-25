@@ -15,7 +15,7 @@ else
 {
 
 	$m = new Memcache;
-	$m->connect('memcache', 11211);
+	$m->connect('badibada', 11211);
 	$r=memcache_get_server_status($m, 'badibada', 11211);
 
 	if ( $r != 1 ) {
