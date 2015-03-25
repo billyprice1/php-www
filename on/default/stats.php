@@ -19,27 +19,31 @@ else
 {
 	$memcache = new Memcache;
 	$memcache->addServer('memcach', 11211);
-	echo $memcache->getServerStatus('memcach', 11211);
-	/*$memcache->connect('memcache', 11211);
-	$get_result = $memcache->get('stats');
-	if(!$get_result){
-		$tmp_object = new stdClass;
-		$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$memcache->set('stats', $tmp_object, false, 86400) or 
-		die ("Failed to save data at the server");
+	$status = $memcache->getServerStatus('memcach', 11211);
+	if($status == '1'){
 		$get_result = $memcache->get('stats');
+		if(!$get_result){
+			$tmp_object = new stdClass;
+			$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$memcache->set('stats', $tmp_object, false, 86400) or 
+			die ("Failed to save data at the server");
+			$get_result = $memcache->get('stats');
+		}
+		$users = $get_result->{'users'};
+		$sites = $get_result->{'sites'};
+		$dbs = $get_result->{'dbs'};
+		$domains = $get_result->{'domains'};
 	}
-	$users = $get_result->{'users'};
-	$sites = $get_result->{'sites'};
-	$dbs = $get_result->{'dbs'};
-	$domains = $get_result->{'domains'};*/
-	$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	else{
+		echo 'api';
+		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+		$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	}
 }
 /*var_dump($get_result);*/
 /*if(date('G:i') >= '17:30' && date('G:i') <= '22:00' || date('G:i') >= '6:00' && date('G:i') <= '9:00')
