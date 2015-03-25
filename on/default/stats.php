@@ -14,21 +14,19 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 else
 {
 
-	$m = new Memcache;
-	$m->connect('badibada', 11211);
-	$r=memcache_get_server_status($m, 'badibada', 11211);
+	try {
+		$m = new Memcache;
+		$m->connect('memcache', 11211);
+		$r=memcache_get_server_status($m, 'memcache', 11211);
+	}
 
-	echo $r;
-	exit;
-	
-	if ( $r != 1 ) {
-
+	catch( Exception $e )
+	{
 		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	}
-	else {
 
 	$get_result = $m->get('stats');
 	
@@ -47,7 +45,6 @@ else
 	$dbs = $get_result->{'dbs'};
 	$domains = $get_result->{'domains'};
 	
-	}
 }
 
 switch( translator::getLanguage() )
