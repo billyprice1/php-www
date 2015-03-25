@@ -18,6 +18,9 @@ else
 	$m->connect('badibada', 11211);
 	$r=memcache_get_server_status($m, 'badibada', 11211);
 
+	echo $r;
+	exit;
+	
 	if ( $r != 1 ) {
 
 		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
