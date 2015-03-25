@@ -20,6 +20,7 @@ else
 	$memcache = new Memcache;
 	$available = $memcache->connect('memcache', 11211);
 	if($available){
+		echo 'available';
 		$get_result = $memcache->get('stats');
 		if(!$get_result){
 			$tmp_object = new stdClass;
