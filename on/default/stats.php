@@ -22,29 +22,38 @@ else
 
 	catch( Exception $e )
 	{
+		$r="1";
+	}
+
+	
+	if ( $r =="1" ) {
 		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	}
-
-	$get_result = $m->get('stats');
+	else
+	{	
 	
-	if(!$get_result){
-		$tmp_object = new stdClass;
-		$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-		$m->set('stats', $tmp_object, false, 86400);
 		$get_result = $m->get('stats');
+	
+		if(!$get_result){
+			$tmp_object = new stdClass;
+			$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+			$m->set('stats', $tmp_object, false, 86400);
+			$get_result = $m->get('stats');
+		}
+	
+		$users = $get_result->{'users'};
+		$sites = $get_result->{'sites'};
+		$dbs = $get_result->{'dbs'};
+		$domains = $get_result->{'domains'};
+	
 	}
-	
-	$users = $get_result->{'users'};
-	$sites = $get_result->{'sites'};
-	$dbs = $get_result->{'dbs'};
-	$domains = $get_result->{'domains'};
-	
+		
 }
 
 switch( translator::getLanguage() )
