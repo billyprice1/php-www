@@ -13,47 +13,44 @@ if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' 
 }
 else
 {
-
-	try {
+	try
+	{
 		$m = new Memcache;
-		$m->connect('tralala', 11211);
-		$r=memcache_get_server_status($m, 'tralala', 11211);
+		if( !$m->connect('tralala', 11211) )
+			throw new Exception("Memcache failed to connect");
+		if( ($value = $m->get("stats")) === false || !is_array($value) )
+			throw new Exception("Memcache could not retrieve value");
+		$m->close();
+		
+		$users = array('count' => $value['users']);
+		$sites = array('count' => $value['sites']);
+		$dbs = array('count' => $value['dbs']);
+		$domains = array('count' => $value['domains']);
 	}
-
 	catch( Exception $e )
 	{
-		template:output("tralala memcache");
-		//$r="1";
-	}
-	
-	if ( $r =="1" ) {
+		// if value was not in memcache or if memcache failed to connect then get the API values (slow)
 		$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 		$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	}
-	else
-	{	
-	
-		$get_result = $m->get('stats');
-	
-		if(!$get_result){
-			$tmp_object = new stdClass;
-			$tmp_object->users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-			$tmp_object->sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-			$tmp_object->dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-			$tmp_object->domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-			$m->set('stats', $tmp_object, false, 86400);
-			$get_result = $m->get('stats');
-		}
-	
-		$users = $get_result->{'users'};
-		$sites = $get_result->{'sites'};
-		$dbs = $get_result->{'dbs'};
-		$domains = $get_result->{'domains'};
-	
-	}
 		
+		// try to store the values back in memcache
+		try
+		{
+			$m = new Memcache;
+			if( !$m->connect('tralala', 11211) )
+				throw new Exception("Memcache failed to connect");
+			$stats = array('users'=>$users['count'], 'sites'=>$sites['count'], 'dbs'=>$dbs['count'], 'domains'=>$domains['count']);
+			if( !$m->set("stats", $stats, false, 86400) )
+				throw new Exception("Memcache could not store value");
+			$m->close();
+		}
+		catch(Exception $e2)
+		{
+			// memcache failed to store value... well, ignore and continue
+		}
+	}
 }
 
 switch( translator::getLanguage() )
