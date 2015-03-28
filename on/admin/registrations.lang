@@ -11,6 +11,7 @@ delete_text = "Not yet..."
 delete_now = "Delete"
 no_result = "No result met your search criteria."
 link = "Display registration confirmation link"
+end = "Validity"
 
 [FR]
 title = "Dernières inscriptions en cours"
@@ -25,3 +26,4 @@ delete_text = "Modification de l'API nécessaire. In progress."
 delete_now = "Supprimer"
 no_result = "Aucun résultat ne correspond aux termes de la recherche."
 link = "Afficher le lien de confirmation de l'inscription"
+end = "Validité"

@@ -8,6 +8,8 @@ if( !defined('PROPER_START') )
 
 try
 {
+	$low_username = strtolower($_POST['username']);
+	
 	if( !isset($_POST['code']) || !isset($_POST['email']) )
 		throw new SiteException('Invalid or missing arguments', 400, 'Parameter code or email is not present');
 	
@@ -18,7 +20,7 @@ try
 	if( $result[0]['date'] < (time() - 864000) ) // 10 days
 	throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
 
-	$result = api::send('user/add', array('user'=>$_POST['username'], 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_POST['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$result = api::send('user/add', array('user'=>$low_username, 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_POST['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$uid = $result['id'];
 
 	if( !is_numeric($uid) || $uid <= 0 )
@@ -42,9 +44,9 @@ try
 	api::send('quota/user/update', array('user'=>$uid, 'quota'=>'BYTES', 'max'=>500), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	api::send('quota/user/update', array('user'=>$uid, 'quota'=>'MAILS', 'max'=>100), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
-	$email = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $_POST['username'], $_POST['password']), $lang['content']);
+	$email = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $low_username, $_POST['password']), $lang['content']);
 	mail($_POST['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
-	$email2 = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $_POST['username'], '**********'), $lang['content']);
+	$email2 = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $low_username, '**********'), $lang['content']);
 	mail('contact@olympe.in', $lang['subject'], str_replace('{CONTENT}', $email2, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
 		
 	$_SESSION['MESSAGE']['TYPE'] = 'success';

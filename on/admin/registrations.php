@@ -53,7 +53,8 @@ $content .= "
 						<tr>
 							<th style=\"text-align: center; width: 40px;\">#</th>
 							<th>{$lang['email']}</th>
-							<th style=\"width:150px;\">{$lang['date']}</th>
+							<th style=\"width:120px;\">{$lang['date']}</th>
+							<th style=\"width:120px;\">{$lang['end']}</th>
 							<th style=\"width: 150px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 ";
@@ -63,6 +64,7 @@ if( count($registrations) > 0 )
 	foreach($registrations as $r)
 	{
 		if($i < $max) {
+			$end = $r['date'] + 864000;
 			$i++;
 			
 			$content .= "
@@ -75,6 +77,7 @@ if( count($registrations) > 0 )
 								</div>
 							</td>
 							<td>".date($lang['dateformat'], $r['date'])."</a></td>
+							<td>".date($lang['dateformat'], $end)."</a></td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#email_switch_{$i}, #link_switch_{$i}').toggle('fast'); $('#link_switch_{$i} input').focus().select(); return false;\" title=\"{$lang['link']}\">
 									<img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/link.png\" alt=\"\" />
