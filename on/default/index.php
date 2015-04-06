@@ -99,7 +99,9 @@ $content .= "
 				</div>
 			</div>
 			<div class=\"separator light\"></div>
-			<div id=\"stats\" style=\"text-align: center;\"></div>
+			<div id=\"stats\" style=\"text-align: center;\">
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif\" />
+			</div>
 			<div class=\"separator light\"></div>
 			<div class=\"content\">
 				<div class=\"left\">
@@ -156,33 +158,8 @@ $content .= "
 			</div>
 
 			<script>
-				$(\"#stats\").html(\"<img src='/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif' />\");
 				$.ajax(\"/default/stats\").done(function(result) {
 					$(\"#stats\").html(result);
-				});
-			
-				function showLogin()
-				{
-					if( $(\"#signupform\").css('display') != 'none' )
-						$(\"#signupform\").css('display', 'none');
-						
-					var options = { direction: \"up\"};
-					$(\"#loginform\").toggle(\"blind\", options, 200);
-				}
-				function showSignup()
-				{
-					if( $(\"#loginform\").css('display') != 'none' )
-						$(\"#loginform\").css('display', 'none');
-						
-					var options = { direction: \"up\"};
-					$(\"#signupform\").toggle(\"blind\", options, 200);
-				}
-				
-				$(function() {
-					$('.msignup').click(function() {
-						$('#signup').dialog('open');
-						return false;
-					});
 				});
 			</script>
 ";
