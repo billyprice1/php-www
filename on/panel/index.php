@@ -71,6 +71,7 @@ $content = "
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
 				$display = rand(0, 2);
+				$twitter_text = 'twitter_text_' . rand(1,2);
 				
 				switch ($display) {
 				case 0:
@@ -94,7 +95,7 @@ $content = "
 						   href=\"https://twitter.com/share\"
 						  data-url=\"https://www.olympe.in\"
 						  data-via=\"OlympeNet\"
-						  data-text=\"{$lang['twitter_text']}\"
+						  data-text=\"{$lang[$twitter_text]}\"
 						  data-count=\"none\">
 						Tweet
 						</a>
