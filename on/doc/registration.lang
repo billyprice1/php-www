@@ -66,4 +66,4 @@ registration_second_text4 = "Si tout s'est bien déroulé, vous recevrez un emai
 
 registration_error = "Erreurs durant l'inscription"
 registration_error_text = "Les erreurs pouvant être rencontrées sont précisées dans les paragraphes précédents. Si vous rencontrez l'une de ces erreurs mais ne trouvez pas la raison qui la justifie, ou si vous rencontrez 
-une autre erreur que celles-ci, n'hésitez pas à <a href='/about/contact'>nous contacter</a> en précisant l'email d'inscription utilisée."
+une autre erreur que celles-ci, n'hésitez pas à <a href='/about/contact'>contact us</a> en précisant l'email d'inscription utilisée."
