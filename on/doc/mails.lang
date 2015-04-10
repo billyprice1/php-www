@@ -1,7 +1,7 @@
 [EN]
 title = "Email accounts"
 intro = "Prerequisite"
-intro_text = "To create mail accounts, aliases and redirections on Olympe, you must have registered at least <a href='/doc/domains'>one domain name</a> for your website."
+intro_text = "To create mail accounts, aliases and redirections on Olympe, you have to link at least <a href='/doc/domains'>one domain name</a> at your website."
 create = "Create an email account"
 create_text = "In order to create an email account, go to the <a href='/panel/users'>\"Email accounts\"</a> menu of your panel. Choose the domain name for which you want a new email account, and click on "<em>Add an account</em>" :"
 create_text2 = "Then, fill the form"

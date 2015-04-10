@@ -38,6 +38,11 @@ if( !isset($_SESSION['ANTISPAM']) )
 $content .= "
 				<br />
 			</div>
+			<noscript>
+				<div class=\"noscript-alert\">
+					{$lang['noscript']}
+				</div>
+			</noscript>
 			<div id=\"loginform\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
 					<form action=\"/login_action\" method=\"post\" class=\"center\">
@@ -71,21 +76,32 @@ $content .= "
 			<div class=\"lines\">
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
-						<a href=\"/service/hosting\" class=\"hfree\"><h3 class=\"red\" style=\"padding-top: 100px;\">{$lang['free']}</h3></a>
+						<a href=\"/service/hosting\" class=\"hfree\">
+							<span></span>
+							<h3 class=\"red\">{$lang['free']}</h3>
+						</a>
 						<p>{$lang['free_text']}</p>
 					</div>
 					<div class=\"hinnovation\">
-						<a href=\"/service/infrastructure\" class=\"hinnovation\"><h3 class=\"blue\"  style=\"padding-top: 100px;\">{$lang['innovation']}</h3></a>
+						<a href=\"/service/infrastructure\" class=\"hinnovation\">
+							<span></span>
+							<h3 class=\"blue\">{$lang['innovation']}</h3>
+						</a>
 						<p>{$lang['innovation_text']}</p>
 					</div>
 					<div class=\"hopen\">
-						<a href=\"/developers\" class=\"hopen\"><h3 class=\"green\"  style=\"padding-top: 100px;\">{$lang['open']}</h3></a>
+						<a href=\"/developers\" class=\"hopen\">
+							<span></span>
+							<h3 class=\"green\">{$lang['open']}</h3>
+						</a>
 						<p>{$lang['open_text']}</p>
 					</div>
 				</div>
 			</div>
 			<div class=\"separator light\"></div>
-			<div id=\"stats\" style=\"text-align: center;\"></div>
+			<div id=\"stats\" style=\"text-align: center;\">
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif\" />
+			</div>
 			<div class=\"separator light\"></div>
 			<div class=\"content\">
 				<div class=\"left\">
@@ -142,31 +158,8 @@ $content .= "
 			</div>
 
 			<script>
-				$(\"#stats\").html(\"<img src='/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif' />\");
-				$(\"#stats\").load(\"/default/stats\");
-			
-				function showLogin()
-				{
-					if( $(\"#signupform\").css('display') != 'none' )
-						$(\"#signupform\").css('display', 'none');
-						
-					var options = { direction: \"up\"};
-					$(\"#loginform\").toggle(\"blind\", options, 200);
-				}
-				function showSignup()
-				{
-					if( $(\"#loginform\").css('display') != 'none' )
-						$(\"#loginform\").css('display', 'none');
-						
-					var options = { direction: \"up\"};
-					$(\"#signupform\").toggle(\"blind\", options, 200);
-				}
-				
-				$(function() {
-					$('.msignup').click(function() {
-						$('#signup').dialog('open');
-						return false;
-					});
+				$.ajax(\"/default/stats\").done(function(result) {
+					$(\"#stats\").html(result);
 				});
 			</script>
 ";

@@ -1,0 +1,69 @@
+[EN]
+title = "Registration"
+registration_step = "How to register ?"
+registration_step_text = "The registration proceeds in two steps detailed below. The only requirement is a valid email address. We invite you to read first the Terms of Services, and important information 
+especially in documentation. If you have questions, you can contact the team on the <a href='http://community.olympe.in'>support forum</a>."
+
+registration_first = "First step"
+registration_first_text = "The first step is to fill an <strong>email address</strong>. You will receive an email in order to complete your registration, that's why you should use a valid address. It should be noted that 
+most disposable email addresses / temporary email adresses are blocked on Olympe, you will not be able to register with one of these. You will also have to <strong>read and accept</strong> the <a href=''>Terms of Services</a>."
+registration_first_text2 = "If you encounter the following error : <span style='color: #bc0000;'>The email format is invalid or this address is already used</span>, 
+<a href='#' class='toggleDoc' data-doc='1'>click here</a> to see the possible reasons."
+registration_error_list1 = "<li>You already have an account on Olympe with this email address (in accordance with Terms of Services, only one account per person or entity is permitted),</li>
+<li>You have filled an incorrect or banned email address (e.g. temporary email adresses),</li>
+<li>You have already made a registration that is still pending (the email was sent to you to complete your registration, and it is not done yet),</li>
+<li>You did not check the box to accept the Terms of Services,</li>"
+
+registration_second = "Second step"
+registration_second_text = "If the first step was successful, you will receive an email (reception may take a few minutes) containing a confirmation link. You have to click it. If you do not receive 
+this email, please <a href='/about/contact'>contact us</a>."
+registration_second_text2 = "This step requires that you choose a <strong>username</strong> (this one will only be used to connect to your Olympe panel, and does not predetermine your website name), and a 
+<strong>password</strong>. The username have to be composed only of <u>letters, numbers, lowercase</u>. The characters _ and - are also allowed. The username must be between 3 and 50 characters, the password must be 
+between 6 and 50."
+registration_second_text3 = "If you encounter the following error : <span style='color: #bc0000;'>This username already exists or is not correctly formated</span>, 
+<a href='#' class='toggleDoc' data-doc='2'>click here</a> to see the possible reasons."
+registration_error_list2 = "<li>This username is already taken by another user,</li>
+<li>The username is composed of a prohibited character (only letters, numbers, lowercase as well as _ and - are allowed),</li>
+<li>The password is too short (6 characters minimum) or too long (50 maximum),</li>
+<li>The confirmation link is too old (its validity is 10 days),</li>"
+registration_second_text4 = "If all went well, you'll receive an email confirming your registration and summarizing your login. Welcome to Olympe!"
+
+registration_error = "Errors during registration"
+registration_error_text = "The errors you may encounter are described in the preceding paragraphs. If you experience any of these errors but can not find the reason for it, or if you encounter any error other than these, 
+please <a href='/about/contact'>contact us</a> specifying the registration email used."
+
+
+[FR]
+title = "Inscription"
+registration_step = "Comment s'inscrire sur Olympe ?"
+registration_step_text = "L'inscription sur Olympe se déroule en deux étapes qui vous sont détaillées ci-dessous. Le seul pré-requis est une adresse email valide. Nous vous invitons au préalable à lire les Conditions générales
+d'utilisation, et à prendre connaissance des informations importantes du service notamment dans la documentation. En cas de question, vous pouvez contacter l'équipe sur le <a href='http://community.olympe.in'>forum de support</a>."
+
+registration_first = "Première étape"
+registration_first_text = "La première étape consiste dans à renseigner <strong>une adresse email</strong>. Vous y recevrez un email qui vous permettra de parfaire votre inscription,
+d'où l'importance d'utiliser une adresse valide. Il est à noter que la plupart des adresses emails jetables sont bloquées sur Olympe, vous ne pourrez donc pas vous inscrire avec l'une 
+de celles-ci. Vous devrez également <strong>lire et accepter</strong> les <a href=''>Conditions générales d'utilisation</a>."
+registration_first_text2 = "Si vous rencontrez l'erreur suivante : <span style='color: #bc0000;'>Le format de votre email est incorrect ou cette adresse est déjà utilisée</span>, 
+<a href='#' class='toggleDoc' data-doc='1'>cliquez ici</a> pour connaitre les raisons possibles."
+registration_error_list1 = "<li>Vous possédez déjà un compte sur Olympe avec cette adresse email (<i>en application des Conditions générales d'utilisation, un seul compte par personne physique ou morale est autorisé</i>),</li>
+<li>Vous avez renseigné une adresse email erronée ou bannie (email jetable notamment),</li>
+<li>Vous avez déjà procédé à une inscription qui est toujours pendante (l'email vous a été envoyé pour finaliser votre inscription, et celle-ci ne l'a pas encore été),</li>
+<li>Vous n'avez pas coché la case d'acceptation des Conditions générales d'utilisation,</li>"
+
+registration_second = "Seconde étape"
+registration_second_text = "Si la première étape s'est correctement déroulée, vous recevrez un email (la réception peut prendre quelques minutes) contenant un lien de confirmation. Vous n'aurez alors 
+qu'à cliquer dessus. Si vous ne recevez pas cet email, n'hésitez pas à <a href='/about/contact'>nous contacter</a>."
+registration_second_text2 = "Cette étape nécessite de votre part que vous <strong>choisissiez un nom d'utilisateur</strong> (celui-ci ne servira qu'à vous connecter sur Olympe et ne prédétermine pas 
+le lien de votre site), <strong>et un mot de passe</strong>. Votre nom d'utilisateur ne doit être composé <u>que de lettres, chiffres, en minuscules</u>. Les caractères _ et - sont également autorisés. 
+Le nom d'utilisateur doit faire entre 3 et 50 caractères, le mot de passe doit en faire entre 6 et 50."
+registration_second_text3 = "Si vous rencontrez l'erreur suivante : <span style='color: #bc0000;'>Ce nom d'utilisateur existe déjà ou n'est pas formaté correctement</span>, 
+<a href='#' class='toggleDoc' data-doc='2'>cliquez ici</a> pour en connaitre les raisons possibles."
+registration_error_list2 = "<li>Le nom d'utilisateur choisi existe déjà sur Olympe</li>
+<li>Le nom d'utilisateur est composé d'un caractère interdit (seuls les lettres, chiffres, en minuscules ainsi que _ et - sont autorisés),</li>
+<li>Le mot de passe est trop court (6 caractères minimum) ou trop long (50 maximum),</li>
+<li>Le lien de confirmation de l'inscription est trop ancien (la validité de celui-ci est de 10 jours),</li>"
+registration_second_text4 = "Si tout s'est bien déroulé, vous recevrez un email confirmant votre inscription et récapitulant vos identifiants de connexion. Bienvenue sur Olympe !"
+
+registration_error = "Erreurs durant l'inscription"
+registration_error_text = "Les erreurs pouvant être rencontrées sont précisées dans les paragraphes précédents. Si vous rencontrez l'une de ces erreurs mais ne trouvez pas la raison qui la justifie, ou si vous rencontrez 
+une autre erreur que celles-ci, n'hésitez pas à <a href='/about/contact'>nous contacter</a> en précisant l'email d'inscription utilisée."

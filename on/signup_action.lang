@@ -2,7 +2,8 @@
 subject = "Olympe account confirmation"
 content = "<p style='margin: 20px 0'>Thank your for your register! You have to click on the following link in order to activate your account:</p>
 <p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
-<p style='margin: 20px 0;'>Enjoy publishing content on Olympe, and do not hesitate to send us your feedback.</p>"
+<p style='margin: 20px 0;'>Enjoy publishing content on Olympe, and do not hesitate to send us your feedback.</p>
+<p style='margin: 20px 0;'><strong>You love the Olympe Service?</strong> You will love the <a style='color: #de5711;' href='https://www.busit.com'>new free service</a> launched by the Olympe founders for automation and alerting: <a style='color: #de5711;' href='https://www.busit.com'>Busit</a>.</p>"
 
 success = "Your request has been accepted.<br />You will receive an email with the confirmation link."
 error_mail = "An error occured, the email can not be sent.<br />Please try later."
@@ -22,7 +23,8 @@ error_api = "El formato de su dirección email es incorrecto o la dirección ya 
 subject = "Confirmation de votre compte sur Olympe"
 content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vous devez cliquer sur le lien suivant pour activer votre compte :</p>
 <p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
-<p style='margin: 20px 0;'>Bonne publication, et n'hésitez pas à nous contacter pour nous transmettre votre retour d'expérience.</p>"
+<p style='margin: 20px 0;'>Bonne publication, et n'hésitez pas à nous contacter pour nous transmettre votre retour d'expérience.</p>
+<p style='margin: 20px 0;'><strong>Vous aimez Olympe ?</strong> Vous allez adorer le <a style='color: #de5711;' href='https://www.busit.com'>nouveau service gratuit</a> lancé par les fondateurs d'Olympe pour l'automatisation et le suivi : <a style='color: #de5711;' href='https://www.busit.com'>Busit</a>.</p>"
 
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."

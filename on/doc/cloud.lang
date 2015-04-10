@@ -8,6 +8,7 @@ address books etc…"
 cloud_text2 = "To access to <a href='https://cloud.olympe.in'>OwnCloud</a>, you must log in with your Olympe logins."
 client = "Client installation"
 client_text = "To automatically synchronize your device files with our platform, you must <a href='http://owncloud.org/sync-clients' target='_blank'>download</a> the OwnCloud client."
+cloud_warning = "<strong>NOTICE :</strong> This service is not available at the moment."
 
 
 [FR]
@@ -20,3 +21,4 @@ les carnets d'adresse etc..."
 cloud_text2 = "Pour accéder à <a href='https://cloud.olympe.in'>OwnCloud</a>, vous devez vous connecter avec vos identifiants Olympe."
 client = "Installation du client"
 client_text = "Afin de synchroniser automatiquement les fichiers de vos périphériques avec notre plateforme, vous devez <a href='http://owncloud.org/sync-clients' target='_blank'>télécharger</a> le client OwnCloud."
+cloud_warning = "<strong>INFORMATION :</strong> Ce service n'est plus disponible pour le moment."

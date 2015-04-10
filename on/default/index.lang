@@ -17,6 +17,7 @@ app = "PHP applications and services"
 app_text = "For more than seven years now, the Olympe organization provides an ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
 other <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 <br />More than a simple disk space, we provide also a <a href='/service/offer'>full domain names management</a> (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
+noscript = "Your browser does not support JavaScript. Some features may not work properly."
 
 manage = "Extended features"
 manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for online file editing, and even data recovery.
@@ -52,6 +53,7 @@ innovation_text = "Utilizamos las últimas <a href='/service/infrastructure'>tec
 app = "Aplicaciones PHP y servicios"
 app_text = "Desde hace más de 7 años, Olympe ofrece un servicio gratuito de <a href='/service/hosting'>web hosting</a> y sin ningún publicidad. Desde una oferta básica con PHP/MySQL, hemos desarrollado la plataforma y ahora podemos proponer muchas otras <a href='/service/offer'>tecnologías</a> (PostgreSQL, MongoDB ...).<br /><br />
 Además, ofrecemos la <a href='/service/offer'>gestión completa</a> de los nombres de dominio (subdominios, registros DNS...), cuentas de correo POP / IMAP (redirecciones, alias...), calendarios y más."
+noscript = "Tu navegador no soporta JavaScript. Algunas funciones pueden no funcionar correctamente."
 
 manage = "Ampliadas funcionalidades"
 manage_text = "Ofrecemos una <a href='/doc/cloud'>aplicación en la nube</a> que permite la sincronización, el compartido y el almacenamiento de archivos. Esta herramienta incluye una interfaz web para vizualisar en línea sus archivos (descarga, modificación, galerías de imágenes...), y la función de recuperación de archivos borrados.
@@ -90,6 +92,7 @@ app_text = "Depuis plus de 7 ans, l'association Olympe fournit un <a href='/serv
 développé la plateforme et proposons aujourd'hui d'autres types de <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 <br />En plus de l'espace d'hébergement, nous fournissons la <a href='/service/offer'>gestion complète</a> des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), 
 des calendriers et agendas partagés."
+noscript = "Votre navigateur ne supporte pas le JavaScript. Certaines fonctionnalités pourraient ne pas fonctionner correctement."
 
 manage = "Fonctionnalités étendues"
 manage_text = "Nous propulsons une <a href='/doc/cloud'>application cloud</a> permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers
@@ -125,6 +128,8 @@ innovation = "Innovative"
 innovation_text = "Wir verwenden die neuesten <a href='/service/infrastructure'>Technologien</a> und konzentrieren uns hauptsächlich auf die <a href='/status'>Service-Verfügbarkeit.</a>"
 app = "PHP-Anwendungen und Dienste"
 app_text = "Seit mehr als 7 Jahren, bietet Olympe eine <a href='/service/hosting'>kostenloses Hosting</a> ohne Werbung. Von eine einfache PHP/MySQL Anbieten, ist die Plattformnach nach und nach entwickelt worden, und bietet heute <a href='/service/offer'>andere Technologien</a>(PostgreSQL, MongoDB...).<br/><br/>Neben der hosting-Raum bieten wir <a href='/service/offer'>vollständige Verwaltung</a> von Domain-Namen (Sub-Domains, DNS-Records), die POP/IMAP (Weiterleitungen, Aliase...)-Mail-Konten, Kalender und geteilten Agenden."
+noscript = "Your browser does not support JavaScript. Some features may not work properly."
+
 manage = "Erweiterte Funktionen"
 manage_text = "Wir fördern eine <a href='/doc/cloud'>Cloud Anwendung</a>, die Synchronisation, Speicherung und gemeinsame Nutzung von Dateien erlaubt. 
 Diese Lösung enthält eine Schnittstelle für die Visualisierung von Dateien (Download, Edition, Galerien...), sowie die Wiederherstellung von gelöschten Dateien.
@@ -161,6 +166,7 @@ app = "Applicazioni PHP e servizi"
 app_text = "Per più di sette anni ormai, l'organizzazione Olympe fornisce un <a href='/service/hosting'>servizio di hosting gratuito</a> e libero da pubblicità. Agli inizi, il nostro piano offriva solamente PHP/MySQL. In seguito, la nostra squadra ha migliorato la capacità della piattaforma e ora proponiamo molte
 altre <a href='/service/offer'>tecnologie</a> (PostgreSQL, MongoDB...).<br />
 <br />Più di un semplice spazio di stoccaggio (memoria), vi forniamo inoltre un <a href='/service/offer'>servizio completo di gestione dei domi di dominio</a> (sottodomini, DNS records...), account email POP/IMAP (redirect, aliases...), calendari condivisi e molto altro ancora."
+noscript = "Your browser does not support JavaScript. Some features may not work properly."
 
 manage = "Funzioni aggiuntive"
 manage_text = "Per ogni account, è disponibile un'<a href='/doc/cloud'>applicazione cloud</a>, per la sincronizzazione di files, la condivisione e lo stoccaggio. Questo strumento include un'interfaccia web per la modifica online dei file e addirittura un sistema di ripristino dati.

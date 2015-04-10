@@ -22,7 +22,8 @@ $content = "
 					{$menu}
 				</div>					
 			</div>
-			<div class=\"right big\">	
+			<div class=\"right big\">
+				<p style=\"text-align: justify; background-color:rgb(240, 240, 240); padding: 20px;\">{$lang['cloud_warning']}</p>
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
 				<br />

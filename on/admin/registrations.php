@@ -53,8 +53,9 @@ $content .= "
 						<tr>
 							<th style=\"text-align: center; width: 40px;\">#</th>
 							<th>{$lang['email']}</th>
-							<th>{$lang['date']}</th>
-							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
+							<th style=\"width:120px;\">{$lang['date']}</th>
+							<th style=\"width:120px;\">{$lang['end']}</th>
+							<th style=\"width: 150px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 ";
 
@@ -63,15 +64,25 @@ if( count($registrations) > 0 )
 	foreach($registrations as $r)
 	{
 		if($i < $max) {
+			$end = $r['date'] + 864000;
 			$i++;
 			
 			$content .= "
 						<tr>
 							<td style=\"text-align: center; width: 40px;\">#{$i}</td>
-							<td>{$r['email']}</td>
+							<td>
+								<div id=\"email_switch_{$i}\">{$r['email']}</div>
+								<div id=\"link_switch_{$i}\" style=\"display:none;\">
+									<input type=\"text\" style=\"width: 98%; font-size: 0.9em; height: 20px;\" readonly value=\"https://www.olympe.in/confirm?email={$r['email']}&code={$r['code']}\">
+								</div>
+							</td>
 							<td>".date($lang['dateformat'], $r['date'])."</a></td>
+							<td>".date($lang['dateformat'], $end)."</a></td>
 							<td style=\"width: 100px; text-align: center;\">
-								<a href=\"#\" onclick=\"$('#id').val('0'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#email_switch_{$i}, #link_switch_{$i}').toggle('fast'); $('#link_switch_{$i} input').focus().select(); return false;\" title=\"{$lang['link']}\">
+									<img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/link.png\" alt=\"\" />
+								</a>
+								<a href=\"#\" onclick=\"$('#id').val('0'); $('#delete').dialog('open'); return false;\" title=\"{$lang['delete']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>
 			";

@@ -10,6 +10,10 @@ who = "Who is Olympe ?"
 who_text = "Olympe is a non-profit organization under French law. It is funded by the <a href='https://www.sys.as'>SYS</a> compagny, created to make the association independant and to ensure it continues."
 who_text2 = "The association head office is located in Paris, France. Feel free to <a href='/about/contact'>contact us</a> if you have any question."
 
+contact = "How to contact us?"
+contact_text = "If you have some suggestions, comments, questions or if you just want to say hello, feel free to contact us using the <a href='/about/contact'>contact form</a>, or directly at 
+<span style='color:#de5711	;'>contact<img src='/on/images/thin-arobase-2.png' alt='' />olympe.in</span>"
+
 [FR]
 title = "Qu'est-ce que Olympe ?"
 intro = "Hébergeur gratuit"
@@ -22,3 +26,7 @@ who = "Qui est Olympe ?"
 who_text = "Olympe est une association à but non lucratif de droit français. Elle est le reflet de ses membres et des <a href='/about/team'>bénévoles</a> qui y travaillent quotidiennement. Olympe est financé par la société
 <a href='https://www.sys.as'>SYS</a>, créée dans l'objectif de donner une indépendance à l'association et d'assurer son maintien sur le long terme."
 who_text2 = "Le siège de l'association est situé en France, à Paris dans le X<sup>e</sup> arrondissement. N'hésitez pas à nous <a href='/about/contact'>contacter</a> si vous avez d'autres questions."
+
+contact = "Comment contacter Olympe ?"
+contact_text = "Si vous avez des suggestions, des remarques, des questions ou que vous souhaitez simplement nous saluer, n'hésitez pas à nous contacter via notre <a href='/about/contact'>formulaire de contact</a>, ou directement à l'adresse 
+<span style='color:#de5711	;'>contact<img src='/on/images/thin-arobase-2.png' alt='' />olympe.in</span>"

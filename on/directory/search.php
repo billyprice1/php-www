@@ -6,12 +6,14 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$sites = api::send('site/list', array('directory'=>1, 'keyword'=>$_GET['keyword'], 'start'=>0, 'limit'=>250), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$keyword = htmlspecialchars($_GET['keyword']);
+
+$sites = api::send('site/list', array('directory'=>1, 'keyword'=>$keyword, 'start'=>0, 'limit'=>250), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
 		<div class=\"directory\">
 			<div class=\"container\">
-				<h1 class=\"dark\">{$lang['search']} &quot;".security::encode($_GET['keyword'])."&quot;</h1>
+				<h1 class=\"dark\">{$lang['search']} &quot;".security::encode($keyword)."&quot;</h1>
 				<br />
 ";
 

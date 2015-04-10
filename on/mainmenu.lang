@@ -1,6 +1,6 @@
 ﻿[EN]
 mhosting = "Hosting"
-mcommunity = "Community"
+mcommunity = "Support"
 mblog = "Blog"
 mdoc = "Documentation"
 mlogin = "Login"
@@ -12,7 +12,7 @@ madmin = "Admin"
 
 [ES]
 mhosting = "Hosting"
-mcommunity = "Foro"
+mcommunity = "Soporte"
 mblog = "Blog"
 mdoc = "Documentación"
 mlogin = "Conectarse"
@@ -24,7 +24,7 @@ madmin = "Admin"
 
 [FR]
 mhosting = "Hébergement"
-mcommunity = "Communauté"
+mcommunity = "Support"
 mblog = "Blog"
 mdoc = "Documentation"
 mlogin = "Connexion"
@@ -48,7 +48,7 @@ madmin = "Admin"
 
 [IT]
 mhosting = "Hosting"
-mcommunity = "Community"
+mcommunity = "Assistenza"
 mblog = "Blog"
 mdoc = "Documentazione"
 mlogin = "Login"
