@@ -1,6 +1,7 @@
 ﻿[EN]
 index = "Index"
 
+register = "Registration"
 started = "First website"
 first = "Create a new website"
 publish = "Publish the website online"
@@ -34,6 +35,7 @@ about_email = "About sending emails"
 [FR]
 index = "Accueil de l'aide"
 
+register = "S'inscrire"
 started = "Premier site"
 first = "Créer un nouveau site"
 publish = "Publier le site en ligne"

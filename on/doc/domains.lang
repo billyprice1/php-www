@@ -1,30 +1,30 @@
 [EN]
 title = "Domain names"
 intro = "Introduction"
-intro_text = "Domain names enable you to associate one or more additional addresses with the Olympe sites which you have. 
+intro_text = "Domain names enable you to associate one or more additional addresses with the Olympe sites you own. 
 A domain name consists of a label and an extension, for example: <i>toto.com</i>, where <i>toto</i> is the label and <i>com</i> the extension."
 buy = "Requirements"
-buy_text = "There are several types of domain names (paying: fr, net, org, com etc ...) or free (fr.nf, asso.st etc ...). Domain names called \"free\" are actually subdomains domains
-short (<i>toto.fr.nf</i> is a subdomain short domain <i>fr.nf</i>).<br /><br />
-<span style='font-weight: bold;'>Warning, Olympe is not a registrar</span>, you can therefore neither book nor buy a domain name directly on our panel. Some recognized suppliers:
+buy_text = "There are many types of domain names with a charge (fr, net, org, com, etc.) or free (fr.nf, asso.st, etc.). The \"free\" ones are actually subdomains of short domains (for example, <i>toto.fr.nf</i> 
+is a subdomain of the short domain <i>fr.nf</i>).<br /><br />
+<span style='font-weight: bold;'>NOTICE : Olympe is not a registrar</span>, you <u>can not</u> buy a domain name directly on our panel. Some recognized registrars:
 <br />
 <ul class='classic'>
-	<li><a href='http://www.gandi.net' target='_blank'>Gandi</a> (classical domains, paying)</li>
-	<li><a href='http://www.ovh.com' target='_blank'>OVH</a> (classical domains, paying)</li>
-	<li><a href='http://www.azote.org' target='_blank'>Azote</a> (subdomains, free)</li>
+	<li><a href='http://www.gandi.net' target='_blank'>Gandi</a> (domains, with a charge)</li>
+	<li><a href='http://www.ovh.com' target='_blank'>OVH</a> (domains, with a charge)</li>
+	<li><a href='http://www.azote.org' target='_blank'>Azote</a> (subdomains, free of charge)</li>
 </ul>
 "
 create = "Create a domain name"
-create_text = "Once attached to your Olympe account, you can manage all the settings for your domain (subdomains, websites, email accounts, redirections ...) from the management interface. 
-To add a domain, simply go to the domain section :"
+create_text = "Once you linked your domain name to jour Olympe website, you can manage all the domain settings (subdomains, websites, email accounts, redirections ...) from the panel. 
+To add a domain, simply go to the \"domain\" menu :"
 create_text2 = "Then fill out the form :"
-create_text3 = "Once the domain added to the panel, you must change the DNS servers in your domain name to your supplier with the following parameters :"
+create_text3 = "Once the domain is added to the panel, you have to change the DNS servers (on the chosen registrar website) with the following parameters :"
 primary = "Primary DNS server :"
 secondary = "Secondary DNS server :"
-create_text4 = "An example at Gandi :"
+create_text4 = "For example, if you chose Gandi :"
 back = "Back"
-next_text = "With your domain name, you can create an unlimited number of mail accounts of the type <em>name@your-domain.com</em>."
-next_button = "Create a mail accounts"
+next_text = "With your domain name, you can create an unlimited number of email accounts of the type <em>name@your-domain.com</em>."
+next_button = "Create an email account"
 
 
 [FR]

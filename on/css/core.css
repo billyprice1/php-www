@@ -460,17 +460,8 @@ div.faq div.answer span.legend {
 }
 
 img.doc {
-	display: block;
-	margin: 0 auto;
-	margin-top: 15px;
-	margin-bottom: 12px;
-	border: 1px solid #c7c7c7;
 	background-color: #e5e5e5;
-	padding: 8px;
 	border-radius: 1px;
-}
-
-img.doc {
 	display: block;
 	width: 700px;
 	margin: 0 auto;
@@ -478,6 +469,20 @@ img.doc {
 	margin-bottom: 20px;
 	border: 1px solid #d6d6d6;
 	padding: 10px;
+}
+
+img.doc.mini {
+    float: left;
+    margin-right: 20px;
+    margin-top: 0;
+    width: 350px;
+}
+
+img.doc.mini.right {
+    float: right;
+    margin-left: 20px;
+    margin-top: 0;
+    width: 350px;
 }
 
 span.author {

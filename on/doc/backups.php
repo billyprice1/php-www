@@ -23,6 +23,8 @@ $content = "
 				</div>					
 			</div>
 			<div class=\"right big\">	
+				<p style=\"text-align: justify; background-color:rgb(240, 240, 240); padding: 20px;\">{$lang['backup_warning']}</p>
+				<hr />
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
 				<br />
@@ -36,7 +38,7 @@ $content = "
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/29.png\" alt=\"29\" />
 				<p>{$lang['backup_database_text2']}</p>
 				<br />
-				<h3>{$lang['backups']}</h3>
+				<h3>{$lang['backups_download']}</h3>
 				<p>{$lang['backups_text']}</p>	
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/30.png\" alt=\"30\" />
 			</div>

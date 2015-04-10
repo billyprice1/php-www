@@ -31,6 +31,9 @@ $content = "
 				<p>{$lang['who_text']}</p>
 				<p>{$lang['who_text2']}</p>
 				<br />
+				<h3>{$lang['contact']}</h3>
+				<p>{$lang['contact_text']}</p>
+				<br />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

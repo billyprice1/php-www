@@ -1,14 +1,15 @@
 [EN]
-title = "Access rights"
+title = "Access rights (tokens)"
 intro = "Introduction"
 main_token = "Modification or deletion of the \"Olympe\" token"
-intro_text = "If you access your panel with your <i>username</i> and your <i>password</i>, know that you can also access your <i>username</i> your <i>token</i> (in the password field), 
-that you can find in the <a href='/panel/settings/tokens'>access rights</a> of your <a href='/panel/settings'>account settings</a>."
+intro_text = "If you login with your <i>username</i> and your <i>password</i>, you should know that you can use your <i>username</i> with a <i>token</i> (as an alternative to password). 
+You can find your existing token(s) in your <a href='/panel/settings'>account settings</a>."
 create = "Create a new token"
-create_text = "You can create new tokens to give differentiated access to your account. For example, by creating a token <i>Database administrator</i>, you can give only those rights on the databases
-to another person. She can identify with your username and her personalized token."
-create_text2 = "Once new the token created, you can go to check the rights which are allotted to him and possibly if necessary to adjust according to your needs."
-main_token_text = "The \"Olympe\" token is the one originally present at the creation of your account, it gives all access rights to your account. You can add, modify and delete other tokens, but it is protected to guarantee you access to your account. The removal or modification of it is, therefore, not allowed to prevent incorrect operation that would make it impossible to access your account."
+create_text = "You can create new tokens to give differentiated access to your account. For example, you can create a new token only intended to the management of the database, and give that new token to someone who 
+will manage only the databases. When that person will login (with your username, and the token as password), he or she will access only the <i>Database</i> menu of your panel."
+create_text2 = "Once the new token is created, you can go to check the rights which are allotted to it and, if necessary, to adjust it to your needs."
+main_token_text = "The \"Olympe\" token is the main token of your account, generated during your registration. It gives <u>all access rights</u> to your account. You can add, modify and delete other tokens, but this one 
+is protected. Its removal or modification is not allowed to avoid incorrect operation that would obstruct your login."
 
 
 [FR]
@@ -21,4 +22,5 @@ create = "Créer un nouveau token"
 create_text = "Vous pouvez donc créer de nouveaux tokens pour donner des accès différenciés à votre compte. Par exemple, en créant un token <i>Administrateur de bases de données</i>, vous pouvez donner uniquement les droits sur les bases
 de données à une autre personne. Elle pourra s'identifier avec votre nom d'utilisateur et son token personnalisé."
 create_text2 = "Une fois le nouveau token créé, vous pouvez aller vérifier les droits qui lui sont attribués et éventuellement si nécessaire ajuster selon vos besoins."
-main_token_text = "Le token \"Olympe\" est celui initialement présent à la création de votre compte, il donne tous les droits d'accès à votre compte. Vous pouvez ajouter, modifier et supprimer d'autres tokens, mais celui-ci est protégé pour vous garantir un accès à votre compte. La suppression ou la modification de celui-ci n'est, de ce fait, pas autorisée afin d'éviter toute fausse manoeuvre qui rendrait impossible l'accès à votre compte."
+main_token_text = "Le token \"Olympe\" est celui initialement présent à la création de votre compte, il donne tous les droits d'accès à votre compte. Vous pouvez ajouter, modifier et supprimer d'autres tokens, mais celui-ci est protégé 
+pour vous garantir un accès à votre compte. La suppression ou la modification de celui-ci n'est, de ce fait, pas autorisée afin d'éviter toute fausse manœuvre qui rendrait impossible l'accès à votre compte."
