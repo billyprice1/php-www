@@ -70,25 +70,25 @@ $content = "
 			<div class=\"sitescontent\">
 				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
 				
-				$display = rand(0, 2);
+				$display = rand(0,3);
 				$twitter_text = 'twitter_text_' . rand(1,2);
 				
 				switch ($display) {
 				case 0:
 					$content .= "
-					<img style=\"display: block; float: left; margin-right: 10px;\" width=\"70px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
+					<img style=\"display: block; float: left; margin-right: 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
 					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\" style=\"color:#5EA9DD\">{$lang['help_text']}</a> !</span><br /><br />
 					<span style=\"color: #6C6C6C; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
 					break;
 				case 1:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
+					<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
 					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
 					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
 					break;
 				case 2:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 5px;\" width=\"25px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
+					<img style=\"display: block; float: left; margin: 5px; width: 25px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
 					<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
 					<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
 						<a class=\"twitter-share-button\"
@@ -104,7 +104,13 @@ $content = "
 					break;
 				case 3:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px;\" width=\"40px\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/cn@x2.png\" />
+					<img style=\"display: block; float: left; margin: 5px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/translate.png\" />
+					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['translate']}</span><br /><br />
+					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['translate_help']}</span>";
+					break;
+				case 4:
+					$content .= "
+					<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/check.png\" />
 					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
 					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
 					break;
