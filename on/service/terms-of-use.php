@@ -84,6 +84,12 @@ while ($ii <= $nb_articles) {
 
 $content .= "
 			topPadding = 70;
+			
+		if($(window).height() - 250 < 450) $('#menu-fixed a.goto li').css('padding','7px 15px 7px 25px');
+		else $('#menu-fixed p').show();
+		  
+		if($(window).height() - 250 < 360) $('#menu-fixed p').hide();
+		else $('#menu-fixed p').show();
 
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > offset.top) {
