@@ -30,7 +30,7 @@ registration_second_text4 = "If all went well, you'll receive an email confirmin
 
 registration_error = "Errors during registration"
 registration_error_text = "The errors you may encounter are described in the preceding paragraphs. If you experience any of these errors but can not find the reason for it, or if you encounter any error other than these, 
-please <a href='/about/contact'>nous contacter</a> specifying the registration email used."
+please <a href='/about/contact'>contact us</a> specifying the registration email used."
 
 
 [FR]
