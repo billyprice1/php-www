@@ -44,9 +44,9 @@ try
 	api::send('quota/user/update', array('user'=>$uid, 'quota'=>'BYTES', 'max'=>500), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	api::send('quota/user/update', array('user'=>$uid, 'quota'=>'MAILS', 'max'=>100), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
-	$email = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $low_username, $_POST['password']), $lang['content']);
+	$email = str_replace(array('{EMAIL}', '{USER}'), array($_POST['email'], $low_username), $lang['content']);
 	mail($_POST['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
-	$email2 = str_replace(array('{EMAIL}', '{USER}', '{PASS}'), array($_POST['email'], $low_username, '**********'), $lang['content']);
+	$email2 = str_replace(array('{EMAIL}', '{USER}'), array($_POST['email'], $low_username), $lang['content']);
 	mail('contact@olympe.in', $lang['subject'], str_replace('{CONTENT}', $email2, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
 		
 	$_SESSION['MESSAGE']['TYPE'] = 'success';
