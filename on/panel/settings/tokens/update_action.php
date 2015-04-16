@@ -6,21 +6,25 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$params = array('token'=>$_POST['token']);
-$params['name'] = $_POST['name'];
+$token = htmlspecialchars($_POST['token']);
+$name = htmlspecialchars($_POST['name']);
+$lease = htmlspecialchars($_POST['lease']);
 
-if( strlen($_POST['lease']) == 0 )
+$params = array('token'=>$token);
+$params['name'] = $name;
+
+if( strlen($lease) == 0 )
 	$params['lease'] = 'never';
-else if( is_numeric($_POST['lease']) )
-	$params['lease'] = $_POST['lease'];
+else if( is_numeric($lease) )
+	$params['lease'] = $lease;
 else
-	$params['lease'] = strtotime($_POST['lease']);
+	$params['lease'] = strtotime($lease);
 	
 api::send('self/token/update', $params);
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/panel/settings/tokens/detail?token=' . $_POST['token']);
+	template::redirect('/panel/settings/tokens/detail?token=' . $token);
 
 ?>

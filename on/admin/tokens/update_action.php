@@ -6,20 +6,25 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$params = array('user'=>$_POST['user'], 'token'=>$_POST['token']);
-$params['name'] = $_POST['name'];
+$user = htmlspecialchars($_POST['user']);
+$token = htmlspecialchars($_POST['token']);
+$name = htmlspecialchars($_POST['name']);
+$lease = htmlspecialchars($_POST['lease']);
 
-if( strlen($_POST['lease']) == 0 )
+$params = array('user'=>$user, 'token'=>$token);
+$params['name'] = $name;
+
+if( strlen($lease) == 0 )
 	$params['lease'] = 'never';
-else if( is_numeric($_POST['lease']) )
-	$params['lease'] = $_POST['lease'];
+else if( is_numeric($lease) )
+	$params['lease'] = $lease;
 else
-	$params['lease'] = strtotime($_POST['lease']);
+	$params['lease'] = strtotime($lease);
 	
 api::send('token/update', $params);
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/tokens/detail?token=' . $_POST['token'] . '&user=' . $_POST['user']);
+	template::redirect('/admin/tokens/detail?token=' . $token . '&user=' . $user);
 
 ?>

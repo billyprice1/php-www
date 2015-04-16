@@ -6,22 +6,28 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$m_title = htmlspecialchars();
+$m_parent = htmlspecialchars();
+$m_quota = htmlspecialchars($_POST['quota']);
+$m_max = htmlspecialchars($_POST['max']);
+$m_content = htmlspecialchars($_POST['content']);
+
 if( !$_POST['parent'] )
 {
 	$message = "[i]{$lang['type']}[/i] {$lang['quota']}
-[i]{$lang['select']}[/i] {$_POST['quota']}
-[i]{$lang['request']}[/i] {$_POST['max']}
+[i]{$lang['select']}[/i] {$m_quota}
+[i]{$lang['request']}[/i] {$m_max}
 
-{$_POST['content']}
+{$m_content}
 	";
 }
 else
 {
-	$message = $_POST['content'];
-	api::send('message/update', array('id'=>$_POST['parent'], 'status'=>2));
+	$message = $m_content;
+	api::send('message/update', array('id'=>$m_parent, 'status'=>2));
 	
 	// send email
-	$msg = api::send('message/list', array('id'=>$_POST['parent']));
+	$msg = api::send('message/list', array('id'=>$m_parent));
 	$msg = $msg[0];
 	$user = api::send('user/list', array('id'=>$msg['user']['id']));
 	$user = $user[0];
@@ -33,10 +39,10 @@ else
 $params = array();
 $params['content'] = bbcode::encode($message);
 $params['type'] = 1;
-if( $_POST['title'] )
-	$params['title'] = $_POST['title'];
-if( $_POST['parent'] )
-	$params['parent'] = $_POST['parent'];
+if( $m_title )
+	$params['title'] = $m_title;
+if( $m_parent )
+	$params['parent'] = $m_parent;
 
 try
 {
@@ -49,11 +55,11 @@ catch( Exception $e )
 }
 
 if(isset($_POST['close']) && ($_POST['close']==1)) 
-	api::send('message/update', array('id'=>$_POST['parent'], 'status'=>3));
+	api::send('message/update', array('id'=>$m_parent, 'status'=>3));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/admin/messages/detail?id='.$_POST['parent']);
+	$template->redirect('/admin/messages/detail?id='.$m_parent);
 
 ?>
