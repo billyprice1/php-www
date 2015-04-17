@@ -29,6 +29,12 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] && 
 
 		if( in_array(gethostbyname($parts[1]), array(gethostbyname('ns1.olympe.in'), gethostbyname('ns2.olympe.in'), gethostbyname('mx1.anotherservice.com'), gethostbyname('mx2.anotherservice.com'))) )
 			throw new SiteException('Invalid or missing arguments', 400, 'Email does not exist');
+			
+		if ( strpos( strtolower( $parts[1] ) ,'gmail') !== false && strpos( $parts[0] ,'+') !== false )
+			throw new SiteException('Invalid or missing arguments', 400, 'Temporary email addresses are not allowed');
+			
+		if ( strpos( strtolower ( $parts[1] ),'yahoo') !== false && strpos( $parts[0] ,'-') !== false )
+			throw new SiteException('Invalid or missing arguments', 400, 'Temporary email addresses are not allowed');			
 	
 		$result = api::send('registration/add', array('auth'=>'', 'email'=>$email), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
