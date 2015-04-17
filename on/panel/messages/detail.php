@@ -38,7 +38,7 @@ $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 600px;\">
-				<h3>{$message['title']}</h3> 
+				<h3>". htmlspecialchars($message['title']) ."</h3> 
 			</div>
 			
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
@@ -57,7 +57,7 @@ foreach( $messages as $m )
 	else 
 		$staff = "";
 	
-	$online = ''; //$staff_icon;
+	$online = ''; //$online_icon;
 	
 	
 		$content .= "
@@ -89,9 +89,9 @@ foreach( $messages as $m )
 					<div class=\"text\">
 						<form action=\"/panel/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$m['id']}\" />
-							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<div id=\"text{$m['id']}\">".bbcode::display($m['content'])."</div>
-							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 800px; height: 100px;\" name=\"content\">".bbcode::edit($m['content'])."</textarea>
+							<input type=\"hidden\" name=\"parent\" value=\"". htmlspecialchars($message['id']) ."\" />
+							<div id=\"text{$m['id']}\">".bbcode::display(htmlspecialchars($m['content']))."</div>
+							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 800px; height: 100px;\" name=\"content\">".bbcode::edit(htmlspecialchars($m['content']))."</textarea>
 							<input id=\"submit{$m['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>
 					</div>
@@ -139,8 +139,8 @@ $content .= "
 						<form action=\"/panel/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$message['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<div id=\"text{$message['id']}\">".bbcode::display($message['content'])."</div>
-							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($message['content'])."</textarea>
+							<div id=\"text{$message['id']}\">".bbcode::display(htmlspecialchars($message['content']))."</div>
+							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit(htmlspecialchars($message['content']))."</textarea>
 							<input id=\"submit{$message['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>						
 					</div>

@@ -67,7 +67,7 @@ if( count($messages) > 0 )
 		$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
-						<td><a href=\"/admin/messages/detail?id={$m['id']}\">{$m['title']}</a></td>
+						<td><a href=\"/admin/messages/detail?id={$m['id']}\">". htmlspecialchars($m['title']) ."</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
 					</tr>
 		";
@@ -105,7 +105,7 @@ foreach( $overquotas as $o )
 	$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$o['id']}\"><img class=\"profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
-						<td><a href=\"/admin/users/detail?id={$o['id']}\">{$o['name']}</a></td>
+						<td><a href=\"/admin/users/detail?id={$o['id']}\">". htmlspecialchars($o['name']) ."</a></td>
 						<td>{$o['quotas']['used']}</td>
 						<td>{$o['quotas']['max']}</td>
 					</tr>
@@ -135,7 +135,7 @@ foreach( $users as $u )
 	$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$u['id']}\"><img class=\"profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
-						<td><a href=\"/admin/users/detail?id={$u['id']}\">{$u['name']}</a></td>
+						<td><a href=\"/admin/users/detail?id={$u['id']}\">". htmlspecialchars($u['name']) ."</a></td>
 						<td>{$u['email']}</td>
 						<td>".date('Y-m-d H:i', $u['date'])."</td>
 					</tr>

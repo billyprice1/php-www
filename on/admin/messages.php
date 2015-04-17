@@ -75,10 +75,10 @@ if( count($messages) > 0 )
 		$content .= "
 						<tr>
 							<td style=\"text-align: center; width: 40px;\"><a href=\"/admin/messages/detail?id={$m['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/email.png\" /></a></td>
-							<td>{$m['title']}</td>
+							<td>". htmlspecialchars($m['title']) ."</td>
 							<td>
 								<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"profile-pic\" style=\"float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-								<a style=\"display: block; float: left; padding-top: 6px; color:#de5711;\" class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
+								<a style=\"display: block; float: left; padding-top: 6px; color:#de5711;\" class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">". htmlspecialchars($m['user']['name']) ."</a>
 							</td>
 							<td>".date($lang['dateformat'], $m['date'])."</a></td>
 							<td style=\"text-align: center;\">".$lang['status_' . $m['status']]."</td>

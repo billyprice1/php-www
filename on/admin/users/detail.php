@@ -25,7 +25,7 @@ $content = "
 			<div class=\"top\">
 				<div class=\"left\" style=\"width: 700px;\">
 					<img style=\"width: 60px; height: 60px; border-radius: 100px; padding: 5px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
-					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>{$user['name']}</strong></span>
+					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>". htmlspecialchars($user['name']) ."</strong></span>
 					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
 				<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
@@ -236,11 +236,11 @@ if( security::hasGrant('DATABASE_SELECT') )
 	$databases = api::send('database/list', array('user'=>$_GET['id']));
 	
 	foreach( $databases as $d )
-	{		
+	{
 		$content .= "
 						<tr>
 							<td>{$d['name']}</td>
-							<td>{$d['desc']}</td>
+							<td>". htmlspecialchars($d['desc']) ."</td>
 							<td>{$d['server']}</td>
 							<td>{$d['type']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
@@ -280,7 +280,7 @@ if( security::hasGrant('TOKEN_SELECT') )
 	{
 		$content .= "
 					<tr>
-						<td>{$t['name']}</td>
+						<td>". htmlspecialchars($t['name']) ."</td>
 						<td>{$t['token']}</td>
 						<td style=\"width: 100px; text-align: center;\">
 		";
@@ -332,7 +332,7 @@ if( security::hasGrant('MESSAGE_SELECT') )
 	{
 		$content .= "
 						<tr>
-							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">{$m['title']}</a></td>
+							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">". htmlspecialchars($m['title']) ."</a></td>
 							<td>{$lang['type_'.$m['type']]}</td>
 							<td>".date($lang['dateformat'], $m['date'])."</td>
 							<td>".$lang['status_' . $m['status']]."</td>
@@ -535,7 +535,7 @@ $content .= "
 					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" /></td>
 					<td>{$lang['cloud']}</td>
 					<td>{$lang['cloud_type']}</td>
-					<td>/dns/in/olympe/Users/{$user['name']}</td>
+					<td>/dns/in/olympe/Users/". htmlspecialchars($user['name']) ."</td>
 					<td><span style=\"font-weight: bold;\">{$user['size']} {$lang['mb']}</span></td>
 				</tr>
 ";

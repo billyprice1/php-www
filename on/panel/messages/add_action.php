@@ -6,34 +6,28 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$m_parent = htmlspecialchars($_POST['parent']);
-$m_title = htmlspecialchars($_POST['title']);
-$m_quota = htmlspecialchars($_POST['quota']);
-$m_max = htmlspecialchars($_POST['max']);
-$m_content = htmlspecialchars($_POST['content']);
-
-if( !$m_parent )
+if( !$_POST['parent'] )
 {
 	$message = "[i]{$lang['type']}[/i] {$lang['quota']}
-[i]{$lang['select']}[/i] {$m_quota}
-[i]{$lang['request']}[/i] {$m_max}
+[i]{$lang['select']}[/i] {$_POST['quota']}
+[i]{$lang['request']}[/i] {$_POST['max']}
 
-{$m_content}
+{$_POST['content']}
 	";
 }
 else
 {
-	$message = $m_content;
-	api::send('self/message/update', array('id'=>$m_parent, 'status'=>1));
+	$message = $_POST['content'];
+	api::send('self/message/update', array('id'=>$_POST['parent'], 'status'=>1));
 }	
 
 $params = array();
 $params['content'] = bbcode::encode($message);
 $params['type'] = 1;
-if( $m_title )
-	$params['title'] = $m_title;
-if( $m_parent )
-	$params['parent'] = $m_parent;
+if( $_POST['title'] )
+	$params['title'] = $_POST['title'];
+if( $_POST['parent'] )
+	$params['parent'] = $_POST['parent'];
 
 try
 {
@@ -47,8 +41,8 @@ catch( Exception $e )
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
-else if( $m_parent )
-		$template->redirect('/panel/messages/detail?id=' . security::encode($m_parent));
+else if( $_POST['parent'] )
+		$template->redirect('/panel/messages/detail?id=' . security::encode($_POST['parent']));
 else
 	$template->redirect('/panel/messages');
 
