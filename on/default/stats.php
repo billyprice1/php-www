@@ -16,7 +16,7 @@ else
 	try
 	{
 		$m = new Memcache;
-		if( !$m->connect('tralala', 11211) )
+		if( !$m->connect('memcache', 11211) )
 			throw new Exception("Memcache failed to connect");
 		if( ($value = $m->get("stats")) === false || !is_array($value) )
 			throw new Exception("Memcache could not retrieve value");
@@ -39,7 +39,7 @@ else
 		try
 		{
 			$m = new Memcache;
-			if( !$m->connect('tralala', 11211) )
+			if( !$m->connect('memcache', 11211) )
 				throw new Exception("Memcache failed to connect");
 			$stats = array('users'=>$users['count'], 'sites'=>$sites['count'], 'dbs'=>$dbs['count'], 'domains'=>$domains['count']);
 			if( !$m->set("stats", $stats, false, 86400) )
