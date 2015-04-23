@@ -39,11 +39,10 @@ if( count($messages) > 0 )
 
 	foreach($messages as $m)
 	{
-		
 		$content .= "
 						<tr>
 							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/messages/detail?id={$m['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/email.png\" /></a></td>
-							<td>{$m['title']}</td>
+							<td>". htmlspecialchars($m['title']) ."</td>
 							<td style=\"width: 150px;\">".date($lang['dateformat'], $m['date'])."</a></td>
 							<td style=\"text-align:center; width: 150px;\">".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 100px; text-align: center;\">

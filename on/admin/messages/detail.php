@@ -27,7 +27,7 @@ $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 600px;\">
-				<h3>{$message['title']}</h3>
+				<h3>". htmlspecialchars($message['title']) ."</h3>
 				<h2 class=\"dark\">".$lang['status_' . $message['status']]."</h2>
 			</div>
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
@@ -51,7 +51,7 @@ foreach( $messages as $m )
 	else 
 		$staff = "";
 	
-	$online = ''; //$staff_icon;
+	$online = ''; //$online_icon;
 	
 		$content .= "
 				<div class=\"message\">
@@ -61,7 +61,7 @@ foreach( $messages as $m )
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">{$m['user']['name']}</a>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">". htmlspecialchars($m['user']['name']) ."</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
@@ -73,8 +73,8 @@ foreach( $messages as $m )
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$m['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<div id=\"text{$m['id']}\">".bbcode::display($m['content'])."</div>
-							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($m['content'])."</textarea>
+							<div id=\"text{$m['id']}\">".bbcode::display(htmlspecialchars($m['content']))."</div>
+							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit(htmlspecialchars($m['content']))."</textarea>
 							<input id=\"submit{$m['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>
 					</div>
@@ -102,7 +102,7 @@ $content .= "
 							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
-						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">{$message['user']['name']}</a>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">". htmlspecialchars($message['user']['name']) ."</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
@@ -114,8 +114,8 @@ $content .= "
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$message['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<div id=\"text{$message['id']}\">".bbcode::display($message['content'])."</div>
-							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($message['content'])."</textarea>
+							<div id=\"text{$message['id']}\">".bbcode::display(htmlspecialchars($message['content']))."</div>
+							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit(htmlspecialchars($message['content']))."</textarea>
 							<input id=\"submit{$message['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>						
 					</div>
