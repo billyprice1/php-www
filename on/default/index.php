@@ -163,6 +163,7 @@ $content .= "
 				});
 			</script>
 ";
+
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);
 
