@@ -100,7 +100,7 @@ $content .= "
 			</div>
 			<div class=\"separator light\"></div>
 			<div id=\"stats\" style=\"text-align: center;\">
-				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif\" />
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif\" alt=\"loading...\" />
 			</div>
 			<div class=\"separator light\"></div>
 			<div class=\"content\">
