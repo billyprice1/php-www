@@ -10,6 +10,7 @@ cloud_text2 = "In order to use this service, you have to login at least once at 
 
 piwik = "Go to Piwik"
 owncloud = "Go to OwnCloud"
+nocloud = "Coming soon..."
 
 [ES]
 title = "Services"
@@ -23,6 +24,7 @@ cloud_text2 = "In order to use this service, you have to login at least once at 
 
 piwik = "Go to Piwik"
 owncloud = "Go to OwnCloud"
+nocloud = "Bientôt..."
 
 [FR]
 title = "Services"

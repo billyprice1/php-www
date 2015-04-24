@@ -37,9 +37,7 @@ $content = "
 					</a>						
 				</div>
 				<div style=\"float: right; width: 510px;\">
-					<a class=\"button classic\" href=\"http://cloud.olympe.in\" style=\"height: 22px; width: 200px; margin: 0 auto;\">
-						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['owncloud']}</span>
-					</a>					
+					<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['nocloud']}</span>	
 				</div>
 				<div class=\"clear\"></div><br />
 			</div>
