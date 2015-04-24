@@ -78,7 +78,7 @@ $content .= "
 					{$lang['password']}
 				</a>
 				<a class=\"action download big\" href=\"#\" onclick=\"$('#download').dialog('open'); return false;\">
-					{$lang['download']}
+					{$lang['backup']}
 				</a>
 				<a class=\"action delete big\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\">
 					{$lang['delete']}

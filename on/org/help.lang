@@ -24,3 +24,17 @@ logo_text = "Lorsque c'est possible, n'hésitez pas à afficher nos <a href='/or
 donation = "Faire un don"
 donation_text = "Olympe est une association à but non lucratif auto-financée par ses membres et ses partenaires. Elle est parfaitement indépendante et continue d'investir pour maintenir et étendre son infrastructure. 
 Vous êtes un utilisateur régulier de nos services ? N'hésitez pas à participer à votre échelle au financement de nos activités."
+
+
+[IT]
+title = "Supporto, reclutamente e finanziamenti"
+
+you = "Abbiamo bisogno di te !"
+you_text = "Olympe sta cercando nuovi membri per il suo team di amministrazione e sviluppo. E' ovviametne un lavoro volontario e da casa, ma se sei interessato nelle tecnologie di infrastruttura,
+lo sviluppo web o le interazioni in una community, puoi <a href='/about/contact'>contattarci</a> spiegando il tuo approccio.
+<br /><br />Come membro del team, aderirai completamente all'associazione Olympe e potrai avere l'opportunità di rappresentare l'associazione a fiere o conferenze."
+logo = "Loghi e Goodies"
+logo_text = "Dove possibile, puoi inserire i nostri <a href='/org/press'>loghi</a> sul tuo sito, questo ci permetterà di essere più visibili, di continuare lo sviluppo e il miglioramento dei nostri servizi."
+donation = "Donazioni"
+donation_text = "Olympe è un'associazione no-profit e autofinanziata dai suoi membri e partner. E' completamente indipendente e continua a investire e mantenere e espandere le sue infrastrutture.
+Sei un utente abituale del nostro servizio? Sentiti libero di partecipare e aiutarci a finanziare le nostre attività."

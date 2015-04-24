@@ -13,6 +13,9 @@ delete_now = "Confirm"
 type_database = "Databases"
 type_site = "Web site"
 nobackup = "You have no backup."
+disclaimer = "<strong>DISCLAIMER</strong> : User is solely responsible for performing regular backups of its sites and its databases. Olympe will not perform backup for him, and can 
+not be held responsible. This automatic backup tool does not release the user from his obligation to check the integrity of backups, and to keep it off-line. Olympe will not be held 
+responsible for the lack of existing backup for a site, or the bad quality, or the unavailability of a backup made but not saved by the user."
 
 [ES]
 title = "Backups"
@@ -29,6 +32,9 @@ delete_now = "Confirmar"
 type_database = "Bases de datos"
 type_site = "Sitio"
 nobackup = "No tienes backups."
+disclaimer = "<strong>DISCLAIMER</strong> : User is solely responsible for performing regular backups of its sites and its databases. Olympe will not perform backup for him, and can 
+not be held responsible. This automatic backup tool does not release the user from his obligation to check the integrity of backups, and to keep it off-line. Olympe will not be held 
+responsible for the lack of existing backup for a site, or the bad quality, or the unavailability of a backup made but not saved by the user."
 
 [FR]
 title = "Sauvegardes"
@@ -45,6 +51,11 @@ delete_now = "Confirmer"
 type_database = "Base de données"
 type_site = "Site Internet"
 nobackup = "Vous n'avez aucune sauvegarde."
+disclaimer = "<strong>ATTENTION</strong> : l'utilisateur est seul responsable de la réalisation régulière de sauvegardes de son site et de ses bases de données. Olympe n'effectuera 
+aucune sauvegarde à sa place, et ne saura en être tenu pour responsable. Cet outil de backup automatisé ne dispense pas l'utilisateur de vérifier l'intégrité des sauvegardes effectuées,
+et de les conserver hors-ligne. Olympe ne saurait être tenu pour responsable de l'absence de sauvegarde existante pour un site, ou de la mauvaise qualité, ou de l'indisponibilité d'une 
+sauvegarde effectuée mais non-enregistrée par l'utilisateur."
+
 
 [IT]
 title = "Backup"
@@ -61,3 +72,6 @@ delete_now = "Conferma"
 type_database = "Database"
 type_site = "Siti web"
 nobackup = "Non sono presenti backup."
+disclaimer = "<strong>DISCLAIMER</strong> : User is solely responsible for performing regular backups of its sites and its databases. Olympe will not perform backup for him, and can 
+not be held responsible. This automatic backup tool does not release the user from his obligation to check the integrity of backups, and to keep it off-line. Olympe will not be held 
+responsible for the lack of existing backup for a site, or the bad quality, or the unavailability of a backup made but not saved by the user."

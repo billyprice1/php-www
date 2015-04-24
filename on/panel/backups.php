@@ -15,6 +15,7 @@ $content = "
 				</div>
 				<div class=\"clear\"></div><br />
 				<div class=\"container\">
+				<p style=\"text-align: justify; background-color:rgb(240, 240, 240); padding: 20px;\">{$lang['disclaimer']}</p><br />
 ";
 
 if( count($backups) > 0 )
