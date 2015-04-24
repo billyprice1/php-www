@@ -1,0 +1,29 @@
+[EN]
+title = "Last pending registrations"
+
+search = "Search"
+email = "Email address"
+date = "Date"
+actions = "Actions"
+dateformat = "m-d-Y"
+delete = "Delete"
+delete_text = "Not yet..."
+delete_now = "Delete"
+no_result = "No result met your search criteria."
+link = "Display registration confirmation link"
+end = "Validity"
+
+[FR]
+title = "Dernières inscriptions en cours"
+
+search = "Rechercher"
+email = "Adresse email"
+date = "Date"
+actions = "Actions"
+dateformat = "d/m/Y"
+delete = "Supprimer"
+delete_text = "Modification de l'API nécessaire. In progress."
+delete_now = "Supprimer"
+no_result = "Aucun résultat ne correspond aux termes de la recherche."
+link = "Afficher le lien de confirmation de l'inscription"
+end = "Validité"

@@ -20,16 +20,22 @@ catch( Exception $e )
 if( !$message['id'] || !$_GET['id'] )
 	template::redirect('/admin/messages');
 
+$staff_icon = "<span class=\"staff\">{$lang['team']}</span>";
+$online_icon = "<span class=\"online\">{$lang['online']}</span>";
+
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 600px;\">
-				<h3>{$message['title']}</h3>
+				<h3>". htmlspecialchars($message['title']) ."</h3>
 				<h2 class=\"dark\">".$lang['status_' . $message['status']]."</h2>
 			</div>
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
 				<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 					<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
+				</a>
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#settings').dialog('open'); return false;\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+					<img style=\"float: left; height: 98%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/settings.png\" />
 				</a>
 			</div>
 			<div class=\"clear\"></div>
@@ -40,70 +46,88 @@ $content .= "
 
 foreach( $messages as $m )
 {
+	if($m['user']['status'] == '99')
+		$staff = $staff_icon;
+	else 
+		$staff = "";
+	
+	$online = ''; //$online_icon;
+	
 		$content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$m['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $m['date'])."
-						</div>
 						<div class=\"icons\">
-							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
-							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<a href=\"#\" onclick=\"quote('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>
+							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$m['user']['id']}\">". htmlspecialchars($m['user']['name']) ."</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-						<br />
-						{$m['user']['name']}
+						<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
+						{$staff}
+						{$online}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$m['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$m['id']}\">".bbcode::display($m['content'])."</p>
-							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($m['content'])."</textarea>
+							<div id=\"text{$m['id']}\">".bbcode::display(htmlspecialchars($m['content']))."</div>
+							<textarea id=\"edit{$m['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit(htmlspecialchars($m['content']))."</textarea>
 							<input id=\"submit{$m['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $m['date'])."</span>
+						<span class=\"messageid\">#{$m['id']}</span>
+					</div>
 				</div>
 		";
 }
+
+if($message['user']['status'] == '99')
+	$staff = $staff_icon;
+else 
+	$staff = "";
+
+$online = ''; //$staff_icon;
+
 $content .= "
 				<div class=\"message\">
 					<div class=\"toppart\">
-						<div class=\"messageid\">
-							#{$message['id']}
-						</div>
-						<div class=\"date\">
-							".date($lang['dateformat'], $message['date'])."
-						</div>
 						<div class=\"icons\">
-							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
-							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<a href=\"#\" onclick=\"quote('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/speech.png\" alt=\"\" title=\"{$lang['quote']}\" /></a>
+							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" title=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" title=\"{$lang['delete']}\" /></a>
 						</div>
+						<a class=\"author-name\" href=\"/admin/users/detail?id={$message['user']['id']}\">". htmlspecialchars($message['user']['name']) ."</a>
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-						<br />
-						{$message['user']['name']}
+						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img class=\"lg-profile-pic\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
+						{$staff}
+						{$online}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$message['id']}\" />
 							<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
-							<p id=\"text{$message['id']}\">".bbcode::display($message['content'])."</p>
-							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit($message['content'])."</textarea>
+							<div id=\"text{$message['id']}\">".bbcode::display(htmlspecialchars($message['content']))."</div>
+							<textarea id=\"edit{$message['id']}\" style=\"display: none; width: 700px; height: 200px;\" name=\"content\">".bbcode::edit(htmlspecialchars($message['content']))."</textarea>
 							<input id=\"submit{$message['id']}\" style=\"display: none;\" type=\"submit\" value=\"{$lang['update']}\" />
 						</form>						
 					</div>
 					<div class=\"clear\"></div>
+					<div class=\"bottompart\">
+						<span class=\"date\">".date($lang['dateformat'], $message['date'])."</span>
+						<span class=\"messageid\">#{$message['id']}</span>
+					</div>
 				</div>
+				
+				
+				
 			</div>
 			<br />
 			<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
@@ -114,16 +138,16 @@ $content .= "
 if( $message['status'] != 3 )
 {
 	$content .= "
-			<a class=\"button classic\" href=\"#\" onclick=\"$('#close').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['close']}</span>
+			<a class=\"button classic\" href=\"#\" onclick=\"$('#close').dialog('open'); return false;\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+				<img style=\"float: left; height: 98%;\" title=\"{$lang['close']}\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/lock.png\" />
 			</a>
 	";
 }
 else
 {
 	$content .= "
-			<a class=\"button classic\" href=\"/admin/messages/open_action?id={$message['id']}\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['open']}</span>
+			<a class=\"button classic\" href=\"/admin/messages/open_action?id={$message['id']}\" style=\"height: 22px; float: right; width: 22px; margin-right: 20px;\">
+				<img style=\"float: left; height: 98%;\" title=\"{$lang['open']}\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/unlock.png\" />
 			</a>
 	";
 }
@@ -140,7 +164,7 @@ $content .= "
 				<input type=\"hidden\" name=\"parent\" value=\"{$message['id']}\" />
 				<input type=\"hidden\" name=\"type\" value=\"{$message['type']}\" />
 				<fieldset>
-					<textarea class=\"auto\" style=\"text-align: left; width: 400px; height: 150px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
+					<textarea style=\"text-align: left; width: 400px; height: 150px;\" name=\"content\" id=\"replyField\"></textarea>
 					<span class=\"help-block\">{$lang['content_help']}</span>
 				</fieldset>
 				<fieldset>
@@ -149,6 +173,27 @@ $content .= "
 				</fieldset>
 				<fieldset>
 					<input autofocus type=\"submit\" value=\"{$lang['send']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id=\"settings\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['settings']}</h3>
+		<div class=\"form-small\">		
+			<form action=\"/admin/messages/status_action\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" value=\"{$message['id']}\" name=\"id\" />
+				<fieldset>
+					<select name=\"new_status\">
+						<option value=\"1\">{$lang['status_1']}</option>
+						<option value=\"2\">{$lang['status_2']}</option>
+						<option value=\"4\">{$lang['status_4']}</option>
+						<option value=\"3\">{$lang['status_3']}</option>
+					</select>
+					<span class=\"help-block\">{$lang['settings_help']}</span>
+				</fieldset>
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['send']}\" />
 				</fieldset>
 			</form>
 		</div>
@@ -183,6 +228,7 @@ $content .= "
 		newFlexibleDialog('reply', 550);
 		newFlexibleDialog('delete', 550);
 		newFlexibleDialog('close', 550);
+		newFlexibleDialog('settings', 550);
 		var status = 0;
 		function showEdit(id)
 		{
@@ -201,6 +247,17 @@ $content .= "
 				$(\"#text\"  + id).show(\"fade\", options, 200);
 				status = 0;
 			}
+		}
+		
+		function quote(e)
+		{
+			var quotation = $('#edit' + e).val(); 
+			var regExpE = /\[quote\]([^§]+)\[\/quote\]/;
+			var clean_quotation = $.trim(quotation.replace(regExpE, '(...)'));
+	
+			$('#replyField').val('[quote]' + clean_quotation + '[/quote]');
+			$('#reply').dialog('open'); 
+			return false;
 		}
 	</script>
 ";

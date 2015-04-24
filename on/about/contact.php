@@ -8,27 +8,26 @@ if( !defined('PROPER_START') )
 
 require_once 'on/status/vendor/autoload.php';
 
-$client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
-$issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
-$issues = $issues['issues'];
-
+// projets.olympe.in status
+$url = 'https://projets.olympe.in';
+libxml_use_internal_errors(true);
+$doc = new DOMDocument();
+$doc->loadHTMLFile($url);
+libxml_clear_errors();
+$title = $doc->getElementsByTagName('title')->item(0);
+$chaine = $title->nodeValue;
+$dispo = "0";
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
+	
+$time = time();
+$random = md5(uniqid($time, true));
+$_SESSION[$random] = 1;
 
-$content = "
-		<div class=\"head-light\">
+$content = "<div class=\"head-light\">
 			<div class=\"container\">
-				<h1 class=\"dark\">{$lang['title']}</h1>
-			</div>
-		</div>
-		<div class=\"content\">
-";
-
-if( count($issues) > 0 ) {
-
-	$content .= "
-				<h2 class=\"dark\">{$lang['issues']}</h2>
+			<h2 class=\"dark\">{$lang['issues']}</h2>
 				
 				<table>
 					<tr>
@@ -39,9 +38,11 @@ if( count($issues) > 0 ) {
 						<th style=\"color: #a4a4a4;\">{$lang['date']}</th>
 						<th style=\"color: #a4a4a4;\">{$lang['status']}</th>
 						<th style=\"color: #a4a4a4;\">{$lang['updated']}</th>
-					</tr>";
-				
+					</tr>
+";
 
+if( count($issues) > 0 )
+{
 	foreach( $issues as $i )
 	{
 		$content .= "
@@ -56,22 +57,40 @@ if( count($issues) > 0 ) {
 					</tr>
 		";
 	}
-
-	$content .= "
-				</table>
-				<div style=\"height: 40px;\"></div>
-	";
 }
+else
+{
+	$content .= "
+				<tr>
+					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
+			";
+			
+	if ($chaine === false) {
+			$content .= $lang['intervention'];
+	}else{
+			$content .= $lang['unavailable'];
+	}
 	
-	
-$content .= "
+	$content .= "
+					</td>
+				</tr>
+	";
+
+}
+	$content .= "
+			</table>
+			<br /><br />
+			<h1 class=\"dark\">{$lang['title']}</h1>
+			</div>
+		</div>
+		<div class=\"content\">
 				<div class=\"left\">
 					<h4>{$lang['send']}</h4>
 					<p>{$lang['send_text']}</p>
 					<br />
 					<form action=\"/about/contact_action\" method=\"post\" id=\"contact\">
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" placeholder=\"{$lang['name']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" required placeholder=\"{$lang['name']}\" />
 						</fieldset>
 		";
 		
@@ -85,17 +104,24 @@ if(!$user) {
 
 $content .= "		
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" id=\"email\" placeholder=\"{$lang['email']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" required id=\"email\" placeholder=\"{$lang['email']}\" />
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" placeholder=\"{$lang['subject']}\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" required placeholder=\"{$lang['subject']}\" />
 						</fieldset>
 						<fieldset>
-							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" placeholder=\"{$lang['message']}\"></textarea>
+							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" required placeholder=\"{$lang['message']}\"></textarea>
+						</fieldset>
+						<fieldset>
+							<input class=\"auto\" style=\"width: 300px; display:none;\" type=\"text\" name=\"phone\" placeholder=\"\" />
 						</fieldset>
 						<fieldset>
 							<input type=\"submit\" value=\"{$lang['send_now']}\" />
 						</fieldset>
+						<input style=\"display:none;\" type=\"text\" id=\"ck1\" name=\"ck1\" value=\"{$time}\" />
+						<input style=\"display:none;\" type=\"text\" id=\"ck2\" name=\"ck2\" value=\"\" />
+						<input style=\"display:none;\" type=\"text\" id=\"email2\" name=\"email2\" value=\"\" />
+						<input type=\"hidden\" value=\"{$random}\" name=\"random\" />
 					</form>
 				</div>
 				<div class=\"right border\">
@@ -106,7 +132,7 @@ $content .= "
 				
 					<h4>{$lang['infos']}</h4>
 					<p>Paris, France</p>
-					<p><a href=\"mailto: contact@olympe.in\">contact@olympe.in</a></p>
+					<p><a href=\"#\">contact<img src=\"/on/images/thin-arobase-2.png\">olympe.in</a></p>
 					<p>#olympe@irc.freenode.net</p>
 					<br />
 					<h4>{$lang['meet']}</h4>
@@ -133,6 +159,8 @@ $content .= "
 				newFlexibleDialog('email_check', 250);
 				
 				$('form#contact').submit(function() {
+					$('#ck2').val($('#ck1').val());
+					
 					var input = $('#email', this);
 					var re = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 					var is_email = re.test(input.val());

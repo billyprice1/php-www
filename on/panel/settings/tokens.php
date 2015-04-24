@@ -37,7 +37,7 @@ foreach( $tokens as $t )
 	$content .= "
 						<tr>
 							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/settings/tokens/detail?token={$t['token']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/token.png\" /></td>
-							<td><span style=\"font-weight: bold;\">{$t['name']}</span></td>
+							<td><span style=\"font-weight: bold;\">". htmlspecialchars($t['name']) ."</span></td>
 							<td><span class=\"lightlarge\">{$t['token']}</a></td>
 							<td>".($t['lease']==0?"{$lang['never']}":date($lang['dateformat'], $t['lease']))."</td>
 							<td style=\"width: 100px; text-align: center;\">

@@ -1,4 +1,28 @@
 [EN]
+title = "Infrastructure"
+datacenters = "Datacenters and network"
+datacenters_text = "Olympe relies its partners <a href='http://www.anotherservice.com'>Another Service</a> and <a href='http://www.interxion.com'>Interxion</a> to operate the rooms, transit and network layer infrastructure. 
+Our servers are located in France, in multiple datacenters. <br /><br /> With different geographical locations and the flexibility of our suppliers particularly on routing, we have set up a strong infrastructure even in cases 
+of complete failure of a production site.<br /><br />
+Thanks to the help of Interxion, Olympe has a gigabit port on the peering point <a href='https://www.franceix.net'>FranceIX</a>. This allows us to increase our transit capabilities to major French operators and thus improve 
+the overall performance of the platform."
+virt = "Storage and virtualization"
+virt_text = "Olympe infrastructure is based on a cluster of physical servers <a href='http://www.proxmox.com'>Proxmox</a> that manages and provides redundancy of virtual machines. We have developed our automatic adjustment tools and resources 
+for high availability.<br /><br />
+Le stockage de la production est assuré par un pool <a href='http://www.ceph.com'>Ceph</a> de 22 teraoctets, avec des blocs <a href='http://ceph.com/docs/next/rbd/rbd/'>Rados</a> pour les machines virtuelles 
+et une partition CephFS pour les données persistantes. Les sauvegardes sont effectuées sur un espace répliqué/distribué <a href='http://www.gluster.org'>GlusterFS</a>.<br /><br />
+Nous avons ensuite des colonnes duplicables comprenant des firewalls <a href='http://www.pfsense.org'>Pfsense</a> (virtuel) et <a href='http://www.cisco.com'>Cisco</a> (physiques) frontaux, des machines virtuelles de load balancing
+(proxy) et les briques de traitement."
+
+soft = "Applications"
+status = "Infrastructure status"
+data = "Our equipment"
+paris = "Paris datacenters"
+paris_text = "We have two points of presence in Paris, the first <i>Interxion Paris 2</i>, and the second at <i>Interxion Paris 7</i>. We light a dark fiber loop dedicated to our infrastructure between the two datacenters."
+paris_text2 = "Both have three points of interconnection with France-IX and more than 70 telecom operators/ISPs. With a power density of 2300W/m² and many innovations, we calmly considering the growth of our Parisian infrastructure."
+marseille = "Marseille datacenters"
+marseille_text = "In Marseille, we are at Jaguar Network in two datacenters : <i>SFR Netcenter</i> and <i>MRS-01</i>. We operate our public routing network and fully manage the redundancy between the two sites."
+marseille_text2 = "Our historical presence in Provencal region allowed us to develop a part of our system and network infrastructure in collaboration with local actors."
 
 
 [FR]

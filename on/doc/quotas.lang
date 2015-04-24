@@ -1,4 +1,20 @@
 [EN]
+title = "Quotas and limits"
+intro = "Introduction"
+intro_text = "Our point is not to limit our users, but as a free and open hosting, we have to set limits to prevent abuses. However, Olympe has the will to allow everyone to access the web technologies, that is why you can ask our staff
+to increase the limits of your space (disk space, websites, databases, emails, domains...), with a <a href='/panel/messages'>justified request</a>."
+
+default = "Default quotas"
+name = "Quota name"
+max = "Default limit"
+sites = "Websites"
+domains = "Domain names"
+bases = "Databases"
+disk = "Disk space"
+sent = "Mails sent per day"
+mb = "Mo"
+overview = "Overview of your quotas"
+overview_text = "You can access an overview of your quotas in the <a href='/panel/quotas'>corresponding section</a>  of your panel:"
 
 
 [FR]

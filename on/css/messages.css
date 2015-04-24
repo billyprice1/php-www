@@ -3,23 +3,36 @@ div.topic {
 }
 
 div.topic div.message {
-	border: 1px solid #b7b7b7;
-	margin: 0 0 20px 0;
-	padding: 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    margin: 0 0 25px;
+    padding: 0;
 }
 
 div.topic div.message div.toppart {
-	margin: 0;
-	padding: 0;
-	border-bottom: 1px solid #b7b7b7;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #DDD;
+    height: 31px;
+    margin: 0;
+    padding: 0;
 }
 
-div.topic div.message div.toppart div.messageid {
-	float: left;
-	width: 150px;
-	margin: 0;
-	padding: 15px 20px 10px 20px;
-	font-size: 15px;
+div.topic div.message div.bottompart {
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    height: 30px;
+	border-top: 1px solid #DDD;
+    padding: 5px 10px 0;
+}
+
+div.topic div.message div.bottompart span.date {
+	font-size: 12px;
+	color: #888;
+	float: right;
+}
+
+div.topic div.message div.bottompart span.messageid {
+	font-size:12px;
 	color: #DE5711;
 }
 
@@ -32,27 +45,74 @@ div.topic div.message div.toppart div.date {
 
 div.topic div.message div.toppart div.icons {
 	float: right;
-	padding: 10px 10px 10px 20px;
+	padding: 3px 4px 10px 20px;
+}
+
+div.topic div.message div.toppart div.icons img {
+	background-color: white;
+}
+
+div.topic div.message .lg-profile-pic {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-top: -22px;
+    padding: 7px;
+	border-radius: 0;
+}
+
+div.topic div.message .author-name {
+    color: #4c4c4c;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-left: 160px;
+    padding-top: 9px;
+	max-width: 300px;
+	overflow: visible;
+}
+
+div.topic div.message span.staff, div.topic div.message span.online {
+    background-color: #de5711;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-top: 3px;
+    padding: 2px;
+    text-align: center;
+    width: 92px;
+}
+
+div.topic div.message span.online {
+    background-color: #7bbb51;
 }
 
 div.topic div.message div.meta {
-	float: left;
-	width: 150px;
-	margin: 0;
-	padding: 25px 20px 10px 20px;
+    float: left;
+    margin: 0;
+    padding: 0 20px 10px;
+    width: 100px;
 }
 
 div.topic div.message div.text {
 	float: left;
-	width: 700px;
+	width: 900px;
 	margin: 0 0 0 0;
 	padding: 10px 20px 10px 20px;
 }
 
-div.topic  div.forum_quote {
-    	background-color: #F0F0F0;
-   	 border-left: 3px solid #D9D9D9;
-    	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.15) inset;
-    	font-size: 0.9em;
-    	padding: 10px 15px 0;
+div.topic div.message div.text div[id^="text"] {
+	line-height: 20px;
+}
+
+div.topic div.forum_quote {
+    background-color: #fafafa;
+    border-left: 3px solid #d9d9d9;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.15) inset;
+    font-family: Verdana;
+    font-size: 11px;
+    line-height: 17px;
+    margin: 15px 0;
+    padding: 10px 15px 0;
+    text-align: justify;
 }

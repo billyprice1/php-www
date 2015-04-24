@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$token = api::send('self/token/list', array('token'=>$_GET['token']));
+$token = api::send('self/token/list', array('token'=>htmlspecialchars($_GET['token'])));
 if( count($token) == 0 )
 	template::redirect('/panel/tokens');
 $token = $token[0];
@@ -23,7 +23,7 @@ $content = "
 		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px; width: 700px;\">
-					<h1 class=\"dark\">{$lang['title']} {$token['name']}</h1>
+					<h1 class=\"dark\">{$lang['title']} ". htmlspecialchars($token['name']) ."</h1>
 				</div>
 				<div class=\"right\" style=\"width: 200px;\">
 					<a class=\"button classic\" href=\"/panel/settings/tokens\" style=\"width: 180px; height: 22px; float: right;\">
@@ -101,7 +101,7 @@ $content .= "
 						<span class=\"help-block\">{$lang['tokentoken']}</span>
 					</fieldset>	
 					<fieldset>
-						<input {$disabled} type=\"text\" name=\"name\" value=\"{$token['name']}\" style=\"width: 400px;\" />
+						<input {$disabled} type=\"text\" name=\"name\" value=\"". htmlspecialchars($token['name']) ."\" style=\"width: 400px;\" />
 						<span class=\"help-block\">{$lang['tokenname']}</span>
 					</fieldset>					
 					<fieldset>

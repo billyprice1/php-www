@@ -1,4 +1,30 @@
 [EN]
+title = "Domain names"
+intro = "Introduction"
+intro_text = "Domain names enable you to associate one or more additional addresses with the Olympe sites you own. 
+A domain name consists of a label and an extension, for example: <i>toto.com</i>, where <i>toto</i> is the label and <i>com</i> the extension."
+buy = "Requirements"
+buy_text = "There are many types of domain names with a charge (fr, net, org, com, etc.) or free (fr.nf, asso.st, etc.). The \"free\" ones are actually subdomains of short domains (for example, <i>toto.fr.nf</i> 
+is a subdomain of the short domain <i>fr.nf</i>).<br /><br />
+<span style='font-weight: bold;'>NOTICE : Olympe is not a registrar</span>, you <u>can not</u> buy a domain name directly on our panel. Some recognized registrars:
+<br />
+<ul class='classic'>
+	<li><a href='http://www.gandi.net' target='_blank'>Gandi</a> (domains, with a charge)</li>
+	<li><a href='http://www.ovh.com' target='_blank'>OVH</a> (domains, with a charge)</li>
+	<li><a href='http://www.azote.org' target='_blank'>Azote</a> (subdomains, free of charge)</li>
+</ul>
+"
+create = "Create a domain name"
+create_text = "Once you linked your domain name to jour Olympe website, you can manage all the domain settings (subdomains, websites, email accounts, redirections ...) from the panel. 
+To add a domain, simply go to the \"domain\" menu :"
+create_text2 = "Then fill out the form :"
+create_text3 = "Once the domain is added to the panel, you have to change the DNS servers (on the chosen registrar website) with the following parameters :"
+primary = "Primary DNS server :"
+secondary = "Secondary DNS server :"
+create_text4 = "For example, if you chose Gandi :"
+back = "Back"
+next_text = "With your domain name, you can create an unlimited number of email accounts of the type <em>name@your-domain.com</em>."
+next_button = "Create an email account"
 
 
 [FR]
@@ -12,9 +38,9 @@ courts (<i>toto.fr.nf</i> est un sous-domaine du domaine court <i>fr.nf</i>).<br
 <span style='font-weight: bold;'>Attention, Olympe n'est pas un fournisseur de domaine</span>, vous ne pouvez donc ni réserver ni acheter un nom de domaine directement sur notre panel. Quelques fournisseurs reconnus :
 <br />
 <ul class='classic'>
-	<li><a href='http://www.gandi.net'>Gandi</a> (domaines classiques, payants)</li>
-	<li><a href='http://www.ovh.com'>OVH</a> (domaines classiques, payants)</li>
-	<li><a href='http://www.azote.org'>Azote</a> (sous-domaines, gratuits)</li>
+	<li><a href='http://www.gandi.net' target='_blank'>Gandi</a> (domaines classiques, payants)</li>
+	<li><a href='http://www.ovh.com' target='_blank'>OVH</a> (domaines classiques, payants)</li>
+	<li><a href='http://www.azote.org' target='_blank'>Azote</a> (sous-domaines, gratuits)</li>
 </ul>
 "
 create = "Créer un domaine"

@@ -119,11 +119,15 @@ div.directory  div.container div.site div.text {
 }
 
 span.name {
-	display: block;
+	display: inline-block;
 	font-size: 16px;
 	font-weight: 300;
 	margin-bottom: 5px;
-	height: 35px;
+	height: 30px;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
 }
 
 span.editor {

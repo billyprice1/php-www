@@ -16,7 +16,7 @@ div.admin div.top  div.right {
 
 div.panel {
 	width: 100%;
-	padding: 80px 0px 30px 0px;
+	padding: 80px 0px 0px;
 }
 
 div.panel div.top {
@@ -41,10 +41,10 @@ div.panel div.top div.right {
 }
 
 div.panel div.sites {
-	background: #eee url('../images/dotgrid-black.png');
+	background: url("../images/dotgrid-black.png") repeat scroll 0% 0% rgba(238, 238, 238, 0.43);
 	width: 100%;
-	margin: 0;
-	padding: 20px 0 5px 0;
+	margin: 0px;
+	padding: 20px 0px 70px;
 }
 
 div.panel div.sites div.sitescontent {
@@ -386,6 +386,15 @@ a.action.email {
 a.action.email:hover {
 	color: #eb782b;
 	background-image: url('../images/illu/mail_hover.png');
+}
+
+a.action.archive {
+	background-image: url('../images/illu/archive.png');
+}
+
+a.action.archive:hover {
+	color: #eb782b;
+	background-image: url('../images/illu/archive_hover.png');
 }
 
 a.action.ban {

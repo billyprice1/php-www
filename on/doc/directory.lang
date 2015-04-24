@@ -1,4 +1,10 @@
 [EN]
+title = "Website directory"
+intro = "Introduction"
+intro_text = "Olympe provides a <a href='/directory'>directory</a> of hosted websites (beta release). You can choose whether or not to show your websites."
+update = "Change the description"
+update_text = "To modify the description of your site, you must go on the management page of this one :"
+update_text2 = "Once your title and your description are filled, you can go to check your website page in the directory in the last added websites :"
 
 
 [FR]

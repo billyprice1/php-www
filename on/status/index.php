@@ -36,11 +36,13 @@ else {
 	$up365 = "";
 }
 
+
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
+
 
 $content = "
 		<div class=\"head\" style=\"background-color: ".($status!=2?"#ca0101":"#7bbb51")."; background-image: url('/{$GLOBALS['CONFIG']['SITE']}/images/dotgrid-black.png'); margin-bottom: 0;\">

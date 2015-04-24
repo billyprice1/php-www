@@ -1,4 +1,20 @@
 [EN]
+title = "Backups"
+intro = "Introduction"
+intro_text = "From your panel, you can access the backups of your site in the corresponding <a href='/panel/backups'>section</a>."
+backup_site = "Save your website"
+backup_site_text = "To make a backup of your website, you have to click its thumbnail on the panel homepage to go on its configuration page:"
+backup_site_text2 = "You just have to click the <i>Backup</i> button to create it. You will be redirected to the <i>Backup</i> menu of your panel, and you will be able to download your
+backup. It is <u>highly recommended</u> to download it and to check the content."
+backup_database = "Save your database"
+backup_database_text = "To make a backup of your database, you have to go to the <i>Databases</i> menu, and click the concerned DB:"
+backup_database_text2 = "You just have to click the <i>Backup</i> button to create it. You will be redirected to the <i>Backup</i> menu of your panel, and you will be able to download your
+backup. It is <u>highly recommended</u> to download it and to check the content."
+backups_download = "Download the backups"
+backups_text = "To download a backup, you just have to go to the <i>Backups</i> menu of your panel, and choose the backup you want to download."
+backup_warning = "<strong>DISCLAIMER</strong> : User is solely responsible for performing regular backups of its sites and its databases. Olympe will not perform backup for him, and can 
+not be held responsible. This automatic backup tool does not release the user from his obligation to check the integrity of backups, and to keep it off-line. Olympe will not be held 
+responsible for the lack of existing backup for a site, or the bad quality, or the unavailability of a backup made but not saved by the user."
 
 
 [FR]
@@ -6,10 +22,18 @@ title = "Sauvegardes"
 intro = "Introduction"
 intro_text = "Depuis votre panel, vous pouvez accéder aux sauvegardes de votre site dans la <a href='/panel/backups'>rubrique</a> correspondante."
 backup_site = "Sauvegarde de votre site"
-backup_site_text = "Pour créer une archive de votre site, vous devez vous trouver dans sa page de configuration:"
-backup_site_text2 = "Puis en cliquant sur <i>Sauvegarde</i>, vous pouvez créer une nouvelle archive et la télécharger ensuite."
+backup_site_text = "Pour créer une archive de votre site, vous devez cliquer sur la miniature du site concerné, sur l'index du panel utilisateur, de manière à vous trouver dans sa page 
+de configuration:"
+backup_site_text2 = "Vous pourrez ensuite cliquer sur le bouton <i>Sauvegarde</i> pour la créer. Vous serez redirigé(e) vers le menu <i>Backup</i> du panel, et serez à même de télécharger 
+votre sauvegarde. Il est <u>vivement recommandé</u> de la télécharger et d'en vérifier le contenu."
 backup_database = "Sauvegarde de votre base de données"
-backup_databas_text = "Pour créer une archive de votre base de données, vous devez aller dans sa page de configuration."
-backup_database_text2 = "Vous avez ensuite un bouton vous permettant de créer une archive."
-backups = "Télécharger les archives"
-backups_text = "Pour télécharger une archive, il suffit de sélectionner celle que vous désirez."
+backup_database_text = "Pour créer une archive de votre base de données, vous devez aller dans le menu <i>Bases de données</i> du panel et cliquer sur la base concernée pour atteindre 
+sa page de configuration."
+backup_database_text2 = "Vous pourrez ensuite cliquer sur le bouton <i>Sauvegarde</i> pour la créer. Vous serez redirigé(e) vers le menu <i>Backup</i> du panel, et serez à même de télécharger 
+votre sauvegarde. Il est <u>vivement recommandé</u> de la télécharger et d'en vérifier le contenu."
+backups_download = "Télécharger les archives"
+backups_text = "Pour télécharger une archive, rendez-vous dans le menu <i>Sauvegarde</i> du panel, et choisissez simplement celle que vous souhaitez télécharger."
+backup_warning = "<strong>ATTENTION</strong> : l'utilisateur est seul responsable de la réalisation régulière de sauvegardes de son site et de ses bases de données. Olympe n'effectuera 
+aucune sauvegarde à sa place, et ne saura en être tenu pour responsable. Cet outil de backup automatisé ne dispense pas l'utilisateur de vérifier l'intégrité des sauvegardes effectuées,
+et de les conserver hors-ligne. Olympe ne saurait être tenu pour responsable de l'absence de sauvegarde existante pour un site, ou de la mauvaise qualité, ou de l'indisponibilité d'une 
+sauvegarde effectuée mais non-enregistrée par l'utilisateur."

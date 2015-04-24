@@ -1,10 +1,9 @@
 ﻿[EN]
 title = "API management"
-subtitle = "How to use the API ?"
-intro = "L'<a href='https://api.olympe.in'>API</a> vous permet de gérer l'ensemble des services d'hébergement liés à un compte. Elle gère à la fois la création, la sélection, l'édition et 
-la suppression des différents éléments. Vous pouvez choisir le format de retour (JSON, HTML, XML...) et tester directement depuis l'API n'importe quelle requêtes grâce à un formulaire fourni pour chaque méthode.<br />
-<br />La documentation de l'API est directement intégrée, d'abord les explications générales sur la page d'accueil (formats, retours d'erreur, signification des champs...) puis ensuite
-les paramètres de chaque méthode dans les différentes pages."
+subtitle = "Using the API"
+intro = "The <a href='https://api.olympe.in'>API</a> allows you to manage all hosting services related to an account. It manages both creating, selecting, editing and
+Removal of the various elements. You can choose the return format (JSON, HTML, XML ...) and test the API directly from any queries through a form provided for each method.<br />
+<br />The API documentation is directly integrated, first explanations on the home page (formats, error returns, meaning of the fields ...) then the parameters of each method in different pages."
 
 steps = "Here are the simple steps to use it:"
 step_1 = "Get the token of the user you want to manage:"
@@ -13,7 +12,7 @@ api = "Go to the API"
 
 [ES]
 title = "API management"
-subtitle = "How to use the API ?"
+subtitle = "Using the API"
 intro = "L'<a href='https://api.olympe.in'>API</a> vous permet de gérer l'ensemble des services d'hébergement liés à un compte. Elle gère à la fois la création, la sélection, l'édition et 
 la suppression des différents éléments. Vous pouvez choisir le format de retour (JSON, HTML, XML...) et tester directement depuis l'API n'importe quelle requêtes grâce à un formulaire fourni pour chaque méthode.<br />
 <br />La documentation de l'API est directement intégrée, d'abord les explications générales sur la page d'accueil (formats, retours d'erreur, signification des champs...) puis ensuite

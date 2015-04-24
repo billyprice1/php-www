@@ -6,12 +6,28 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/blocked.txt");
+class analyse
+{
+	public static function contain  ( $search, $string )
+	{
+		if ( strpos( "{$string}", $search ) !== false )
+			return true;
+		if ( levenshtein( $string, $search ) <= 2 )
+			return true;
+		if ( soundex("{$string}")  == soundex("{$search}") )
+			return true;
+			
+		return false;
+	}	
+}
+	
+$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/sitename_blacklist.txt");
 $subdomain = htmlspecialchars(strtolower($_POST['subdomain']));
 
-foreach ($blocked as $line_num => $blocked_keyword) {
-	$blocked_keyword = trim($blocked_keyword);
-	if (strpos($subdomain, $blocked_keyword) !== false) {
+foreach ($blocked as $line => $keyword ) {
+	$keyword = trim( $keyword );
+	if ( analyse::contain ( $subdomain, $keyword ) ) 
+	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
 		$_SESSION['MESSAGE']['TEXT']= $lang['blocked'];
 		$template->redirect('/panel');

@@ -8,6 +8,7 @@ $menu = "
 							<a href=\"/doc\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc', '/'))===0?"active":"")."\">{$lang['index']}</li></a>
 							<li style=\"cursor: auto;\">{$lang['started']}</li>
 							<ul>
+								<a href=\"/doc/registration\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/registration', '/'))===0?"active":"")."\">{$lang['register']}</li></a>
 								<a href=\"/doc/first\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/first', '/'))===0?"active":"")."\">{$lang['first']}</li></a>
 								<a href=\"/doc/publish\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/publish', '/'))===0?"active":"")."\">{$lang['publish']}</li></a>
 								<a href=\"/doc/info\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/info', '/'))===0?"active":"")."\">{$lang['infos']}</li></a>
@@ -26,7 +27,6 @@ $menu = "
 								<a href=\"/doc/stats\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/stats', '/'))===0?"active":"")."\">{$lang['stats']}</li></a>
 								<a href=\"/doc/quotas\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/quotas', '/'))===0?"active":"")."\">{$lang['quota']}</li></a>
 								<a href=\"/doc/tokens\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/tokens', '/'))===0?"active":"")."\">{$lang['tokens']}</li></a>
-								<a href=\"/doc/cloud\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/cloud', '/'))===0?"active":"")."\">{$lang['cloud']}</li></a>
 							</ul>							
 							<li style=\"cursor: auto;\">{$lang['about']}</li>
 							<ul>
@@ -34,5 +34,9 @@ $menu = "
 								<a href=\"/doc/techno\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/techno', '/'))===0?"active":"")."\">{$lang['techno']}</li></a>
 								<a href=\"/about/contact\"><li>{$lang['contact']}</li></a>
 							</ul>
+							<li style=\"cursor: auto;\">{$lang['more']}</li>
+							<ul>
+								<a href=\"/doc/email\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/email', '/'))===0?"active":"")."\">{$lang['about_email']}</li></a>
+							</u1>
 						</ul>
 ";

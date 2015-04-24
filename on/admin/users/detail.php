@@ -24,11 +24,14 @@ $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"width: 700px;\">
-					<img style=\"width: 60px; height: 60px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
-					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>{$user['name']}</strong></span>
+					<img style=\"width: 60px; height: 60px; border-radius: 100px; padding: 5px; text-align: right; float: left; margin-right: 20px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$user['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+					<span style=\"color: #DE5711; font-size: 32px; display: block; margin-bottom: 5px;\">{$lang['title']} : <strong>". htmlspecialchars($user['name']) ."</strong></span>
 					<h2 class=\"dark\">{$user['firstname']} {$user['lastname']}</h2>
 				</div>
 				<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
+					<a class=\"action archive\" href=\"/admin/logs?user={$user['id']}\">
+						{$lang['logs']}
+					</a>
 					<a class=\"action email\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\">
 						{$lang['email_help']}
 					</a>
@@ -233,11 +236,11 @@ if( security::hasGrant('DATABASE_SELECT') )
 	$databases = api::send('database/list', array('user'=>$_GET['id']));
 	
 	foreach( $databases as $d )
-	{		
+	{
 		$content .= "
 						<tr>
 							<td>{$d['name']}</td>
-							<td>{$d['desc']}</td>
+							<td>". htmlspecialchars($d['desc']) ."</td>
 							<td>{$d['server']}</td>
 							<td>{$d['type']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
@@ -277,7 +280,7 @@ if( security::hasGrant('TOKEN_SELECT') )
 	{
 		$content .= "
 					<tr>
-						<td>{$t['name']}</td>
+						<td>". htmlspecialchars($t['name']) ."</td>
 						<td>{$t['token']}</td>
 						<td style=\"width: 100px; text-align: center;\">
 		";
@@ -329,7 +332,7 @@ if( security::hasGrant('MESSAGE_SELECT') )
 	{
 		$content .= "
 						<tr>
-							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">{$m['title']}</a></td>
+							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">". htmlspecialchars($m['title']) ."</a></td>
 							<td>{$lang['type_'.$m['type']]}</td>
 							<td>".date($lang['dateformat'], $m['date'])."</td>
 							<td>".$lang['status_' . $m['status']]."</td>
@@ -384,6 +387,9 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 		if( $percent > 100 )
 			$percent = 100;
 			
+		if($u['name'] == 'SITES' || $u['name'] == 'DOMAINS' || $u['name'] == 'DATABASES' || $u['name'] == 'BYTES' || $u['name'] == 'MAILS') 
+			$step = 1;
+			
 		$content .= "
 					<tr>
 						<td>{$u['name']}</td>
@@ -394,7 +400,7 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 							<span class=\"quota\"><span style='font-weight: bold;'>{$u['used']}</span> {$lang['of']} {$u['max']}</span>
 						</td>
 						<td style=\"width: 50px; text-align: center;\">
-							<a href=\"#\" onclick=\"$('#user2').val('{$user['id']}'); $('#quota').val('{$u['name']}'); $('#max').val('{$u['max']}'); $('#quotachange').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#user2').val('{$user['id']}'); $('#quota').val('{$u['name']}'); $('#max').val('{$u['max']}'); $('#max').attr('step', '{$step}'); $('#quotachange').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
 						</td>
 					</tr>
 		";
@@ -529,7 +535,7 @@ $content .= "
 					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" /></td>
 					<td>{$lang['cloud']}</td>
 					<td>{$lang['cloud_type']}</td>
-					<td>/dns/in/olympe/Users/{$user['name']}</td>
+					<td>/dns/in/olympe/Users/". htmlspecialchars($user['name']) ."</td>
 					<td><span style=\"font-weight: bold;\">{$user['size']} {$lang['mb']}</span></td>
 				</tr>
 ";
@@ -590,7 +596,7 @@ $content .= "
 					<input id=\"user2\" type=\"hidden\" value=\"\" name=\"user\" />
 					<input id=\"quota\" type=\"hidden\" value=\"\" name=\"quota\" />
 					<fieldset>
-						<input id=\"max\" type=\"text\" name=\"max\" value=\"\" />
+						<input id=\"max\" type=\"number\" name=\"max\" value=\"\" step=\"1\" min=\"0\" style=\"height: 30px;\" />
 						<span class=\"help-block\">{$lang['max_help']}</span>
 					</fieldset>
 					<fieldset autofocus>	

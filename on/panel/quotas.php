@@ -39,7 +39,7 @@ foreach( $me['quotas'] as $q )
 $percent_disk = $disk['used']*100/$disk['max'];
 $percent_sites = $sites['used']*100/$sites['max'];
 $percent_databases = $databases['used']*100/$databases['max'];
-$percent_mails = $mails['used']*100/$mails['max'];
+@$percent_mails = $mails['used']*100/$mails['max'];
 
 if( $percent_disk > 100 )
 	$percent_disk = 100;
@@ -105,7 +105,6 @@ $content = "
 				<div class=\"clear\"></div><br />
 				<br />
 				<h2 class=\"dark\">{$lang['sizes']}</h2>
-				<h1 class=\"dark\" style=\"text-align: center; font-weight: bold; font-size: 20px; width: 600px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/alert2.png\" /> {$lang['diskalert']}</h1>
 				<table>
 					<tr>
 						<th style=\"text-align: center; width: 40px;\">#</th>

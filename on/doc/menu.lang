@@ -1,6 +1,7 @@
-[EN]
+﻿[EN]
 index = "Index"
 
+register = "Registration"
 started = "First website"
 first = "Create a new website"
 publish = "Publish the website online"
@@ -28,9 +29,13 @@ what = "What is Olympe ?"
 techno = "Used technologies"
 contact = "Contact us"
 
+more = "Tutorial"
+about_email = "About sending emails"
+
 [FR]
 index = "Accueil de l'aide"
 
+register = "S'inscrire"
 started = "Premier site"
 first = "Créer un nouveau site"
 publish = "Publier le site en ligne"
@@ -57,3 +62,6 @@ about = "A propos"
 what = "Qu'est-ce qu'Olympe ?"
 techno = "Technologies utilisées"
 contact = "Nous contacter"
+
+more = "Tutoriel"
+about_email = "Optimiser l'envoi d'email"

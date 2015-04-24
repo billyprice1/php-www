@@ -1,11 +1,40 @@
 [EN]
-
+title = "Olympe in action"
+conferences = "Conferences"
+conferences_text = "Olympe Association progressively expanding its research, both in the field of new technologies, but also social science applied to new modes of communication. <br /><br />Some of our members have 
+opportunity to speak at trade shows or as part of seminars / discussions on the following themes :"
+conferences_text2 = "<span style='font-weight: bold;'>Generalist</span>
+<br /><br />
+<ul class='styled'>
+	<li>The web hosting (issues, data control, freedom ...)</li>
+	<li>The digital divide (disparity, accessibility, infrastructure ...)</li>
+	<li>Social networks (the concept of community sharing ...)</li>
+</ul><br />
+<span style='font-weight: bold;'>Technical</span>
+<br /><br />
+<ul class='styled'>
+	<li>Safety data hosting</li>
+	<li>Open source « cloud » infrastructure</li>
+	<li>Storage in mass architectures</li>
+</ul>"
+formations = "Formations"
+formations_text = "Thanks to the experience it has gained in this field, Olympe offers training courses for associations and non-profit organizations. 
+These courses are taught by recognized professionals and covers the following fields :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Office and editorial suites</li>
+	<li>Creating sites and publishing tools</li>
+	<li>Community management and use of social networks</li>
+	<li>Systems infrastructure, networking and telecom</li>
+	<li>IT security</li>
+</ul>"
+contact = "Contact us"
 
 [FR]
 title = "Olympe en action"
 conferences = "Conférences"
-conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux nouveaux modes de communication. <br /><br />Certains de nos membres ont la 
-possibilité d'intervenir lors de salons ou dans le cadre de séminaires/débats, sur les thématiques suivantes :"
+conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux 
+nouveaux modes de communication. <br /><br />Certains de nos membres ont la possibilité d'intervenir lors de salons ou dans le cadre de séminaires/débats, sur les thématiques suivantes :"
 conferences_text2 = "<span style='font-weight: bold;'>Généraliste</span>
 <br /><br />
 <ul class='styled'>
@@ -32,3 +61,35 @@ formations_text2 = "
 	<li>Sécurité informatique</li>
 </ul>"
 contact = "Contactez-nous"
+
+[IT]
+title = "Olympe in azione"
+conferences = "Conferenze"
+conferences_text = "L'associazione Olympe si espande progressivamente nelle ricerche di nuove tecnologie, e anche nelle scienze sociali applicate ai nuovi mezzi di comunicazione. <br /><br />Alcuni 
+dei nostri membri hanno l'opportunità di parlare alle fiere o di partecipare a seminari / discussi sui seguenti temi :"
+conferences_text2 = "<span style='font-weight: bold;'>Generico</span>
+<br /><br />
+<ul class='styled'>
+	<li>Web Hoating (problemi, gestione dei dati, libertà ...)</li>
+	<li>Divisione sociale (disparità, accessibilità, infrastrutture ...)</li>
+	<li>Social network (concetti di condivisione sociale)</li>
+</ul><br />
+<span style='font-weight: bold;'>Tecnico</span>
+<br /><br />
+<ul class='styled'>
+	<li>Sicurezza dell'hosting di dati</li>
+	<li>Infrastrutture open-source « cloud »</li>
+	<li>Stoccaggio in infrastrutture di massa</li>
+</ul>"
+formations = "Addestramento"
+formations_text = "Grazie all'esperienza acquisita in questo campo, Olympe offre corsi di addestramento per associazioni e organizzazioni no-profit. 
+Questi corsi sono tenuti da personalità riconosciute e professionali nei seguenti ambiti :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Office e suite editoriali</li>
+	<li>Strumenti di pubblicazione e creazioni di siti</li>
+	<li>Gestione di community e social network</li>
+	<li>Sistemi di infrastrutture, networking e telecomunicazione</li>
+	<li>Sicurezza informatica</li>
+</ul>"
+contact = "Contattaci"

@@ -50,7 +50,7 @@ $content .= "
 				<form action=\"/panel/databases/config_action\" method=\"post\">
 					<input type=\"hidden\" name=\"database\" value=\"".security::encode($_GET['database'])."\" />
 					<fieldset>
-						<input type=\"text\" name=\"description\" value=\"{$database['desc']}\" style=\"width: 400px;\" />
+						<input type=\"text\" name=\"description\" value=\"". htmlspecialchars($database['desc']) ."\" style=\"width: 400px;\" />
 						<span class=\"help-block\">{$lang['description_help']}</span>
 					</fieldset>
 					<fieldset>

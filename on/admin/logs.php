@@ -6,8 +6,8 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if(isset($_POST['action']) && $_POST['action']=='search') {
-	$user = security::encode($_POST['user']);
+if(isset($_GET['user']) && $_GET['user'] != '') {
+	$user = security::encode($_GET['user']);
 	$logs = api::send('log/list', array('user'=>$user));
 } else {
 	$display = 'display:none';
@@ -42,10 +42,9 @@ if($search == 1) {
 				</div>
 				<div class=\"clear\"></div><br />
 				<div id=\"searchlogs\" class=\"container\" style=\"{$display};\">
-					<form action=\"\" method=\"post\">
+					<form action=\"\" method=\"get\">
 						<fieldset>
 							<input type=\"text\" name=\"user\" placeholder=\"{$lang['user']}\" value=\"{$user}\" style=\"width: 300px; display: inline-block;\" />
-							<input type=\"hidden\" name=\"action\" value=\"search\" />
 							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />
 						</fieldset>
 					</form>
@@ -95,12 +94,17 @@ if( count($logs) > 0 )
 				</div>
 		";
 		
+		if (strpos($l['ip'], ':') !== false)
+			$check_ip_link = "http://whois.urih.com/record/";
+		else 
+			$check_ip_link = "http://ipgetinfo.com/?ip=";
+		
 		$content .= "
 						<tr>
 							<td><a href=\"/admin/users/detail?id={$l['user']['id']}\"><img style=\"width: 30px; height: 30px; float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$l['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a><a style=\"display: block; float: left; padding-top: 6px;\" href=\"/admin/users/detail?id={$l['user']['id']}\">{$l['user']['name']}</a></td>
 							<td>{$l['method']}</td>
 							<td>".date($lang['dateformat'], $l['date'])."</a></td>
-							<td>{$l['ip']}</td>
+							<td><a href=\"{$check_ip_link}{$l['ip']}\" target=\"_blank\">{$l['ip']}</a></td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#params{$l['id']}').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"\" /></a>
 								<a href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>

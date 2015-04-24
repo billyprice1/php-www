@@ -20,4 +20,10 @@ menu_help = "Aide et financement"
 menu_actions = "Aktionen und Projekt"
 menu_last = "News"
 menu_press = "Presse"
-menu_help = "Unterstützung und Finanzierung "
+menu_help = "Unterstützung und Finanzierung"
+
+[IT]
+menu_actions = "Azioni e progetti"
+menu_last = "News"
+menu_press = "Stampa"
+menu_help = "Contributi e finanze"

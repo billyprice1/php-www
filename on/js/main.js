@@ -137,3 +137,20 @@ function newFlexibleDialog(name, width)
 		}
 	});
 }
+
+function showLogin()
+{
+	if( $("#signupform").css('display') != 'none' )
+		$("#signupform").css('display', 'none');
+		
+	var options = { direction: "up"};
+	$("#loginform").toggle("blind", options, 200);
+}
+function showSignup()
+{
+	if( $("#loginform").css('display') != 'none' )
+		$("#loginform").css('display', 'none');
+		
+	var options = { direction: "up"};
+	$("#signupform").toggle("blind", options, 200);
+}

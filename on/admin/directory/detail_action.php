@@ -40,7 +40,7 @@ if( $_POST['action'] == 'delete_highlight') {
 }
 
 
-api::send('self/site/update', $params);
+api::send('/site/update', $params);
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['success'];	
