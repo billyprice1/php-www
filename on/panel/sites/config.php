@@ -77,9 +77,17 @@ $content .= "
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepassword').dialog('open'); return false;\">
 					{$lang['password']}
 				</a>
+";
+ 
+/*
+$content .= "
 				<a class=\"action download big\" href=\"#\" onclick=\"$('#download').dialog('open'); return false;\">
 					{$lang['backup']}
 				</a>
+";
+*/
+
+$content .= "
 				<a class=\"action delete big\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\">
 					{$lang['delete']}
 				</a>
