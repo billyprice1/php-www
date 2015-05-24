@@ -64,9 +64,9 @@
 			throw new SiteException('Please remove one of your databases ', 400, 'quota reached');
 
 	$install_date = date("Y-m-d");
-	$db_name = $_GLOBALS['APP']['NAME']. " - autoinstalled - {$install_date}";
+	$db_description = $_GLOBALS['APP']['NAME']. " - autoinstalled - {$install_date}";
 			
-	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=> $_GLOBALS['APP']['NAME'], 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
+	$new = api::send('self/database/add', array('type'=>'mysql', 'desc'=> $db_description, 'pass'=> $_GLOBALS['APP']['PASSWORD'] ));
 	$database = api::send( 'self/database/list', array( 'database' => $new['name'] ) )[0];
 		
 		// write config file on remote directory
