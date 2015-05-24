@@ -98,6 +98,7 @@ $content .= "
 								<option value=\"{$lang['sites']}\">{$lang['sites']}</option>
 								<option value=\"{$lang['dbs']}\">{$lang['dbs']}</option>
 								<option value=\"{$lang['domains']}\">{$lang['domains']}</option>
+								<option value=\"{$lang['mails']}\">{$lang['mails']}</option>
 							</select>
 							<span class=\"help-block\">{$lang['quota_select']}</span>
 						</fieldset>
