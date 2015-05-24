@@ -89,7 +89,7 @@ $content .= "
 			<div class=\"clear\"></div>
 			<br />
 			<div style=\"width: 350px; float: left;\">
-				<h3 class=\"colored\">{$lang['overquota']}</h3>
+				<h3 class=\"colored\"><a href=\"/admin/overquota\" style=\"font-weight: 100;\">{$lang['overquota']}</a></h3>
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>

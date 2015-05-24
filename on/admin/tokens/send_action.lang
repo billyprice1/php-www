@@ -2,7 +2,8 @@
 subject = "Olympe - Reminder of your login"
 content = "<p style='margin: 20px 0'>Following your request, we remind you your login to the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> hosting platform.</p>
 <p style='margin: 20px 0'><strong>Username</strong> : {USERNAME} <br />
-<strong>Main token</strong> : {TOKEN} </p>
+<strong>Main token</strong> (instead of the password): {TOKEN} </p>
+<p style='margin: 20px 0'>After your successful login with these credentials, you will be able to access the settings menu, and to change your password.</p>
 <p style='margin: 20px 0'>If you have not asked for a reminder, you can just ignore it. Hope to see you again very soon on our platform!</p>"
 
 success = "The reminder of the login has been sent."
@@ -11,7 +12,8 @@ success = "The reminder of the login has been sent."
 subject = "Olympe - Rappel de vos identifiants"
 content = "<p style='margin: 20px 0'>Suite à votre demande, nous vous rappelons vos identifiants de connexion au service d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
 <p style='margin: 20px 0'><strong>Nom d'utilisateur</strong> : {USERNAME} <br />
-<strong>Token principal</strong> : {TOKEN} </p>
+<strong>Token principal</strong> (à utiliser en lieu et place du mot de passe) : {TOKEN} </p>
+<p style='margin: 20px 0'>Une fois votre connexion réussie grâce à ces identifiants, vous serez à même d'accéder au menu de paramètres vous permettant de modifier votre mot de passe.</p>
 <p style='margin: 20px 0'>Si vous n'avez pas sollicité ce rappel, vous pouvez simplement l'ignorer. En espérant vous revoir très rapidement sur notre plateforme !</p>"
 
 success = "Le rappel des identifiants de connexion a bien été envoyé."
