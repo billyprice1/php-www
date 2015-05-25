@@ -118,7 +118,7 @@ question_8 = "Pourquoi la miniature de mon site n'est pas à jour ?"
 question_9 = "Comment Olympe est-il financé ?"
 question_10 = "En quoi Olympe est-il Open Source ?"
 question_11 = "Quel format pour le nom de compte ?"
-question_12 = "Où trouvez nos CGU ?"
+question_12 = "Où trouver nos CGU ?"
 
 dns = "Afin que votre nom de domaine soit pleinement fonctionnel sur notre plateforme, vous devez modifier les paramètres DNS de votre domaine chez votre <i>registrar</i> avec les informations ci-dessous."
 serv = "Serveur"
