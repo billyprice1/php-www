@@ -45,7 +45,7 @@ question_8 = "Why my website thumbnail is outdated ?"
 question_9 = "How Olympe is funded ?"
 question_10 = "How opensource is Olympe ?"
 question_11 = "What format for the account name ?"
-question_12 = "Where are your Terms ?"
+question_12 = "Where are our Terms ?"
  
 dns = "In order to configure properly your domain name, you have to change the DNS settings of your domain (on your <em>registrar</em> website), with the information below."
 serv = "Server"
@@ -144,4 +144,4 @@ finance = "Olympe est entièrement autofinancé, son infrastructure et les serve
 opensource = "Olympe est investi dans l'Open Source via de <a href='/org'>multiples initiatives</a> mais également dans sa démarche de développement et d'administration système. Nous publions l'ensemble des <a href='/developers/tools'>outils</a> 
 que nous avons créés dans le cadre du service."
 nom_compte = "Le nom d'un compte doit être en minuscule. Son accepté les minuscules de 'a' à 'z', les chiffres de '0' à '9' et les caractères '-' ou '_'. La longueur minimum est de 3 et la maximum de 26."
-cgu = "Nos CGU sont consultable ici : <a href='https://www.olympe.in/service/hosting'>Conditions générales</a>"
+cgu = "Nos CGU sont consultables ici : <a href='https://www.olympe.in/service/hosting'>Conditions générales</a>"
