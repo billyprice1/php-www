@@ -107,7 +107,7 @@ else
 	$content .= "
 				<tr>
 					<td colspan=\"7\" style=\"text-align: center; width: 40px;\">
-					".$lang['intervention'].".
+					".$lang['intervention']."
 					</td>
 				</tr>
 	";
