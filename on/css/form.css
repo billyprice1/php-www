@@ -74,7 +74,7 @@ form.center  input, form.center  select, form.center  textarea  {
 	text-align: center;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
 	height: 30px;
 }
 
@@ -134,6 +134,16 @@ input[type=file] {
 
 form.center .help-block {
 	text-align: center;
+}
+
+.help-block .error, .help-block .empty {
+    background-color: #f06e57;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    float: right;
+    padding: 2px 8px;
+	display: none;
 }
 
 #login {
