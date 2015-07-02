@@ -99,7 +99,7 @@ if( security::hasGrant('SITE_SELECT') )
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#site_overview').attr('src','/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}'); $('#site_overview_name').text('{$s['hostname']}'); $('#overview').dialog('open'); return false;\" title=\"{$lang['overview']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/view.png\" alt=\"\" /></a>
-								
+								<a href=\"#\" onclick=\"$('#user6-1').val('{$user['id']}'); $('#sitename').val('{$s['name']}'); $('#site_id-1').val('{$s['id']}'); $('#bansite').dialog('open'); return false;\" title=\"{$lang['ban_site']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/denied.png\" alt=\"\" /></a>
 								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"{$lang['delete_site']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
@@ -654,6 +654,20 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"bansite\" class=\"floatingdialog delete-link\">
+			<h3 class=\"center\">{$lang['ban_site']}</h3>
+			<p style=\"text-align: center;\">{$lang['ban_site_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/sites/ban_action\" method=\"post\" class=\"center\">
+					<input id=\"user6-1\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"site_id-1\" type=\"hidden\" value=\"\" name=\"site\" />
+					<input id=\"sitename\" type=\"hidden\" value=\"\" name=\"sitename\" />
+					<fieldset autofocus>
+						<input type=\"submit\" value=\"{$lang['ban_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
 		<div id=\"deletedatabase\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_bdd']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_bdd_text']}</p>
@@ -805,6 +819,7 @@ $content .= "
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('deletebackup', 550);
 			newFlexibleDialog('deletesite', 550);
+			newFlexibleDialog('bansite', 550);
 			newFlexibleDialog('deletedatabase', 550);
 			newFlexibleDialog('deletedomain', 550);
 			newFlexibleDialog('deletemail', 550);
