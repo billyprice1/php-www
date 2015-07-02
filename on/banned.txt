@@ -55,6 +55,7 @@ bitmessage.ch
 bk.ru
 blackbox.trillianpro.com
 bloatbox.com
+blogcz.ru
 bobmail.info
 bodhi.lawlita.com
 bofthew.com
@@ -241,6 +242,7 @@ ieatspam.eu
 ieatspam.info
 iespana.es
 ihateyoualot.info
+iimail.fr
 imails.info
 imgof.com
 inbox.ru
@@ -289,6 +291,7 @@ mail.ru
 mail114.net
 mail15.com
 mail15.fr
+mail2tor.com
 mail333.com
 mail4trash.com
 mailbidon.com
