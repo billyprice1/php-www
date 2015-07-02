@@ -25,12 +25,14 @@
 	
 	
 	/* display banned page */
-	$htaccess = file_get_contents( __DIR__.'/404/.htaccess' );
-	$font = file_get_contents( __DIR__.'/404/BebasNeue Regular.ttf' );
+	$htaccess = __DIR__.'/404/.htaccess';
+	$font = __DIR__.'/404/BebasNeue Regular.ttf';
 	
+	/*
 	$index = file_get_contents( __DIR__.'/404/index.html' );
 	$index = str_replace("**DATE**", date("F j, Y, g:i a"), $index);
 	$index = str_replace("**EXPLAIN**", empty($_POST['explain'])?'No reason provided':htmlentities($_POST['explain']), $index);
+	*/
 	
 	sleep(2);
 	api::send('site/insert', array('site'=>$site_name, 'user'=>$banned_sites_user_id, 'pass'=>$new_password));
@@ -40,7 +42,7 @@
 	ssh2_auth_password( $connection, $site_name, $new_password );
 	ssh2_scp_send($connection, $htaccess, '/.htaccess', 0644);
 	ssh2_scp_send($connection, $font, '/BebasNeue Regular.ttf', 0644);
-	ssh2_scp_send($connection, $index, '/index.html', 0644);
+	/*ssh2_scp_send($connection, $index, '/index.html', 0644);*/
 	
 	
 	if( isset($_GET['redirect']) )
