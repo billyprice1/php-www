@@ -36,6 +36,12 @@ $content = "
 				<p>{$lang['begin_index_text1']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/33.png\" alt=\"33\" />
 				<p>{$lang['begin_index_text2']}</p>
+				<p>{$lang['begin_index_text3']}</p>
+				<br /><br />
+				<h2 class=\"dark\">{$lang['begin_cms']}</h2>
+				<p>{$lang['begin_cms_text1']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/36.png\" alt=\"33\" />
+				<p>{$lang['begin_cms_text2']}</p>
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>
