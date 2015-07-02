@@ -36,24 +36,27 @@ offrant une installation simple, un système de publication, et une zone réserv
 voulez que cette adresse devienne <em>www.nomdusite.fr</em>, par exemple, vous devrez alors lier à votre site un nom de domaine. <a href=\"/doc/domains\">Plus d'informations</a></li></ul>
 Vous voilà normalement armés pour comprendre la suite de ce tutoriel."
 
-begin_build = "Construction du site"
+begin_build = "1. Construction du site"
 begin_build_text = "Comme annoncé précédemment, il est généralement conseillé d'avoir quelques notions en HTML (qui est le langage utilisé pour structurer les pages d'un site), et en CSS 
-(qui est utilisé pour donner un style à cette structure). Deux méthodes existent pour réaliser votre site : 
+(qui est utilisé pour donner un style à cette structure). Trois méthodes existent pour réaliser votre site : 
 <ul class=\"classic\"><li style=\"line-height: 23px;\"><u>Le réaliser vous-même, à la main</u> : il vous faudra pour ça un logiciel d'édition de code, Notepad++ est sans doute le plus utilisé.</li>
 <li style=\"line-height: 23px;\"><u>Le réaliser à l'aide d'un logiciel de type WYSIWYG</u> : ce nom vient (encore) de l'anglais, et signifie <em>What you see is what you get</em>. Comprenez 
-que ces logiciels vous permettent de réaliser un site de la même manière qu'avec un logiciel de traitement de texte.</li></ul>"
+que ces logiciels vous permettent de réaliser un site de la même manière qu'avec un logiciel de traitement de texte.</li>
+<li style=\"line-height: 23px;\"><u>Utiliser un <acronym title=\"Content Management System, voir ci-dessus\">CMS</acronym></u> : vous n'avez pas à développer vous-même votre site, seule une 
+installation du CMS est requise. Si vous êtes dans ce cas, passez directement au point 1.2.</ul>"
 
-begin_index = "Création de la première page"
+begin_index = "1.1. Création des pages"
 begin_index_text1 = "Si vous visitez le site que vous avez créé (à l'adresse de type <em>nomdusite.olympe.in</em>), vous y verrez quelque chose ressemblant à ça :"
 begin_index_text2 = "Ce n'est bien sûr pas ce à quoi votre page d'accueil ressemblera une fois que vous aurez terminé votre site. Il s'agit en fait d'une page listant tous les fichiers présent dans le dossier 
 courant. En l'occurence, nous sommes à la racine du site donc il s'agit de l'ensemble de l'arborescence du site. Cette page sera présente dans tous les dossiers que vous créerez tant qu'ils ne 
 contiendront pas une page d'index. En effet, par défaut, la page affichée à l'arrivée sur votre site est une page d'index, qui doit être nommée <strong>index.html</strong> ou <strong>index.php</strong> 
-en fonction du langage que vous y utiliserez.<br /><br />"
+en fonction du langage que vous y utiliserez."
+begin_index_text3 = "Bien entendu, une fois cette première page réalisée vous devrez réaliser les suivantes de la même manière. De nombreux sites se proposent de vous apprendre le développement web, tel que
+<a href='http://www.codecademy.com/fr/tracks/web' target='_blank'>Codecademy</a>, ou encore <a href='http://www.openclassrooms.com/' target='_blank'>OpenClassrooms</a>."
 
-
-backup_site_text2 = "Puis en cliquant sur <i>Sauvegarde</i>, vous pouvez créer une nouvelle archive et la télécharger ensuite."
-backup_database = "Sauvegarde de votre base de données"
-backup_databas_text = "Pour créer une archive de votre base de données, vous devez aller dans sa page de configuration."
-backup_database_text2 = "Vous avez ensuite un bouton vous permettant de créer une archive."
-backups = "Télécharger les archives"
-backups_text = "Pour télécharger une archive, il suffit de sélectionner celle que vous désirez."
+begin_cms = "1.2. Recours à un CMS"
+begin_cms_text1 = "Si vous souhaitez utiliser un CMS, il vous faut d'abord déterminer quel est le plus adapté à votre projet. Il en existe une multitude dont vous trouverez facilement des comparatifs sur votre 
+moteur de recherche préféré.</p><p>Une fois ce choix effectué, certains CMS sont disponibles pour une installation automatique via le panel Olympe : il n'y a alors qu'à cliquer, et le CMS est installé sur votre site.
+Si votre CMS est disponible dans la liste, il vous suffit de cliquer sur votre site à l'accueil du panel, puis sur \"<strong>Lancer l'installation</strong>\"."
+begin_cms_text2 = "Si votre CMS n'est pas dans la liste, vous devrez procéder à une installation manuelle de celui-ci. Chaque CMS a une procédure propre d'installation, il vous faudra donc vous référer à la documentation
+de celui que vous aurez choisi. En général, il s'agira de télécharger une archive contenant l'ensemble des fichiers du CMS, qu'il vous faudra transférer via votre client FTP préféré. Si votre CMS requiert une base de données, vous devrez en <a href=\"/doc/databases\">créer une</a>."
