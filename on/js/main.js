@@ -65,11 +65,11 @@ $(function()
 	{
 		if( $(window).scrollTop() > num )
 		{
-			$('.menu-fixed').addClass('fixed');
+			$('.menu-fixed, #search-admin-form').addClass('fixed');
 		}
 		else
 		{
-			$('.menu-fixed').removeClass('fixed');
+			$('.menu-fixed, #search-admin-form').removeClass('fixed');
 		}
 	});
 });
