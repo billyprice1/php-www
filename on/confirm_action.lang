@@ -11,7 +11,7 @@ Password: <strong>the chosen one</strong></p>
 [ES]
 success = "¡Felicidades! Su registro esta terminada.<br />Puedes visitar su <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">panel de gestión</a>."
 
-subject = "Welcome to the Olympe platform"
+subject = "¡Bienvenido a Olympe!"
 content = "<p style='margin: 20px 0'>Su cuenta Olympe ya está lista. Recuerde su nombre de usuario y contraseña :</p>
 <p style='margin: 20px 0'>Nombre de usuario : <strong>{USER}</strong><br />
 Contraseña : <strong>la contraseña elegida</strong></p>

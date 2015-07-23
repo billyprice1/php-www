@@ -778,7 +778,9 @@ span.tag.important {
     padding: 5px 0;
     text-align: center;
 }
-
 .hidden {
 	display: none;
+}
+#core.status-page {
+	background-color: #F0F0F0;
 }
