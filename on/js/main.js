@@ -10,6 +10,8 @@ $(function()
 	newFlexibleDialog('changepass', 350);
 	newFlexibleDialog('cookie', 700);
 	
+	$(".ui-dialog-titlebar").hide();
+
 	// CONNECTOR RATING //
 	$('.star').raty(
 	{
@@ -40,14 +42,6 @@ $(function()
 			rate($(this).attr('data-id'), $('.star').raty('score'));
 		}
 	});
-	
-	// EDITOR
-	$(".formeditor").sceditor({
-			plugins: "bbcode",
-			toolbar: "bold,italic,underline|code,quote,horizontalrule,image,email,link,unlink|source",
-    });
-	
-	$(".ui-dialog-titlebar").hide();
 	
 	// CATEGORIES MENU //
 	$('.scategory').hover(

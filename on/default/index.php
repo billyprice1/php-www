@@ -8,27 +8,32 @@ if( !defined('PROPER_START') )
 
 $content = "
 			<div class=\"head\">
-				<br />
-				<div id=\"homepage\">
-					<h1>{$lang['title']}</h1>
-					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
-					
-				</div>
-				<br />
+				<div>
+					<br />
+					<div id=\"homepage\">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/computer.png\" alt=\"\" class=\"animated fadeInRight\" />
+						<h1 class=\"fadeInLeft animated\">{$lang['title']}</h1>
+						<h2 class=\"fadeInLeft animated\">{$lang['subtitle']}</h2>
+					</div>
+					<br />
 ";
 
 if( $security->hasAccess('/panel') )
 {
 	$content .= "
-				<a class=\"button main\" href=\"/panel\">{$lang['panel']}</a>
-				<span class=\"light\">{$lang['logged']} <span style=\"color: #ffffff;\">".security::get('USER')."</span>.</span>
+					<div class=\"homepage_button fadeInUp animated\">
+						<a class=\"button main\" href=\"/panel\">{$lang['panel']}</a>
+						<a class=\"button main second\" href=\"/panel/settings\"><i class=\"fa fa-user\"></i> ".security::get('USER')."</a>
+					</div>
 	";
 }
 else
 {
 	$content .= "
-				<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
-				<span class=\"light\"><a href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a></span>
+					<div class=\"homepage_button fadeInUp animated\">
+						<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
+						<a class=\"button main second\" href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a>
+					</div>
 	";
 }
 
@@ -36,7 +41,8 @@ if( !isset($_SESSION['ANTISPAM']) )
 	$_SESSION['ANTISPAM'] = md5(time().'olympe');
 
 $content .= "
-				<br />
+					<div class=\"clear\"></div>
+				</div>
 			</div>
 			<noscript>
 				<div class=\"noscript-alert\">
