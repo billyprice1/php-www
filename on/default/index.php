@@ -48,11 +48,16 @@ $content .= "
 					<form action=\"/login_action\" method=\"post\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
-							<input class=\"auto\" type=\"text\" placeholder=\"{$lang['username']}\" name=\"username\" />
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"text\" placeholder=\"{$lang['ph_username']}\" name=\"username\" />
+								<span class=\"help-block\">{$lang['lab_username']}</span>
+							</label>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" type=\"password\" placeholder=\"{$lang['password']}\" name=\"password\" />
-							".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['register']}</span>")."
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"password\" placeholder=\"**************\" name=\"password\" />
+								".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['lab_password']}</span>")."
+							</label>
 						</fieldset>
 						<input type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\"  value=\"{$lang['login']}\" />											
 					</form>
@@ -63,11 +68,16 @@ $content .= "
 					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
-							<input class=\"auto\" type=\"text\" placeholder=\"{$lang['email']}\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"")."\" name=\"email\" />
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"text\" placeholder=\"john@example.com\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"")."\" name=\"email\" />
+								<span class=\"help-block\">{$lang['email']}</span>
+							</label>
 						</fieldset>
 						<fieldset>
-							<input type=\"checkbox\" name=\"conditions\" value=\"1\" />
-							{$GLOBALS['lang']['conditions']}
+							<label class=\"clean\">
+								<input type=\"checkbox\" name=\"conditions\" value=\"1\" />
+								{$GLOBALS['lang']['conditions']}
+							</label>
 						</fieldset>
 						<input type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
 					</form>

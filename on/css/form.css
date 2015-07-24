@@ -13,7 +13,7 @@ form.center fieldset {
 	text-align: center;
 }
 
-label {
+label:not(.clean) {
 	display: block;
 	float: left;
 	width: 200px;
@@ -22,7 +22,7 @@ label {
 	font-size: 14px;
 }
 
-form.center label {
+form.center label:not(.clean) {
 	margin: 0 auto;
 	margin-bottom: 5px;
 	text-align: center;
