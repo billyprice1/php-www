@@ -143,8 +143,8 @@ function showLogin()
 	if( $("#signupform").css('display') != 'none' )
 		$("#signupform").css('display', 'none');
 	
-	$('#signupform input[type="submit"]').removeAttr('autofocus');
-	$('#loginform input[type="submit"]').attr('autofocus', '');
+	$('#signupform').find('input[type="submit"]').removeAttr('autofocus');
+	$('#loginform').find('input[type="submit"]').attr('autofocus', '');
 		
 	var options = { direction: "up"};
 	$("#loginform").toggle("blind", options, 200);
@@ -154,8 +154,8 @@ function showSignup()
 	if( $("#loginform").css('display') != 'none' )
 		$("#loginform").css('display', 'none');
 	
-	$('#loginform input[type="submit"]').removeAttr('autofocus');
-	$('#signupform input[type="submit"]').attr('autofocus', '');
+	$('#loginform').find('input[type="submit"]').removeAttr('autofocus');
+	$('#signupform').find('input[type="submit"]').attr('autofocus', '');
 		
 	var options = { direction: "up"};
 	$("#signupform").toggle("blind", options, 200);

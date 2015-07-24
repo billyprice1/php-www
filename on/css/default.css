@@ -784,3 +784,24 @@ span.tag.important {
 #core.status-page {
 	background-color: #F0F0F0;
 }
+div#cookies_warning {
+    background-color: #444;
+    bottom: 0;
+    box-shadow: 0 4px 9px #292929 inset;
+    box-sizing: border-box;
+    color: white;
+    font-size: 12px;
+    opacity: 0.9;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+div#cookies_warning > a {
+	color: #ffceb5;
+}
+div#cookies_warning > button {
+    border-radius: 2px;
+    margin: 0 10px;
+    padding: 2px 10px;
+}

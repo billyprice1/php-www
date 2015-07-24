@@ -31,6 +31,44 @@ $content = "
 					<br />
 					<h4>{$lang['data']}</h4>
 					<p>{$lang['data_text']}</p>
+
+					<br />
+					<h4>{$lang['cookie']}</h4>
+					<p>{$lang['cookie_explain']}</p>
+					<p style=\"padding-top: 10px;\">{$lang['cookie_explain_2']}</p>
+					<ul class=\"classic\">
+						<li><a  href=\"http://windows.microsoft.com/fr-fr/internet-explorer/delete-manage-cookies#ie=ie-11\">Internet Explorer</a></li>
+						<li><a  href=\"https://support.mozilla.org/fr/kb/activer-desactiver-cookies\">Mozilla Firefox</a></li>
+						<li><a  href=\"https://support.google.com/accounts/answer/61416\">Google Chrome</a></li>
+						<li><a  href=\"https://support.apple.com/fr-fr/HT1677\">Apple Safari</a></li>
+					</ul><br />
+					<p>{$lang['cookie_explain_3']}</p>
+					<form method=\"post\" id=\"cookie_action\" action=\"about/cookie_action\">
+						<input type=\"hidden\" name=\"cookie_current\" value=\"\" />
+";
+
+if(isset($_COOKIE["cookie_agreement"]) && $_COOKIE['cookie_agreement'] == 0)
+	$content .= "
+		<label id=\"cookie_agreement\" style=\"width:400px;\">
+			<input type=\"checkbox\" name=\"cookie_agree\" value=\"1\" style=\"float: left; margin: 6px 13px;\" /> {$lang['cookie_unagree']}
+		</label>
+	";
+
+if(!isset($_COOKIE["cookie_agreement"]) || $_COOKIE['cookie_agreement'] == 1)
+	$content .= "
+		<label id=\"cookie_agreement\" style=\"width:400px;\">
+			<input type=\"checkbox\" name=\"cookie_agree\" checked value=\"1\" style=\"float: left; margin: 6px 13px;\" /> {$lang['cookie_agreed']}
+		</label>
+	";
+	
+/*
+TODO :
+[] traduire cookie_explain2 ; 3 et cookie_unagree / agreed
+[] gérer l'acceptation / refus
+*/
+
+$content .= "
+					</form>
 				</div>
 				<div class=\"right small border\">
 					<h4>{$lang['follow']}</h4>
@@ -48,26 +86,14 @@ $content = "
 				<div class=\"clear\"></div>
 				<br /><br />
 			</div>
-			
-			<div id=\"cookie\" class=\"floatingdialog delete-link\">
-				<h3 class=\"center\">{$lang['cookie']}</h3>
-				<p style=\"text-align: center;\">{$lang['cookie_explain']}</p>
-				<a href=\"/about?cookie=remove\"><input type=\"button\" id=\"no_cookie\" style=\"margin:auto;\" value=\"{$lang['cookie_no']}\" /></a>
-			</div>
+			<script>
+			$(function() {
+				$('#cookie_agreement').click(function() {
+					$('#cookie_action').submit();
+				});
+			});
+			</script>
 ";
-
-if( isset($_GET['cookie']) &&  $_GET['cookie']!='remove' )
-{
-	$content .= "<script type=\"text/javascript\">
-					newFlexibleDialog('cookie', 800);
-
-					$(document).ready(function() {
-						$(\"#cookie\").dialog(\"open\");
-						$(\".ui-dialog-titlebar\").hide();
-					});
-				</script>
-	";
-}
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);
