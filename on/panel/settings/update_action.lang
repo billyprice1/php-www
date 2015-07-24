@@ -1,14 +1,44 @@
 ﻿[EN]
 success = "Your settings have been successfully updated."
 
+subject = "Your email address has been changed"
+content = "<p style='margin: 20px 0'>Hello {USER},<br /><br />Your account's email address on the <a style='color: #de5711;' href='https://www.olympe.in/'>Olympe</a> platform has been changed.</p>
+<p style='margin: 20px 0'>Previous one : <strong>{OLD}</strong><br />
+New one : <strong>{NEW}</strong></p>
+<p style='margin: 20px 0;'>If you did not do that modification, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
 [ES]
 success = "Preferencias han sido actualizadas correctamente."
+
+subject = "Su dirección de correo electrónico ha sido cambiado"
+content = "<p style='margin: 20px 0'>Hola {USER},<br /><br />La dirección de correo electrónico de su cuenta en la plataforma <a style='color: #de5711;' href='https://www.olympe.in/'>Olympe</a> ha sido cambiado.</p>
+<p style='margin: 20px 0'>Previa : <strong>{OLD}</strong><br />
+Nueva : <strong>{NEW}</strong></p>
+<p style='margin: 20px 0;'>Si no hiciste esa modificación, por favor <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contactanos</a>.</p>"
 
 [FR]
 success = "Vos informations ont bien été mises à jour."
 
+subject = "Modification de votre adresse email"
+content = "<p style='margin: 20px 0'>Bonjour {USER},<br /><br />L'adresse email lié à votre compte sur la plateforme <a style='color: #de5711;' href='https://www.olympe.in/'>Olympe</a> vient d'être modifiée.</p>
+<p style='margin: 20px 0'>Ancienne adresse : <strong>{OLD}</strong><br />
+Nouvelle adresse : <strong>{NEW}</strong></p>
+<p style='margin: 20px 0;'>Si vous n'êtes pas à l'origine de cette action, n'hésitez pas à nous en <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>informer</a>.</p>"
+
 [DE]
 success = "Ihre Einstellungen sind geändert worden."
 
+subject = "Your email address has been changed"
+content = "<p style='margin: 20px 0'>Hello {USER},<br /><br />Your account's email address on the <a style='color: #de5711;' href='https://www.olympe.in/'>Olympe</a> platform has been changed.</p>
+<p style='margin: 20px 0'>Previous one : <strong>{OLD}</strong><br />
+New one : <strong>{NEW}</strong></p>
+<p style='margin: 20px 0;'>If you did not do that modification, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
+
 [IT]
 success = "Le tue impostazioni sono state aggiornate."
+
+subject = "Your email address has been changed"
+content = "<p style='margin: 20px 0'>Hello {USER},<br /><br />Your account's email address on the <a style='color: #de5711;' href='https://www.olympe.in/'>Olympe</a> platform has been changed.</p>
+<p style='margin: 20px 0'>Previous one : <strong>{OLD}</strong><br />
+New one : <strong>{NEW}</strong></p>
+<p style='margin: 20px 0;'>If you did not do that modification, please <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>contact us</a>.</p>"
