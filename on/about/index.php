@@ -60,12 +60,6 @@ if(!isset($_COOKIE["cookie_agreement"]) || $_COOKIE['cookie_agreement'] == 1)
 			<input type=\"checkbox\" name=\"cookie_agree\" checked value=\"1\" style=\"float: left; margin: 6px 13px;\" /> {$lang['cookie_agreed']}
 		</label>
 	";
-	
-/*
-TODO :
-[] traduire cookie_explain2 ; 3 et cookie_unagree / agreed
-[] gérer l'acceptation / refus
-*/
 
 $content .= "
 					</form>
