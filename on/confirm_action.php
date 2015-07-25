@@ -10,16 +10,21 @@ try
 {
 	$low_username = strtolower($_POST['username']);
 	
-	if( !isset($_POST['code']) || !isset($_POST['email']) )
+	if( !isset($_POST['code']) || !isset($_POST['email']) || $_POST['code'] == '' || $_POST['email'] == '')
 		throw new SiteException('Invalid or missing arguments', 400, 'Parameter code or email is not present');
 	
-	$result = api::send('registration/select', array('code'=>$_POST['code']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	// CHECK THE REGISTRATION CODE
+	$result = api::send('registration/select', array('code'=>$_POST['code'], 'email'=>$_POST['email']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	
+	// NO REGISTRATION FOUND
 	if( count($result) == 0 )
 		throw new SiteException('Invalid user/code', 400, 'No registration matches for this user/code');
+	
+	// OUTDATED REGISTRATION FOUND
 	if( $result[0]['date'] < (time() - 864000) ) // 10 days
-	throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
+		throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
 
+	// CREATE ACCOUNT
 	$result = api::send('user/add', array('user'=>$low_username, 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_POST['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$uid = $result['id'];
 
@@ -59,7 +64,10 @@ catch(Exception $e)
 	$_SESSION['REGISTER']['STATUS'] = true;
 	$_SESSION['REGISTER']['ID'] = security::encode($_POST['id']);
 	$_SESSION['REGISTER']['EMAIL'] = security::encode($_POST['email']);
+	$_SESSION['REGISTER']['CODE'] = security::encode($_POST['code']);
 	$_SESSION['REGISTER']['ORIGIN'] = security::encode($_POST['origin']);
+	$_SESSION['REGISTER']['USERNAME'] = security::encode($low_username);
+	$_SESSION['REGISTER']['ERROR'] = $e;
 	
 	$template->redirect(str_replace('?ecode', '', $_SERVER['HTTP_REFERER']) . (strstr($_SERVER['HTTP_REFERER'], 'eregister')===false?"?eregister":""));
 }

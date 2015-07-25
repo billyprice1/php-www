@@ -1126,6 +1126,32 @@ div.core div.head > div {
     transform: none;
   }
 }
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
@@ -1966,6 +1992,19 @@ form.center .help-block {
 }
 :-ms-input-placeholder {
 	color: #666;
+}
+div.ui-dialog span.message.error {
+    background-color: #f06e57;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+    font-family: Roboto;
+    margin: auto auto 20px;
+    padding: 6px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #ed4223;
+    width: 100%;
 }
 
 /* PANEL

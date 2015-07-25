@@ -93,21 +93,21 @@ $content .= "
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
 						<a href=\"/service/hosting\" class=\"hfree\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"red\">{$lang['free']}</h3>
 						</a>
 						<p>{$lang['free_text']}</p>
 					</div>
 					<div class=\"hinnovation\">
 						<a href=\"/service/infrastructure\" class=\"hinnovation\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"blue\">{$lang['innovation']}</h3>
 						</a>
 						<p>{$lang['innovation_text']}</p>
 					</div>
 					<div class=\"hopen\">
 						<a href=\"/developers\" class=\"hopen\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"green\">{$lang['open']}</h3>
 						</a>
 						<p>{$lang['open_text']}</p>
