@@ -21,7 +21,7 @@ other <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 noscript = "Your browser does not support JavaScript. Some features may not work properly."
 
 manage = "Extended features"
-manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for online file editing, and even data recovery.
+manage_text = "Beginners as experienced users will appreciate the <a href='/doc'>CMS automatic installer</a> available on Olympe. With a few clicks, you can easily install from your panel the CMS of your choice: Wordpress, Joomla, etc.
 <br /><br />
 Our platform is fully self-funded and maintained by a <a href='/about/team'>volunteer team</a>, you are welcome to <a href='/org/help'>help us</a> raise funds for the project and participate to the charges. For any
 question or if you wish to help, please <a href='/about/contact'>contact us</a>, our team will be pleased to greet you."
@@ -58,7 +58,7 @@ Además, ofrecemos la <a href='/service/offer'>gestión completa</a> de los nomb
 noscript = "Tu navegador no soporta JavaScript. Algunas funciones pueden no funcionar correctamente."
 
 manage = "Ampliadas funcionalidades"
-manage_text = "Ofrecemos una <a href='/doc/cloud'>aplicación en la nube</a> que permite la sincronización, el compartido y el almacenamiento de archivos. Esta herramienta incluye una interfaz web para vizualisar en línea sus archivos (descarga, modificación, galerías de imágenes...), y la función de recuperación de archivos borrados.
+manage_text = "Novicios como usuarios experimentados apreciarán la <a href='/doc'>instalación automática</a> de CMS disponible en Olympe. Con algunos clics, se puede instalar fácilmente desde su panel el CMS de su elección: Wordpress, Joomla, etc.
 <br /><br />
 Nuestra plataforma es totalmente autofinanciada y mantenida por <a href='/about/team'>el equipo de voluntarios</a>. Puedes <a href='/org/help'>ayudarnos</a> a financiar el proyecto y pagar los gastos de los servicios. Si
 tienes alguna pregunta o si deseas participar, no dudes en <a href='/about/contact'>contactarnos</a>."
@@ -98,8 +98,7 @@ des calendriers et agendas partagés."
 noscript = "Votre navigateur ne supporte pas le JavaScript. Certaines fonctionnalités pourraient ne pas fonctionner correctement."
 
 manage = "Fonctionnalités étendues"
-manage_text = "Nous propulsons une <a href='/doc/cloud'>application cloud</a> permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers
-(téléchargement, édition, galeries de photos...), ainsi qu'une fonction de récupération des fichiers supprimés.
+manage_text = "Les néophytes comme les utilisateurs expérimentés apprécieront l'<a href='/doc'>installateur automatique</a> de CMS présent sur Olympe. En quelques clics, installez facilement depuis votre panel le CMS de votre choix : Wordpress, Joomla, etc.
 <br /><br />
 Notre plateforme est entièrement autofinancée et maintenue par une <a href='/about/team'>équipe de bénévoles</a>, vous pouvez <a href='/org/help'>nous aider</a> à supporter les charges
 liées au service. Si vous avez des questions ou que vous désirez prendre part au projet, n'hésitez pas à <a href='/about/contact'>nous contacter</a>."
@@ -135,8 +134,7 @@ app_text = "Seit mehr als 7 Jahren, bietet Olympe eine <a href='/service/hosting
 noscript = "Your browser does not support JavaScript. Some features may not work properly."
 
 manage = "Erweiterte Funktionen"
-manage_text = "Wir fördern eine <a href='/doc/cloud'>Cloud Anwendung</a>, die Synchronisation, Speicherung und gemeinsame Nutzung von Dateien erlaubt. 
-Diese Lösung enthält eine Schnittstelle für die Visualisierung von Dateien (Download, Edition, Galerien...), sowie die Wiederherstellung von gelöschten Dateien.
+manage_text = "Beginners as experienced users will appreciate the <a href='/doc'>CMS automatic installer</a> available on Olympe. With a few clicks, you can easily install from your panel the CMS of your choice: Wordpress, Joomla, etc.
 <br /><br />
 Unsere Plattform ist vollständig selbst finanziert und ist von <a href='/about/team'>einem Team von Freiwilligen</a> gepflegt. Sie können uns <a href='/org/help'>helfen</a>, die Kosten im Zusammenhang mit dem Dienst. 
 Wenn Sie Fragen haben oder wenn Sie an dem Projekt teilnehmen möchten, bitte <a href='/about/contact'>setzen Sie Sie in Verbindung mit uns</a>."
@@ -174,9 +172,9 @@ altre <a href='/service/offer'>tecnologie</a> (PostgreSQL, MongoDB...).<br />
 noscript = "Your browser does not support JavaScript. Some features may not work properly."
 
 manage = "Funzioni aggiuntive"
-manage_text = "Per ogni account, è disponibile un'<a href='/doc/cloud'>applicazione cloud</a>, per la sincronizzazione di files, la condivisione e lo stoccaggio. Questo strumento include un'interfaccia web per la modifica online dei file e addirittura un sistema di ripristino dati.
-<br /><br />La nostra piattaforma è completamente autonoma e mantenuta da una <a href='/about/team'>squadra di volontari</a>, sei il benvenuto se volessi <a href='/org/help'>aiutarci</a> a raccogliere fondi per i progetti. Per ogni
-domanda o se desideri aiutarci, per favore <a href='/about/contact'>contattaci</a>, il nostro team ti accoglierà a braccia aperte."
+manage_text = "Beginners as experienced users will appreciate the <a href='/doc'>CMS automatic installer</a> available on Olympe. With a few clicks, you can easily install from your panel the CMS of your choice: Wordpress, Joomla, etc.
+<br /><br />
+La nostra piattaforma è completamente autonoma e mantenuta da una <a href='/about/team'>squadra di volontari</a>, sei il benvenuto se volessi <a href='/org/help'>aiutarci</a> a raccogliere fondi per i progetti. Per ogni domanda o se desideri aiutarci, per favore <a href='/about/contact'>contattaci</a>, il nostro team ti accoglierà a braccia aperte."
 signup_now = "Registrati ora"
 
 help = "Una domanda? <a href='/about/contact'>Contattaci</a>."

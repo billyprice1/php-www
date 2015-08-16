@@ -66,6 +66,15 @@ $(function()
 			$('.menu-fixed, #search-admin-form').removeClass('fixed');
 		}
 	});
+	
+	// SUBMIT BUTTON DISABLED AFTER CLICKING, AND RE-ENABLED 2 SECONDS AFTER
+	$('input[type="submit"], button[type="submit"]').click(function(){
+		var btn = $(this);
+		btn.prop('disabled', true);
+		setTimeout(function(){
+			btn.removeAttr('disabled');
+		}, 2000);
+	});
 });
 
 function success()
