@@ -27,7 +27,7 @@
 	/* display banned page */
 	$htaccess = '404/.htaccess';
 	$font = '404/BebasNeue Regular.ttf';
-	$index = '404/test.txt';
+	$index = __DIR__.'404/test.txt';
 	
 	/*
 	$index = file_get_contents( __DIR__.'/404/index.html' );
