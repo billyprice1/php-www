@@ -39,10 +39,10 @@
 	sleep(10);
 	
 	$conn_id = ftp_connect("ftp.olympe.in") or die("Couldn't connect to $ftp_server");
-	ftp_login($conn_id, $site_name, $new_password)
+	ftp_login($conn_id, $site_name, $new_password);
 	ftp_pasv($conn_id, true);
-	ftp_put($conn_id, "index.html", $index, FTP_ASCII)
-	ftp_put($conn_id, ".htaccess", $htaccess, FTP_ASCII)
+	ftp_put($conn_id, "index.html", $index, FTP_ASCII);
+	ftp_put($conn_id, ".htaccess", $htaccess, FTP_ASCII);
 	ftp_close($conn_id);
 	
 	/*
