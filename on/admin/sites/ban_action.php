@@ -39,28 +39,24 @@
 	api::send('site/insert', array('site'=>$site_name, 'user'=>$banned_sites_user_id, 'pass'=>$new_password));
 	sleep(10);
 	
-	
+	/*
 	$conn_id = ftp_connect("ftp.olympe.in") or die("Couldn't connect to $ftp_server");
-
-	if (@ftp_login($conn_id, $site_name, $new_password))
-		echo "Connecté en tant que $site_name@ftp.olympe.in\n";
-	else
-		echo "Connexion impossible en tant que $site_name\n";
-	
+	ftp_login($conn_id, $site_name, $new_password)
 	ftp_pasv($conn_id, true);
-
-	if (ftp_put($conn_id, "test.txt", $index, FTP_ASCII))
-		echo "Le fichier $index a été chargé avec succès\n";
-	else
-		echo "Il y a eu un problème lors du chargement du fichier $file\n";
-
-	ftp_close($conn_id);	
+	ftp_put($conn_id, "test.txt", $index, FTP_ASCII)
+	ftp_close($conn_id);
+	*/
 	
-	/*$connection = ssh2_connect('ftp.olympe.in', 22);
+	$connection = ssh2_connect('ftp.olympe.in', 22);
 	ssh2_auth_password( $connection, $site_name, $new_password );
-	ssh2_scp_send($connection, $htaccess, '/.htaccess', 0644);
+	/*ssh2_scp_send($connection, $htaccess, '/.htaccess', 0644);
 	ssh2_scp_send($connection, $font, '/BebasNeue Regular.ttf', 0644);
-	ssh2_scp_send($connection, $index, '/index.html', 0644);*/
+	*/
+	if(ssh2_scp_send($connection, $index, '/test.txt', 0644))
+		echo 'OK';
+	else 
+		echo 'Not ok :(';
+	
 	
 	
 	/*
