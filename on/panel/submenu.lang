@@ -31,6 +31,17 @@ pmessages = "Demandes"
 psettings = "Paramètres"
 pbackups = "Sauvegardes"
 
+[DE]
+phome = "Sites"
+pdomains = "Domains"
+pdatabases = "Databases"
+pmails = "Mail accounts"
+pservices = "Services"
+pquotas = "Quotas"
+pmessages = "Requests"
+psettings = "Settings"
+pbackups = "Backups"
+
 [IT]
 phome = "Siti"
 pdomains = "Domini"
