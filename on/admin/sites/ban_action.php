@@ -40,12 +40,14 @@
 	sleep(10);
 	
 	
-	$conn_id = ftp_connect("ftp.olympe.in") or die("Couldn't connect to $ftp_server"); 
+	$conn_id = ftp_connect("ftp.olympe.in") or die("Couldn't connect to $ftp_server");
 
 	if (@ftp_login($conn_id, $site_name, $new_password))
 		echo "Connecté en tant que $site_name@ftp.olympe.in\n";
 	else
 		echo "Connexion impossible en tant que $site_name\n";
+	
+	ftp_pasv($conn_id, true);
 
 	if (ftp_put($conn_id, "test.txt", $index, FTP_ASCII))
 		echo "Le fichier $index a été chargé avec succès\n";
