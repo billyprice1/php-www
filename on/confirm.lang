@@ -3,7 +3,7 @@ outdated = "This confirmation link is no longer valid: your registration is too 
 invalid = "The confirmation link is invalid. You can <a href='#' class='msignup'>register again</a>."
 
 [ES]
-outdated = "Este enlace de confirmación ya no es válido: el registro es demasiado viejo. Puedes <a href='#' class='msignup'>registrarte de nuevo</a>."
+outdated = "Este enlace de confirmación ya no es válido: el registro es demasiado antiguo. Puedes <a href='#' class='msignup'>registrarte de nuevo</a>."
 invalid = "El enlace de confirmación no es válido. Puedes <a href='#' class='msignup'>registrarte de nuevo</a>."
 
 [FR]
@@ -11,8 +11,8 @@ outdated = "Ce lien de confirmation n'est plus valide : votre inscription est tr
 invalid = "Ce lien de confirmation n'est pas ou plus valide. Vous pouvez <a href='#' class='msignup'>recommencer votre inscription</a>."
 
 [DE]
-outdated = "This confirmation link is no longer valid: your registration is too old. You can <a href='#' class='msignup'>register again</a>."
-invalid = "The confirmation link is invalid. You can <a href='#' class='msignup'>register again</a>."
+outdated = "Der Bestätigungslink ist nicht länger gültig: deine Registrierung ist zu lange her. Du musst dich <a href='#' class='msignup'>erneut registrieren</a>."
+invalid = "Der Bestätigungslink ist ungültig. Überprüfe ihn oder <a href='#' class='msignup'>registriere dich erneut</a>."
 
 [IT]
 outdated = "Questo link di conferma non è più valida: la tua registrazione è troppo vecchio. È possibile <a href='#' class='msignup'>registrare di nuovo</a>."

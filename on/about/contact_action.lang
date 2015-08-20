@@ -1,16 +1,9 @@
-﻿[ES]
-success = "Tu mensaje ha sido enviado. Gracias por su interés."
-error_empty_field = "Su mensaje no se pudo enviar: algunos campos están vacíos."
-error_email_wrong = "Su formato de dirección email es erróneo."
-error_referer = "Su mensaje no se pudo enviar."
-error_js = "Su mensaje no se pudo enviar : por favor, verificas que JavaScript está activado en tu navegador."
-
-[EN]
+﻿[EN]
 success = "Your message has been succesfully sent. Thanks for your interest in Olympe!"
-error_empty_field = "Your message could not be sent: one or more field(s) are empty."
+error_empty_field = "Your message could not be sent: one or more fields are empty."
 error_email_wrong = "Your email address format is wrong."
 error_referer = "Your message could not be sent."
-error_js = "Your message could not be sent : please make sure javascript is enabled in your browser."
+error_js = "Your message could not be sent : please make sure that javascript is enabled in your browser."
 
 [FR]
 success = "Votre message a bien été envoyé. Merci de votre intérêt pour Olympe !"
@@ -19,12 +12,12 @@ error_email_wrong = "Le format de votre adresse email est incorrect."
 error_referer = "Votre message n'a pu être envoyé."
 error_js = "Votre message n'a pu être envoyé : vérifiez que le javascript est activé sur votre navigateur."
 
-[DE]
-success = "Ihre Nachricht wurde gesendet. Vielen Dank für Ihr Interesse !"
-error_empty_field = "Ihre Nachricht ist nicht gesendet worden: ein oder mehrere Felder sind leer."
-error_email_wrong = "Das Format der e-Mail-Adresse ist falsch"
-error_referer = "Ihre Nachricht ist nicht gesendet worden."
-error_js = "Ihre Nachricht ist nicht gesendet worden : make sure javascript is enabled in your browser."
+[ES]
+success = "Tu mensaje ha sido enviado. Gracias por tu interés."
+error_empty_field = "Tu mensaje no se pudo enviar: algun(os) campos están vacíos."
+error_email_wrong = "Su formato de dirección de correo es errónea."
+error_referer = "Su mensaje no se pudo enviar."
+error_js = "Su mensaje no se pudo enviar : por favor, verifica que JavaScript está activado en tu navegador."
 
 [IT]
 success = "Il tuo messaggio è stato inviato correttamente. Grazie per il tuo interesse su Olympe!"
@@ -32,3 +25,10 @@ error_empty_field = "Il messaggio non può essere inviato: è presente uno o pi�
 error_email_wrong = "Il formato del tuo indirizzo email non è corretto."
 error_referer = "Il messaggio non può essere inviato."
 error_js = "Il messaggio non può essere inviato : please make sure javascript is enabled in your browser."
+
+[DE]
+success = "Deine Nachricht wurde versendet. Vielen Dank für dein Interesse!"
+error_empty_field = "Deine Nachricht konnte nicht gesendet werden: ein oder mehrere Felder sind leer."
+error_email_wrong = "Das Format der E-Mail-Adresse ist ungültig."
+error_referer = "Deine Nachricht konnte nicht gesendet werden."
+error_js = "Deine Nachricht konnte nicht gesendet werden: Stelle bitte sicher, dass Javascript in deinem Browser aktiviert ist!"

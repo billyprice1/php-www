@@ -2,26 +2,12 @@
 title = "API management"
 subtitle = "Using the API"
 intro = "The <a href='https://api.olympe.in'>API</a> allows you to manage all hosting services related to an account. It manages both creating, selecting, editing and
-Removal of the various elements. You can choose the return format (JSON, HTML, XML ...) and test the API directly from any queries through a form provided for each method.<br />
-<br />The API documentation is directly integrated, first explanations on the home page (formats, error returns, meaning of the fields ...) then the parameters of each method in different pages."
-
+removal of the various elements. You can choose the return format (JSON, HTML, XML ...) and test the API directly through a form provided for each method.<br />
+<br />API 's documentation is directly integrated. There are the first explanations on the home page (formats, error returns, meaning of the fields ...) and then the parameters of each method in different pages."
 steps = "Here are the simple steps to use it:"
 step_1 = "Get the token of the user you want to manage:"
-step_2 = "Test retrieving account informations:"
+step_2 = "Test retrieving account information:"
 api = "Go to the API"
-
-[ES]
-title = "API management"
-subtitle = "Using the API"
-intro = "L'<a href='https://api.olympe.in'>API</a> vous permet de gérer l'ensemble des services d'hébergement liés à un compte. Elle gère à la fois la création, la sélection, l'édition et 
-la suppression des différents éléments. Vous pouvez choisir le format de retour (JSON, HTML, XML...) et tester directement depuis l'API n'importe quelle requêtes grâce à un formulaire fourni pour chaque méthode.<br />
-<br />La documentation de l'API est directement intégrée, d'abord les explications générales sur la page d'accueil (formats, retours d'erreur, signification des champs...) puis ensuite
-les paramètres de chaque méthode dans les différentes pages."
-
-steps = "Aquí están los pasos para usarla :"
-step_1 = "Tienes el token del usuario que deseas administrar :"
-step_2 = "Intentas de obtener las informaciones de la cuenta :"
-api = "Ver la API"
 
 [FR]
 title = "API de gestion"
@@ -30,24 +16,20 @@ intro = "L'<a href='https://api.olympe.in'>API d'Olympe</a> vous permet de gére
 la suppression des différents éléments. Vous pouvez choisir le format de retour (JSON, HTML, XML...) et tester directement depuis l'API n'importe quelle requêtes grâce à un formulaire fourni pour chaque méthode.<br />
 <br />La documentation de l'API est directement intégrée, d'abord les explications générales sur la page d'accueil (formats, retours d'erreur, signification des champs...) puis ensuite
 les paramètres de chaque méthode dans les différentes pages."
-
 steps = "Voici les étapes simples pour l'utiliser :"
 step_1 = "Récupérer le token de l'utilisateur que l'on veut gérer :"
 step_2 = "Test en récupérant les informations du compte :"
 api = "Aller sur l'API"
 
-[DE]
-title = "Management API"
-subtitle = "Verwendung der API"
-intro = "L'<a href='https://api.olympe.in'>API d'Olympe</a> vous permet de gérer l'ensemble des services d'hébergement liés à un compte. Elle gère à la fois la création, la sélection, l'édition et 
-la suppression des différents éléments. Vous pouvez choisir le format de retour (JSON, HTML, XML...) et tester directement depuis l'API n'importe quelle requêtes grâce à un formulaire fourni pour chaque méthode.<br />
-<br />La documentation de l'API est directement intégrée, d'abord les explications générales sur la page d'accueil (formats, retours d'erreur, signification des champs...) puis ensuite
-les paramètres de chaque méthode dans les différentes pages."
-
-steps = "Hier sind die einfachen Schritte, es zu benutzen :"
-step_1 = "Rufen Sie das Token des Benutzers, die Sie verwalten möchten :"
-step_2 = "Test von Kontoinformationen abrufen :"
-api = "API entdecken"
+[ES]
+title = "API management"
+subtitle = "Uso de la API"
+intro = "La <a href='https://api.olympe.in'>API</a> permite gestionar todos los servicios de alojamiento relacionados con una cuenta. Se gestiona tanto la creación, la selección, la edición y la eliminación de los diversos elementos. Usted puede elegir el formato de retorno (JSON, HTML, XML...) y testear la API directamente con un formulario provisto para cada método.<br />
+<br />La documentación de la API está directamente integrada : las explicaciones generales en la página principal (formatos, errores, significado de los campos...), y después los parámetros de cada método en diferentes páginas."
+steps = "Aquí están los pasos para usarla :"
+step_1 = "Obtén la ficha  del usuario que deseas administrar :"
+step_2 = "Intentas de obtener las informaciones de la cuenta :"
+api = "Ver la API"
 
 [IT]
 title = "Gestione API"
@@ -56,8 +38,17 @@ intro = "Il codice <a href='https://api.olympe.in'>API</a> vi permette di gestir
 l'eliminazione dei vari elementi. È possibile scegliere il formato del risultato (JSON, HTML, XML ...) e provare direttamente eventuali richieste API tramite un modulo fornito per ciascun metodo.<br />
 <br />La documentazione API è direttamente integrata con le prime spiegazioni sulla home page (formati, ritorni di errore, spiegazione dei vari campi ...) nonché i vari
 parametri pagina per pagina"
-
 steps = "I passaggi principali per l'utilizzo:"
 step_1 = "Seleziona il Token dell'utent che desideri gestire:"
 step_2 = "Test di recupero delle informazioni dell'account:"
 api = "Vai al codice API"
+
+[DE]
+title = "API Management"
+subtitle = "Verwendung des API"
+intro = "Das <a href='https://api.olympe.in'>API</a> ermöglicht es dir, alle Dienste, die an einen bestimmten Account gebunden sind, zu verwalten. Es können verschiedenste Elemente erstellt, ausgewählt, bearbeitet oder vollständig entfernt werden. Du kannst das auszugebende Format dieser Elemente und Inhalte wählen (JSON, HTML, XML...) und kannst das API direkt durch gezielte Abfragen (\"queries\") in einer für jede Methode bereitgestellten Form testen. <br />
+<br />Eine API-Dokumentation ist ebenso integriert - erste Erklärungen auf der Startseite (z.B. Formate, Fehlermeldungen, Bedeutungen einzelner Felder,...) mit weiterführenden Parametern zu jeder Methode auf weiterfolgenden Seiten."
+steps = "Hier sind die einfachen Schritte dazu, um das API zu verwenden:"
+step_1 = "Rufe das Token des Benutzers ab, den du verwalten möchtest:"
+step_2 = "Teste das Abrufen von Kontoinformationen:"
+api = "Mehr zum API"

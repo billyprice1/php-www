@@ -2,18 +2,18 @@
 featured = "Main selection"
 top = "Team selection"
 
-[ES]
-featured = "Destacado"
-top = "Selección del equipo"
-
 [FR]
 featured = "A la une"
 top = "Sélection de l'équipe"
 
-[DE]
-featured = "Main selection"
-top = "Team-Auswahl"
+[ES]
+featured = "Destacado"
+top = "Selección del equipo"
 
 [IT]
 featured = "I siti web in vetrina"
 top = "Le scelte del personale"
+
+[DE]
+featured = "Hauptauswahl"
+top = "Teamauswahl"

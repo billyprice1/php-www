@@ -1,14 +1,14 @@
 [EN]
 top = "Most popular websites"
 
-[ES]
-top = "Sitios populares"
-
 [FR]
 top = "Sites les plus populaires"
 
-[DE]
-top = "Most popular websites"
+[ES]
+top = "Sitios populares"
 
 [IT]
-top = "Siti web più popolari"
+top = "Siti web piÃ¹ popolari"
+
+[DE]
+top = "Die beliebtesten Websites"

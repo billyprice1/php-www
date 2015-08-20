@@ -1,17 +1,15 @@
 ﻿[EN]
 subject = "Olympe account recovery"
 content = "<p style='margin: 20px 0'>You have requested the recovery of your account on the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe platform</a>.</p>
-	<p style='margin: 20px 0'>In order to choose a new password, you have to click on the following link. Be careful, this link is only valid during <strong>6 hours</strong>!</p>
+	<p style='margin: 20px 0'>In order to choose a new password, you have to click on the following link. Be careful, this link is only valid for <strong>6 hours</strong>!</p>
 	<p style='margin: 20px 0'>Update your password : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
-
-success = "You request is a success. An email with a recovery link has been sent to your address."
+success = "You request has been successfully completed. An email with a recovery link has been sent to your address."
 
 [ES]
 subject = "Recuperación de cuenta"
-content = "<p style='margin: 20px 0'>Has solicitado la recuperación de su cuenta en la <a style='color: #de5711;' href='https://www.olympe.in'>plataforma Olympe</a>.</p>
+content = "<p style='margin: 20px 0'>Has solicitado la recuperación de tu cuenta en la <a style='color: #de5711;' href='https://www.olympe.in'>plataforma Olympe</a>.</p>
 	<p style='margin: 20px 0'>Para elegir una contraseña nueva, tienes que hacer clic en el siguiente enlace. Ten cuidado, este enlace es válido sólo durante <strong>6 horas</strong>.</p>
 	<p style='margin: 20px 0'>Modificar su contraseña : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
-
 success = "Su petición ha sido tomada en cuenta. Un email que contiene un enlace de recuperación te ha sido enviado."
 
 [FR]
@@ -19,21 +17,18 @@ subject = "Récupération de compte Olympe"
 content = "<p style='margin: 20px 0'>Vous avez effectué une demande de récupération sur la <a style='color: #de5711;' href='https://www.olympe.in'>plateforme Olympe</a>.</p>
 	<p style='margin: 20px 0'>Afin de choisir un nouveau mot de passe, merci de bien vouloir cliquer sur le lien suivant. Attention, ce lien n'est valide que pendant <strong>6 heures</strong> !</p>
 	<p style='margin: 20px 0'>Changement de mot de passe : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
-
 success = "Votre demande a bien été prise en compte, un email contenant un lien de récupération a bien été envoyé."
 
 [DE]
-subject = "Olympe - Kontowiederherstellung"
-content = "<p style='margin: 20px 0'>Sie haben Sie über die <a style='color: #de5711;' href='https://www.olympe.in'>Olympe Plattform</a> zum Zurücksetzen Ihres Kennworts zurücksetzen lassen.</p>
-	<p style='margin: 20px 0'>Um eine neues Passwort zu wählen , bitte klicken Sie auf den folgenden Link. Dieser Link wird für <strong>6 Stunden </strong>gültig sein !</p>
-	<p style='margin: 20px 0'>Kennwort Ändererung: <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
-
-success = "Ihre Anfrage ist berücksichtigt worden, eine E-Mail für Ihre Kontowiederherstellung ist Ihnen gesendet worden ."
+subject = "Olympe - Neues Passwort"
+content = "<p style='margin: 20px 0'>Ein neues Passwort wurde für dein Benutzerkonto bei <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a> angefordert.</p>
+	<p style='margin: 20px 0'>Um ein neues Passwort zu erhalten, klicke bitte auf den folgenden Link. Dieser ist für <strong>6 Stunden</strong> gültig!</p>
+	<p style='margin: 20px 0'>Um dein Passwort zu ändern: <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
+success = "Vielen Dank! Eine E-Mail mit einem Bestätigungslink zum Ändern deines Passworts wurde an deine E-Mail-Adresse geschickt."
 
 [IT]
 subject = "Recupera il tuo account Olympe"
 content = "<p style='margin: 20px 0'>Hai richiesto il recupero del tuo account sulla <a style='color: #de5711;' href='https://www.olympe.in'>piattaforma Olympe</a>.</p>
 	<p style='margin: 20px 0'>Per scegliere una nuova password, devi cliccare sul seguente link. Fai attenzione, questo link è valido solo per <strong>6 ore</strong>!</p>
 	<p style='margin: 20px 0'>Aggiorna la tua password : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
-
 success = "La tua richiesta è stata completata con successo. Una email con il link di recupero è stata mandata al tuo indirizzo email."

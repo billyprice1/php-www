@@ -1,11 +1,9 @@
 ﻿[EN]
 title = "Partners"
-
-interxion = "With more than 34 datacenters in 11 countries, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> is a leading provider of cloud- and carrier-neutral 
-colocation data centre services, neutral over european Cloud and Telecom operators. Interxion provides Olympe several locations in its parisian datacenters and one of its dark fibre."
+interxion = "With more than 34 datacenters in 11 countries, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> is a leading provider of cloud and carrier-neutral 
+colocation data centre services, neutral over european Cloud and Telecom operators. Interxion provides Olympe with several locations in its parisian datacenters and one of its dark fibre."
 as = "<a href='http://www.anotherservice.com/' title='Another Service' target='_blank'>Another Service</a> is a PaaS/Iaas host solutions, specialised in critical applications and high availability 
 infrastructure. Another Service operates Olympe's network and funds up its physical servers."
-
 fa_link = "http://www.forumactif.com"
 fa_img = "fa_fr"
 fa_text = "<a href='http://www.forumactif.com' title='Forumactif' target='_blank'>Forumactif</a> vous propose de créer facilement un forum gratuit en quelques clics. Simples et intuitifs, les forums Forumactif 
@@ -13,12 +11,10 @@ sont disponibles en 4 différentes versions, phpBB2, phpBB3, punBB et Invision p
 
 [FR]
 title = "Partenaires"
-
 interxion = "Avec plus de 34 datacenters dans 11 pays, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> est l'un des principaux fournisseurs de collocations neutres 
 vis-à-vis des acteurs du cloud et des opérateurs Télécom en Europe. Interxion fournit à Olympe plusieurs emplacements dans ses datacenters parisiens et l'une de ses fibres noires."
 as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> est un fournisseur de solutions d'hébergement PaaS/IaaS, spécialisé dans les applications 
 critiques et les infrastructures très haute disponibilité. Another Service opère le réseau et finance les serveurs physiques d'Olympe."
-
 fa_link = "http://www.forumactif.com"
 fa_img = "fa_fr"
 fa_text = "<a href='http://www.forumactif.com' title='Forumactif' target='_blank'>Forumactif</a> vous propose de créer facilement un forum gratuit en quelques clics. Simples et intuitifs, les forums Forumactif 
@@ -26,39 +22,29 @@ sont disponibles en 4 différentes versions, phpBB2, phpBB3, punBB et Invision p
 
 [ES]
 title = "Partners"
-
-interxion = "With more than 34 datacenters in 11 countries, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> is a leading provider of cloud- and carrier-neutral colocation 
-data centre services, neutral over european Cloud and Telecom operators. Interxion provides Olympe several locations in its parisian datacenters and one of its dark fibre."
-as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> is a PaaS/Iaas host solutions, specialised in critical applications and high availability 
-infrastructure. Another Service operates Olympe's network and funds up its physical servers."
-
+interxion = "Con más de 34 datacenters in 11 Paises, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> es un proveedor líder de colocación en la nube- y portador-neutral de servicios de centro de datos y neutros sobre los operadores de la nube y Telecomunicación  europeos. Interxion ofrece  a Olympe varios lugares en sus centros de datos de Francia y uno de su fibra ."
+as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> es un PaaS/Iaas Soluciones en Host especializadas en aplicaciones críticas y una gran infraestructura disponible. Otro servicio opera la red y los fondos de Olympe hasta sus servidores físicos."
 fa_link = "http://www.foroactivo.com"
 fa_img = "fa_es"
 fa_text = "Crear un foro gratis es simple y rápido con <a href='http://www.foroactivo.com' title='Foroactivo' target='_blank'>Foroactivo</a>. Sin ningún conocimiento técnico puedes comenzar a discutir 
 instantáneamente en tu propio foro. Además, con una interfaz intuitiva y temas gratuitos es possible gestionar y personalizar tu foro fácilmente."
 
-[DE]
-title = "Partners"
-
-interxion = "With more than 34 datacenters in 11 countries, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> is a leading provider of cloud- and carrier-neutral 
-colocation data centre services, neutral over european Cloud and Telecom operators. Interxion provides Olympe several locations in its parisian datacenters and one of its dark fibre."
-as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> is a PaaS/Iaas host solutions, specialised in critical applications and high availability 
-infrastructure. Another Service operates Olympe's network and funds up its physical servers."
-
-fa_link = "http://www.forumieren.com"
-fa_img = "fa_de"
-fa_text = "Erstellen Sie ein kostenloses Forum mit <a href='http://www.forumieren.com' title='Forumieren' target='_blank'>Forumieren</a>! Mit über 7 Jahren Erfahrung und mehr als 150.000 aktiven Foren hat 
-sich Forumieren als ein Marktführer im Forenbereich durchgesetzt. Kostenlos, zuverlässig und sicher!"
-
 [IT]
 title = "Partners"
-
 interxion = "Con più di 34 datacenters in 11 nazioni, <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> è il maggior fornitore di servizi cloud e di servizi di 
 database, con operatori Cloud e Telecom. Interxion fornisce a Olympe molte collocazioni fin dai suoi datacenter parigini"
 as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> è una soluzione PaaS/Iaas per l'hoting, specializzato in applicazioni e infrastrutture 
 ad alta disponibilità. Un altro servizio nella rete Olympe che gestisce i suoi database."
-
 fa_link = "http://www.forumattivo.it"
 fa_img = "fa_it"
 fa_text = "<a href='http://www.forumattivo.com' title='Forumattivo' target='_blank'>Forumattivo</a> permette di creare un forum gratuito in alcuni minuti senza nessuna conoscenza technica. L'interfaccia del 
 foro è intuitiva, facile a utilizzare ed a personnalizzare. Entra nelle communità di forum di discussione!"
+
+[DE]
+title = "Unsere Partner"
+interxion = "Mit mehr als 34 Rechenzentren in 11 Ländern ist <a href='http://www.interxion.com' title='Interxion' target='_blank'>Interxion</a> ein führender Anbieter von Cloud- und Netzwerk-unabhängigen kollokativen Dienstleistungen für Rechenzentren - unabhängig von der europäischen <i>Cloud</i> und Telekommunikation. Interxion bietet Olympe mehrere Stellplätze in ihren Pariser Rechenzentren und versorgt einen sogar mit Glasfaser."
+as = "<a href='http://www.anotherservice.com' title='Another Service' target='_blank'>Another Service</a> ist eine PaaS/Iaas-Host-Lösung, spezialisiert auf kritische Anwendungen und hohe Verfügbarkeit der Infrastruktur. Another Service betreibt Olympe's Netzwerk und finanziert ihre physischen Server."
+fa_link = "http://www.forumieren.com"
+fa_img = "fa_de"
+fa_text = "Erstelle ein kostenloses Forum mit <a href='http://www.forumieren.com' title='Forumieren' target='_blank'>Forumieren</a>! Mit über 7 Jahren Erfahrung und mehr als 150.000 aktiven Foren hat 
+sich Forumieren als ein Marktführer im Forenbereich durchgesetzt. Kostenlos, zuverlässig und sicher!"

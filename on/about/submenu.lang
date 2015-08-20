@@ -6,14 +6,6 @@ menu_partners = "Partners"
 menu_legal = "Legal"
 menu_reference = "References"
 
-[ES]
-menu_overview = "Ojeada"
-menu_contact = "Contactarnos"
-menu_team = "Equipo"
-menu_partners = "Afiliados"
-menu_legal = "Condiciones"
-menu_reference = "Referencias"
-
 [FR]
 menu_overview = "Aperçu"
 menu_contact = "Contact"
@@ -22,13 +14,13 @@ menu_partners = "Partenaires"
 menu_legal = "Conditions"
 menu_reference = "Références"
 
-[DE]
-menu_overview = "Vorschau"
-menu_contact = "Kontakt"
-menu_team = "Team"
-menu_partners = "Partner"
-menu_legal = "Bedingungen"
-menu_reference = "Referenzen"
+[ES]
+menu_overview = "Ojeada"
+menu_contact = "Contactarnos"
+menu_team = "Equipo"
+menu_partners = "Afiliados"
+menu_legal = "Condiciones"
+menu_reference = "Referencias"
 
 [IT]
 menu_overview = "Panoramica"
@@ -37,3 +29,11 @@ menu_team = "Team"
 menu_partners = "Partner"
 menu_legal = "Legale"
 menu_reference = "Referenze"
+
+[DE]
+menu_overview = "Übersicht"
+menu_contact = "Kontakt"
+menu_team = "Team"
+menu_partners = "Unsere Partner"
+menu_legal = "Rechtliches"
+menu_reference = "Verweise"
