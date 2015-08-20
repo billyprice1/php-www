@@ -1505,6 +1505,10 @@ img.blogimage {
 	vertical-align:middle;
 	background-color:rgba(0,0,0,0.023);
 }
+div.blog-post p {
+    text-align: justify;
+	font-size:18px;
+}
 span.legend {
 	font-size:15px;
 	display:block;
