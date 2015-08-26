@@ -13,14 +13,16 @@ $time = time();
 $random = md5(uniqid($time, true));
 $_SESSION[$random] = 1;
 
+/*
 // Get issues in progress
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
 $issues = $client->api('issue')->all(array('project_id' => 'maintenances'));
 $issues = $issues['issues'];
+*/
 
-/*
+/* 
 require_once 'on/status/vendor/autoload.php';
 
 // projets.olympe.in status
@@ -34,9 +36,13 @@ $chaine = $title->nodeValue;
 $dispo = "0";
 */
 
-
-$content = "<div class=\"head-light\">
+$content = "
+		<div class=\"head-light\">
 			<div class=\"container\">
+";
+
+/*
+$content .= "
 			<h2 class=\"dark\">{$lang['issues']}</h2>
 				
 				<table>
@@ -80,10 +86,11 @@ else
 
 }
 
+$content .= "</table>";
+*/
+
 
 	$content .= "
-			</table>
-			<br /><br />
 			<h1 class=\"dark\">{$lang['title']}</h1>
 			</div>
 		</div>

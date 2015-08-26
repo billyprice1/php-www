@@ -24,7 +24,7 @@ function setFooter() {
 			var coreHeight = document.getElementById('core').offsetHeight;
 			var need = windowHeight - coreHeight;
 			if (need > 255) {
-				document.getElementById('footer').style.marginTop = (need-255) + 'px';
+				document.getElementById('footer').style.marginTop = (need-273) + 'px';
 			}
 			else
 				document.getElementById('footer').style.marginTop = '0px';
