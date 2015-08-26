@@ -2,25 +2,12 @@
 title = "Olympe for developers"
 api = "API management"
 api_text = "In our open approach, we have developed an <a href='/developers/api'>API REST</a> (JSON responses, XML or HTML). This API allows to fully manage Olympe accounts, to
-create databases, websites, domain names... <br /><br />You can automate tasks creations or information (such as view real-time quotas).
-Feel free to ask questions on the <a href='https://community.olympe.in'>community</a> to learn more about the operation of the API."
-
+create databases, websites, domain names and more. <br /><br />You can automate task creations or information (such as view real-time quotas).
+Feel free to ask questions in the <a href='https://community.olympe.in'>community</a> to learn more about API."
 sources = "Tools, panel and source codes"
-sources_text = "Olympe is a non-profit invested in the world of Open Source. The <a href='/developers/tools'>tools</a> we have developed (PHP modules, API, scripts...)
-are open and freely accessible. You can also contribute to their improvement.<br /><br />Moreovert, this website and the user panel are published on our
-<a href='https://github.com/OlympeNetwork'>Github</a> to allow you to improve, and develop the features you need."
-
-[ES]
-title = "Olympe for developers"
-api = "API management"
-api_text = "Dans notre démarche d'ouverture, nous avons développé une <a href='/developers/api'>API REST</a> (réponses en JSON, XML ou HTML). Cette API permet de gérer intégralement les comptes Olympe, 
-de créer des bases de données, des sites, des noms de domaine... <br /><br />Vous pouvez ainsi automatiser certaines tâches de créations ou d'informations (comme par exemple afficher les quotas en temps réel). 
-N'hésitez pas à poser vos questions sur la <a href='https://community.olympe.in'>communauté</a> pour en savoir plus sur le fonctionnement de l'API."
-
-sources = "Tools, panel and source code"
-sources_text = "Olympe is a non-profit invested in the world of Open Source. The <a href='/developers/tools'>tools</a> we have developed (PHP modules, API, scripts...)
-are open and freely accessible. You can also contribute to their improvement.<br /><br />Moreovert, this website and the user panel are published on our
-<a href='https://github.com/OlympeNetwork'>Github</a> to allow you to improve, and develop the features you need."
+sources_text = "Olympe is a non-profit participating in the world of Open Source. The <a href='/developers/tools'>tools</a> which we have developed (PHP modules, API, scripts...)
+are open and freely accessible. You can also contribute to their improvement.<br /><br />Moreover, this website and the user panel are published on our
+<a href='https://github.com/OlympeNetwork'>Github</a> to allow you to improve and develop the features you need."
 
 [FR]
 title = "Olympe pour les développeurs"
@@ -28,23 +15,18 @@ api = "API de gestion"
 api_text = "Dans notre démarche d'ouverture, nous avons développé une <a href='/developers/api'>API REST</a> (réponses en JSON, XML ou HTML). Cette API permet de gérer intégralement les comptes Olympe, 
 de créer des bases de données, des sites, des noms de domaine... <br /><br />Vous pouvez ainsi automatiser certaines tâches de créations ou d'informations (comme par exemple afficher les quotas en temps réel). 
 N'hésitez pas à poser vos questions sur la <a href='https://community.olympe.in'>communauté</a> pour en savoir plus sur le fonctionnement de l'API."
-
 sources = "Outils, panel et codes sources"
 sources_text = "Olympe est une association à but non lucratif investie dans le monde de l'Open Source. Les <a href='/developers/tools'>outils</a> que nous avons développés (modules PHP, API, scripts...) 
 sont ouverts et librement accessibles. Vous pouvez par ailleurs contribuer à leur amélioration.<br /><br />Mais ce n'est pas tout, le présent site Internet, et notamment le panel Olympe, sont également publiés sur notre 
 <a href='https://github.com/OlympeNetwork'>Github</a> afin de permettre à chacun d'entre vous de l'améliorer si vous le désirez et de développer les fonctionnalités dont vous avez besoin."
 
-[DE]
-title = "Olympe for developers"
-api = "API management"
-api_text = "Dans notre démarche d'ouverture, nous avons développé une <a href='/developers/api'>API REST</a> (réponses en JSON, XML ou HTML). Cette API permet de gérer intégralement les comptes Olympe, 
-de créer des bases de données, des sites, des noms de domaine... <br /><br />Vous pouvez ainsi automatiser certaines tâches de créations ou d'informations (comme par exemple afficher les quotas en temps réel). 
-N'hésitez pas à poser vos questions sur la <a href='https://community.olympe.in'>communauté</a> pour en savoir plus sur le fonctionnement de l'API."
-
-sources = "Tools, panel and source code"
-sources_text = "Olympe is a non-profit invested in the world of Open Source. The <a href='/developers/tools'>tools</a> we have developed (PHP modules, API, scripts...)
-are open and freely accessible. You can also contribute to their improvement.<br /><br />Moreovert, this website and the user panel are published on our
-<a href='https://github.com/OlympeNetwork'>Github</a> to allow you to improve, and develop the features you need."
+[ES]
+title = "Olympe para desarrolladores"
+api = "Gestión de la API"
+api_text = "En nuestro enfoque abierto, hemos desarrollado una <a href='/developers/api'>API REST</a> (respuestas en JSON, XML o HTML). Esta API permite gestionar completamente las cuentas Olympe, para crear bases de datos, sitios web, nombres de dominio...<br /><br />Puede automatizar tareas de creación o de información (como las cuotas en tiempo real). No dude en hacer preguntas en la <a href='https://community.olympe.in'>comunidad</a> para aprender más sobre las operaciones de la API"
+sources = "Herramientas, panel y código abierto"
+sources_text = "Olympe es una organización sin fines de lucro inmersa en el mundo del código abierto. Las <a href='/developers/tools'>herramientas</a> que hemos desarrollado (PHP modules, API, scripts...)
+son de código abierto y libre acceso. Tu también pudes contribuir con su mejora.<br /><br />Por otro lado este sitio web y el panel de usuario se publican en nuestro <a href='https://github.com/OlympeNetwork'>Github</a> para que se pueda mejorar y desarrollar las funciones que se necesitan."
 
 [IT]
 title = "Olympe per gli sviluppatori"
@@ -52,8 +34,14 @@ api = "Gestione API"
 api_text = "Nel nostro approccio aperto, abbiamo sviluppato un  <a href='/developers/api'>codice API</a> (Risposte in JSON, XML o HTML). Questo codice API consente di gestire completamente gli account su Olympe, 
 creare database e gestirli, cosi come per i siti o i nomi di domimnio. <br /><br />E' possibile automatizzare e migliorare alcune funzioni (come per esempio sviluppare il sistema delle quote in tempo reale). 
 Non esistate a porre questioni nella <a href='https://community.olympe.in'>community di Olympe</a> riguardo al funzionamento del codice API."
-
 sources = "Strumenti, pannello e codice sorgente"
 sources_text = "Olympe è un'organizzazione no-profit nel mondo dell'Open Source. Gli <a href='/developers/tools'>strumenti</a> che abbiamo sviluppato (moduli PHP, API, scripts...)
 sono liberi e accessibili a tutti. puoi inoltre contribuire con i tuoi miglioramenti.<br /><br />Inoltre, questa piattaforma e il pannello utenti sono pubblicati nel nostro
 <a href='https://github.com/OlympeNetwork'>Github</a> per permettervi di migliorare, sviluppare i servizi con tutto ciò di cui avete bisogno."
+
+[DE]
+title = "Olympe für Entwickler"
+api = "API Management"
+api_text = "In unserem offenen Ansatz haben wir <a href='/developers/api'>REST API</a> verwendet (Ausgaben von JSON, XML oder HTML). Diese Art von API ermöglicht es, Konten bei Olympe vollständig zu verwalten, Datenbanken, Webseiten, Domain-Namen u.a. zu erstellen und vieles mehr.<br /><br />Du kannst so bestimmte Prozesse wie das Erstellen von Aufgaben und Informationen (z.B. das Einsehen bestimmter Statistiken in Echtzeit) automatisieren. Frag' in unserem <a href='https://community.olympe.in'>Supportforum</a> nach, um mehr über die Funktionsfähigkeit von API zu erfahren."
+sources = "Wir sind Open-Source!"
+sources_text = "Olympe ist eine Non-Profit-Organisation, die sich mit der Welt des Open-Source befasst. Die <a href='/developers/tools'>Tools</a>, die wir entwickelt haben (PHP-Module, API, Skripte...), sind offen für alle und frei verfügbar. Du kannst dich an Fortschritt und Verbesserung beteiligen.<br /><br />Zudem ist diese Website und der gesamte Kontrollbereich für Nutzer bei <a href='https://github.com/OlympeNetwork'>GitHub</a> aufrufbar, um dir die Möglichkeit zu geben, Funktionen zu verbessern oder zu entwickeln, die brauchen könntest."

@@ -10,6 +10,8 @@ $(function()
 	newFlexibleDialog('changepass', 350);
 	newFlexibleDialog('cookie', 700);
 	
+	$(".ui-dialog-titlebar").hide();
+
 	// CONNECTOR RATING //
 	$('.star').raty(
 	{
@@ -41,14 +43,6 @@ $(function()
 		}
 	});
 	
-	// EDITOR
-	$(".formeditor").sceditor({
-			plugins: "bbcode",
-			toolbar: "bold,italic,underline|code,quote,horizontalrule,image,email,link,unlink|source",
-    });
-	
-	$(".ui-dialog-titlebar").hide();
-	
 	// CATEGORIES MENU //
 	$('.scategory').hover(
 		function () {
@@ -65,12 +59,21 @@ $(function()
 	{
 		if( $(window).scrollTop() > num )
 		{
-			$('.menu-fixed').addClass('fixed');
+			$('.menu-fixed, #search-admin-form').addClass('fixed');
 		}
 		else
 		{
-			$('.menu-fixed').removeClass('fixed');
+			$('.menu-fixed, #search-admin-form').removeClass('fixed');
 		}
+	});
+	
+	// SUBMIT BUTTON DISABLED AFTER CLICKING, AND RE-ENABLED 2 SECONDS AFTER
+	$('input[type="submit"], button[type="submit"]').click(function(){
+		var btn = $(this);
+		btn.prop('disabled', true);
+		setTimeout(function(){
+			btn.removeAttr('disabled');
+		}, 2000);
 	});
 });
 
@@ -142,6 +145,9 @@ function showLogin()
 {
 	if( $("#signupform").css('display') != 'none' )
 		$("#signupform").css('display', 'none');
+	
+	$('#signupform').find('input[type="submit"]').removeAttr('autofocus');
+	$('#loginform').find('input[type="submit"]').attr('autofocus', '');
 		
 	var options = { direction: "up"};
 	$("#loginform").toggle("blind", options, 200);
@@ -150,6 +156,9 @@ function showSignup()
 {
 	if( $("#loginform").css('display') != 'none' )
 		$("#loginform").css('display', 'none');
+	
+	$('#loginform').find('input[type="submit"]').removeAttr('autofocus');
+	$('#signupform').find('input[type="submit"]').attr('autofocus', '');
 		
 	var options = { direction: "up"};
 	$("#signupform").toggle("blind", options, 200);

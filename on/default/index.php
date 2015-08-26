@@ -8,27 +8,32 @@ if( !defined('PROPER_START') )
 
 $content = "
 			<div class=\"head\">
-				<br />
-				<div id=\"homepage\">
-					<h1>{$lang['title']}</h1>
-					<h2 style=\"margin: 15px auto;\">{$lang['subtitle']}</h2>
-					
-				</div>
-				<br />
+				<div>
+					<br />
+					<div id=\"homepage\">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/computer.png\" alt=\"\" class=\"animated fadeInRight\" />
+						<h1 class=\"fadeInLeft animated\">{$lang['title']}</h1>
+						<h2 class=\"fadeInLeft animated\">{$lang['subtitle']}</h2>
+					</div>
+					<br />
 ";
 
 if( $security->hasAccess('/panel') )
 {
 	$content .= "
-				<a class=\"button main\" href=\"/panel\">{$lang['panel']}</a>
-				<span class=\"light\">{$lang['logged']} <span style=\"color: #ffffff;\">".security::get('USER')."</span>.</span>
+					<div class=\"homepage_button fadeInUp animated\">
+						<a class=\"button main\" href=\"/panel\">{$lang['panel']}</a>
+						<a class=\"button main second\" href=\"/panel/settings\"><i class=\"fa fa-user\"></i> ".security::get('USER')."</a>
+					</div>
 	";
 }
 else
 {
 	$content .= "
-				<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
-				<span class=\"light\"><a href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a></span>
+					<div class=\"homepage_button fadeInUp animated\">
+						<a class=\"button main\" href=\"#\" onclick=\"showSignup(); return false;\">{$lang['signup']}</a>
+						<a class=\"button main second\" href=\"#\" onclick=\"showLogin(); return false;\">{$lang['login_now']}</a>
+					</div>
 	";
 }
 
@@ -36,7 +41,8 @@ if( !isset($_SESSION['ANTISPAM']) )
 	$_SESSION['ANTISPAM'] = md5(time().'olympe');
 
 $content .= "
-				<br />
+					<div class=\"clear\"></div>
+				</div>
 			</div>
 			<noscript>
 				<div class=\"noscript-alert\">
@@ -48,13 +54,18 @@ $content .= "
 					<form action=\"/login_action\" method=\"post\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"{$lang['username']}\" name=\"username\" onfocus=\"this.value = this.value=='{$lang['username']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['username']}' : this.value; this.value=='{$lang['username']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"text\" placeholder=\"{$lang['ph_username']}\" name=\"username\" />
+								<span class=\"help-block\">{$lang['lab_username']}</span>
+							</label>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" type=\"password\" value=\"{$lang['password']}\" name=\"password\" onfocus=\"this.value = this.value=='{$lang['password']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['password']}' : this.value; this.value=='{$lang['password']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\"/>
-							".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['register']}</span>")."
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"password\" placeholder=\"**************\" name=\"password\" />
+								".(isset($_GET['elogin'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['auth']}</span>":"<span class=\"help-block\">{$lang['lab_password']}</span>")."
+							</label>
 						</fieldset>
-						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\"  value=\"{$lang['login']}\" />											
+						<input type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\"  value=\"{$lang['login']}\" />											
 					</form>
 				</div>
 			</div>
@@ -63,13 +74,18 @@ $content .= "
 					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
 						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"{$lang['email']}")."\" name=\"email\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<label class=\"clean\">
+								<input class=\"auto\" type=\"text\" placeholder=\"john@example.com\" value=\"".($_SESSION['JOIN_EMAIL']?"{$_SESSION['JOIN_EMAIL']}":"")."\" name=\"email\" />
+								<span class=\"help-block\">{$lang['email']}</span>
+							</label>
 						</fieldset>
 						<fieldset>
-							<input type=\"checkbox\" name=\"conditions\" value=\"1\" />
-							{$GLOBALS['lang']['conditions']}
+							<label class=\"clean\">
+								<input type=\"checkbox\" name=\"conditions\" value=\"1\" />
+								{$GLOBALS['lang']['conditions']}
+							</label>
 						</fieldset>
-						<input autofocus type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
+						<input type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
 					</form>
 				</div>
 			</div>
@@ -77,21 +93,21 @@ $content .= "
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
 						<a href=\"/service/hosting\" class=\"hfree\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"red\">{$lang['free']}</h3>
 						</a>
 						<p>{$lang['free_text']}</p>
 					</div>
 					<div class=\"hinnovation\">
 						<a href=\"/service/infrastructure\" class=\"hinnovation\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"blue\">{$lang['innovation']}</h3>
 						</a>
 						<p>{$lang['innovation_text']}</p>
 					</div>
 					<div class=\"hopen\">
 						<a href=\"/developers\" class=\"hopen\">
-							<span></span>
+							<span class=\"zoomIn animated\"></span>
 							<h3 class=\"green\">{$lang['open']}</h3>
 						</a>
 						<p>{$lang['open_text']}</p>

@@ -421,8 +421,8 @@ $content .= "
 if( security::hasGrant('USER_SELECT') )
 {
 	$content .= "			
-				<h2 class=\"dark\">{$lang['infos']}</h2>
 				<form action=\"/admin/users/update_action\" method=\"post\">
+					<h2 class=\"dark\">{$lang['infos']}</h2>
 					<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"password\" name=\"pass\" />
@@ -433,16 +433,24 @@ if( security::hasGrant('USER_SELECT') )
 						<span class=\"help-block\">{$lang['confirm_help']}</span>
 					</fieldset>
 					<fieldset>
-						<input style=\"width: 300px;\" type=\"text\" name=\"date\" value=\"".date($lang['dateformat'], $user['date'])."\" disabled />
-						<span class=\"help-block\">{$lang['date_help']}</span>
-					</fieldset>
-					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"email\" value=\"{$user['email']}\" />
 						<span class=\"help-block\">{$lang['email_help']}</span>
 					</fieldset>
 					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"date\" value=\"".date($lang['dateformat'], $user['date'])."\" disabled />
+						<span class=\"help-block\">{$lang['date_help']}</span>
+					</fieldset>
+					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"ip\" value=\"{$user['ip']}\" disabled />
 						<span class=\"help-block\">{$lang['ip_help']} - <a href=\"http://www.ipgetinfo.com/?mode=ip&ip={$user['ip']}\" target=\"_blank\">(whois)</a></span>
+					</fieldset>
+					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"ip\" value=\"".($user['last_login_date']==0?$lang['last_login_never']:date($lang['dateformat'], $user['last_login_date']))."\" disabled />
+						<span class=\"help-block\">{$lang['last_login_help']}</span>
+					</fieldset>
+					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"ip\" value=\"{$user['last_login_ip']}\" disabled />
+						<span class=\"help-block\">{$lang['last_ip_help']} - <a href=\"http://www.ipgetinfo.com/?mode=ip&ip={$user['last_login_ip']}\" target=\"_blank\">(whois)</a></span>
 					</fieldset>
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"firstname\" value=\"{$user['firstname']}\" />
@@ -451,10 +459,6 @@ if( security::hasGrant('USER_SELECT') )
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"lastname\" value=\"{$user['lastname']}\" />
 						<span class=\"help-block\">{$lang['lastname_help']}</span>
-					</fieldset>
-					<fieldset>
-						<input style=\"width: 300px;\" type=\"text\" name=\"language\" placeholder=\"{$lang['lang_NO']}\" value=\"{$lang['lang_'.$user['language']]}\" disabled />
-						<span class=\"help-block\">{$lang['language_help']}</span>
 					</fieldset>
 					<fieldset>
 						<input type=\"hidden\" name=\"action\" value=\"update_user_infos\" />

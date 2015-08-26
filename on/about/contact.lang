@@ -1,10 +1,10 @@
 ﻿[EN]
 title = "Contact us"
 send = "Send us a message"
-send_text = "You have a problem with the usage of our services ? You can not find the answer in the <a href='https://www.olympe.in/doc'>documentation</a> ?
-<br />Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests by email.
+send_text = "Do you have a problem with the usage of our services ? Aren't you able to find the answer in the <a href='https://www.olympe.in/doc'>documentation</a> ? 
+Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests by email.
 <br /><br /> If you need more information about our services or simply want be in touch with us, you can fill the following form."
-infos = "Informations"
+infos = "Information"
 meet = "Meet us"
 meet_text = "Olympe is a non-profit organization, its head office is located in Paris, France."
 name = "Name"
@@ -16,18 +16,18 @@ follow = "Follow us"
 news = "News"
 account = "Olympe account (if any)"
 report = "Report inappropriate content"
-report_text = "In accordance with France's Digital Economy Law no. 2004-575 of 21 June 2004, <strong>you can inform us of any content, hosted by Olympe, which may characterize a criminal offense</strong>, 
+report_text = "In accordance with France's Digital Economy Law no. 2004-575 of 21 June 2004, <strong>you can inform us about any content, hosted by Olympe, which may characterize a criminal offense</strong>, 
 including offenses of crimes against humanity apology, incitement to racial hatred and child pornography. 
 <br /><br />
 We remind you that, according to this law, the fact to flag any content or activity as illegal in order to obtain the withdrawal or to stop the broadcast while knowing this information to be inaccurate 
 <strong>may be liable to legal action</strong>.
 <br /><br />
-<strong>To report any content, thank you to send an email to the following address: <a href='#'>abuse<img src='/on/images/thin-arobase-2.png'>olympe.in</a> with: 
+<strong>To report any content, thank you for sending an email to the following address: <a href='#'>abuse<img src='/on/images/thin-arobase-2.png'>olympe.in</a> with: 
 <ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
 <li style='padding-left: 10px; padding-bottom: 10px;'>your name and full contact details,</li>
 <li style='padding-left: 10px; padding-bottom: 10px;'>the address of the relevant page(s),</li>
 <li style='padding-left: 10px; padding-bottom: 10px;'>the reason for your request,</li>
-<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>the copy of the correspondence sent to the activities' author or publisher, requesting interruption, withdrawal or modification, 
+<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>the copy of the correspondence sent to the author or publisher of the illegal actions, requesting interruption, withdrawal or modification, 
 or justification that they could not be contacted.</li>
 </ul>"
 email_wrong = "Your email address format is wrong."
@@ -38,11 +38,12 @@ type = "Task Type"
 category = "Category"
 date = "Date"
 status = "Status"
+resume = "Summary"
 updated = "Last update"
+tracker_1 = "Incident"
 tracker_2 = "Development"
-tracker_4 = "Intervention"
-tracker_5 = "Incident"
-tracker_6 = "Maintenance"
+tracker_3 = "Assistance"
+tracker_8 = "Task"
 status2_1 = "New"
 status2_2 = "In progress"
 status2_7 = "Planned"
@@ -58,72 +59,11 @@ priority_4 = "Urgent"
 priority_5 = "Instant"
 priority = "Priority"
 
-[ES]
-title = "Contactarnos"
-send = "Envianos un mensaje"
-send_text = "Tienes un problema con el uso de nuestros servicios ? No has encontrado la respuesta en la <a href='/doc'>documentación</a> ?
-<br />Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
-<br /><br />Si necesitas más informaciónes sobre nuestros servicios o si simplemente quieres contactarnos, puede rellenar el siguiente formulario."
-infos = "Informaciónes"
-meet = "Encuéntranos"
-meet_text = "Olympe es una asociación sin fines de lucro, el domicilio se encuentra in Paris, France."
-name = "Nombre"
-email = "Email"
-subject = "Objeto"
-message = "Mensaje"
-send_now = "Enviar"
-follow = "Siguenos"
-news = "Actualidad"
-account = "Olympe cuenta (si estás registrado)"
-report = "Contenido inapropiado"
-report_text = "De conformidad con la Ley de Economía Digital de Francia no. 2004-575 de 21 de junio de 2004, <strong>puedes informarnos de cualquier contenido, alojado por Olympe, que puede caracterizar 
-un delito</strong>, 
-incluidas las infracciones de apología de crímenes de lesa humanidad, la incitación al odio racial y la pornografía infantil.
-<br /><br />
-Recordamos que, en acuerdo con esta ley, el hecho de presentar cualquier contenido o actividad ilegal con el fin de obtener el retiro o para detener la difusión, sabiendo que esa información es inexacta 
-<strong>puede incurrir la responsabilidad legal</strong>.
-<br /><br />
-<strong>Para informarnos de cualquier contenido, por favor envias un email a la siguiente dirección:</strong> <a href='mailto:abuse@olympe.in'>abuse@olympe.in</a> con : 
-<ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
-<li style='padding-left: 10px; padding-bottom: 10px;'>su identidad y sus datos de contacto,</li>
-<li style='padding-left: 10px; padding-bottom: 10px;'>la(s) dirección(s) de la(s) página(s) en cuestión,</li>
-<li style='padding-left: 10px; padding-bottom: 10px;'>la razón de su solicitud,</li>
-<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>la copia de la correspondencia enviada a el autor o el editor de las actividades ilícitas, para solicitar su interrupción, retirada
-o modificación, o la justificación de lo que el autor o el editor no pudieron ser contactados.</li>
-</ul>"
-email_wrong = "Su formato de dirección email es erróneo."
-intervention = "No intervenciones planificadas o en curso."
-unavailable = "Información no disponible."
-issues = "Intervenciones en curso"
-type = "Tipo de tarea"
-category = "Categoría"
-date = "Fecha"
-status = "Estado"
-updated = "Última actualización"
-tracker_2 = "Desarrollo"
-tracker_4 = "Intervención"
-tracker_5 = "Incidentes"
-tracker_6 = "Mantenimientos"
-status2_1 = "Nuevo"
-status2_2 = "En curso"
-status2_7 = "Planificado"
-status2_9 = "Completado"
-dateformatsimple = "d/m/Y"
-dateformat = "d/m/Y H:i:s"
-project_5 = "Panel de gestión"
-project_6 = "Infraestructura"
-priority_1 = "Baja"
-priority_2 = "Normal"
-priority_3 = "Alto"
-priority_4 = "Urgente"
-priority_5 = "Inmediata"
-priority = "Prioridad"
-
 [FR]
 title = "Contactez nous"
 send = "Envoyez-nous un message"
-send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Vous ne trouvez pas la réponse dans la <a href='https://www.olympe.in/doc'>documentation</a> ?
-<br /> Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
+send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Vous ne trouvez pas la réponse dans la <a href='https://www.olympe.in/doc'>documentation</a> ? 
+Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
 <br /><br /> Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
 infos = "Informations"
 meet = "Nous rencontrer"
@@ -144,11 +84,12 @@ type = "Type de tâche"
 category = "Catégorie"
 date = "Date"
 status = "Statut"
+resume = "Résumé"
 updated = "Dernière mise à jour"
+tracker_1 = "Incident"
 tracker_2 = "Evolution"
-tracker_4 = "Intervention"
-tracker_5 = "Incident"
-tracker_6 = "Maintenance"
+tracker_3 = "Assistance"
+tracker_8 = "Tâche"
 status2_1 = "Nouveau"
 status2_2 = "En cours"
 status2_7 = "Planifié"
@@ -165,7 +106,7 @@ priority_5 = "Immédiat"
 priority = "Priorité"
 report = "Signaler un contenu illicite"
 report_text = "Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, vous avez la possibilité de <strong>nous informer de tout contenu, hébergé par Olympe, 
-susceptible de caractériser une infraction pénale</strong>, notamment les infractions d'apologie de crimes contre l’humanité, d'incitation à la haine raciale, et de pornographie enfantine.
+susceptible de caractériser une infraction pénale</strong>, notamment les infractions d'apologie de crimes contre l'humanité, d'incitation à la haine raciale, et de pornographie enfantine.
 <br /><br />
 Nous vous rappelons que l'article 4 de la loi prévoit que le fait de présenter <em>« un contenu ou une activité comme étant illicite dans le but d'en obtenir le retrait ou d'en faire cesser la diffusion, 
 alors qu'elle sait cette information inexacte, <strong>est puni</strong> d'une peine d'un an d'emprisonnement et de 15 000 Euros d'amende »</em>.
@@ -179,71 +120,72 @@ alors qu'elle sait cette information inexacte, <strong>est puni</strong> d'une p
 ou leur modification, ou la justification de ce que l'auteur ou l'éditeur n'a pu être contacté.</li>
 </ul>"
 
-[DE]
-title = "Kontakt"
-send = "Schreiben Sie uns"
-send_text = "Haben Sie ein Problem mit der Nutzung der Plattform ?  Finden Sie keine Antwort auf Ihre Frage in unserer <a href='https://www.olympe.in/doc'>Dokumentation</a> ?
-<br /> Sollten Sie Fragen haben, können Sie <a href='https://community.olympe.in'>das Forum</a> verwenden. Technischen Fragen werden nicht beantworten werden.
-<br /><br /> Wenn Sie mehr Informationen über unserer Leistungen oder wenn Sie Ihnen einfach mit uns in Verbindung setzen möchten, bitte fühlen Sie das Kontaktformular aus."
-infos = "Informationen"
-meet = "Treffen Sie uns"
-meet_text = "Olympe ist eine Non-Profit-Vereinigung, deren Betriebssitz in Paris, Frankreich steht."
-name = "Name"
-email = "E-Mail-Adresse"
-subject = "Anliegen"
-message = "Nachricht "
-send_now = "Senden"
-follow = "Follow us"
-news = "Nachrichten"
-account = "Olympe Account(wenn vorhanden)"
-email_wrong = "Das Format der e-Mail-Adresse ist falsch"
-report = "Illegale Inhalte melden"
-report_text = "Gemäß Gesetz Nr. 2004-575 der 21. Juni 2004 über das Vertrauen in die digitale Wirtschaft, haben Sie die Möglichkeit uns von Olympus, gehosteten Inhalte <strong> zu informieren<strong>
-voraussichtlich eine strafbare Handlung charakterisieren </strong>, einschließlich Straftaten der Entschuldigung der Verbrechen gegen die Menschlichkeit, Anstiftung zum Rassenhass und Kinderpornographie.
-<br /><br/>
-Wir erinnern Sie daran, dass Artikel 4 des Gesetzes bereitstellt, das Scheitern <em> einreichen 'Inhalte oder Aktivitäten als illegaler sucht die Rücknahme oder die Sendung zu stoppen' während sie diese ungenaue Informationen kennt, 
-ist <strong> bestraft </strong> eine Strafe von einem Jahr in Haft und Geldstrafe von 15.000 Euro </em>.
-<br/><br/>
-<strong>Illegale Inhalte melden, senden Sie bitte eine e-Mail an folgende Adresse: </strong ><a href = 'mailto:abuse@olympe.in'> abuse@olympe.in </a>, einschließlich: 
+[ES]
+title = "Contactarnos"
+send = "Envianos un mensaje"
+send_text = "Tienes un problema con el uso de nuestros servicios ? No has encontrado la respuesta en la <a href='/doc'>documentación</a> ?
+Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
+<br /><br />Si necesitas más informaciónes sobre nuestros servicios o si simplemente quieres contactarnos, puede rellenar el siguiente formulario."
+infos = "Informaciónes"
+meet = "Encuéntranos"
+meet_text = "Olympe es una asociación sin fines de lucro, el domicilio se encuentra in Paris, France."
+name = "Nombre"
+email = "Email"
+subject = "Objeto"
+message = "Mensaje"
+send_now = "Enviar"
+follow = "Siguenos"
+news = "Actualidad"
+account = "Olympe cuenta (si estás registrado)"
+report = "Contenido inapropiado"
+report_text = "De conformidad con la Ley de Economía Digital de Francia no. 2004-575 de 21 de junio de 2004, <strong>puedes informarnos de cualquier contenido, alojado por Olympe, que pueda suponer
+un delito</strong>, 
+incluidas las infracciones de apología de crímenes contra la humanidad, la incitación al odio racial y la pornografía infantil.
+<br /><br />
+Recordamos que, en acuerdo con esta ley, el hecho de presentar cualquier contenido o actividad ilegal con el fin de obtener la retirada o para detener la difusión, sabiendo que esa información es inexacta 
+<strong>puede incurrir la responsabilidad legal</strong>.
+<br /><br />
+<strong>Para informarnos de cualquier contenido, por favor envianos  un email a la siguiente dirección:</strong> <a href='mailto:abuse@olympe.in'>abuse@olympe.in</a> con : 
 <ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
-<li style='padding-left: 10px; padding-bottom: 10px;'>Ihre vollständige Identität,</li>
-<li style='padding-left: 10px; padding-bottom: 10px;'>die Adresse der Seite betrifft/den Seiten betroffen </li>
-<li style='padding-left: 10px; padding-bottom: 10px;'>der Grund für Ihre Anfrage,</li>
-<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>die Kopie der Korrespondenz an den Autor oder an die Redaktion der umstrittenen Aktivitäten Fragen ihre Unterbrechung, ihren Rückzug 
-Ihre Änderung oder Begründung für was der Autor oder Herausgeber konnte kontaktiert werden.</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>su identidad y sus datos de contacto,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>la(s) dirección(s) de la(s) página(s) en cuestión,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>la razón de su solicitud,</li>
+<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>la copia de la correspondencia enviada al autor o editor las actividades \", solicitando la interrupción, supresión o modificación, o la justificación de que no podían ser contactados.</li>
 </ul>"
-intervention = "Nicht oder geplante Eingriffe."
-unavailable = "Keine Daten vorhanden."
-issues = "Ongoing interventions"
-type = "Task Type"
-category = "Category"
-date = "Date"
-status = "Status"
-updated = "Last update"
-tracker_2 = "Development"
-tracker_4 = "Intervention"
-tracker_5 = "Incident"
-tracker_6 = "Maintenance"
-status2_1 = "New"
-status2_2 = "In progress"
-status2_7 = "Planned"
-status2_9 = "Completed"
+email_wrong = "Su formato de dirección email es erróneo."
+intervention = "No hay intervenciones planificadas o en curso."
+unavailable = "Información no disponible."
+issues = "Intervenciones en curso"
+type = "Tipo de tarea"
+category = "Categoría"
+date = "Fecha"
+status = "Estado"
+resume = "Resumen"
+updated = "Última actualización"
+tracker_1 = "Incidentes"
+tracker_2 = "Desarrollo"
+tracker_3 = "Asistencia"
+tracker_8 = "Tarea"
+status2_1 = "Nuevo"
+status2_2 = "En curso"
+status2_7 = "Planificado"
+status2_9 = "Completado"
 dateformatsimple = "d/m/Y"
 dateformat = "d/m/Y H:i:s"
-project_5 = "Management Panel"
-project_6 = "Infrastructure"
-priority_1 = "Low"
+project_5 = "Panel de gestión"
+project_6 = "Infraestructura"
+priority_1 = "Baja"
 priority_2 = "Normal"
-priority_3 = "High"
-priority_4 = "Urgent"
-priority_5 = "Instant"
-priority = "Priority"
+priority_3 = "Alto"
+priority_4 = "Urgente"
+priority_5 = "Inmediata"
+priority = "Prioridad"
 
 [IT]
 title = "Contattaci"
 send = "Mandaci un messaggio"
 send_text = "Hai problemi con l'utilizzare i nostri servizi ? Non sei riuscito a trovare la soluzione nella <a href='https://www.olympe.in/doc'>documentazione</a> ?
-<br />Perfavore, utilizza la <a href='https://community.olympe.in'>community</a> per rispondere alla tua domanda, non rispondiamo a domande di natura tecnica per email.
+Perfavore, utilizza la <a href='https://community.olympe.in'>community</a> per rispondere alla tua domanda, non rispondiamo a domande di natura tecnica per email.
 <br /><br /> Se ti servono più informazioni sui nostri servizi o semplicemente vuoi entrare in contatta con noi, puoi completare il seguente form."
 infos = "Informazioni"
 meet = "Incontraci"
@@ -279,11 +221,12 @@ type = "Tipo di attività"
 category = "Categoria"
 date = "Data"
 status = "Stato"
+resume = "Riepilogo"
 updated = "Ultimo aggiornamento"
+tracker_1 = "Problema"
 tracker_2 = "Sviluppo"
-tracker_4 = "Intervento"
-tracker_5 = "Problema"
-tracker_6 = "Manutenzione"
+tracker_3 = "Assistenza"
+tracker_8 = "Compito"
 status2_1 = "Nuovo"
 status2_2 = "In corso"
 status2_7 = "Pianificato"
@@ -298,3 +241,60 @@ priority_3 = "Alto"
 priority_4 = "Urgente"
 priority_5 = "Instantaneo"
 priority = "Priorità"
+
+[DE]
+title = "Kontaktformular"
+send = "Schreib' uns eine Nachricht!"
+send_text = "Hast du ein Problem mit der Nutzung von Olympe?  Findest du keine Antwort auf deine Frage in unserem <a href='https://www.olympe.in/doc'>Handbuch</a> ? Solltest du Fragen haben, kannst du <a href='https://community.olympe.in'>unser Supportforum</a> verwenden. Technische Fragen werden jedoch nicht per E-Mail von uns beantwortet!
+<br /><br /> Wenn du jedoch mehr Informationen über Olympe erfahren oder einfach nur mit uns in Kontakt treten möchtest, dann fülle das Kontaktformular unten aus."
+infos = "Informationen"
+meet = "Treffe uns!"
+meet_text = "Olympe ist eine Non-Profit-Organisation, die ihren Betriebssitz in Paris, Frankreich stehen hat. "
+name = "Name"
+email = "E-Mail-Adresse"
+subject = "Titel"
+message = "Nachricht "
+send_now = "Senden"
+follow = "Folge uns!"
+news = "News"
+account = "Olympe-Account (falls vorhanden)"
+email_wrong = "Das Format der E-Mail-Adresse ist ungültig."
+report = "Illegale Inhalte melden"
+report_text = "Gemäß Gesetz Nr. 2004-575 des 21. Juni 2004 über das Vertrauen in die digitale Wirtschaft, <strong>hast du die Möglichkeit uns von Olympus über jegliche gehosteten Inhalte zu informieren, die eine strafbare Handlung charakterisieren</strong>, einschließlich Straftaten oder Verbrechen gegen die Menschlichkeit, Anstiftung zum Rassenhass und Kinderpornographie.
+<br /><br/>
+Im Bezug auf Artikel 4 dieses Gesetzes weisen wir jedoch darauf hin, dass das Melden von Inhalten und Aktivitäten als illegal, wohlwissend, dass diese Information falsch ist, um die Entfernung und Löschung oder Offlinenahme dieser Inhalte zu erreichen, <strong>mit einer Haftstrafe von einem Jahr und einer Geldstrafe von 15.000 Euro bestraft werden kann</strong>
+<br/><br/>
+<strong>Um illegale Inhalte zu melden, sende bitte eine E-Mail an folgende Adresse: </strong ><a href = 'mailto:abuse@olympe.in'> abuse@olympe.in </a>, mit folgenden Daten: 
+<ul style='margin-left: 40px; list-style: disc; font-size: 13px;'>
+<li style='padding-left: 10px; padding-bottom: 10px;'>deinem Namen und vollständigen Kontaktdaten,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>der/den Adresse(n) aller relevanten Seiten,</li>
+<li style='padding-left: 10px; padding-bottom: 10px;'>dem Grund für deine Anfrage,</li>
+<li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>einer Kopie des Schriftverkehrs an den Autor oder an die Redaktion der umstrittenen Aktivitäten und Inhalte, in der Unterbrechung, Rücknahme oder Änderung dieser Inhalte gefordert wurde oder die Begründung, dass der Herausgeber nicht kontaktiert werden konnte, ersichtlich ist.</li>
+</ul>"
+intervention = "Keine geplanten Eingriffe oder aktuellen Störungen"
+unavailable = "Keine Informationen vorhanden."
+issues = "Aktuelle Eingriffe"
+type = "Vorgangsart"
+category = "Kategorie"
+date = "Datum"
+status = "Status"
+resume = "Zusammenfassung"
+updated = "Letztes Update"
+tracker_1 = "Vorfall"
+tracker_2 = "Entwicklung"
+tracker_3 = "Unterstützung"
+tracker_8 = "Aufgabe"
+status2_1 = "Neu"
+status2_2 = "Durchgeführt"
+status2_7 = "Geplant"
+status2_9 = "Abgeschlossen"
+dateformatsimple = "d.m.Y"
+dateformat = "d.m.Y H:i:s"
+project_5 = "Verwaltungsbereich"
+project_6 = "Infrastruktur"
+priority_1 = "Gering"
+priority_2 = "Normal"
+priority_3 = "Hoch"
+priority_4 = "Dringend"
+priority_5 = "Unverzüglich"
+priority = "Priorität"

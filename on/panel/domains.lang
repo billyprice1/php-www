@@ -107,7 +107,7 @@ this domain name by an external service, a registrar. For more information, <a h
 name = "domain.com"
 tipname = "Without <i>www</i>. Eg : toto.com, titi.ru"
 tipsite = "Website concerned"
-folder = "Zielordner"
+folder = "Folder"
 foldertip = "Name of the folder<br />An empty value makes a redirection to the root of the Web site."
 create = "Create"
 delete = "Delete this domain"

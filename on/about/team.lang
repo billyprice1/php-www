@@ -13,11 +13,10 @@ remi = "Education Officer<br />Administrator / Support"
 tristan = "Student<br />Administrator / Developer"
 you = "You?"
 join = "Join"
-
 hiring = "We're hiring !"
 hiring_text = "Olympe is currently searching for new staff members. Of course, this is a volunteer and remote work, but if you are interested in infrastructure technologies,
-developing, or the community management, you could <a href='/about/contact'>contact us</a> and explain us your wish. 
-<br /><br />As a staff member, you become a fully adherent to the association Olympe, and by the way you could represent the association during conferences or meetings."
+developing, or the community management, you could <a href='/about/contact'>contact us</a> and explain to us your wish. 
+<br /><br />As a staff member, you become a fully adherent to the association Olympe and you could represent the association during conferences or meetings."
 contact = "Contact us"
 help = "Join our team"
 
@@ -28,19 +27,18 @@ sam = "Ingeniero<br />Co-fundador"
 simon = "Ingeniero<br />Co-fundador"
 bruno = "Ingeniero<br />Administrador"
 gaetan = "Ingeniero<br />Administrador"
-thomas = "Estudiante<br />Administrador / Developer"
+thomas = "Estudiante<br />Administrador / Desarrollador"
 herve = "Estudiante<br />Administrador / Soporte"
-gael = "Ingeniero<br />Administrador / Developer"
-romain = "Estudiante<br />Administrador / Developer"
+gael = "Ingeniero<br />Administrador / Desarrollador"
+romain = "Estudiante<br />Administrador / Desarrollador"
 remi = "Educador<br />Administrador / Soporte"
-tristan = "Estudiante<br />Administrador / Developer"
+tristan = "Estudiante<br />Administrador /Desarrollador"
 you = "Usted?"
 join = "Únete"
-
 hiring = "¡Estamos reclutando!"
 hiring_text = "Olympe está buscando nuevos miembros en el staff. Por supuesto, es un trabajo voluntario y a distancia, pero si estás interesado en las tecnologías de infraestructura,
-desarrollo o la gestión de la comunidad, puedes <a href='/about/contact'>contactarnos</a> y explicarnos su deseo.
-<br /><br />Como miembro del staff, estás automáticamente miembro de la asociación Olympe, y puedes representar a la asociación durante las conferencias o reuniones."
+desarrollo o la gestión de la comunidad, puedes <a href='/about/contact'>contactarnos</a> y explicarnos tu deseo.
+<br /><br />Como miembro del staff, eres automáticamente miembro de la asociación Olympe, y puedes representar a la asociación durante las conferencias o reuniones."
 contact = "Contactarnos"
 help = "Únase a nosotros"
 
@@ -59,36 +57,31 @@ remi = "Agent d'éducation<br />Administrateur / Support"
 tristan = "Étudiant<br />Administrateur / Développeur"
 you = "Vous?"
 join = "Rejoindre"
-
 hiring = "Nous recrutons !"
-hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
-le développement web ou les interactions communautaires, vous pouvez nous <a href='/about/contact'>contacter</a> en nous expliquant votre démarche.
+hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure, le développement web ou les interactions communautaires, vous pouvez nous <a href='/about/contact'>contacter</a> en nous expliquant votre démarche.
 <br /><br />En tant que membre de l'équipe, vous devenez pleinement adhérent à l'association Olympe et de ce fait vous avez la possibilité d'aller représenter l'association lors de salons ou de conférences."
 contact = "Contactez-nous"
 help = "Rejoignez notre équipe"
 
 [DE]
 title = "Unser Team"
-yann = "Engineer <br />Co-Gründer"
-sam = "Engineer <br />Co-Gründer"
-simon = "Engineer <br />Co-Gründer"
-bruno = "Engineer <br />Administrator"
-gaetan = "Engineer <br />Administrator"
+yann = "Entwickler<br />Co-Founder"
+sam = "Entwickler <br />Co-Founder"
+simon = "Entwickler <br />Co-Founder"
+bruno = "Entwickler <br />Administrator"
+gaetan = "Entwickler <br />Administrator"
 thomas = "Student <br />Administrator / IT-Entwickler"
 herve = "Student <br />Administrator / Support"
-gael = "Engineer<br />Administrator / IT-Entwickler"
+gael = "Entwickler<br />Administrator / IT-Entwickler"
 romain = "Student<br />Administrator / IT-Entwickler"
-remi = "Education Officer<br />Administrator / Support"
+remi = "Bildungsbeauftragter<br />Administrator / Support"
 tristan = "Student <br />Administrator / IT-Entwickler"
-you = "Sie?"
-join = "Beitreten"
-
-hiring = "Wir sind recruiting!"
-hiring_text = "Olympus sucht derzeit neue Mitglieder in die Entwicklungsteam. Es ist für Freiwilligenarbeit, aber wenn Sie IT-Infrastruktur, Web-Entwicklung oder Community-Interaktion interessiert sind, 
-können Sie Ihnen mit uns <a href='/about/contact'> in Verbindung setzen </a>"
-<br/><br/>
-contact = "Kontakt"
-help = "Verstärken Sie unser Team"
+you = "Du?"
+join = "Tritt uns bei!"
+hiring = "Wir suchen!"
+hiring_text = "Olympe sucht derzeit neue engagierte Mitglieder für das Entwicklungsteam. Die Arbeit ist freiwillig; aber wenn du an IT-Infrastruktur, Web-Entwicklung und Community-Interaktion interessiert bist, dann <a href='/about/contact'>tritt mit uns in Kontakt</a>."
+contact = "Kontaktiere uns!"
+help = "Werde Teil unseres Teams"
 
 [IT]
 title = "La squadra Olympe"
@@ -105,7 +98,6 @@ remi = "Education Officer<br />Amministratore / Supporto"
 tristan = "Studente <br />Amministratore / Sviluppatore"
 you = "Te?"
 join = "Aderire"
-
 hiring = "Stiamo reclutando!"
 hiring_text = "Olympe stà attualmente cercando per nuovi membri del personale. Certamente, questo è un lavoro volontario e da casa, ma se sei interessato nelle tecnologie delle infrastrutture,
 nello sviluppo, o nella gestione della community, puoi <a href='/about/contact'>contattarci</a> e spiegarci la tua richiesta. 

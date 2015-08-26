@@ -4,7 +4,6 @@ type = "Backup type"
 name = "Name"
 date = "Date"
 actions = "Actions"
-
 dateformat = "d/m/Y H:i:s"
 doc = "Documentation"
 delete = "Delete"
@@ -23,7 +22,6 @@ type = "Type del backup"
 name = "Nombre"
 date = "Fecha"
 actions = "Acciones"
-
 dateformat = "d/m/Y H:i:s"
 doc = "Documentación"
 delete = "Eliminar"
@@ -42,7 +40,6 @@ type = "Type de sauvegarde"
 name = "Nom"
 date = "Date"
 actions = "Actions"
-
 dateformat = "d/m/Y H:i:s"
 doc = "Documentation"
 delete = "Supprimer"
@@ -56,6 +53,23 @@ aucune sauvegarde à sa place, et ne saura en être tenu pour responsable. Cet o
 et de les conserver hors-ligne. Olympe ne saurait être tenu pour responsable de l'absence de sauvegarde existante pour un site, ou de la mauvaise qualité, ou de l'indisponibilité d'une 
 sauvegarde effectuée mais non-enregistrée par l'utilisateur."
 
+[DE]
+title = "Backups"
+type = "Backup type"
+name = "Name"
+date = "Date"
+actions = "Actions"
+dateformat = "d/m/Y H:i:s"
+doc = "Documentation"
+delete = "Delete"
+delete_text = "Are you sure you want to delete this backup?"
+delete_now = "Confirm"
+type_database = "Databases"
+type_site = "Web site"
+nobackup = "You have no backup."
+disclaimer = "<strong>DISCLAIMER</strong> : User is solely responsible for performing regular backups of its sites and its databases. Olympe will not perform backup for him, and can 
+not be held responsible. This automatic backup tool does not release the user from his obligation to check the integrity of backups, and to keep it off-line. Olympe will not be held 
+responsible for the lack of existing backup for a site, or the bad quality, or the unavailability of a backup made but not saved by the user."
 
 [IT]
 title = "Backup"
@@ -63,7 +77,6 @@ type = "Tipo di Backup"
 name = "Nome"
 date = "Data"
 actions = "Azioni"
-
 dateformat = "d/m/Y H:i:s"
 doc = "Documentazione"
 delete = "Rimuovi"

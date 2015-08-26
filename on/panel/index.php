@@ -67,59 +67,107 @@ $content = "
 		</div>
 		<br />
 		<div class=\"sites\">
-			<div class=\"sitescontent\">
-				<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">";
+			<div class=\"sitescontent\">";
 				
-				$display = rand(0,3);
+				$display = rand(0,6);
 				$twitter_text = 'twitter_text_' . rand(1,2);
 				
 				switch ($display) {
 				case 0:
 					$content .= "
-					<img style=\"display: block; float: left; margin-right: 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
-					<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\" style=\"color:#5EA9DD\">{$lang['help_text']}</a> !</span><br /><br />
-					<span style=\"color: #6C6C6C; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>";
+					<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">
+						<img style=\"display: block; float: left; margin-right: 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/tax.png\" />
+						<span style=\"font-size: 16px; display: block; padding: 10px 0px 0px; float: left;\">{$lang['help']} <a href=\"/org/help\" style=\"color:#5EA9DD\">{$lang['help_text']}</a> !</span><br /><br />
+						<span style=\"color: #6C6C6C; left: -50px; display: block; font-size: 12px; position: relative; left:0px; bottom:0px\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>
+						<div class=\"clear\"></div>
+					</div>";
 					break;
 				case 1:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
-					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">
+						<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/social/twitter_icon.png\" />
+						<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['twitter']}</span><br /><br />
+						<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>
+						<div class=\"clear\"></div>
+					</div>";
 					break;
 				case 2:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 5px; width: 25px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
-					<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
-					<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
-						<a class=\"twitter-share-button\"
-						   href=\"https://twitter.com/share\"
-						  data-url=\"https://www.olympe.in\"
-						  data-via=\"OlympeNet\"
-						  data-text=\"{$lang[$twitter_text]}\"
-						  data-count=\"none\">
-						Tweet
-						</a>
-						<div class=\"fb-share-button\" data-href=\"https://www.olympe.in\" data-layout=\"button\" style=\"top: -5px; margin-left: 20px;\"></div>
+					<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">
+						<img style=\"display: block; float: left; margin: 5px; width: 25px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/love.png\" />
+						<span style=\"font-size: 18px; display: block; float: left; margin:5px 10px\">{$lang['like_us']}</span>
+						<div style=\"float: right; margin-top: 5px; margin-right: 25px;\">
+							<a class=\"twitter-share-button\"
+							   href=\"https://twitter.com/share\"
+							  data-url=\"https://www.olympe.in\"
+							  data-via=\"OlympeNet\"
+							  data-text=\"{$lang[$twitter_text]}\"
+							  data-count=\"none\">
+							Tweet
+							</a>
+							<div class=\"fb-share-button\" data-href=\"https://www.olympe.in\" data-layout=\"button\" style=\"top: -5px; margin-left: 20px;\"></div>
+						</div>
+						<div class=\"clear\"></div>
 					</div>";
 					break;
 				case 3:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 5px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/translate.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['translate']}</span><br /><br />
-					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['translate_help']}</span>";
+					<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">
+						<img style=\"display: block; float: left; margin: 5px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/translate.png\" />
+						<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['translate']}</span><br /><br />
+						<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['translate_help']}</span>
+						<div class=\"clear\"></div>
+					</div>";
 					break;
 				case 4:
 					$content .= "
-					<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/check.png\" />
-					<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
-					<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>";
+					<div style=\"width: 1080px; padding: 10px; background-color: #F07C3E; margin-bottom: 20px; color:white; border-radius: 3px;\">
+						<img style=\"display: block; float: left; margin: 5px 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/cost-guy.png\" />
+						<a class=\"animated infinite pulse\" style=\"color: white; float: right; background-color: rgb(237, 103, 31); padding: 10px; font-weight: bold; border-radius: 4px; font-size: 18px; margin-top: 25px; margin-right: 20px;\" href=\"http://www.tipeee.com/olympe-1\" target=\"_blank\"><i class=\"fa fa-chevron-right\"></i> {$lang['tip_button']}</a>
+						<div class=\"animated fadeInUp\" style=\"float: left; margin: 20px 15px;\">
+							<span style=\"font-size: 18px; display: block;\">{$lang['tip']}</span>
+							<span style=\"display: block; color: #ffceb5; font-size: 16px; margin-top:5px;\">{$lang['tip_help']}</span>
+						</div>
+						<div class=\"clear\"></div>
+					</div>";
+					break;
+				case 5:
+					$content .= "
+					<div style=\"width: 1080px; padding: 10px; background-color: #F07C3E; margin-bottom: 20px; color:white; border-radius: 3px;\">
+						<img style=\"display: block; float: left; margin: 5px 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/cost-guy.png\" />
+						<a class=\"animated infinite pulse\" style=\"color: white; float: right; background-color: rgb(237, 103, 31); padding: 10px; font-weight: bold; border-radius: 4px; font-size: 18px; margin-top: 25px; margin-right: 20px;\" href=\"http://www.tipeee.com/olympe-1\" target=\"_blank\"><i class=\"fa fa-chevron-right\"></i> {$lang['tip_button']}</a>
+						<div class=\"animated fadeInUp\" style=\"float: left; margin: 20px 15px;\">
+							<span style=\"font-size: 18px; display: block;\">{$lang['tip']}</span>
+							<span style=\"display: block; color: #ffceb5; font-size: 16px; margin-top:5px;\">{$lang['tip_help']}</span>
+						</div>
+						<div class=\"clear\"></div>
+					</div>";
+					break;
+				case 6:
+					$content .= "
+					<div style=\"width: 1080px; padding: 10px; background-color: #F07C3E; margin-bottom: 20px; color:white; border-radius: 3px;\">
+						<img style=\"display: block; float: left; margin: 5px 10px; width: 70px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/cost-guy.png\" />
+						<a class=\"animated infinite pulse\" style=\"color: white; float: right; background-color: rgb(237, 103, 31); padding: 10px; font-weight: bold; border-radius: 4px; font-size: 18px; margin-top: 25px; margin-right: 20px;\" href=\"http://www.tipeee.com/olympe-1\" target=\"_blank\"><i class=\"fa fa-chevron-right\"></i> {$lang['tip_button']}</a>
+						<div class=\"animated fadeInUp\" style=\"float: left; margin: 20px 15px;\">
+							<span style=\"font-size: 18px; display: block;\">{$lang['tip']}</span>
+							<span style=\"display: block; color: #ffceb5; font-size: 16px; margin-top:5px;\">{$lang['tip_help']}</span>
+						</div>
+						<div class=\"clear\"></div>
+					</div>";
+					break;
+				case 7:
+					$content .= "
+					<div style=\"width: 1080px; padding: 10px; background-color: #fff; margin-bottom: 20px;\">
+						<img style=\"display: block; float: left; margin: 10px 10px 10px; width: 40px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/check.png\" />
+						<span style=\"font-size: 16px; display: block; float: left; margin:5px 10px\">{$lang['join_us']}</span><br /><br />
+						<span style=\"display: block; color: #959595; font-size: 12px; position: relative; left:10px; bottom:8px\">{$lang['share']}</span>
+						<div class=\"clear\"></div>
+					</div>";
 					break;
 
 				}
 
 				$content .="
-				<div class=\"clear\"></div>
-				</div>
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
 						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button grey\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center; \">
