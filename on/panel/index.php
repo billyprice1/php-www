@@ -189,11 +189,11 @@ else
 	$content .= "
 							<form action=\"/panel/sites/add_action\" method=\"post\" class=\"center\">
 								<fieldset style=\"padding-top: 10px;\">
-									<input class=\"auto\" type=\"text\" placeholder=\"{$lang['name']}\" name=\"subdomain\" />
+									<input class=\"auto\" type=\"text\" placeholder=\"{$lang['name']}\" required name=\"subdomain\" />
 									<span class=\"help-block\">{$lang['tipsite']}</span>
 								</fieldset>
 								<fieldset>
-									<input class=\"auto\" type=\"password\" placeholder=\"{$lang['password']}\" name=\"password\" />
+									<input class=\"auto\" type=\"password\" placeholder=\"{$lang['password']}\" required name=\"password\" />
 									<span class=\"help-block\">{$lang['tippassword']}</span>
 								</fieldset>
 								<fieldset>	
