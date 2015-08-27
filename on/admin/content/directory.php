@@ -118,6 +118,7 @@ foreach( $selection as $s )
 $content .= "		
 				</table>
 			</div>
+			<div class=\"clear\"></div>
 		</div>
 	</div>
 
