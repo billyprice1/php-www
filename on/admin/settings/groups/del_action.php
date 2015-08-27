@@ -6,11 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('group/update', array('id'=>$_POST['id'], 'name'=>$_POST['name']));
-
+api::send('group/del', array('id'=>$_GET['id']));
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/groups/detail?id=' . $_POST['id']);
+	template::redirect('/admin/settings/group');
 
 ?>

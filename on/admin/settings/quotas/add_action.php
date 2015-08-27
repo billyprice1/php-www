@@ -6,11 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('group/add', array('name'=>$_POST['name']));
+api::send('quota/add', array('name'=>$_POST['name']));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/groups');
+	template::redirect('/admin/settings/quotas');
 
 ?>

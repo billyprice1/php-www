@@ -43,13 +43,13 @@ if( security::hasGrant('GRANT_GROUP_SELECT') )
 		if( security::hasGrant('GROUP_SELECT') )
 		{
 			$content .= "
-								<a href=\"/admin/groups/detail?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/preview.png\" alt=\"{$lang['detail']}\" /></a>";
+								<a href=\"/admin/settings/groups/detail?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/preview.png\" alt=\"{$lang['detail']}\" /></a>";
 		}
 	
 		if( security::hasGrant('GRANT_GROUP_DELETE') )
 		{
 			$content .= "
-								<a href=\"/admin/groups/revoke_action?group={$g['id']}&grant={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"{$lang['revoke']}\" /></a>";
+								<a href=\"/admin/settings/groups/revoke_action?group={$g['id']}&grant={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"{$lang['revoke']}\" /></a>";
 		}
 	
 		$content .= "
@@ -66,7 +66,7 @@ $content .= "
 				</div>
 				<div style=\"width: 600px; float: right;\">
 					<h2 class=\"dark\">{$lang['rename']}</h2>
-					<form action=\"/admin/grants/update_action\" method=\"post\">
+					<form action=\"/admin/settings/grants/update_action\" method=\"post\">
 						<input type=\"hidden\" name=\"id\" value=\"{$grant['id']}\" />
 						<fieldset>
 							<input type=\"text\" name=\"name\" value=\"{$grant['name']}\" style=\"width: 400px;\" />

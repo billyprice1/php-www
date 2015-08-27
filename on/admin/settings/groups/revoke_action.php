@@ -6,11 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('quota/update', array('id'=>$_POST['id'], 'name'=>$_POST['name']));
-
+api::send('grant/group/revoke', array('group'=>$_GET['group'], 'grant'=>$_GET['grant']));
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/quota/detail?id='.$_POST['id'].'#quotas');
+	template::redirect('/admin/settings/group/detail?id=' . $_GET['group']);
 
 ?>

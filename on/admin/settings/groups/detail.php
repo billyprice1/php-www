@@ -8,7 +8,7 @@ if( !defined('PROPER_START') )
 
 $group = api::send('group/list', array('id'=>$_GET['id']));
 if( count($group) == 0 )
-	template::redirect('/admin/groups');
+	template::redirect('/admin/settings/groups');
 $group = $group[0];
 
 $content = "
@@ -31,7 +31,7 @@ if( security::hasGrant('GRANT_GROUP_SELECT') )
 		$grants = $groupgrants;
 	
 	$content .= "
-					<form action=\"/admin/groups/grant_action\" method=\"post\">
+					<form action=\"/admin/settings/groups/grant_action\" method=\"post\">
 						<input type=\"hidden\" name=\"id\" value=\"{$_GET['id']}\" />
 						<table>
 							<tr>
@@ -77,7 +77,7 @@ $content .= "
 			</div>
 			<div style=\"width: 600px; float: right;\">
 				<h2 class=\"dark\">{$lang['rename']}</h2>
-				<form action=\"/admin/groups/update_action\" method=\"post\">
+				<form action=\"/admin/settings/groups/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"id\" value=\"{$group['id']}\" />
 					<fieldset>
 						<input type=\"text\" name=\"name\" value=\"{$group['name']}\" style=\"width: 400px;\" />

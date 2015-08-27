@@ -1,0 +1,11 @@
+[EN]
+title = "General settings"
+groups = "Groups management"
+grants = "Grants management"
+quotas = "Quotas management"
+
+[FR]
+title = "Paramètres généraux"
+groups = "Gestion des groupes"
+grants = "Gestion des privilèges"
+quotas = "Gestion des quotas"

@@ -6,10 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('grant/group/revoke', array('group'=>$_GET['group'], 'grant'=>$_GET['grant']));
+api::send('grant/add', array('name'=>$_POST['name']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/group/detail?id=' . $_GET['group']);
+	template::redirect('/admin/settings/grants');
 
 ?>

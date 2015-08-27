@@ -6,10 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('group/del', array('id'=>$_GET['id']));
+api::send('grant/update', array('id'=>$_POST['id'], 'name'=>$_POST['name']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/group');
+	template::redirect('/admin/settings/grants/detail?id=' . $_POST['id']);
 
 ?>

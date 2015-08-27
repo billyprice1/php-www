@@ -53,6 +53,7 @@ if( count($databases) > 0 )
 					<a class=\"button classic\" href=\"https://ppa.olympe.in\" style=\"width: 180px; float: left; margin-left: 20px;\">
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['ppa']}</span>
 					</a>
+					<div class=\"clear\"></div><br />
 	";
 }
 else
