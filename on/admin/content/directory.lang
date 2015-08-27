@@ -1,5 +1,9 @@
 [EN]
-title = "Directory management"
+title = "Website content"
+menu_cat = "Category"
+menu_statistics = "Statistics"
+menu_blog = "Blog management"
+menu_directory = "Directory management"
 see = "See the index"
 edit = "Update the settings of a website"
 featured = "Main selection"
@@ -13,7 +17,11 @@ remove_text = "This website still will be on the index, but won't be displayed i
 ok = "Ok"
 
 [FR]
-title = "Gestion de l'annuaire"
+title = "Gestion du contenu"
+menu_cat = "Catégorie"
+menu_statistics = "Statistiques"
+menu_blog = "Gestion du blog"
+menu_directory = "Gestion de l'annuaire"
 see = "Voir l'annuaire"
 edit = "Nom d'un site figurant sur l'annuaire"
 featured = "Sites à la Une"
@@ -31,7 +39,11 @@ configuration. Indiquez le nom du site recherché."
 sitename = "Nom du site"
 
 [DE]
-title = "Directory management"
+title = "Website content"
+menu_cat = "Category"
+menu_statistics = "Statistics"
+menu_blog = "Blog management"
+menu_directory = "Directory management"
 see = "See the index"
 edit = "Update the settings of a website"
 featured = "Main selection"

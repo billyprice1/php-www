@@ -18,6 +18,6 @@ api::send('news/add', $params);
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/admin/blog');
+	$template->redirect('/admin/content/blog');
 
 ?>

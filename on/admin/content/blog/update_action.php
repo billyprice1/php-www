@@ -19,6 +19,6 @@ api::send('news/update', $params);
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/admin/blog/detail?id='.security::encode($_POST['id']));
+	$template->redirect('/admin/content/blog/detail?id='.security::encode($_POST['id']));
 
 ?>

@@ -7,7 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 if(!isset($_GET['id']) || !is_numeric($_GET['id']))
-	template::redirect('/admin/directory');
+	template::redirect('/admin/content/directory');
 	
 $site = api::send('site/list', array('site'=>$_GET['id']));
 $site = $site[0];
@@ -49,7 +49,7 @@ if($site['directory']== 4)
 	
 $content .= "
 					
-					<form action=\"/admin/directory/detail_action\" method=\"post\">	
+					<form action=\"/admin/content/directory/detail_action\" method=\"post\">	
 						<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
 						<input type=\"hidden\" name=\"action\" value=\"changedirectory\" />
 						<fieldset>
@@ -107,7 +107,7 @@ $content .= "
 					
 					<h2 class=\"dark\">{$lang['display']}</h2>
 					
-					<form action=\"/admin/directory/detail_action\" method=\"post\">	
+					<form action=\"/admin/content/directory/detail_action\" method=\"post\">	
 						<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
 						<input type=\"hidden\" name=\"action\" value=\"displaydirectory\" />
 

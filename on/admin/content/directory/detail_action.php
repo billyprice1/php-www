@@ -48,6 +48,6 @@ $_SESSION['MESSAGE']['TEXT']= $lang['success'];
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/admin/directory/detail?id=' . security::encode($_POST['id']));
+	$template->redirect('/admin/content/directory/detail?id=' . security::encode($_POST['id']));
 
 ?>

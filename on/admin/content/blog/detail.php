@@ -23,7 +23,7 @@ $content .= "
 			<div class=\"clear\"></div><br />
 		</div>
 		<div class=\"container\">
-			<form action=\"/admin/blog/update_action\" method=\"post\">
+			<form action=\"/admin/content/blog/update_action\" method=\"post\">
 				<input type=\"hidden\" name=\"id\" value=\"{$news['id']}\" />
 				<fieldset>
 					<input type=\"text\" style=\"width: 700px;\" maxlenght=\"150\" name=\"title\" value=\"{$news['title']}\" />
@@ -65,7 +65,7 @@ $content .= "
 		<h3 class=\"center\">{$lang['delete']}</h3>
 		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
 		<div class=\"form-small\">		
-			<form action=\"/admin/news/del_action\" method=\"get\" class=\"center\">
+			<form action=\"/admin/content/blog/del_action\" method=\"get\" class=\"center\">
 				<input type=\"hidden\" value=\"{$news['id']}\" name=\"parent\" />
 				<input id=\"id\" type=\"hidden\" value=\"\" name=\"id\" />
 				<fieldset>	
