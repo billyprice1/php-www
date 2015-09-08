@@ -163,6 +163,7 @@ wait = "Install in progress, please wait. <br />This may take several minutes."
 uninstall = "Uninstall"
 uninstall_btn =  "Uninstall"
 wait2 = "Uninstall in progress, please wait. <br />This may take several minutes."
+dareboost = "Con nuestro partenario <a href=\"http://www.dareboost.com\" target=\"_blank\">Dareboost</a>, puedes analizar e optimizar las páginas de tu sitio, y obtener 40% de descuento en tu primera factura con el código <strong>OLYMP40</strong>!"
 
 [FR]
 title = "Configurer un site"
@@ -246,6 +247,7 @@ wait = "Installation en cours. Merci de bien vouloir patienter. <br />Cela peut 
 uninstall = "Supprimer l'installation"
 uninstall_btn =  "Désinstaller"
 wait2 = "Désinstallation en cours. Merci de bien vouloir patienter. <br />Cela peut prendre quelques minutes"
+dareboost = "Grâce à notre partenaire <a href=\"http://www.dareboost.com\" target=\"_blank\">Dareboost</a>, analysez et optimisez facilement les pages de votre site, et bénéficiez de 40% de réduction sur votre première facture grâce au code <strong>OLYMP40</strong> !"
 
 [DE]
 title = "Webseite Einstellungen"
@@ -329,6 +331,7 @@ wait = "Install in progress, please wait. <br />This may take several minutes."
 uninstall = "Uninstall"
 uninstall_btn =  "Uninstall"
 wait2 = "Uninstall in progress, please wait. <br />This may take several minutes."
+dareboost = "With our partner <a href=\"http://www.dareboost.com\" target=\"_blank\">Dareboost</a>, feel free to analyze and easily optimize the pages of your site and get 40% off your first bill with the code <strong>OLYMP40</strong>!"
 
 [IT]
 title = Configura un sito web"
@@ -411,3 +414,4 @@ wait = "Install in progress, please wait. <br />This may take several minutes."
 uninstall = "Uninstall"
 uninstall_btn =  "Uninstall"
 wait2 = "Uninstall in progress, please wait. <br />This may take several minutes."
+dareboost = "With our partner <a href=\"http://www.dareboost.com\" target=\"_blank\">Dareboost</a>, feel free to analyze and easily optimize the pages of your site and get 40% off your first bill with the code <strong>OLYMP40</strong>!"
