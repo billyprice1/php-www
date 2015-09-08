@@ -48,7 +48,7 @@ $content = "
 		<div class=\"head\" style=\"background-color: ".($status!=2?"#ca0101":"#7bbb51")."; background-image: url('/{$GLOBALS['CONFIG']['SITE']}/images/dotgrid-black.png'); margin-bottom: 0;\">
 			<br />
 			<h1>".($status!=2?"{$lang['offline']}":"{$lang['online']}")."</h1>
-			<h2 style=\"margin: 15px 0 15px 0; color: #ffffff;\">".date('M d Y H:i')."</h2>
+			<h2 style=\"margin: 15px 0 15px 0; color: #ffffff; text-align: center;\">".date('M d Y H:i')."</h2>
 			<div style=\"width: 800px; margin: 0 auto; color: #ffffff; text-align: center; font-size: 14px; line-height: 20px;\">
 				{$lang['monitor']}
 			</div>
