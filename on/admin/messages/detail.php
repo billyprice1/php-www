@@ -8,9 +8,9 @@ if( !defined('PROPER_START') )
 
 try
 {
-	$message = api::send('message/list', array('id'=>$_GET['id']));
+	$message = api::send('message/list', array('id'=>$_GET['id'], 'type'=>1));
 	$message = $message[0];
-	$messages = api::send('message/list', array('parent'=>$_GET['id']));
+	$messages = api::send('message/list', array('parent'=>$_GET['id'], 'type'=>1));
 }
 catch( Exception $e )
 {
@@ -51,7 +51,10 @@ foreach( $messages as $m )
 	else 
 		$staff = "";
 	
-	$online = ''; //$online_icon;
+	if($m['user']['status'] != '99' && $m['user']['last_login'] > (time()-360))
+		$online = $online_icon;
+	else 
+		$online = "";
 	
 		$content .= "
 				<div class=\"message\">
@@ -92,7 +95,10 @@ if($message['user']['status'] == '99')
 else 
 	$staff = "";
 
-$online = ''; //$staff_icon;
+if($message['user']['status'] != '99' && $message['user']['last_login'] > (time()-360))
+	$online = $online_icon;
+else 
+	$online = "";
 
 $content .= "
 				<div class=\"message\">

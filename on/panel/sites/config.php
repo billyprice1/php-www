@@ -141,6 +141,10 @@ $content .= "
 				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>
 				<div id=\"chart2\" style=\"margin-bottom: 20px;\"></div>
 				<p>{$lang['note']}</p>
+				<p style=\"background-color: #EEE; padding: 15px; width: 100%; margin: 40px 0 30px;\">
+					<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/partners/dareboost.png\" title=\"Dareboost\" alt=\"\" style=\"float: left; margin-right: 20px; width: 70px;\" />
+					{$lang['dareboost']}
+				</p>
 			</div>
 			<div class=\"right border\" style=\"width: 340px; padding-left: 60px; margin-left: 40px; margin-top: 5px;\">
 				<h2 class=\"dark\">{$lang['directory']}</h2>

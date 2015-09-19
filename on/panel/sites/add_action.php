@@ -20,32 +20,38 @@ class analyse
 		return false;
 	}	
 }
-	
-$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/sitename_blacklist.txt");
-$subdomain = htmlspecialchars(strtolower($_POST['subdomain']));
 
-foreach ($blocked as $line => $keyword ) {
-	$keyword = trim( $keyword );
-	if ( analyse::contain ( $subdomain, $keyword ) ) 
+if($_POST['subdomain'] != '' && $_POST['password'] != '') {
+	
+	$blocked = file("{$GLOBALS['CONFIG']['SITE']}/panel/sites/sitename_blacklist.txt");
+	$subdomain = htmlspecialchars(strtolower($_POST['subdomain']));
+
+	foreach ($blocked as $line => $keyword ) {
+		$keyword = trim( $keyword );
+		if ( analyse::contain ( $subdomain, $keyword ) ) 
+		{
+			$_SESSION['MESSAGE']['TYPE'] = 'error';
+			$_SESSION['MESSAGE']['TEXT']= $lang['blocked'];
+			$template->redirect('/panel');
+			exit();
+		}
+	}
+
+	try
+	{
+		api::send('self/site/add', array('site'=>$subdomain, 'pass'=>$_POST['password']));
+		unset($_SESSION['subdomain']);
+	}
+	catch( Exception $e )
 	{
 		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= $lang['blocked'];
-		$template->redirect('/panel');
-		exit();
+		$_SESSION['MESSAGE']['TEXT']= $lang['error'];
 	}
-}
-
-try
-{
-	api::send('self/site/add', array('site'=>$subdomain, 'pass'=>$_POST['password']));
-	unset($_SESSION['subdomain']);
-}
-catch( Exception $e )
-{
+	
+} else {
 	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+	$_SESSION['MESSAGE']['TEXT']= $lang['empty'];
 }
-
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

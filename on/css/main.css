@@ -36,7 +36,6 @@ q:before,q:after,blockquote:before,blockquote:after {
 	content:"";
 }
 html {
-	overflow-y:scroll;
 	font-size:100%;
 	-webkit-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
@@ -1653,7 +1652,8 @@ ul.search li {
 /* FOOTER
 ------------------------------------------ */
 div.footer {
-	height:130px;
+	min-height:130px;
+	box-sizing: border-box;
 	margin:0 0 0 0;
 	padding:20px 0 0 0;
 	box-shadow:rgba(0,0,0,0.14902) 0px 1px 1px 0px inset;
@@ -2212,6 +2212,25 @@ div.panel div.site div.left {
 div.panel div.site div.right {
 	float:left;
 	width:195px;
+}
+.case {
+    float: left;
+    margin: 45px 65px 25px;
+    width: 230px;
+}
+.case > a {
+    border: 1px solid;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    padding: 30px 20px;
+    width: 100%;
+}
+.case span {
+    display: block;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 div.panel div.site div.connector {
 	float:left;

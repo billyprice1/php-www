@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$messages = api::send('self/message/list', array('topic'=>1));
+$messages = api::send('self/message/list', array('topic'=>1, 'type'=>1));
 
 $content = "
 			<div class=\"panel\">

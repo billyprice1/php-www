@@ -10,17 +10,17 @@ if(isset($_POST['action']) && $_POST['action']=='search') {
 	$user = security::encode($_POST['user']);
 	
 	if($_POST['user'] != '' && $_POST['statusmode']!= 0)
-		$messages = api::send('message/list', array('topic'=>1, 'user'=>$user, 'status'=>$_POST['statusmode']));
+		$messages = api::send('message/list', array('topic'=>1, 'type'=>1, 'user'=>$user, 'status'=>$_POST['statusmode']));
 	
 	elseif($_POST['user'] != '' && $_POST['statusmode']== 0)
-		$messages = api::send('message/list', array('topic'=>1, 'user'=>$user));
+		$messages = api::send('message/list', array('topic'=>1, 'type'=>1, 'user'=>$user));
 		
 	elseif($_POST['user'] == '' && $_POST['statusmode']!= 0)
-		$messages = api::send('message/list', array('topic'=>1, 'status'=>$_POST['statusmode']));
+		$messages = api::send('message/list', array('topic'=>1, 'type'=>1, 'status'=>$_POST['statusmode']));
 		
 } else {
 	$display = 'display:none';
-	$messages = api::send('message/list', array('topic'=>1));
+	$messages = api::send('message/list', array('topic'=>1, 'type'=>1));
 }
 
 $content = "

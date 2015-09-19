@@ -29,7 +29,7 @@ logged = "Login as"
 conditions = "I agree to the <a href='/on/documents/Olympe-CGS-EN.pdf'>Terms of Use</a>."
 hosted = "Want to know our references ?"
 directory = "Search our index"
-lock_signup = "Following overcrowding, entries are temporarily closed. <br />They will resume when the infrastructure will again be able to welcome a new member. <br />We apologize for the inconvenience."
+signup_lock = "In order to sustain the infrastructure, registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
 
 [FR]
 title = "Solidarité et Innovation"
@@ -66,7 +66,7 @@ logged = "Identifié en tant que"
 conditions = "J'ai lu et j'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'>Conditions Générales d'Utilisation</a>."
 hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
 directory = "Consultez notre annuaire"
-lock_signup = "Suite à une trop grande affluence, les inscriptions sont momentanément fermées.<br />Elles reprendront lorsque l'infrastructure sera de nouveau apte à accueillir de nouveaux membres.<br />Nous nous excusons par ailleurs pour la gêne occasionnée."
+signup_lock = "Afin de pérenniser l'infrastructure, les inscriptions sont momentanément suspendues. Nous vous invitons à visiter Olympe régulièrement pour vérifier la réouverture de celles-ci."
 
 [ES]
 title = "Solidaridad e Innovación"
@@ -100,7 +100,7 @@ logged = "Conectado como"
 conditions = "He leído y acepto las <a href='/on/documents/Olympe-CGS-ES.pdf'>Condiciones Generales de Utilización</a>."
 hosted = "¿Quiénes son las personas y las organizaciones alojados en Olympe?"
 directory = "Ver el directorio"
-lock_signup = "Seguimos colapsados, los registros están temporalmente cerrados. <br />El servicio volverá cuando la infraestructura pueda aceptar nuevos registros. <br />Sentimos las molestias que esto pueda causar."
+signup_lock = "A fin de mantener la infraestructura, las inscripciones están suspendidas temporalmente. Te invitamos a visitar regularmente Olympe para comprobar si las reabrió."
 
 [IT]
 title = "Solidarietà e innovazione"
@@ -134,7 +134,7 @@ logged = "Connesso come"
 conditions = "Accetto le <a href='/on/documents/Olympe-CGS-IT.pdf'>condizioni di utilizzo</a>."
 hosted = "Vuoi conoscere le nostre referenze ?"
 directory = "Cerca nella nostra directory"
-lock_signup = "A seguito di una eccessiva richiesta, le nuove registrazioni sono temporaneamente chiuse. <br />Verranno riattivate quando l'infrastruttura potrà nuovamente accettare nuovi membri. <br />Ci scusiamo per l'inconveniente."
+signup_lock = "In order to sustain the infrastructure, registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
 
 [DE]
 title = "Verbundenheit und Innovation"
@@ -166,4 +166,4 @@ logged = "Eingeloggt als"
 conditions = "Ich habe <a href='/on/documents/Olympe-CGS-DE.pdf'>die allgemeinen Nutzungsbedingungen</a> gelesen und akzeptiere sie."
 hosted = "Möchtest du mehr über unsere Webseiten erfahren?"
 directory = "Durchsuche unser Verzeichnis!"
-lock_signup = "Aufgrund ausgeschöpfter Ressourcen sind die Registrierungen momentan geschlossen.<br />Wir werden neue Registrierungen erneut öffnen, wenn die Infrastruktur die Kapazitäten für neue Mitglieder bietet.<br />Wir hoffen, dich zu einem späteren Zeitpunkt bei uns begrüßen zu dürfen!<br />Wir entschuldigen uns sehr für die dadurch entstandenen Unannehmlichkeiten!"
+signup_lock = "In order to sustain the infrastructure, registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
