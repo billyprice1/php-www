@@ -69,7 +69,7 @@ $content .= "
 					</form>
 				</div>
 			</div>
-			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
+			<div id=\"signupform_lock\" style=\"display: none; padding-top: 20px;\">
 				<div class=\"form-small\">
 					<form action=\"/signup_action\" method=\"post\" id=\"valid\" class=\"center\">
 						<input type=\"hidden\" name=\"antispam\" value=\"{$_SESSION['ANTISPAM']}\" />
@@ -87,6 +87,11 @@ $content .= "
 						</fieldset>
 						<input type=\"submit\" style=\"margin-bottom: 0; margin-top: 5px;\" value=\"{$lang['signup']}\" ".($_SESSION['JOIN_STATUS']===0?'disabled':'')." />
 					</form>
+				</div>
+			</div>
+			<div id=\"signupform\" style=\"display: none; padding-top: 20px;\">
+				<div class=\"form-small\">
+					<p class=\"center\" style=\"width: 500px; margin: auto; padding: 10px; border: 1px solid #de5711; color: #de5711;\">{$lang['signup_lock']}</p>
 				</div>
 			</div>
 			<div class=\"lines\">
@@ -115,7 +120,7 @@ $content .= "
 				</div>
 			</div>
 			<div class=\"separator light\"></div>
-			<div id=\"stats\" style=\"text-align: center;\">
+			<div id=\"stats\" class=\"center\">
 				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif\" alt=\"loading...\" />
 			</div>
 			<div class=\"separator light\"></div>
@@ -124,7 +129,7 @@ $content .= "
 					<h3>{$lang['app']}</h3>
 					<p>{$lang['app_text']}</p>
 				</div>
-				<div class=\"right\" style=\"text-align: center;\">
+				<div class=\"right\" class=\"center\">
 					<div class=\"terminal\">
 						<div class=\"indicators\">
 							<span class=\"circle\"></span>
@@ -137,7 +142,7 @@ $content .= "
 					</div>
 				</div>
 				<div class=\"clear\" style=\"margin-bottom: 60px;\"></div>
-				<div class=\"left\" style=\"text-align: center;\">
+				<div class=\"left\" class=\"center\">
 					<div class=\"terminal\">
 						<div class=\"indicators\">
 							<span class=\"circle\"></span>
@@ -162,7 +167,7 @@ $content .= "
 					</blockquote>
 				</div>
 				<div class=\"separator light\"></div>
-				<div style=\"text-align: center;\">
+				<div class=\"center\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#signup').dialog('open'); return false;\" style=\"height: 22px; width: 200px; margin: 0 auto;\">
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['signup_now']}</span>
 					</a>

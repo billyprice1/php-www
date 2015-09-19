@@ -7,6 +7,7 @@ content = "<p style='margin: 20px 0'>Thank your for registering! You have to cli
 success = "Your request has been accepted.<br />You will receive an email with the confirmation link."
 error_mail = "An error occured, the email cannot be sent.<br />Please try later."
 error_api = "The email address format is invalid or this email is already used."
+error_lock = "Registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
 
 [ES]
 subject = "Confirme su cuenta de Olympe"
@@ -16,6 +17,7 @@ content = "<p style='margin: 20px 0'>Gracias por registrarte! Tiene que hacer cl
 success = "Tu solicitud ha sido aceptada.<br />Recibirás un email con un enlace de confirmación."
 error_mail = "Se ha producido un error, el email no puede ser enviado.<br />Por favor, intentas de nuevo más tarde."
 error_api = "El formato de tu dirección email es incorrecto o la dirección ya está utilizada."
+error_lock = "Las inscripciones están suspendidas temporalmente. Te invitamos a visitar regularmente Olympe para comprobar si las reabrió."
 
 [FR]
 subject = "Confirmation de votre compte sur Olympe"
@@ -27,6 +29,7 @@ content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vou
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
 error_api = "Le format de votre adresse email est incorrect ou cette adresse est déjà utilisée."
+error_lock = "Les inscriptions sont momentanément suspendues. Nous vous invitons à visiter Olympe régulièrement pour vérifier la réouverture de celles-ci."
 
 [DE]
 subject = "Olympe - Registrierungsbestätigung"
@@ -36,6 +39,7 @@ content = "<p style='margin: 20px 0'>Vielen Dank für deine Registrierung bei <s
 success = "Vielen Dank für deine Registrierung!<br/>Du erhältst in Kürze eine E-Mail mit dem Bestätigungslink.<br/>"
 error_mail = "Ein Fehler ist aufgetreten. Die E-Mail konnte nicht gesendet werden.<br />Bitte versuche es später noch einmal."
 error_api = "Das Format deiner E-Mail-Adresse ist falsch oder ungültig, oder diese E-Mail-Adresse wird bereits verwendet."
+error_lock = "Registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
 
 [IT]
 subject = "Attivazione account Olympe"
@@ -45,3 +49,4 @@ content = "<p style='margin: 20px 0'>Grazie per esserti registrato! Per attivare
 success = "La tua richiesta è stata convalidata.<br />Riceverai una email con il link di attivazione"
 error_mail = "Sembra ci sia un errore, l'email non è stata inviata<br />Prova più tardi"
 error_api = "Il formato di questo indrizzo email non è valido, oppure questa email è già stata utilizzata"
+error_lock = "Registrations are temporarily suspended. We invite you to visit regularly Olympe to check if we reopened it."
